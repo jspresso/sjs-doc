@@ -433,43 +433,25 @@ Entity relationships definition is only a matter of a few SJS statements. Please
 
 A department belongs to a company.
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>Entity(&#39;Company&#39;) {
-    ...
-}
-
-</code></pre></td>
-<td align="left"><pre><code>Entity(&#39;Department&#39;) {
-    ...
-    
-    ...
-}</code></pre></td>
-</tr>
-</tbody>
-</table>
+  ------------------------- ----------------------------
+      Entity('Company') {       Entity('Department') {
+          ...                       ...
+      }                             
+                                    ...
+                                }
+  ------------------------- ----------------------------
 
 ### Collection relationship (N multiplicity)
 
 A company is made of an unordered collection of departments.
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>Entity(&#39;Company&#39;) {
-    ...
-    
-    ...
-}</code></pre></td>
-<td align="left"><pre><code>Entity(&#39;Department&#39;) {
-    ...
-}
-
-</code></pre></td>
-</tr>
-</tbody>
-</table>
+  ------------------------- ----------------------------
+      Entity('Company') {       Entity('Department') {
+          ...                       ...
+                                }
+          ...               
+      }                     
+  ------------------------- ----------------------------
 
 > **Note**
 >
@@ -479,26 +461,15 @@ A company is made of an unordered collection of departments.
 
 Both relationship ends defined above must be connected between each other.
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>Entity(&#39;Company&#39;) {
-    ...
-    set &#39;departments&#39; ref:&#39;Department&#39;
-    ...
-}
-
-</code></pre></td>
-<td align="left"><pre><code>Entity(&#39;Department&#39;) {
-    ...
-    reference &#39;company&#39;
-      ref:&#39;Company&#39;,
-      
-    ...
-}</code></pre></td>
-</tr>
-</tbody>
-</table>
+  -------------------------------------------- -----------------------------
+      Entity('Company') {                          Entity('Department') {
+          ...                                          ...
+          set 'departments' ref:'Department'           reference 'company'
+          ...                                            ref:'Company',
+      }                                                  
+                                                       ...
+                                                   }
+  -------------------------------------------- -----------------------------
 
 As used above, SJS implicitely creates a top-level, identified and referenceable component for each relation end. The pattern used for auto generated identifiers is :
 
@@ -520,26 +491,15 @@ Making a bi-directional association is allowed for any type of relationship end 
 
 For instance, if a department can be managed by an employee and an employee can manage at most a department, we can define the 1-1 association as follows :
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>Entity(&#39;Employee&#39;) {
-    ...
-    reference &#39;managedDepartment&#39;
-      ref:&#39;Department&#39;
- 
-    ...
-}</code></pre></td>
-<td align="left"><pre><code>Entity(&#39;Department&#39;) {
-    ...
-    reference &#39;manager&#39;
-      ref:&#39;Employee&#39;
-    ...
-}
-</code></pre></td>
-</tr>
-</tbody>
-</table>
+  --------------------------------------- -----------------------------
+      Entity('Employee') {                    Entity('Department') {
+          ...                                     ...
+          reference 'managedDepartment'           reference 'manager'
+            ref:'Department'                        ref:'Employee'
+                                                  ...
+          ...                                 }
+      }                                   
+  --------------------------------------- -----------------------------
 
 > **Note**
 >
@@ -577,29 +537,31 @@ in SJS, lifecycle interceptors packages are determined by convention using the f
 
 Here is the code of the lifecycle interceptor (`TraceableLifecycleInterceptor.java`) , given that the application namespace is `org.jspresso.hrsample` :
 
-    package ;
+``` {.java}
+package ;
 
-    import ...
+import ...
 
-    public class TraceableLifecycleInterceptor extends
-        EmptyLifecycleInterceptor<Traceable> {
+public class TraceableLifecycleInterceptor extends
+    EmptyLifecycleInterceptor<Traceable> {
 
-      @Override
-      @SuppressWarnings("unused")
-      public boolean (Traceable traceable, IEntityFactory entityFactory,
-          UserPrincipal principal, IEntityLifecycleHandler entityLifecycleHandler) {
-        traceable.setCreateTimestamp(new Date());
-        return true;
-      }
+  @Override
+  @SuppressWarnings("unused")
+  public boolean (Traceable traceable, IEntityFactory entityFactory,
+      UserPrincipal principal, IEntityLifecycleHandler entityLifecycleHandler) {
+    traceable.setCreateTimestamp(new Date());
+    return true;
+  }
 
-      @Override
-      @SuppressWarnings("unused")
-      public boolean (Traceable traceable, IEntityFactory entityFactory,
-          UserPrincipal principal, IEntityLifecycleHandler entityLifecycleHandler) {
-        traceable.setLastUpdateTimestamp(new Date());
-        return true;
-      }
-    }
+  @Override
+  @SuppressWarnings("unused")
+  public boolean (Traceable traceable, IEntityFactory entityFactory,
+      UserPrincipal principal, IEntityLifecycleHandler entityLifecycleHandler) {
+    traceable.setLastUpdateTimestamp(new Date());
+    return true;
+  }
+}
+```
 
 ### Property processors
 
@@ -627,58 +589,58 @@ SJS determines property processors package by convention using the following pat
 
 Here is the code of the property processors containing class (`EmployeePropertyProcessors.java`) , given that the application namespace is `org.jspresso.hrsample` :
 
-```groovy
-    package ;
+``` {.java}
+package ;
 
-    import ...
+import ...
 
-    public class EmployeePropertyProcessors {
+public class EmployeePropertyProcessors {
 
-      /**
-       * Birth date property processor.
-       */
-      public static class  extends
-          EmptyPropertyProcessor<Employee, Date> {
+  /**
+   * Birth date property processor.
+   */
+  public static class  extends
+      EmptyPropertyProcessor<Employee, Date> {
 
-        /**
-         * Checks that the employee age is at least 18.
-         * <p>
-         * {@inheritDoc}
-         */
-        @Override
-        public void (Employee employee, Date newBirthDate) {
-          if (newBirthDate == null
-              || employee.computeAge(newBirthDate).intValue() < 18) {
-            throw new IntegrityException("Age is below 18", "age.below.18");
-          }
-        }
-      }
-
-      /**
-       * First name property processor.
-       */
-      public static class  extends
-          EmptyPropertyProcessor<Employee, String> {
-
-        /**
-         * Formats the new first name. The formatting is :
-         * <li>Capitalize the 1st letter
-         * <li>Lower case all the other letters
-         * <p>
-         * {@inheritDoc}
-         */
-        @Override
-        public String (Employee employee, String newFirstName) {
-          if (newFirstName != null && newFirstName.length() > 0) {
-            StringBuffer formattedName = new StringBuffer();
-            formattedName.append(newFirstName.substring(0, 1).toUpperCase());
-            formattedName.append(newFirstName.substring(1).toLowerCase());
-            return formattedName.toString();
-          }
-          return super.interceptSetter(employee, newFirstName);
-        }
+    /**
+     * Checks that the employee age is at least 18.
+     * <p>
+     * {@inheritDoc}
+     */
+    @Override
+    public void (Employee employee, Date newBirthDate) {
+      if (newBirthDate == null
+          || employee.computeAge(newBirthDate).intValue() < 18) {
+        throw new IntegrityException("Age is below 18", "age.below.18");
       }
     }
+  }
+
+  /**
+   * First name property processor.
+   */
+  public static class  extends
+      EmptyPropertyProcessor<Employee, String> {
+
+    /**
+     * Formats the new first name. The formatting is :
+     * <li>Capitalize the 1st letter
+     * <li>Lower case all the other letters
+     * <p>
+     * {@inheritDoc}
+     */
+    @Override
+    public String (Employee employee, String newFirstName) {
+      if (newFirstName != null && newFirstName.length() > 0) {
+        StringBuffer formattedName = new StringBuffer();
+        formattedName.append(newFirstName.substring(0, 1).toUpperCase());
+        formattedName.append(newFirstName.substring(1).toLowerCase());
+        return formattedName.toString();
+      }
+      return super.interceptSetter(employee, newFirstName);
+    }
+  }
+}
 ```
 
 ### Services
