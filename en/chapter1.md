@@ -466,26 +466,36 @@ Entity relationships definition is only a matter of a few SJS statements. Please
 
 A department belongs to a company.
 
-  ------------------------- -----------------------------------------
-      Entity('Company') {       Entity('Department') {
-          ...                       ...
-      }                             reference 'company' ref:'Company'
-                                    ...
-                                }
-  ------------------------- -----------------------------------------
+```groovy
+Entity('Company') {
+  ...
+}
+```
+```groovy
+Entity('Department') {
+  ...
+  reference 'company' ref:'Company'
+  ...
+}
+```
 
 ### Collection relationship (N multiplicity)
 
 A company is made of an unordered collection of departments.
 
-  ------------------------------------------ ----------------------------
-      Entity('Company') {                        Entity('Department') {
-          ...                                    ...
-          set 'departments',                     }
-            ref:'Department'
-          ...               
-      }                     
-  ------------------------------------------ ----------------------------
+```groovy
+Entity('Company') {
+  ...
+  set 'departments',
+    ref:'Department'
+  ...
+}                     
+```
+```groovy
+Entity('Department') {
+  ...
+}                     
+```
 
 > **Note**
 >
@@ -495,16 +505,23 @@ A company is made of an unordered collection of departments.
 
 Both relationship ends defined above must be connected between each other.
 
-  -------------------------------------------- -----------------------------
-      Entity('Company') {                          Entity('Department') {
-          ...                                          ...
-          set 'departments',                           reference 'company',
-            ref:'Department'                             ref:'Company',
-          ...                                            reverse:'Company-departments'
-      }                                                ...  
-                                                   }
-  -------------------------------------------- -----------------------------
-
+```groovy
+Entity('Company') {
+  ...
+  set 'departments',
+    ref:'Department'
+  ...
+}
+```
+```groovy
+Entity('Department') {
+  ...
+  reference 'company',
+    ref:'Company',
+    reverse:'Company-departments'
+  ...  
+}
+```
 As used above, SJS implicitely creates a top-level, identified and referenceable component for each relation end. The pattern used for auto generated identifiers is :
 
 > **[OwningComponent]-[associationNameEnd]**
@@ -523,15 +540,23 @@ Making a bi-directional association is allowed for any type of relationship end 
 
 For instance, if a department can be managed by an employee and an employee can manage at most a department, we can define the 1-1 association as follows :
 
-  --------------------------------------- -----------------------------
-      Entity('Employee') {                    Entity('Department') {
-          ...                                     ...
-          reference 'managedDepartment',          reference 'manager',
-            ref:'Department',                       ref:'Employee'
-            reverse:'Department-manager'          ...
-          ...                                 }
-      }                                   
-  --------------------------------------- -----------------------------
+```groovy
+Entity('Employee') {
+  ...
+  reference 'managedDepartment',
+    ref:'Department',
+    reverse:'Department-manager'
+  ...
+}
+```
+```groovy
+Entity('Department') {
+  ...
+  reference 'manager',
+    ref:'Employee'
+  ...
+}
+```
 
 > **Note**
 >
