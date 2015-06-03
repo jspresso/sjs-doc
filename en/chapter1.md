@@ -627,6 +627,7 @@ SJS determines property processors package by convention using the following pat
 
 Here is the code of the property processors containing class (`EmployeePropertyProcessors.java`) , given that the application namespace is `org.jspresso.hrsample` :
 
+```groovy
     package ;
 
     import ...
@@ -678,6 +679,7 @@ Here is the code of the property processors containing class (`EmployeePropertyP
         }
       }
     }
+```
 
 ### Services
 
