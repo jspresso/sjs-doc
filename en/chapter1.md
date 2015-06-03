@@ -12,35 +12,47 @@ An SJS statement is made of 4 parts :
 
 2.  The identifier of the underlying component, e.g. :
 
-        Entity()
+    ```groovy
+    Entity('Employee')
+    ```
 
     or even simpler without parenthesis :
 
-        Entity 
+    ```groovy
+    Entity 'Employee'
+    ```
 
 3.  Arguments that configure the underlying component properties, e.g. :
 
-        Entity('Employee', )
+    ```groovy
+    Entity('Employee', icon:'employee-48x48.png')
+    ```
 
     or even simpler without parenthesis :
 
-        Entity 'Employee', 
+    ```groovy
+    Entity 'Employee', icon:'employee-48x48.png'
+    ```
 
 4.  Nested SJS statements between curly brackets (a "closure"). In that case, parenthesis cannot be omitted, e.g.
 
-        Entity('Employee', icon:'employee-48x48.png') 
+    ```groovy
+    Entity('Employee', icon:'employee-48x48.png') 
+    ```
 
     Or even with deeper nesting :
 
-        split_vertical('Departments.and.teams.view',
-                       top:'Company-departments.table',
-                       cascadingModels:true) {
-            bottom {
-                split_horizontal (left:'Department-teams.table',
-                                  right:'Team-teamMembers.table',
-                                  cascadingModels:true)
-            }
+    ```groovy
+    split_vertical('Departments.and.teams.view',
+                   top:'Company-departments.table',
+                   cascadingModels:true) {
+        bottom {
+            split_horizontal (left:'Department-teams.table',
+                              right:'Team-teamMembers.table',
+                              cascadingModels:true)
         }
+    }
+    ```
 
     Statement nesting is a key feature for SJS flexibility.
 
