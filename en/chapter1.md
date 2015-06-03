@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Using SJS
 
 An SJS application description is a set of statements that are used to describe and assemble Jspresso components the same way you would do it using Spring XML. The big difference is the expression language itself.
