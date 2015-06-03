@@ -9,39 +9,27 @@ An SJS application description is a set of statements that are used to describe 
 An SJS statement is made of 4 parts :
 
 1.  The name of the statement, e.g. :
-
 2.  The identifier of the underlying component, e.g. :
-
     ```groovy
     Entity('Employee')
     ```
-
     or even simpler without parenthesis :
-
     ```groovy
     Entity 'Employee'
     ```
-
 3.  Arguments that configure the underlying component properties, e.g. :
-
     ```groovy
     Entity('Employee', icon:'employee-48x48.png')
     ```
-
     or even simpler without parenthesis :
-
     ```groovy
     Entity 'Employee', icon:'employee-48x48.png'
     ```
-
 4.  Nested SJS statements between curly brackets (a "closure"). In that case, parenthesis cannot be omitted, e.g.
-
     ```groovy
     Entity('Employee', icon:'employee-48x48.png') 
     ```
-
     Or even with deeper nesting :
-
     ```groovy
     split_vertical('Departments.and.teams.view',
                    top:'Company-departments.table',
@@ -53,7 +41,6 @@ An SJS statement is made of 4 parts :
         }
     }
     ```
-
     Statement nesting is a key feature for SJS flexibility.
 
 Only statement name is always mandatory. Other parts may be required or not and SJS will enforce these rules.Some statements dont have any parameter. To summarize, every SJS statement conforms to the following scheme :
@@ -276,7 +263,7 @@ Every SJS statement allows for a `paramSets` argument that expects a list of par
 
 Here is an example using the paramSet defined in the former section :
 
-    string_32 'firstName', 
+    string_32 'firstName', paramSets:['roMandatory']
 
 which is equivalent to :
 
@@ -445,25 +432,26 @@ Entity relationships definition is only a matter of a few SJS statements. Please
 
 A department belongs to a company.
 
-  ------------------------- ----------------------------
+  ------------------------- -----------------------------------------
       Entity('Company') {       Entity('Department') {
           ...                       ...
-      }                             
+      }                             reference 'company' ref:'Company'
                                     ...
                                 }
-  ------------------------- ----------------------------
+  ------------------------- -----------------------------------------
 
 ### Collection relationship (N multiplicity)
 
 A company is made of an unordered collection of departments.
 
-  ------------------------- ----------------------------
-      Entity('Company') {       Entity('Department') {
-          ...                       ...
-                                }
+  ------------------------------------------ ----------------------------
+      Entity('Company') {                        Entity('Department') {
+          ...                                    ...
+          set 'departments',                     }
+            ref:'Department'
           ...               
       }                     
-  ------------------------- ----------------------------
+  ------------------------------------------ ----------------------------
 
 > **Note**
 >
@@ -476,10 +464,10 @@ Both relationship ends defined above must be connected between each other.
   -------------------------------------------- -----------------------------
       Entity('Company') {                          Entity('Department') {
           ...                                          ...
-          set 'departments' ref:'Department'           reference 'company'
-          ...                                            ref:'Company',
-      }                                                  
-                                                       ...
+          set 'departments',                           reference 'company',
+            ref:'Department'                             ref:'Company',
+          ...                                            reverse:'Company-departments'
+      }                                                ...  
                                                    }
   -------------------------------------------- -----------------------------
 
@@ -506,9 +494,9 @@ For instance, if a department can be managed by an employee and an employee can 
   --------------------------------------- -----------------------------
       Entity('Employee') {                    Entity('Department') {
           ...                                     ...
-          reference 'managedDepartment'           reference 'manager'
-            ref:'Department'                        ref:'Employee'
-                                                  ...
+          reference 'managedDepartment',          reference 'manager',
+            ref:'Department',                       ref:'Employee'
+            reverse:'Department-manager'          ...
           ...                                 }
       }                                   
   --------------------------------------- -----------------------------
@@ -538,7 +526,7 @@ Lifecycle interceptors allow to inject java code that will be executed on entity
 This is how you can declare lifecycle interceptors using SJS statements :
 
     Interface('Traceable',
-              ) {
+              interceptors:'TraceableLifecycleInterceptor') {
       date_time 'createTimestamp'
       date_time 'lastUpdateTimestamp'
     }
@@ -549,8 +537,8 @@ in SJS, lifecycle interceptors packages are determined by convention using the f
 
 Here is the code of the lifecycle interceptor (`TraceableLifecycleInterceptor.java`) , given that the application namespace is `org.jspresso.hrsample` :
 
-``` {.java}
-package ;
+```java
+package org.jspresso.hrsample.model.service;
 
 import ...
 
@@ -559,7 +547,7 @@ public class TraceableLifecycleInterceptor extends
 
   @Override
   @SuppressWarnings("unused")
-  public boolean (Traceable traceable, IEntityFactory entityFactory,
+  public boolean onPersist(Traceable traceable, IEntityFactory entityFactory,
       UserPrincipal principal, IEntityLifecycleHandler entityLifecycleHandler) {
     traceable.setCreateTimestamp(new Date());
     return true;
@@ -567,7 +555,7 @@ public class TraceableLifecycleInterceptor extends
 
   @Override
   @SuppressWarnings("unused")
-  public boolean (Traceable traceable, IEntityFactory entityFactory,
+  public boolean onUpdate(Traceable traceable, IEntityFactory entityFactory,
       UserPrincipal principal, IEntityLifecycleHandler entityLifecycleHandler) {
     traceable.setLastUpdateTimestamp(new Date());
     return true;
@@ -590,9 +578,9 @@ As detailed in the Jspresso reference guide, SJS follows the convention of group
 For instance, you can declare property processors like this :
 
     Entity('Employee',
-           ) {
-        string_32 'firstName', 
-        date 'birthDate', 
+            processor:'EmployeePropertyProcessors') {
+        string_32 'firstName', processors:'FirstNameProcessor'
+        date 'birthDate', processors:'BirthDateProcessor'
     }
 
 SJS determines property processors package by convention using the following pattern :
@@ -601,8 +589,8 @@ SJS determines property processors package by convention using the following pat
 
 Here is the code of the property processors containing class (`EmployeePropertyProcessors.java`) , given that the application namespace is `org.jspresso.hrsample` :
 
-``` {.java}
-package ;
+```java
+package org.jspresso.hrsample.model.processor;
 
 import ...
 
@@ -611,7 +599,7 @@ public class EmployeePropertyProcessors {
   /**
    * Birth date property processor.
    */
-  public static class  extends
+  public static class BirthDateProcessor extends
       EmptyPropertyProcessor<Employee, Date> {
 
     /**
@@ -620,7 +608,7 @@ public class EmployeePropertyProcessors {
      * {@inheritDoc}
      */
     @Override
-    public void (Employee employee, Date newBirthDate) {
+    public void preprocessSetter(Employee employee, Date newBirthDate) {
       if (newBirthDate == null
           || employee.computeAge(newBirthDate).intValue() < 18) {
         throw new IntegrityException("Age is below 18", "age.below.18");
@@ -631,7 +619,7 @@ public class EmployeePropertyProcessors {
   /**
    * First name property processor.
    */
-  public static class  extends
+  public static class FirstNameProcessor extends
       EmptyPropertyProcessor<Employee, String> {
 
     /**
@@ -642,7 +630,7 @@ public class EmployeePropertyProcessors {
      * {@inheritDoc}
      */
     @Override
-    public String (Employee employee, String newFirstName) {
+    public String interceptSetter(Employee employee, String newFirstName) {
       if (newFirstName != null && newFirstName.length() > 0) {
         StringBuffer formattedName = new StringBuffer();
         formattedName.append(newFirstName.substring(0, 1).toUpperCase());
@@ -668,7 +656,7 @@ A service can implement several methods and an entity can implement several serv
 For instance, you can declare services like this :
 
     Entity ('Employee',
-            ) {
+             services:[EmployeeService:'EmployeeServiceDelegate']) {
       ...
     }
 
@@ -678,11 +666,11 @@ SJS determines services package by convention using the following pattern :
 
 Here is the code of the service interface (`EmployeeService.java`) , given that the application namespace is `org.jspresso.hrsample` :
 
-    package ;
+    package org.jspresso.hrsample.model.service;
 
     import ...
 
-    public interface  {
+    public interface EmployeeService {
 
       /**
        * Computes the employee age.
@@ -692,16 +680,16 @@ Here is the code of the service interface (`EmployeeService.java`) , given that 
        * @return the computed age based on the birth date or null if the birth date
        *         is not available.
        */
-      ;
+      Integer computeAge(Date birthDate);
     }
 
 and service implementation (`EmployeeServiceDelegate.java`) :
 
-    package ;
+    package org.jspresso.hrsample.model.service;
 
     import ...
 
-    public class  implements IComponentService {
+    public class EmployeeServiceDelegate implements IComponentService {
 
       /**
        * Computes the employee age.
@@ -713,7 +701,7 @@ and service implementation (`EmployeeServiceDelegate.java`) :
        *          date).
        * @return the age computed from the birth date passed as parameter.
        */
-       {
+       public Integer computeAge(Employee employee, Date birthDate) {
         if (birthDate != null) {
           return new Integer(
               (int) ((new Date().getTime() - birthDate.getTime())
@@ -734,9 +722,9 @@ Jspresso allows to define computed properties on entities. These computed proper
 For instance, you can declare entity computed properties like this :
 
     Entity ('Employee',
-            ) {
+             extension:'EmployeeExtension') {
       date 'birthDate'
-      integer 'age', 
+      integer 'age', computed:true
     }
 
 SJS determines extension class package by convention using the following pattern :
@@ -745,7 +733,7 @@ SJS determines extension class package by convention using the following pattern
 
 Here is the code of the extension class (`EmployeeExtension.java`) , given that the application namespace is `org.jspresso.hrsample` :
 
-    package ;
+    package org.jspresso.hrsample.model.extension;
 
     import ...
 
@@ -767,7 +755,7 @@ Here is the code of the extension class (`EmployeeExtension.java`) , given that 
        * 
        * @return The employee age.
        */
-      public Integer () {
+      public Integer getAge() {
         return getComponent().computeAge(getComponent().getBirthDate());
       }
     }
@@ -817,7 +805,7 @@ Actions are grouped into action lists that in turn are grouped into action maps.
 Using SJS, action maps can be assigned to views using the `actionMap` argument, e.g. :
 
     table 'Company-departments.table',
-          
+           actionMap:'masterDetail'
 
 Actions can be inherited and customized, e.g. :
 
@@ -920,7 +908,7 @@ All the boiler plate SJS code is already written in `application.groovy`. This m
 
 You can further modularize SJS applications using the `include` statement :
 
-    ('filename.groovy')
+    include('filename.groovy')
 
 included files are merged exactly as if all their statements had been written directly into the in the including SJS source file. This is actually the same mecanism that is used by the `application.groovy` wrapper to include the standard SJS source files.
 
@@ -952,7 +940,7 @@ Scopes are then used in `application.groovy` to write specific Spring XML contex
 
 In `application.groovy` :
 
-    frontendBuilder.writeOutputFile(,
+    frontendBuilder.writeOutputFile('swing',
          project.properties['outputDir'],
          'swing-'+project.properties['viewOutputFileName'])
 
@@ -967,7 +955,7 @@ In `beanRefFactory.xml` :
         <constructor-arg>
           <list>
             ...
-            <value>org/jspresso/hrsample/</value>
+            <value>org/jspresso/hrsample/spec/swing-dsl-view.xml</value>
             ...
           </list>
         </constructor-arg>
