@@ -72,14 +72,16 @@ roles collections are null, then access is granted to anyone.</p></td>
 </td>
 <td><p>Assigns a collection of gates to determine view writability. A view will
 be considered writable (updatable) if and only if all boolean gates are open.
-<programlisting>
+<pre>
 form 'form1', booleanWritabilityGates: ['prop1', '!prop2']
 
-</programlisting>
-<itemizedlist>
-<listitem><para>The first 'prop1' gate is open if the prop1 property is true on the underlying model</para></listitem>
-<listitem><para>The second '!prop2' gate is open if prop2 property is false on the underlying model</para></listitem>
-</itemizedlist>
+</pre>
+<ul>
+<li>The first 'prop1' gate is open if the prop1 property is true on the underlying model
+</li>
+<li>The second '!prop2' gate is open if prop2 property is false on the underlying model
+</li>
+</ul>
 This mecanism is mainly used for dynamic UI authorization based on
 model state, e.g. a validated invoice should not be editable anymore.
 View assigned gates will be cloned for each view instance created
@@ -95,13 +97,15 @@ writability is the combination of view and model writability.</p></td>
 </td>
 <td><p>Assigns a collection of gates to determine view writability. A view will
 be considered writable (updatable) if and only if the user role matches at least one of the role.
-<programlisting>
+<pre>
 form 'form2', rolesWritabilityGates: ['role1', '!role2']
-</programlisting>
-<itemizedlist>
-<listitem><para>The first gate 'role1' is open if the connected user has the role1</para></listitem>
-<listitem><para>The second gate '!role2' is open if the connected user does not have the role2</para></listitem>
-</itemizedlist>
+</pre>
+<ul>
+<li>The first gate 'role1' is open if the connected user has the role1
+</li>
+<li>The second gate '!role2' is open if the connected user does not have the role2
+</li>
+</ul>
 The mecanism is different from booleanWritabilityGates since only one role condition has to be matched to open the gate.
 In the example, if the user has role1 OR does not have role2, then the access is granted.</p></td>
 </tr>
@@ -110,14 +114,16 @@ In the example, if the user has role1 OR does not have role2, then the access is
 </td>
 <td><p>Assigns a collection of gates to determine view writability. A view will
 be considered writable (updatable) if and only if all enum gates are open.
-<programlisting>
+<pre>
 form 'form1', enumWritabilityGates: ['prop1':['VAL1','VAL2'], '!prop2':['VAL3']]
 
-</programlisting>
-<itemizedlist>
-<listitem><para>The first 'prop1' gate is open if 'prop1' property value is either 'VAL1' or 'VAL2' on the underlying model</para></listitem>
-<listitem><para>The second '!prop2' gate is open if 'prop2' propety value is not 'VAL3' on the underlying model</para></listitem>
-</itemizedlist>
+</pre>
+<ul>
+<li>The first 'prop1' gate is open if 'prop1' property value is either 'VAL1' or 'VAL2' on the underlying model
+</li>
+<li>The second '!prop2' gate is open if 'prop2' propety value is not 'VAL3' on the underlying model
+</li>
+</ul>
 This mecanism is mainly used for dynamic UI authorization based on
 model state, e.g. a validated invoice should not be editable anymore.
 View assigned gates will be cloned for each view instance created
@@ -133,14 +139,16 @@ writability is the combination of view and model writability.</p></td>
 </td>
 <td><p>Assigns a collection of gates to determine view writability. A view will
 be considered writable (updatable) if and only if all regex gates are open.
-<programlisting>
+<pre>
 form 'form1', regexWritabilityGates: ['prop1':'[A-Z]*', '!prop2':'[a-z]*']
 
-</programlisting>
-<itemizedlist>
-<listitem><para>The first 'prop1' gate is open if the prop1 property matches [A-Z]* on the underlying model</para></listitem>
-<listitem><para>The second '!prop2' gate is open if prop2 property does not match [a-z]* regex on the underlying model</para></listitem>
-</itemizedlist>
+</pre>
+<ul>
+<li>The first 'prop1' gate is open if the prop1 property matches [A-Z]* on the underlying model
+</li>
+<li>The second '!prop2' gate is open if prop2 property does not match [a-z]* regex on the underlying model
+</li>
+</ul>
 This mecanism is mainly used for dynamic UI authorization based on
 model state, e.g. a validated invoice should not be editable anymore.
 View assigned gates will be cloned for each view instance created
@@ -181,20 +189,22 @@ commons properties for desktop views.
 </td>
 <td><p>Assigns the model descriptor backing the view. The model descriptor
 serves several purposes :
-<itemizedlist>
-<listitem><para>configuration of the view content. For instance whenever a form
+<ul>
+<li>configuration of the view content. For instance whenever a form
 is assigned a component model descriptor, it will install 1 field per
 component rendering properties, unless otherwise specified in the
-view descriptor itself.</para></listitem>
-<listitem><para>configuration of the binding layer. There is no need for the developer
+view descriptor itself.
+</li>
+<li>configuration of the binding layer. There is no need for the developer
 to configure anything for the binding to occur between the
 view and the model. Based on their model descriptor, Jspresso will
 setup all the necessary plumbing to efficiently synchronize model
 properties with their view couterpart bi-directionally. This synchronization
 occurs implicitely using the observer pattern and one
 of the Jspresso key contract is to guarantee this synchronization
-seamlessly.</para></listitem>
-</itemizedlist>
+seamlessly.
+</li>
+</ul>
 Although it is the developer responsibility to make sure the correct
 model descriptor is assigned to the view, there are cases where the
 framework will infer it. For instance, a composite view will by default
@@ -208,9 +218,9 @@ the children as an implicite model inheritance enablement.
 Most of the time it is not necessary to explicitly use the property model. By convention, with SJS,
 the name of the componant is prefixed by the name of the model.
 In the following example SJS automatically determines that the form uses the entity "Company"
-<programlisting>
+<pre>
 form 'Company.pane', ...
-</programlisting></p></td>
+</pre></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>validationModel</strong></p><p><code>RefDomain</code></p>
@@ -223,11 +233,14 @@ the default result table view on collection modules where the table model is det
 <td align="left"><p><strong>icon</strong></p><p><code>String</code></p><p><code>iconImageURL</code></p>
 </td>
 <td><p>Sets the icon image URL of this descriptor. Supported URL protocols include :
-<itemizedlist>
-<listitem><para>all JVM supported protocols</para></listitem>
-<listitem><para>the jar:/ pseudo URL protocol</para></listitem>
-<listitem><para>the classpath:/ pseudo URL protocol</para></listitem>
-</itemizedlist></p></td>
+<ul>
+<li>all JVM supported protocols
+</li>
+<li>the jar:/ pseudo URL protocol
+</li>
+<li>the classpath:/ pseudo URL protocol
+</li>
+</ul></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>iconWidth</strong></p><p><code>Integer</code></p><p><code>iconPreferredWidth</code></p>
@@ -278,14 +291,16 @@ help, ...</p></td>
 <td><p>Assigns the view action map on top of the view. An action map is generally represented
 as a toolbar attached to the view. The toolbar follows the structure of
 the action map :
-<itemizedlist>
-<listitem><para>each action list is contained in its own toolbar section which is visually
+<ul>
+<li>each action list is contained in its own toolbar section which is visually
 separated from the other sections. This allows for visually
-grouping related actions as they are grouped in the action lists.</para></listitem>
-<listitem><para>each action contained in an action list is represented by a toolbar
+grouping related actions as they are grouped in the action lists.
+</li>
+<li>each action contained in an action list is represented by a toolbar
 button using the action image as icon and translated action description
-as tooltip.</para></listitem>
-</itemizedlist>
+as tooltip.
+</li>
+</ul>
 Depending on the UI channel, the view action map may also be
 replicated in a component contextual menu. In that case, the translated
 action name is used to label each menu item. The same grouping
@@ -328,12 +343,15 @@ Default value is null, meaning use UI default.</p></td>
 </td>
 <td><p>Allows to customize the font used by the UI component. The font
 must be string encoded using the pattern "[name];[style];[size]" :
-<itemizedlist>
-<listitem><para>[name] is the name of the font, e.g. arial.</para></listitem>
-<listitem><para>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
-combined with the "**" character, e.g. BOLD**ITALIC.</para></listitem>
-<listitem><para>[size] is the size of the font, e.g. 10.</para></listitem>
-</itemizedlist>
+<ul>
+<li>[name] is the name of the font, e.g. arial.
+</li>
+<li>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
+combined with the "**" character, e.g. BOLD**ITALIC.
+</li>
+<li>[size] is the size of the font, e.g. 10.
+</li>
+</ul>
 Any of the above pattern section can be left empty, thus falling back
 to the component default.
 
@@ -344,13 +362,16 @@ Default value is null, meaning use default component font.</p></td>
 </td>
 <td><p>Sets the border type of the view. This is either a value of the EBorderType
 enum or its equivalent string representation :
-<itemizedlist>
-<listitem><para>NONE for no border</para></listitem>
-<listitem><para>SIMPLE for a line border</para></listitem>
-<listitem><para>TITLED for a titled border. The view is then labeled with its translated
+<ul>
+<li>NONE for no border
+</li>
+<li>SIMPLE for a line border
+</li>
+<li>TITLED for a titled border. The view is then labeled with its translated
 name and and icon. Whenever the view name has not been
-explicitely set, the model name is used is used.</para></listitem>
-</itemizedlist>
+explicitely set, the model name is used is used.
+</li>
+</ul>
 Default value is EBorderType.NONE, i.e. no border.</p></td>
 </tr>
 <tr class="even">
@@ -404,20 +425,22 @@ commons properties for mobile views.
 </td>
 <td><p>Assigns the model descriptor backing the view. The model descriptor
 serves several purposes :
-<itemizedlist>
-<listitem><para>configuration of the view content. For instance whenever a form
+<ul>
+<li>configuration of the view content. For instance whenever a form
 is assigned a component model descriptor, it will install 1 field per
 component rendering properties, unless otherwise specified in the
-view descriptor itself.</para></listitem>
-<listitem><para>configuration of the binding layer. There is no need for the developer
+view descriptor itself.
+</li>
+<li>configuration of the binding layer. There is no need for the developer
 to configure anything for the binding to occur between the
 view and the model. Based on their model descriptor, Jspresso will
 setup all the necessary plumbing to efficiently synchronize model
 properties with their view couterpart bi-directionally. This synchronization
 occurs implicitely using the observer pattern and one
 of the Jspresso key contract is to guarantee this synchronization
-seamlessly.</para></listitem>
-</itemizedlist>
+seamlessly.
+</li>
+</ul>
 Although it is the developer responsibility to make sure the correct
 model descriptor is assigned to the view, there are cases where the
 framework will infer it. For instance, a composite view will by default
@@ -431,9 +454,9 @@ the children as an implicite model inheritance enablement.
 Most of the time it is not necessary to explicitly use the property model. By convention, with SJS,
 the name of the componant is prefixed by the name of the model.
 In the following example SJS automatically determines that the form uses the entity "Company"
-<programlisting>
+<pre>
 form 'Company.pane', ...
-</programlisting></p></td>
+</pre></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>validationModel</strong></p><p><code>RefDomain</code></p>
@@ -446,11 +469,14 @@ the default result table view on collection modules where the table model is det
 <td align="left"><p><strong>icon</strong></p><p><code>String</code></p><p><code>iconImageURL</code></p>
 </td>
 <td><p>Sets the icon image URL of this descriptor. Supported URL protocols include :
-<itemizedlist>
-<listitem><para>all JVM supported protocols</para></listitem>
-<listitem><para>the jar:/ pseudo URL protocol</para></listitem>
-<listitem><para>the classpath:/ pseudo URL protocol</para></listitem>
-</itemizedlist></p></td>
+<ul>
+<li>all JVM supported protocols
+</li>
+<li>the jar:/ pseudo URL protocol
+</li>
+<li>the classpath:/ pseudo URL protocol
+</li>
+</ul></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>styleName</strong></p><p><code>String</code></p>
@@ -489,14 +515,16 @@ help, ...</p></td>
 <td><p>Assigns the view action map on top of the view. An action map is generally represented
 as a toolbar attached to the view. The toolbar follows the structure of
 the action map :
-<itemizedlist>
-<listitem><para>each action list is contained in its own toolbar section which is visually
+<ul>
+<li>each action list is contained in its own toolbar section which is visually
 separated from the other sections. This allows for visually
-grouping related actions as they are grouped in the action lists.</para></listitem>
-<listitem><para>each action contained in an action list is represented by a toolbar
+grouping related actions as they are grouped in the action lists.
+</li>
+<li>each action contained in an action list is represented by a toolbar
 button using the action image as icon and translated action description
-as tooltip.</para></listitem>
-</itemizedlist>
+as tooltip.
+</li>
+</ul>
 Depending on the UI channel, the view action map may also be
 replicated in a component contextual menu. In that case, the translated
 action name is used to label each menu item. The same grouping
@@ -523,13 +551,16 @@ Default value is false, i.e. view is updatable.</p></td>
 </td>
 <td><p>Sets the border type of the view. This is either a value of the EBorderType
 enum or its equivalent string representation :
-<itemizedlist>
-<listitem><para>NONE for no border</para></listitem>
-<listitem><para>SIMPLE for a line border</para></listitem>
-<listitem><para>TITLED for a titled border. The view is then labeled with its translated
+<ul>
+<li>NONE for no border
+</li>
+<li>SIMPLE for a line border
+</li>
+<li>TITLED for a titled border. The view is then labeled with its translated
 name and and icon. Whenever the view name has not been
-explicitely set, the model name is used is used.</para></listitem>
-</itemizedlist>
+explicitely set, the model name is used is used.
+</li>
+</ul>
 Default value is EBorderType.NONE, i.e. no border.</p></td>
 </tr>
 <tr class="odd">
@@ -764,10 +795,12 @@ Defines a 2+ dimensional chart.
 </td>
 <td><p>Configures the orientation of the chart, i.e. wheteher the value axis is the horizontal or vertical one.
 This is either a value of the EOrientation enum or its equivalent string representation :
-<itemizedlist>
-<listitem><para>VERTICAL for a vertical value axis</para></listitem>
-<listitem><para>HORIZONAL for an horizontal value axis</para></listitem>
-</itemizedlist>
+<ul>
+<li>VERTICAL for a vertical value axis
+</li>
+<li>HORIZONAL for an horizontal value axis
+</li>
+</ul>
 Default value is EOrientation.VERTICAL, i.e. the value axis is the vertical one.</p></td>
 </tr>
 <tr class="even">
@@ -787,13 +820,17 @@ the chart adapts the axis maximum value depending on the data it has to display.
 </td>
 <td><p>Configures the way the series are displayed in the chart. This is either a value of the EBarChartType enum
 or its equivalent string representation :
-<itemizedlist>
-<listitem><para>CLUSTERED the series are drawn side by side</para></listitem>
-<listitem><para>OVERLAID the series are drawn on each other</para></listitem>
-<listitem><para>STACKED the series are drawn additively</para></listitem>
-<listitem><para>STACKED_PERCENT the series are drawn additively based on their percentage of the total
-value of all series</para></listitem>
-</itemizedlist>
+<ul>
+<li>CLUSTERED the series are drawn side by side
+</li>
+<li>OVERLAID the series are drawn on each other
+</li>
+<li>STACKED the series are drawn additively
+</li>
+<li>STACKED_PERCENT the series are drawn additively based on their percentage of the total
+value of all series
+</li>
+</ul>
 Default value is EBarChartType.CLUSTERED, i.e. the series are drawn side by side.</p></td>
 </tr>
 </tbody>
@@ -1038,12 +1075,15 @@ Default value is null, meaning use UI default.</p></td>
 <td><p>Defines the background font of the series label. The font must be string encoded using
 the pattern "[name];[style];[size]" :
 
-<itemizedlist>
-<listitem><para>[name] is the name of the font, e.g. arial.</para></listitem>
-<listitem><para>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
-combined with the "**" character, e.g. BOLD**ITALIC.</para></listitem>
-<listitem><para>[size] is the size of the font, e.g. 10.</para></listitem>
-</itemizedlist>
+<ul>
+<li>[name] is the name of the font, e.g. arial.
+</li>
+<li>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
+combined with the "**" character, e.g. BOLD**ITALIC.
+</li>
+<li>[size] is the size of the font, e.g. 10.
+</li>
+</ul>
 Any of the above pattern section can be left empty, thus falling back
 to the component default.
 
@@ -1237,12 +1277,15 @@ Default value is null, meaning use UI default.</p></td>
 <td><p>Defines the background font of the series label. The font must be string encoded using
 the pattern "[name];[style];[size]" :
 
-<itemizedlist>
-<listitem><para>[name] is the name of the font, e.g. arial.</para></listitem>
-<listitem><para>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
-combined with the "**" character, e.g. BOLD**ITALIC.</para></listitem>
-<listitem><para>[size] is the size of the font, e.g. 10.</para></listitem>
-</itemizedlist>
+<ul>
+<li>[name] is the name of the font, e.g. arial.
+</li>
+<li>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
+combined with the "**" character, e.g. BOLD**ITALIC.
+</li>
+<li>[size] is the size of the font, e.g. 10.
+</li>
+</ul>
 Any of the above pattern section can be left empty, thus falling back
 to the component default.
 
@@ -1304,11 +1347,14 @@ that allows to fine-tune each component UI field individually in a fields list.
 </td>
 <td><p>Instructs Jspresso where to place the fields label. This is either a value
 of the ELabelPosition enum or its equivalent string representation :
-<itemizedlist>
-<listitem><para>ABOVE for placing each field label above the property UI component</para></listitem>
-<listitem><para>ASIDE for placing each field label aside the property UI component</para></listitem>
-<listitem><para>NONE for completely disabling fields labelling on the view</para></listitem>
-</itemizedlist>
+<ul>
+<li>ABOVE for placing each field label above the property UI component
+</li>
+<li>ASIDE for placing each field label aside the property UI component
+</li>
+<li>NONE for completely disabling fields labelling on the view
+</li>
+</ul>
 Default value is ELabelPosition.ASIDE, i.e. fields label next to the property UI component.</p></td>
 </tr>
 <tr class="even">
@@ -1316,10 +1362,12 @@ Default value is ELabelPosition.ASIDE, i.e. fields label next to the property UI
 </td>
 <td><p>When labels are positionned ASIDE, you can decide where to place them. This is either a value
 of the EHorizontalPosition enum or its equivalent string representation :
-<itemizedlist>
-<listitem><para>LEFT for placing each field label at the left of the property UI component</para></listitem>
-<listitem><para>RIGHT for placing each field label at the right of the property UI component</para></listitem>
-</itemizedlist>
+<ul>
+<li>LEFT for placing each field label at the left of the property UI component
+</li>
+<li>RIGHT for placing each field label at the right of the property UI component
+</li>
+</ul>
 Default value is ELabelPosition.LEFT, i.e. fields label at the left of the property UI component.</p></td>
 </tr>
 <tr class="odd">
@@ -1328,12 +1376,15 @@ Default value is ELabelPosition.LEFT, i.e. fields label at the left of the prope
 <td><p>Defines the font used for the labels of form. The font must be string encoded using
 the pattern "[name];[style];[size]" :
 
-<itemizedlist>
-<listitem><para>[name] is the name of the font, e.g. arial.</para></listitem>
-<listitem><para>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
-combined with the "**" character, e.g. BOLD**ITALIC.</para></listitem>
-<listitem><para>[size] is the size of the font, e.g. 10.</para></listitem>
-</itemizedlist>
+<ul>
+<li>[name] is the name of the font, e.g. arial.
+</li>
+<li>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
+combined with the "**" character, e.g. BOLD**ITALIC.
+</li>
+<li>[size] is the size of the font, e.g. 10.
+</li>
+</ul>
 Any of the above pattern section can be left empty, thus falling back
 to the component default.
 
@@ -1348,12 +1399,15 @@ Default value is null, meaning use default series font.</p></td>
 <td><p>Defines the font used for the values of the form. The font must be string encoded using
 the pattern "[name];[style];[size]" :
 
-<itemizedlist>
-<listitem><para>[name] is the name of the font, e.g. arial.</para></listitem>
-<listitem><para>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
-combined with the "**" character, e.g. BOLD**ITALIC.</para></listitem>
-<listitem><para>[size] is the size of the font, e.g. 10.</para></listitem>
-</itemizedlist>
+<ul>
+<li>[name] is the name of the font, e.g. arial.
+</li>
+<li>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
+combined with the "**" character, e.g. BOLD**ITALIC.
+</li>
+<li>[size] is the size of the font, e.g. 10.
+</li>
+</ul>
 Any of the above pattern section can be left empty, thus falling back
 to the component default.
 
@@ -1400,10 +1454,12 @@ property. It must be configued with a Map containing only
 the properties that need to span more than 1 column. The other
 properties will follow the default span of 1.
 The Map is :
-<itemizedlist>
-<listitem><para>keyed by the name of the property</para></listitem>
-<listitem><para>valued by the number of columns of the property span</para></listitem>
-</itemizedlist>
+<ul>
+<li>keyed by the name of the property
+</li>
+<li>valued by the number of columns of the property span
+</li>
+</ul>
 Default value is null, meaning all property fields have a span of 1.</p></td>
 </tr>
 <tr class="even">
@@ -1460,11 +1516,14 @@ that allows to fine-tune each component UI field individually in a fields list.
 </td>
 <td><p>Instructs Jspresso where to place the fields label. This is either a value
 of the ELabelPosition enum or its equivalent string representation :
-<itemizedlist>
-<listitem><para>ABOVE for placing each field label above the property UI component</para></listitem>
-<listitem><para>ASIDE for placing each field label aside the property UI component</para></listitem>
-<listitem><para>NONE for completely disabling fields labelling on the view</para></listitem>
-</itemizedlist>
+<ul>
+<li>ABOVE for placing each field label above the property UI component
+</li>
+<li>ASIDE for placing each field label aside the property UI component
+</li>
+<li>NONE for completely disabling fields labelling on the view
+</li>
+</ul>
 Default value is ELabelPosition.ASIDE, i.e. fields label next to the property UI component.</p></td>
 </tr>
 <tr class="even">
@@ -1685,15 +1744,20 @@ Default value is true, i.e. table allows for its rows to be sorted</p></td>
 <td align="left"><p><strong>selectionMode</strong></p><p><code>String</code></p>
 </td>
 <td><p>Sets the selection mode of the collection view.
-<itemizedlist>
-<listitem><para>MULTIPLE_INTERVAL_SELECTION for allowing any type of selection</para></listitem>
-<listitem><para>MULTIPLE_INTERVAL_CUMULATIVE_SELECTION for allowing any type of selection with toggle behaviour</para></listitem>
-<listitem><para>SINGLE_INTERVAL_SELECTION for allowing only contiguous interval
-selection</para></listitem>
-<listitem><para>SINGLE_INTERVAL_CUMULATIVE_SELECTION for allowing only contiguous interval
-selection with toggle behaviour</para></listitem>
-<listitem><para>SINGLE_SELECTION for allowing only a single item selection</para></listitem>
-</itemizedlist>
+<ul>
+<li>MULTIPLE_INTERVAL_SELECTION for allowing any type of selection
+</li>
+<li>MULTIPLE_INTERVAL_CUMULATIVE_SELECTION for allowing any type of selection with toggle behaviour
+</li>
+<li>SINGLE_INTERVAL_SELECTION for allowing only contiguous interval
+selection
+</li>
+<li>SINGLE_INTERVAL_CUMULATIVE_SELECTION for allowing only contiguous interval
+selection with toggle behaviour
+</li>
+<li>SINGLE_SELECTION for allowing only a single item selection
+</li>
+</ul>
 Default value MULTIPLE_INTERVAL_SELECTION,
 i.e. any type of selection allowed.</p></td>
 </tr>
@@ -1807,15 +1871,20 @@ of the element component descriptor is used.</p></td>
 <td align="left"><p><strong>selectionMode</strong></p><p><code>String</code></p>
 </td>
 <td><p>Sets the selection mode of the collection view.
-<itemizedlist>
-<listitem><para>MULTIPLE_INTERVAL_SELECTION for allowing any type of selection</para></listitem>
-<listitem><para>MULTIPLE_INTERVAL_CUMULATIVE_SELECTION for allowing any type of selection with toggle behaviour</para></listitem>
-<listitem><para>SINGLE_INTERVAL_SELECTION for allowing only contiguous interval
-selection</para></listitem>
-<listitem><para>SINGLE_INTERVAL_CUMULATIVE_SELECTION for allowing only contiguous interval
-selection with toggle behaviour</para></listitem>
-<listitem><para>SINGLE_SELECTION for allowing only a single item selection</para></listitem>
-</itemizedlist>
+<ul>
+<li>MULTIPLE_INTERVAL_SELECTION for allowing any type of selection
+</li>
+<li>MULTIPLE_INTERVAL_CUMULATIVE_SELECTION for allowing any type of selection with toggle behaviour
+</li>
+<li>SINGLE_INTERVAL_SELECTION for allowing only contiguous interval
+selection
+</li>
+<li>SINGLE_INTERVAL_CUMULATIVE_SELECTION for allowing only contiguous interval
+selection with toggle behaviour
+</li>
+<li>SINGLE_SELECTION for allowing only a single item selection
+</li>
+</ul>
 Default value MULTIPLE_INTERVAL_SELECTION,
 i.e. any type of selection allowed.</p></td>
 </tr>
@@ -1927,15 +1996,20 @@ of the element component descriptor is used.</p></td>
 <td align="left"><p><strong>selectionMode</strong></p><p><code>String</code></p>
 </td>
 <td><p>Sets the selection mode of the collection view.
-<itemizedlist>
-<listitem><para>MULTIPLE_INTERVAL_SELECTION for allowing any type of selection</para></listitem>
-<listitem><para>MULTIPLE_INTERVAL_CUMULATIVE_SELECTION for allowing any type of selection with toggle behaviour</para></listitem>
-<listitem><para>SINGLE_INTERVAL_SELECTION for allowing only contiguous interval
-selection</para></listitem>
-<listitem><para>SINGLE_INTERVAL_CUMULATIVE_SELECTION for allowing only contiguous interval
-selection with toggle behaviour</para></listitem>
-<listitem><para>SINGLE_SELECTION for allowing only a single item selection</para></listitem>
-</itemizedlist>
+<ul>
+<li>MULTIPLE_INTERVAL_SELECTION for allowing any type of selection
+</li>
+<li>MULTIPLE_INTERVAL_CUMULATIVE_SELECTION for allowing any type of selection with toggle behaviour
+</li>
+<li>SINGLE_INTERVAL_SELECTION for allowing only contiguous interval
+selection
+</li>
+<li>SINGLE_INTERVAL_CUMULATIVE_SELECTION for allowing only contiguous interval
+selection with toggle behaviour
+</li>
+<li>SINGLE_SELECTION for allowing only a single item selection
+</li>
+</ul>
 Default value MULTIPLE_INTERVAL_SELECTION,
 i.e. any type of selection allowed.</p></td>
 </tr>
@@ -2067,7 +2141,8 @@ key used for translation.</p></td>
 <td><p>When the property has to be displayed in a grid-like layout (e.g. in a
 component view), this property defines the umber of grid columns the
 corresponding UI component will span.
-</para><para>
+
+
 Default value is null, meaning use default span of 1</p></td>
 </tr>
 <tr class="even">
@@ -2087,12 +2162,15 @@ property defines the font of the corresponding label. It might differ
 from the field component one. The font must be string encoded using
 the pattern "[name];[style];[size]" :
 
-<itemizedlist>
-<listitem><para>[name] is the name of the font, e.g. arial.</para></listitem>
-<listitem><para>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
-combined with the "**" character, e.g. BOLD**ITALIC.</para></listitem>
-<listitem><para>[size] is the size of the font, e.g. 10.</para></listitem>
-</itemizedlist>
+<ul>
+<li>[name] is the name of the font, e.g. arial.
+</li>
+<li>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
+combined with the "**" character, e.g. BOLD**ITALIC.
+</li>
+<li>[size] is the size of the font, e.g. 10.
+</li>
+</ul>
 Any of the above pattern section can be left empty, thus falling back
 to the component default.
 
@@ -2112,32 +2190,38 @@ Default value is null, meaning use UI default.</p></td>
 </td>
 <td><p>When labels are positionned ASIDE in a form, you can decide where to place them relatively to their component.
 This is either a value of the EHorizontalPosition enum or its equivalent string representation :
-<itemizedlist>
-<listitem><para>LEFT for placing field label at the left of the property UI component</para></listitem>
-<listitem><para>RIGHT for placing field label at the right of the property UI component</para></listitem>
-</itemizedlist>
+<ul>
+<li>LEFT for placing field label at the left of the property UI component
+</li>
+<li>RIGHT for placing field label at the right of the property UI component
+</li>
+</ul>
 Default value is ELabelPosition.LEFT, i.e. field label at the left of the property UI component.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>action</strong></p><p><code>RefAction</code></p>
 </td>
 <td><p>Configures the action to be triggered when acting on this property. There are 2 cases :
-<itemizedlist>
-<listitem><para>If the property is read-only, then assigning an action turns the property into a clickable hyperlink.</para></listitem>
-<listitem><para>If the property is read-write, the registered action will be trigerred when the user changes the value of the field.
+<ul>
+<li>If the property is read-only, then assigning an action turns the property into a clickable hyperlink.
+</li>
+<li>If the property is read-write, the registered action will be trigerred when the user changes the value of the field.
 Note thet in that case, the action is executed after the model has been updated.
-However the old property value can be retrieved from the context action param.</para></listitem>
-</itemizedlist></p></td>
+However the old property value can be retrieved from the context action param.
+</li>
+</ul></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>renderedChildProperties</strong></p><p><code>ListOfField</code></p>
 </td>
 <td><p>Whenever the property decriptor backing the view is not scalar, this property allows to override which of the
 referenced component fields should be displayed :
-<itemizedlist>
-<listitem><para>as columns when the rendered property is a collection property</para></listitem>
-<listitem><para>as fields when the rendered property is a reference property</para></listitem>
-</itemizedlist>
+<ul>
+<li>as columns when the rendered property is a collection property
+</li>
+<li>as fields when the rendered property is a reference property
+</li>
+</ul>
 The property must be configured with a List containing the property names to render for the child element(s).
 A null value (default), means that the non-scalar property will be rendered using default rendered
 properties as specified in its referenced model descriptor.
@@ -2152,11 +2236,14 @@ using composite views; so the latter is by far recommended.</p></td>
 </td>
 <td><p>This property allows to control the property alignment in views that support it. This is either a value
 of the EHorizontalAlignment enum or its equivalent string representation :
-<itemizedlist>
-<listitem><para>LEFT for left alignment</para></listitem>
-<listitem><para>CENTER for center alignment</para></listitem>
-<listitem><para>RIGHT for right alignment</para></listitem>
-</itemizedlist>
+<ul>
+<li>LEFT for left alignment
+</li>
+<li>CENTER for center alignment
+</li>
+<li>RIGHT for right alignment
+</li>
+</ul>
 Default value is null, meaning use property type default.</p></td>
 </tr>
 <tr class="odd">
@@ -2451,11 +2538,14 @@ the preferredWidth / preferredHeight properties.</p></td>
 </td>
 <td><p>Indicates how the actions should be rendered. This is either a value
 of the ERenderingOptions enum or its equivalent string representation :
-<itemizedlist>
-<listitem><para>LABEL_ICON for label and icon</para></listitem>
-<listitem><para>LABEL for label only</para></listitem>
-<listitem><para>ICON for icon only</para></listitem>
-</itemizedlist>
+<ul>
+<li>LABEL_ICON for label and icon
+</li>
+<li>LABEL for label only
+</li>
+<li>ICON for icon only
+</li>
+</ul>
 Default value is null, i.e. determined from outside, e.g. the view factory.</p></td>
 </tr>
 </tbody>
@@ -2927,11 +3017,14 @@ than the outer composite unless explicitely specified differently.</p></td>
 </td>
 <td><p>Indicates how the actions should be rendered. This is either a value
 of the ERenderingOptions enum or its equivalent string representation :
-<itemizedlist>
-<listitem><para>LABEL_ICON for label and icon</para></listitem>
-<listitem><para>LABEL for label only</para></listitem>
-<listitem><para>ICON for icon only</para></listitem>
-</itemizedlist>
+<ul>
+<li>LABEL_ICON for label and icon
+</li>
+<li>LABEL for label only
+</li>
+<li>ICON for icon only
+</li>
+</ul>
 Default value is null, i.e. determined from outside, e.g. the view factory.</p></td>
 </tr>
 <tr class="even">
@@ -2985,11 +3078,14 @@ the children views order of this list.</p></td>
 </td>
 <td><p>Indicates how the actions should be rendered. This is either a value
 of the ERenderingOptions enum or its equivalent string representation :
-<itemizedlist>
-<listitem><para>LABEL_ICON for label and icon</para></listitem>
-<listitem><para>LABEL for label only</para></listitem>
-<listitem><para>ICON for icon only</para></listitem>
-</itemizedlist>
+<ul>
+<li>LABEL_ICON for label and icon
+</li>
+<li>LABEL for label only
+</li>
+<li>ICON for icon only
+</li>
+</ul>
 Default value is null, i.e. determined from outside, e.g. the view factory.</p></td>
 </tr>
 <tr class="odd">
@@ -3601,10 +3697,12 @@ than the outer composite unless explicitely specified differently.</p></td>
 <td align="left"><p><strong>drivingDimension</strong></p><p><code>String</code></p>
 </td>
 <td><p>Configures the driving dimension of the grid :
-<itemizedlist>
-<listitem><para>ROW for distributing cells along rows then columns</para></listitem>
-<listitem><para>COLUMN for distributing cells along columns then rows</para></listitem>
-</itemizedlist>
+<ul>
+<li>ROW for distributing cells along rows then columns
+</li>
+<li>COLUMN for distributing cells along columns then rows
+</li>
+</ul>
 Default value is ROW, i.e. distribute cells along rows then
 columns.</p></td>
 </tr>
@@ -3887,11 +3985,14 @@ parent actions with the same name.</p></td>
 </td>
 <td><p>Indicates how the actions should be rendered. This is either a value
 of the ERenderingOptions enum or its equivalent string representation :
-<itemizedlist>
-<listitem><para>LABEL_ICON for label and icon</para></listitem>
-<listitem><para>LABEL for label only</para></listitem>
-<listitem><para>ICON for icon only</para></listitem>
-</itemizedlist>
+<ul>
+<li>LABEL_ICON for label and icon
+</li>
+<li>LABEL for label only
+</li>
+<li>ICON for icon only
+</li>
+</ul>
 Default value is null, i.e. determined from outside, e.g. the view factory.</p></td>
 </tr>
 <tr class="even">
@@ -3966,11 +4067,14 @@ parent actions with the same name.</p></td>
 </td>
 <td><p>Indicates how the actions should be rendered. This is either a value
 of the ERenderingOptions enum or its equivalent string representation :
-<itemizedlist>
-<listitem><para>LABEL_ICON for label and icon</para></listitem>
-<listitem><para>LABEL for label only</para></listitem>
-<listitem><para>ICON for icon only</para></listitem>
-</itemizedlist>
+<ul>
+<li>LABEL_ICON for label and icon
+</li>
+<li>LABEL for label only
+</li>
+<li>ICON for icon only
+</li>
+</ul>
 Default value is null, i.e. determined from outside, e.g. the view factory.</p></td>
 </tr>
 <tr class="even">
@@ -4034,11 +4138,14 @@ description property set here is actually an i18n key used for translation.</p><
 <td align="left"><p><strong>icon</strong></p><p><code>String</code></p><p><code>iconImageURL</code></p>
 </td>
 <td><p>Sets the icon image URL of this descriptor. Supported URL protocols include :
-<itemizedlist>
-<listitem><para>all JVM supported protocols</para></listitem>
-<listitem><para>the jar:/ pseudo URL protocol</para></listitem>
-<listitem><para>the classpath:/ pseudo URL protocol</para></listitem>
-</itemizedlist></p></td>
+<ul>
+<li>all JVM supported protocols
+</li>
+<li>the jar:/ pseudo URL protocol
+</li>
+<li>the classpath:/ pseudo URL protocol
+</li>
+</ul></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>iconWidth</strong></p><p><code>Integer</code></p><p><code>iconPreferredWidth</code></p>
@@ -4062,11 +4169,14 @@ factory is ignored.</p></td>
 </td>
 <td><p>Indicates how the actions should be rendered. This is either a value
 of the ERenderingOptions enum or its equivalent string representation :
-<itemizedlist>
-<listitem><para>LABEL_ICON for label and icon</para></listitem>
-<listitem><para>LABEL for label only</para></listitem>
-<listitem><para>ICON for icon only</para></listitem>
-</itemizedlist>
+<ul>
+<li>LABEL_ICON for label and icon
+</li>
+<li>LABEL for label only
+</li>
+<li>ICON for icon only
+</li>
+</ul>
 Default value is null, i.e. determined from outside, e.g. the view factory.</p></td>
 </tr>
 <tr class="even">
@@ -4075,7 +4185,8 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 <td><p>Configures the actionlist so that it can be collapsed by view factories.
 Collapsable action lists can typically be rendered as combo buttons in UI
 channels that support it.
-</para><para>
+
+
 Default value is false.</p></td>
 </tr>
 <tr class="odd">
@@ -4182,13 +4293,13 @@ layer (the frontend).</p></td>
 <td align="left"><p><strong>custom</strong></p><p><code>Map</code></p>
 </td>
 <td><p>Map of custom properties that have to be set on the action. When a property is a reference, its key has to be suffixed by "_ref". This enables SJS to generate the appropriate XML and to control the existence of the reference.
-<programlisting>
+<pre>
 custom:[
 
     parentModuleName:'Projects', 
 
     componentDescriptor_ref:'Project'])
-</programlisting></p></td>
+</pre></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>name</strong></p><p><code>String</code></p>
@@ -4215,11 +4326,14 @@ This is the syntax supported by the javax.swing.KeyStroke</p></td>
 <td align="left"><p><strong>icon</strong></p><p><code>String</code></p><p><code>iconImageURL</code></p>
 </td>
 <td><p>Sets the icon image URL of this descriptor. Supported URL protocols include :
-<itemizedlist>
-<listitem><para>all JVM supported protocols</para></listitem>
-<listitem><para>the jar:/ pseudo URL protocol</para></listitem>
-<listitem><para>the classpath:/ pseudo URL protocol</para></listitem>
-</itemizedlist></p></td>
+<ul>
+<li>all JVM supported protocols
+</li>
+<li>the jar:/ pseudo URL protocol
+</li>
+<li>the classpath:/ pseudo URL protocol
+</li>
+</ul></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>iconWidth</strong></p><p><code>Integer</code></p><p><code>iconPreferredWidth</code></p>
@@ -4272,14 +4386,16 @@ Moreover, boolean actionnability gates that are configured on collection based a
 view selected components instead of the view model itself. In case of multi-selection enabled UI views, the actionability gates
 will actually open if and only if their opening condition is met for all the selected items.
 
-<programlisting>
+<pre>
 action('actionA', booleanActionabilityGates: ['!prop1', 'prop2_cb'] ...
-</programlisting>
+</pre>
 
-<itemizedlist>
-<listitem><para>The first '!prop1' gate is open if prop1 is false, the gate is not applied to each collection item individually</para></listitem>
-<listitem><para>The second 'prop2' gate is open if prop2 is true, the gate is applied to each collection item individually</para></listitem>
-</itemizedlist>
+<ul>
+<li>The first '!prop1' gate is open if prop1 is false, the gate is not applied to each collection item individually
+</li>
+<li>The second 'prop2' gate is open if prop2 is true, the gate is applied to each collection item individually
+</li>
+</ul>
 
 This mecanism is mainly used for dynamic UI authorization
 based on model state, e.g. a validated invoice should not be validated
@@ -4296,13 +4412,15 @@ By default, frontend actions are assigned a generic gate that closes
 </td>
 <td><p>Assigns a collection of gates to determine action actionability. An action will be
 considered actionable (enabled) if and only if all rolesGates are open.
-<programlisting>
+<pre>
 action('actionA', rolesActionabilityGates: ['role1', '!role2'] ...
-</programlisting>
-<itemizedlist>
-<listitem><para>The first gate 'role1' is open if the connected user has the role1</para></listitem>
-<listitem><para>The second gate '!role2' is open if the connected user does not have the role2</para></listitem>
-</itemizedlist>
+</pre>
+<ul>
+<li>The first gate 'role1' is open if the connected user has the role1
+</li>
+<li>The second gate '!role2' is open if the connected user does not have the role2
+</li>
+</ul>
 Same mecanism has booleanActionabilityGates</p></td>
 </tr>
 <tr class="odd">
@@ -4316,14 +4434,16 @@ Moreover, enum actionnability gates that are configured on collection based acti
 view selected components instead of the view model itself. In case of multi-selection enabled UI views, the actionability gates
 will actually open if and only if their opening condition is met for all the selected items.
 
-<programlisting>
+<pre>
 action('actionA', enumActionabilityGates: ['!prop1':['VAL1','VAL2'], 'prop2_cb':['VAL3']] ...
-</programlisting>
+</pre>
 
-<itemizedlist>
-<listitem><para>The first '!prop1' gate is open if prop1 is not one of 'VAL1' or 'VAL'2', the gate is not applied to each collection item individually</para></listitem>
-<listitem><para>The second 'prop2' gate is open if prop2 is 'VAL3', the gate is applied to each collection item individually</para></listitem>
-</itemizedlist>
+<ul>
+<li>The first '!prop1' gate is open if prop1 is not one of 'VAL1' or 'VAL'2', the gate is not applied to each collection item individually
+</li>
+<li>The second 'prop2' gate is open if prop2 is 'VAL3', the gate is applied to each collection item individually
+</li>
+</ul>
 
 This mecanism is mainly used for dynamic UI authorization
 based on model state, e.g. a validated invoice should not be validated
@@ -4346,14 +4466,16 @@ Moreover, boolean actionnability gates that are configured on collection based a
 view selected components instead of the view model itself. In case of multi-selection enabled UI views, the actionability gates
 will actually open if and only if their opening condition is met for all the selected items.
 
-<programlisting>
+<pre>
 action('actionA', regexActionabilityGates: ['!prop1':'[A-Z]*', 'prop2_cb':'[a-z]*'] ...
-</programlisting>
+</pre>
 
-<itemizedlist>
-<listitem><para>The first '!prop1' gate is open if prop1 does not match [A-Z]*, the gate is not applied to each collection item individually</para></listitem>
-<listitem><para>The second 'prop2' gate is open if prop2 matches [a-z]*, the gate is applied to each collection item individually</para></listitem>
-</itemizedlist>
+<ul>
+<li>The first '!prop1' gate is open if prop1 does not match [A-Z]*, the gate is not applied to each collection item individually
+</li>
+<li>The second 'prop2' gate is open if prop2 matches [a-z]*, the gate is applied to each collection item individually
+</li>
+</ul>
 
 This mecanism is mainly used for dynamic UI authorization
 based on model state, e.g. a validated invoice should not be validated
@@ -4925,11 +5047,14 @@ leveraged as a textual section that explains the workspace goal.</p></td>
 <td align="left"><p><strong>icon</strong></p><p><code>String</code></p><p><code>iconImageURL</code></p>
 </td>
 <td><p>Sets the icon image URL of this descriptor. Supported URL protocols include :
-<itemizedlist>
-<listitem><para>all JVM supported protocols</para></listitem>
-<listitem><para>the jar:/ pseudo URL protocol</para></listitem>
-<listitem><para>the classpath:/ pseudo URL protocol</para></listitem>
-</itemizedlist></p></td>
+<ul>
+<li>all JVM supported protocols
+</li>
+<li>the jar:/ pseudo URL protocol
+</li>
+<li>the classpath:/ pseudo URL protocol
+</li>
+</ul></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>iconWidth</strong></p><p><code>Integer</code></p><p><code>iconPreferredWidth</code></p>
@@ -5026,11 +5151,14 @@ tooltip on the UI side but its use may be extended for online help.</p></td>
 <td align="left"><p><strong>icon</strong></p><p><code>String</code></p><p><code>iconImageURL</code></p>
 </td>
 <td><p>Sets the icon image URL of this descriptor. Supported URL protocols include :
-<itemizedlist>
-<listitem><para>all JVM supported protocols</para></listitem>
-<listitem><para>the jar:/ pseudo URL protocol</para></listitem>
-<listitem><para>the classpath:/ pseudo URL protocol</para></listitem>
-</itemizedlist></p></td>
+<ul>
+<li>all JVM supported protocols
+</li>
+<li>the jar:/ pseudo URL protocol
+</li>
+<li>the classpath:/ pseudo URL protocol
+</li>
+</ul></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>iconWidth</strong></p><p><code>Integer</code></p><p><code>iconPreferredWidth</code></p>
@@ -5093,7 +5221,8 @@ must be explicitely set if Spring XML is used.</p></td>
 privileges, the module is simply not installed in the workspace
 . Setting the collection of granted roles to null (default value) disables
 role based authorization on this module.
-</para><para>
+
+
 Some specific modules that are component/entity model based i.e.
 Bean(Collection)Module also inherit their authrorizations from
 their model.</p></td>
@@ -5139,7 +5268,8 @@ one unless explicitely set. Same goes for icon image URL,
 default ordering properties or even granted roles. The latter means
 that bean collection modules based on forbidden entities will automatically
 be excluded from the workspace of the logged-in user.
-</para><para>
+
+
 if not explicitely configured, the eement component descriptor can be
 inferred from the collection view descriptor configured as projected
 view descriptor.</p></td>
@@ -5149,7 +5279,8 @@ view descriptor.</p></td>
 </td>
 <td><p>This property is not used by the module itself, but by built-in actions
 that maybe registered on this module. One of tese actions is AddBeanAsSubModuleAction.
-</para><para>
+
+
 This property indicates the view to use whenever the user requests a
 "form-like" view on a collection element. Naturally the configured element
 view descriptor must be backed by a model matching the type
@@ -5228,12 +5359,14 @@ bordered with the bage navigation actions.</p></td>
 <td><p>Configures a custom map of ordering properties for the result set. If
 not set, which is the default, the elements ordering properties is used.
 This property consist of a Map whose entries are composed with :
-<itemizedlist>
-<listitem><para>the property name as key</para></listitem>
-<listitem><para>the sort order for this property as value. This is either a value of the
+<ul>
+<li>the property name as key
+</li>
+<li>the sort order for this property as value. This is either a value of the
 ESort enum (ASCENDING or DESCENDING) or its equivalent
-string representation.</para></listitem>
-</itemizedlist>
+string representation.
+</li>
+</ul>
 Ordering properties are considered following their order in the map
 iterator.</p></td>
 </tr>
@@ -5284,7 +5417,8 @@ one unless explicitely set. Same goes for icon image URL,
 default ordering properties or even granted roles. The latter means
 that bean collection modules based on forbidden entities will automatically
 be excluded from the workspace of the logged-in user.
-</para><para>
+
+
 if not explicitely configured, the element component descriptor can be
 inferred from the collection view descriptor configured as projected
 view descriptor.</p></td>
@@ -5360,11 +5494,14 @@ application structure like the workspace list, the name, the application-wide ac
 <td align="left"><p><strong>icon</strong></p><p><code>String</code></p><p><code>iconImageURL</code></p>
 </td>
 <td><p>Sets the icon image URL that is used as the application icon.
-<itemizedlist>
-<listitem><para>all JVM supported protocols</para></listitem>
-<listitem><para>the jar:/ pseudo URL protocol</para></listitem>
-<listitem><para>the classpath:/ pseudo URL protocol</para></listitem>
-</itemizedlist></p></td>
+<ul>
+<li>all JVM supported protocols
+</li>
+<li>the jar:/ pseudo URL protocol
+</li>
+<li>the classpath:/ pseudo URL protocol
+</li>
+</ul></p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>iconWidth</strong></p><p><code>Integer</code></p><p><code>iconPreferredWidth</code></p>
@@ -5405,7 +5542,8 @@ from the UI and thus, do not depend on the active workspace.</p></td>
 <td><p>Reference the help action map. The help action map should contain
 actions that are related to helping the user (online help, reference
 manual, tutorial, version dialog...).
-</para><para>
+
+
 The help action map is visually distinguished from the regular aplication
 action map. For instance elp actions can be represented in a
 menu that is right-aligned in the menubar.</p></td>
@@ -5423,7 +5561,8 @@ the JVM, either through setting the java.security.auth.login
 </td>
 <td><p>Configures the locale used to initiate the login process. Whenever the
 forced starting locale is null, the client host default locale is used.
-</para><para>
+
+
 As soon as the user logs-in, his locale is then used to translate the UI
 . Whenever the login process is disabled, then the forced starting locale
 is kept as the UI I18N locale.</p></td>
@@ -5781,13 +5920,13 @@ description property set here is actually an i18n key used for translation.</p><
 <td><p>Map of custom properties that have to be set on the action. When a property is a reference,
 its key has to be suffixed by "_ref". This enables SJS to generate the appropriate XML and
 to control the existence of the reference.
-<programlisting>
+<pre>
 custom:[
 
     parentModuleName:'Projects', 
 
     componentDescriptor_ref:'Project'])
-</programlisting></p></td>
+</pre></p></td>
 </tr>
 </tbody>
 </table>
