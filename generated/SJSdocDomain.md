@@ -5,7 +5,9 @@
 
 + **mandatory** : `projectName`
 + **allowed next element** : `Entity, Interface, Component, external, paramSet`
+
 This root descriptor is used in the file application.groovy generated during the initialization of the project by Jspresso. There is generally no need to change it.
+
 
 <table>
 <caption>Domain properties</caption>
@@ -46,6 +48,7 @@ This root descriptor is used in the file application.groovy generated during the
 + **allowed previous element** : `Domain`
 + **allowed next element** : `string, text, imageUrl, password, integer, date, bool, decimal, time, duration, percent, enumeration, typeEnumeration, range, refId, color, binary, image, java, any, sourcecode, html, reference, list, set, paramSet`
 + **Jspresso** : `BasicEntityDescriptor`
+
 This descriptor key to the description of the application model. It is used to describe a model entity.
 
 The description of an entity can be very simple :
@@ -74,6 +77,7 @@ or be richer to meet more complex needs :
 }</pre>
 <br>Note : Concurrent access conflicts are automatically manage by Jspresso through optimistic locking
 </br>
+
 
 <table>
 <caption>Entity properties</caption>
@@ -443,6 +447,7 @@ Entity('Department', extend: 'OrganizationalUnit'){...} </pre></p></td>
 + **allowed previous element** : `Domain`
 + **allowed next element** : `string, text, imageUrl, password, integer, date, bool, decimal, time, duration, percent, enumeration, typeEnumeration, range, refId, color, binary, image, java, any, sourcecode, html, reference, list, set, paramSet`
 + **Jspresso** : `BasicInterfaceDescriptor`
+
 This descriptor is a mean of factorizing state/behaviour among components, entities or even sub-interfaces.
 This is a much less coupling mecanism than actual entity inheritance and can be used across entities
 that don't belong the the same inheritance hierarchy, or even accross types (entities, components, interfaces).
@@ -469,6 +474,7 @@ Entity('Employee', <b>extend</b>: ['Nameable', 'Traceable']){
   ...
 
 }</pre>
+
 
 <table>
 <caption>Interface properties</caption>
@@ -499,6 +505,7 @@ Entity('Employee', <b>extend</b>: ['Nameable', 'Traceable']){
 + **allowed previous element** : `Domain`
 + **allowed next element** : `string, text, imageUrl, password, integer, date, bool, decimal, time, duration, percent, enumeration, typeEnumeration, range, refId, color, binary, image, java, any, sourcecode, html, reference, list, set, paramSet`
 + **Jspresso** : `BasicComponentDescriptor`
+
 structures that are to be reused but don't have enough focus for being considered as entities. For instance
 MoneyAmount component could be composed of a decimal and a reference to a Money entity.
 This structure could then be reused in other elements of the domain like an Invoice or an Article.
@@ -528,6 +535,7 @@ Entity('Employee') {
 
 }</pre>
 
+
 <table>
 <caption>Component properties</caption>
 <colgroup>
@@ -551,8 +559,10 @@ Entity('Employee') {
 ---
 #### <a name=""></a>Common
 #### <a name=""></a>common
+
 This descriptor is an internal s SJS descriptor which is never used by the application.It s used by SJS to factorize
 commons properties.
+
 
 <table>
 <caption>common properties</caption>
@@ -854,11 +864,13 @@ number, date, time, and duration properties behave this way.</p></td>
 + **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicStringPropertyDescriptor`
+
 Field Declaration of type String. To be used with _n where the value n determine the maximum string length 
 <pre><b>string_32</b> 'name'
 
 <b>string_10</b> 'zipCode'
 </pre>
+
 
 <table>
 <caption>string properties</caption>
@@ -925,7 +937,9 @@ properties support searching, ordering,... exactly like non-translatable propert
 + **Inherited properties ** : `maxLength, regex, regexSample, upperCase, translatable, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicTextPropertyDescriptor`
+
 Field declaration of type text. To be used with _n where the value n determine the maximum text length
+
 
 <table>
 <caption>text properties</caption>
@@ -992,8 +1006,10 @@ text view in order to allow for multi-line text in filters. Default value is fal
 + **Inherited properties ** : `maxLength, regex, regexSample, upperCase, translatable, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicImageUrlPropertyDescriptor`
+
 Describes a property used for image URL values. This instructs Jspresso to display the property value as
 an image instead of raw text content.
+
 
 <table>
 <caption>imageUrl properties</caption>
@@ -1033,10 +1049,12 @@ ratio.</p></td>
 + **Inherited properties ** : `maxLength, regex, regexSample, upperCase, translatable, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicPasswordPropertyDescriptor`
+
 Describes a property used for password values. For obvious security reasons, this type of properties will
 hardly be part of a persistent entity. However it is useful for defining transient view models, e.g. for implementing
 a change password action. Jspresso will automatically adapt view fields accordingly, using password
 fields, to interact with password properties.
+
 
 <table>
 <caption>password properties</caption>
@@ -1066,8 +1084,10 @@ fields, to interact with password properties.
 + **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicIntegerPropertyDescriptor`
+
 Describes an integer property. The property is either represented as an
 Integer or a Long depending on the property value.
+
 
 <table>
 <caption>integer properties</caption>
@@ -1121,8 +1141,10 @@ Default value is false which means java.lang.Integer will be used.</p></td>
 + **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicDatePropertyDescriptor`
+
 Describes a date based property. Wether the date property should include time information or not, can be
 configured using <b>date</b> or <b>date_time</b> declaration
+
 
 <table>
 <caption>date properties</caption>
@@ -1176,7 +1198,9 @@ Default value is false, meaning that the date is considered as a string. It is i
 + **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicBooleanPropertyDescriptor`
+
 Describes a boolean property
+
 
 <table>
 <caption>bool properties</caption>
@@ -1207,8 +1231,10 @@ Describes a boolean property
 + **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicDecimalPropertyDescriptor`
+
 Describes a decimal property. Property value is either stored as a Double or as a BigDecimal depending
 on the usingBigDecimal property
+
 
 <table>
 <caption>decimal properties</caption>
@@ -1269,8 +1295,10 @@ null which means unlimited.</p></td>
 + **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicTimePropertyDescriptor`
+
 Describes a property used to hold time only values. These properties use a Date to store their value but
 only the time part of the value is relevant
+
 
 <table>
 <caption>time properties</caption>
@@ -1311,9 +1339,11 @@ only the time part of the value is relevant
 + **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicDurationPropertyDescriptor`
+
 Describes a property used to store a duration value. Duration is stored in the form of a number of milliseconds.
 duration properties are cleanly handled by Jspresso UI layer for both displaying / editing duration
 properties in a convenient human format.
+
 
 <table>
 <caption>duration properties</caption>
@@ -1350,9 +1380,11 @@ Default value is null, meaning unbound.</p></td>
 + **Inherited properties ** : `minValue, maxValue, usingBigDecimal, maxFractionDigit, thousandsGrouping, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicPercentPropertyDescriptor`
+
 This is a specialization of decimal descriptor to handle percentage values. The impact of using this descriptor
 is only on the UI level that will be configured accordingly, i.e. displaying/editing properties as percentage
 instead of their raw decimal values.
+
 
 <table>
 <caption>percent properties</caption>
@@ -1382,9 +1414,11 @@ instead of their raw decimal values.
 + **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicEnumerationPropertyDescriptor`
+
 descriptor for properties whose values are enumerated strings. An example of such a
 property is gender whose value can be M (for "Male") or F (for "Female"). Actual property values can be
 codes that are translated for inclusion in the UI. Such properties are usually rendered as combo-boxes.
+
 
 <table>
 <caption>enumeration properties</caption>
@@ -1459,10 +1493,12 @@ disjunctions in filters. Default value is false.</p></td>
 + **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `TypeEnumerationPropertyDescriptor`
+
 This is a special enumeration descriptor that allows to build the enumeration out of a list of component
 descriptors. Enumeration values and icons are the names and icons of the registered component descriptors.
 For instance, this can be useful in the UI if you want to visually indicate the actual type of a element
 contained in a polymorphic collection
+
 
 <table>
 <caption>typeEnumeration properties</caption>
@@ -1517,8 +1553,10 @@ disjunctions in filters. Default value is false.</p></td>
 + **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `RangeEnumerationPropertyDescriptor`
+
 This is a special enumeration descriptor that allows to build the enumeration values out of a list of integer
 values. Obviously, no icon is provided for a given value
+
 
 <table>
 <caption>range properties</caption>
@@ -1576,7 +1614,9 @@ disjunctions in filters. Default value is false.</p></td>
 
 + **mandatory** : `id`
 + **allowed previous element** : `Entity, Interface, Component`
+
 allows to point on a reference
+
 
 <table>
 <caption>refId properties</caption>
@@ -1607,10 +1647,12 @@ allows to point on a reference
 + **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicColorPropertyDescriptor`
+
 Describes a property used for storing a color. Color values are stored in the property as their string hexadecimal
 representation (0xrgba encoded). Jspresso cleanly handles color properties in views for both visually
 displaying and editing them without any extra effort. Moreover the ColorHelper helper class eases
 colors manipulation and helps converting to/from their hexadecimal representation.
+
 
 <table>
 <caption>color properties</caption>
@@ -1641,7 +1683,9 @@ colors manipulation and helps converting to/from their hexadecimal representatio
 + **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicBinaryPropertyDescriptor`
+
 Describes a property used to store a binary value in the form of a byte array
+
 
 <table>
 <caption>binary properties</caption>
@@ -1707,8 +1751,10 @@ extensions, e.g. "JPEG images"
 + **Inherited properties ** : `maxLength, fileFilter, fileName, contentType, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicImageBinaryPropertyDescriptor`
+
 Describes a property used for image binary values. This instructs Jspresso to display the property value as
 an image instead of raw binary content.
+
 
 <table>
 <caption>image properties</caption>
@@ -1754,9 +1800,11 @@ format before being stored.</p></td>
 + **Inherited properties ** : `fileFilter, fileName, contentType, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicJavaSerializablePropertyDescriptor`
+
 Describes a property used to store any java Serializable object. The property value is serialized/deserialized
 to/from the datastore. The operation is completely transparent to the developer, i.e. the developer
 never plays with the serialized form.
+
 
 <table>
 <caption>java properties</caption>
@@ -1787,8 +1835,10 @@ never plays with the serialized form.
 + **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicObjectPropertyDescriptor`
+
 This descriptore is used to describe an arbitrary object property for which the type can be
 explicitely declared.
+
 
 <table>
 <caption>any properties</caption>
@@ -1819,9 +1869,11 @@ explicitely declared.
 + **Inherited properties ** : `fileFilter, fileName, contentType, queryMultiline, maxLength, regex, regexSample, upperCase, translatable, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicSourceCodePropertyDescriptor`
+
 Describes a property as handing sourcecode content. This instructs Jspresso to display the property value
 as sourcecode, using syntax coloring for instance, instead of displaying unformatted raw content. The
 language used to format the property text content may be defined explicitely using the language property.
+
 
 <table>
 <caption>sourcecode properties</caption>
@@ -1853,8 +1905,10 @@ language used to format the property text content may be defined explicitely usi
 + **Inherited properties ** : `fileFilter, fileName, contentType, queryMultiline, maxLength, regex, regexSample, upperCase, translatable, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicHtmlPropertyDescriptor`
+
 Describes a property as handing HTML content. This instructs Jspresso to display the property value as
 HTML instead of raw text content.
+
 
 <table>
 <caption>html properties</caption>
@@ -1886,7 +1940,9 @@ HTML instead of raw text content.
 + **mandatory** : `ref`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicReferencePropertyDescriptor`
+
 This descriptor is used to describe a reference to an other component (entities, interfaces or components)
+
 
 <table>
 <caption>reference properties</caption>
@@ -2009,9 +2065,11 @@ properties based on the referenced component descriptor.</p></td>
 + **Inherited properties ** : `ref, reverse, composition, fkName, rendered, queryable, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **mandatory** : `ref`
 + **allowed previous element** : `Entity, Interface, Component`
+
 This descriptor is used to describe a collection of components (entities, interfaces or components).
 A list allows for duplicates and preserves the order of the elements in the
 datastore through an implicit index column.
+
 
 <table>
 <caption>list properties</caption>
@@ -2087,9 +2145,11 @@ determines the size of th IN clause.</p></td>
 + **Inherited properties ** : `ordering, manyToMany, fetch, batch, nullElement, ref, reverse, composition, fkName, rendered, queryable, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable`
 + **mandatory** : `ref`
 + **allowed previous element** : `Entity, Interface, Component`
+
 This descriptor is used to describe a collection of components (entities, interfaces or components)..
 A set do not allow for duplicates and do not preserve the order of the elements
 in the datastore.
+
 
 <table>
 <caption>set properties</caption>
@@ -2117,8 +2177,10 @@ in the datastore.
 
 
 + **allowed previous element** : `Domain`
+
 This descriptor allowed declaring references which are not described in the SJS description of the application.
 since all references are controlled by SJS, it is necessary to declare the external references.
+
 
 <table>
 <caption>external properties</caption>
@@ -2149,11 +2211,13 @@ since all references are controlled by SJS, it is necessary to declare the exter
 
 
 + **allowed previous element** : `Domain, Entity, Interface, Component`
+
 paramSet allows to create a reusable groups of properties in SJS declarations.
 <pre>
 paramSet 'myCommon', readOnly:true, mandatory:true 
 </pre>
 paramSet can be used by declaration SJS using the attribute paramSets
+
 
 <table>
 <caption>paramSet properties</caption>
@@ -2180,6 +2244,7 @@ paramSet can be used by declaration SJS using the attribute paramSets
 
 
 + **allowed previous element** : `Domain, Entity, Interface, Component`
+
 namespace allows to declare and open a namespace scope. The use of namespaces allows simplifying the declarations SJS referring to resources with a complex path.
 <pre>
 namespace('org.jspresso.hrsample'){...}
@@ -2196,6 +2261,7 @@ by
 </pre>
 With namespaces, conventions on the organization of the Jspresso's directories are used.
 In this exemple, images are in the subdirectory /images of the project
+
 
 <table>
 <caption>namespace properties</caption>
@@ -2222,10 +2288,12 @@ In this exemple, images are in the subdirectory /images of the project
 
 
 + **allowed previous element** : `Domain, Entity, Interface, Component`
+
 include allows to use multi SJS sources files and to include them into each other.
 <pre>
 include('fileName')
 </pre>
+
 
 <table>
 <caption>include properties</caption>

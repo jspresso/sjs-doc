@@ -4,9 +4,11 @@
 
 
 + **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, actionMap, action, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
+
 This root descriptor is used in the file application.groovy generated during the
 initialization of the project by Jspresso.
 There is generally no need to change it.
+
 
 <table>
 <caption>Front properties</caption>
@@ -31,8 +33,10 @@ There is generally no need to change it.
 ---
 #### <a name=""></a>Common
 #### <a name=""></a>Security
+
 This descriptor is an internal s SJS descriptor which is never used by the application.It is used by SJS to factorize
 Security properties.
+
 
 <table>
 <caption>Security properties</caption>
@@ -168,8 +172,10 @@ writability is the combination of view and model writability.</p></td>
 
 + **extend** : `Security`
 + **Inherited properties ** : `permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
+
 This descriptor is an internal s SJS descriptor which is never used by the application.It s used by SJS to factorize
 commons properties for desktop views.
+
 
 <table>
 <caption>common properties</caption>
@@ -404,8 +410,10 @@ The properties brought by the paramSet can be overridden  by the current descrip
 
 + **extend** : `Security`
 + **Inherited properties ** : `permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
+
 This descriptor is an internal s SJS descriptor which is never used by the application. It s used by SJS to factorize
 commons properties for mobile views.
+
 
 <table>
 <caption>commonMobile properties</caption>
@@ -575,7 +583,9 @@ The properties brought by the paramSet can be overridden  by the current descrip
 
 ---
 #### <a name=""></a>mobileSection
+
 Defines a page section that can be aggregated in a composite page.
+
 
 <table>
 <caption>mobileSection properties</caption>
@@ -614,8 +624,10 @@ or regex like DEFKTOP, MOBILE, HTML5, ...</p></td>
 
 + **extend** : `mobileSection`
 + **Inherited properties ** : `position, clientTypes`
+
 This descriptor is an internal s SJS descriptor which is never used by the application. It s used by SJS to factorize
 commons properties for views that can react to common page interactions.
+
 
 <table>
 <caption>mobilePageAware properties</caption>
@@ -666,8 +678,10 @@ commons properties for views that can react to common page interactions.
 ---
 #### <a name=""></a>View
 #### <a name=""></a>abstractChart
+
 This descriptor is an internal s SJS descriptor which is never used by the application.It is used by SJS to factorize
 charts properties. Charts in Jspresso are very similar to table collection view in the way they are defined.
+
 
 <table>
 <caption>abstractChart properties</caption>
@@ -725,7 +739,9 @@ It defaults to true otherwise.</p></td>
 
 ---
 #### <a name=""></a>abstractPolarChart
+
 Defines at pie chart.
+
 
 <table>
 <caption>abstractPolarChart properties</caption>
@@ -750,7 +766,9 @@ Defines at pie chart.
 
 ---
 #### <a name=""></a>abstractCartesianChart
+
 Defines a 2+ dimensional chart.
+
 
 <table>
 <caption>abstractCartesianChart properties</caption>
@@ -842,7 +860,9 @@ Default value is EBarChartType.CLUSTERED, i.e. the series are drawn side by side
 
 + **extend** : `common, abstractChart`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, parent, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow`
+
 descriptor for charts
+
 
 <table>
 <caption>chart properties</caption>
@@ -873,7 +893,9 @@ descriptor for charts
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `pieSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `PieChartDescriptor`
+
 descriptor for pie charts
+
 
 <table>
 <caption>polarChart properties</caption>
@@ -904,7 +926,9 @@ descriptor for pie charts
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `lineSeries, barSeries, plotSeries, areaSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `BarChartDescriptor`
+
 descriptor for cartesian charts
+
 
 <table>
 <caption>cartesianChart properties</caption>
@@ -932,7 +956,9 @@ descriptor for cartesian charts
 
 + **extend** : `commonMobile, mobileSection, abstractChart`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes, parent, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow`
+
 descriptor for charts
+
 
 <table>
 <caption>mobileChart properties</caption>
@@ -963,7 +989,9 @@ descriptor for charts
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center`
 + **allowed next element** : `pieSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `MobilePieChartDescriptor`
+
 descriptor for pie charts
+
 
 <table>
 <caption>mobilePolarChart properties</caption>
@@ -994,7 +1022,9 @@ descriptor for pie charts
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center`
 + **allowed next element** : `lineSeries, barSeries, plotSeries, areaSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileBarChartDescriptor`
+
 descriptor for cartesian charts
+
 
 <table>
 <caption>mobileCartesianChart properties</caption>
@@ -1018,8 +1048,10 @@ descriptor for cartesian charts
 
 ---
 #### <a name=""></a>commonCartesianSeries
+
 This descriptor is an internal s SJS descriptor which is never used by the application.It is used by SJS to factorize
 chart series properties. Charts series in Jspresso are very similar to property views in the way they are defined.
+
 
 <table>
 <caption>commonCartesianSeries properties</caption>
@@ -1113,7 +1145,9 @@ of actions defined on table columns.</p></td>
 + **Inherited properties ** : `valueField, i18nNameKey, background, foreground, labelBackground, labelFont, labelForeground, action`
 + **allowed previous element** : `cartesianChart, mobileCartesianChart`
 + **Jspresso** : `LineSeriesDescriptor`
+
 Defines a line series.
+
 
 <table>
 <caption>lineSeries properties</caption>
@@ -1143,7 +1177,9 @@ Defines a line series.
 + **Inherited properties ** : `valueField, i18nNameKey, background, foreground, labelBackground, labelFont, labelForeground, action`
 + **allowed previous element** : `cartesianChart, mobileCartesianChart`
 + **Jspresso** : `BarSeriesDescriptor`
+
 Defines a bar series.
+
 
 <table>
 <caption>barSeries properties</caption>
@@ -1173,7 +1209,9 @@ Defines a bar series.
 + **Inherited properties ** : `valueField, i18nNameKey, background, foreground, labelBackground, labelFont, labelForeground, action`
 + **allowed previous element** : `cartesianChart, mobileCartesianChart`
 + **Jspresso** : `PlotSeriesDescriptor`
+
 Defines a plot series.
+
 
 <table>
 <caption>plotSeries properties</caption>
@@ -1203,7 +1241,9 @@ Defines a plot series.
 + **Inherited properties ** : `valueField, i18nNameKey, background, foreground, labelBackground, labelFont, labelForeground, action`
 + **allowed previous element** : `cartesianChart, mobileCartesianChart`
 + **Jspresso** : `AreaSeriesDescriptor`
+
 Defines a area series.
+
 
 <table>
 <caption>areaSeries properties</caption>
@@ -1231,7 +1271,9 @@ Defines a area series.
 
 + **allowed previous element** : `polarChart, mobilePolarChart`
 + **Jspresso** : `PieSeriesDescriptor`
+
 Declares a series to be used for pie charts.
+
 
 <table>
 <caption>pieSeries properties</caption>
@@ -1316,6 +1358,7 @@ of actions defined on table columns.</p></td>
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `fields, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicComponentViewDescriptor`
+
 form descriptors are surely one of the most commonly used view descriptors in Jspresso.
 It allows to implement advanced form-like views to interact with a single component model. Component
 properties that are displayed in the view are organized in an invisible grid. Each field component is labelled
@@ -1323,6 +1366,7 @@ with the property name it displays and labels can be configured to be displayed 
 their peer field. Property fields can be configured to span multiple form columns. Component view offer
 various straightforward customizations, but the most advanced and prowerful one is definitely the propertyView property
 that allows to fine-tune each component UI field individually in a fields list.
+
 
 <table>
 <caption>form properties</caption>
@@ -1485,6 +1529,7 @@ room.</p></td>
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center`
 + **allowed next element** : `fields, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileComponentViewDescriptor`
+
 form descriptors are surely one of the most commonly used view descriptors in Jspresso.
 It allows to implement advanced form-like views to interact with a single component model. Component
 properties that are displayed in the view are organized in an invisible grid. Each field component is labelled
@@ -1492,6 +1537,7 @@ with the property name it displays and labels can be configured to be displayed 
 their peer field. Property fields can be configured to span multiple form columns. Component view offer
 various straightforward customizations, but the most advanced and prowerful one is definitely the propertyView property
 that allows to fine-tune each component UI field individually in a fields list.
+
 
 <table>
 <caption>mobileForm properties</caption>
@@ -1558,8 +1604,10 @@ model descriptor.</p></td>
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicMapViewDescriptor`
+
 A map is a view that displays a map and allows to bind to longitude and latitude coordinates taken from
 its model.
+
 
 <table>
 <caption>mapView properties</caption>
@@ -1601,8 +1649,10 @@ its model.
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `MobileMapViewDescriptor`
+
 A mobile map is a mobile page that displays a map and allows to bind to longitude and latitude coordinates taken from
 its model.
+
 
 <table>
 <caption>mobileMapView properties</caption>
@@ -1641,7 +1691,9 @@ its model.
 
 + **allowed previous element** : `form, mobileForm`
 + **allowed next element** : `propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html`
+
 Open a list of propertyView to individually fine-tunes each field  in a form
+
 
 <table>
 <caption>fields properties</caption>
@@ -1672,6 +1724,7 @@ Open a list of propertyView to individually fine-tunes each field  in a form
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `columns, actionMap, secondaryActionMap, rowAction, itemSelectionAction, sortingAction`
 + **Jspresso** : `BasicTableViewDescriptor`
+
 This descriptor is used to implement a table view. This is certainly the most commonly used collection
 descriptor in Jspresso. A table view displays a collection of components (one row per component in the
 collection) detailed by a set of properties (one column per displayed component property).
@@ -1696,6 +1749,7 @@ will be used for dates
 A table view provides sensible defaults regarding its configuration, but it can be refined using either the
 simple rendered property or the more advanced yet lot more powerful columns declaration that opens a list of propertyView
 to individually fine-tunes each column
+
 
 <table>
 <caption>table properties</caption>
@@ -1827,6 +1881,7 @@ the view are kept in sync with the bound model collection.</p></td>
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap, rowAction, itemSelectionAction`
 + **Jspresso** : `BasicListViewDescriptor`
+
 This type of descriptor is used to implement a list view. A list view is a single column, uneditable collection
 view used to display a collection of components. Each item is displayed using a string representation
 that can be customized using the renderedProperty property. List views are rarely used since one
@@ -1835,6 +1890,7 @@ Despite its low usage as an individual UI component, the list view is also used 
 tree parts. A collection of sibling tree nodes can actually be considered as being a list view and can be
 described as such. In the latter case, the renderedProperty property will be used to label the tree
 nodes.
+
 
 <table>
 <caption>listView properties</caption>
@@ -1952,6 +2008,7 @@ the view are kept in sync with the bound model collection.</p></td>
 + **allowed previous element** : `Front, selection`
 + **allowed next element** : `actionMap, secondaryActionMap, itemSelectionAction`
 + **Jspresso** : `MobileListViewDescriptor`
+
 This type of descriptor is used to implement a list view. A list view is a single column, uneditable collection
 view used to display a collection of components. Each item is displayed using a string representation
 that can be customized using the renderedProperty property. List views are rarely used since one
@@ -1960,6 +2017,7 @@ Despite its low usage as an individual UI component, the list view is also used 
 tree parts. A collection of sibling tree nodes can actually be considered as being a list view and can be
 described as such. In the latter case, the renderedProperty property will be used to label the tree
 nodes.
+
 
 <table>
 <caption>mobileListView properties</caption>
@@ -2069,7 +2127,9 @@ indicates that the user can navigate to another page when clicking a list item.<
 
 + **allowed previous element** : `table`
 + **allowed next element** : `propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html`
+
 Open a list of propertyView to individually fine-tunes each column in a table
+
 
 <table>
 <caption>columns properties</caption>
@@ -2100,6 +2160,7 @@ Open a list of propertyView to individually fine-tunes each column in a table
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicPropertyViewDescriptor`
+
 This view descriptor serves 2 purposes :
 <ul>
 <li>configure complex, component based views : refine columns of table views and fields of form views.
@@ -2112,6 +2173,7 @@ which maps a text property that contains XML content. This text area must be dis
 and provide actions to interact directly with the FS (save content to a file, load content from a file, ...). In
 that case, defining a property view alone on the text property of the owning component might be a good
 solution.
+
 
 <table>
 <caption>propertyView properties</caption>
@@ -2281,8 +2343,10 @@ Allowed values are</p></td>
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicStringPropertyViewDescriptor`
+
 This specialized property view descriptor is used in order to be able to declare an action
 to be triggered when a character is typed in the UI.
+
 
 <table>
 <caption>stringPropertyView properties</caption>
@@ -2314,11 +2378,13 @@ to be triggered when a character is typed in the UI.
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicReferencePropertyViewDescriptor`
+
 This specialized property view descriptor is used in order to be able to
 refine the "List of values" action that gets automatically
 installed by Jspresso when a reference property is displayed. You can then
 customize this action when defining the corresponding column in a table view
 or field in a component view.
+
 
 <table>
 <caption>referencePropertyView properties</caption>
@@ -2351,10 +2417,12 @@ property view. A null value (default) keeps the standard action.</p></td>
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicEnumerationPropertyViewDescriptor`
+
 This specialized property view descriptor is used in order to be able to refine
 the "values" that are taken from the model enumeration. You can configure a set
 of allowed values from which the user can choose when defining the corresponding
 column in a table view or field in a component view.
+
 
 <table>
 <caption>enumerationPropertyView properties</caption>
@@ -2415,12 +2483,14 @@ values should be rendered horizontally and VERTICAL otherwise. Default value is 
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicImageViewDescriptor`
+
 This type of view descriptor is used to display a binary property or a string property containing an URL as
 an image. By default, binary properties are rendered as button fields that allow to upload, download and
 query size of the binary content. This button field visually indicate whether the binary property is empty or
 not. Whenever you know that the underlying property is used to store image content, you can explicitely
 define an image view backed by the binary property descriptor and use it in your UI. Jspresso will then
 display the image whose content is stored in the binary property directly in the UI.
+
 
 <table>
 <caption>image properties</caption>
@@ -2474,7 +2544,9 @@ POD for instance.</p></td>
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicHtmlViewDescriptor`
+
 This type of view descriptor is used to display an html property.
+
 
 <table>
 <caption>html properties</caption>
@@ -2515,10 +2587,12 @@ means that the html view will be made scrollable horizontally.</p></td>
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap, action, next, wrapped, rowAction, itemSelectionAction, sortingAction`
 + **Jspresso** : `BasicActionViewDescriptor`
+
 This type of view allows to make an action available as a view and thus participate in the UI composition
 as a visual component. An action view can then be embedded in surrounding a composite view. It litterally
 takes the action away from the toolbar/context menu it is located when registered in an action map and
 makes it a primary citizen of the UI.
+
 
 <table>
 <caption>actionView properties</caption>
@@ -2569,6 +2643,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 + **mandatory** : `nameElement`
 + **allowed previous element** : `Front`
 + **allowed next element** : `actionMap, secondaryActionMap`
+
 <pre>
 treeNode('Department-teams.treeNode',
 
@@ -2583,6 +2658,7 @@ treeNode('Company-teams.treeNode',
         render: 'ouId', actionMap: 'masterDetail')
 
 </pre>
+
 
 <table>
 <caption>treeNode properties</caption>
@@ -2619,6 +2695,7 @@ treeNode('Company-teams.treeNode',
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `subTree, actionMap, secondaryActionMap, rowAction, itemSelectionAction`
 + **Jspresso** : `BasicTreeViewDescriptor`
+
 This descriptor is use to design a tree view. The way to define a tree view in Jspresso and SJS is a matter of assembling
 treeNode descriptors hierarchically. A treeNode descriptor is a group of sibling nodes that usually
 represent a component collection property. Each individual treeNode collection can be secured by
@@ -2696,6 +2773,7 @@ Company
 In this second example you should notice intermediate collection property
 grouping nodes (departments and teams). They automatically appeared
 to clearly group the tree nodes belonging to the different collections.
+
 
 <table>
 <caption>tree properties</caption>
@@ -2782,6 +2860,7 @@ be nested.</p></td>
 + **allowed previous element** : `Front, selection`
 + **allowed next element** : `subTree, actionMap, secondaryActionMap, itemSelectionAction`
 + **Jspresso** : `MobileTreeViewDescriptor`
+
 This descriptor is use to design a tree view. The way to define a tree view in Jspresso and SJS is a matter of assembling
 treeNode descriptors hierarchically. A treeNode descriptor is a group of sibling nodes that usually
 represent a component collection property. Each individual treeNode collection can be secured by
@@ -2859,6 +2938,7 @@ Company
 In this second example you should notice intermediate collection property
 grouping nodes (departments and teams). They automatically appeared
 to clearly group the tree nodes belonging to the different collections.
+
 
 <table>
 <caption>mobileTree properties</caption>
@@ -2938,8 +3018,10 @@ be nested.</p></td>
 + **allowed previous element** : `tree, mobileTree, subTree`
 + **allowed next element** : `subTree`
 + **Jspresso** : `BasicSimpleTreeLevelDescriptor`
+
 A SubTree is an instantiation of a TreeNode in a tree.
 In SJS a subTree has the same identifier as the treeNode it instantiates.
+
 
 <table>
 <caption>subTree properties</caption>
@@ -2977,10 +3059,12 @@ In SJS a subTree has the same identifier as the treeNode it instantiates.
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `views, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicTabViewDescriptor`
+
 This composite view arranges its children in tabs. Each tab potentially displays a label (that is translated
 based on the name of the view in the tab), an icon (based on the icon of the view in the tab) and a tooltip
 (based on the description of the view in the tab).
 Default cascading order follows the order of nested view registrations in the container.
+
 
 <table>
 <caption>tabs properties</caption>
@@ -3052,10 +3136,12 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `views, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileTabViewDescriptor`
+
 This composite view arranges its children in tabs. Each tab potentially displays a label (that is translated
 based on the name of the view in the tab), an icon (based on the icon of the view in the tab) and a tooltip
 (based on the description of the view in the tab).
 Default cascading order follows the order of nested view registrations in the container.
+
 
 <table>
 <caption>mobileTabs properties</caption>
@@ -3115,7 +3201,9 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 
 + **allowed previous element** : `tabs, mobileTabs, entityCardView, basicCardView`
 + **allowed next element** : `polarChart, cartesianChart, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
+
 Open a list of views where each view can be defined "inline"
+
 
 <table>
 <caption>views properties</caption>
@@ -3146,12 +3234,14 @@ Open a list of views where each view can be defined "inline"
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `left, right, top, bottom, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicSplitViewDescriptor`
+
 This composite view arranges its children in a container splitted either horizontally or vertically.
 With SJS the orientation is defined directly in the name of the descriptor : <b>split_vertical</b> or <b>split_horizontal</b>
 An horizontal split disposes its 2 children left and right whereas a vertical split disposes its 2 children top and
 bottom. The dividing bar can typically be moved by the user to distribute the available space.
 Default cascading order for master-detail is :
 left -> right or top -> bottom depending on the split orientation.
+
 
 <table>
 <caption>split properties</caption>
@@ -3219,7 +3309,9 @@ than the outer composite unless explicitely specified differently.</p></td>
 
 + **allowed previous element** : `split`
 + **allowed next element** : `polarChart, cartesianChart, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
+
 Enable to set an in-line view in in the left zone of a split_horizontal
+
 
 <table>
 <caption>left properties</caption>
@@ -3247,7 +3339,9 @@ Enable to set an in-line view in in the left zone of a split_horizontal
 
 + **allowed previous element** : `split`
 + **allowed next element** : `polarChart, cartesianChart, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
+
 Enable to set an in-line view in in the rigth zone of a split_horizontal
+
 
 <table>
 <caption>right properties</caption>
@@ -3275,7 +3369,9 @@ Enable to set an in-line view in in the rigth zone of a split_horizontal
 
 + **allowed previous element** : `split`
 + **allowed next element** : `polarChart, cartesianChart, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
+
 Enable to set an in-line view in in the top zone of a split_vertical
+
 
 <table>
 <caption>top properties</caption>
@@ -3303,7 +3399,9 @@ Enable to set an in-line view in in the top zone of a split_vertical
 
 + **allowed previous element** : `split`
 + **allowed next element** : `polarChart, cartesianChart, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
+
 Enable to set an in-line view in in the the bottom zone of a split_vertical
+
 
 <table>
 <caption>bottom properties</caption>
@@ -3334,6 +3432,7 @@ Enable to set an in-line view in in the the bottom zone of a split_vertical
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `east, west, south, north, center, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicBorderViewDescriptor`
+
 A border view is a composite view that arranges its children to the north, west, east, south and center.
 Depending its position in the container, the resizing rules apply differently :
 <ul>
@@ -3346,6 +3445,7 @@ Depending its position in the container, the resizing rules apply differently :
 </ul>
 Default cascading order for master-detail is :
 north -> west -> center -> east -> south
+
 
 <table>
 <caption>border properties</caption>
@@ -3421,6 +3521,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center`
 + **allowed next element** : `south, north, center, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileBorderViewDescriptor`
+
 A border view is a composite view that arranges its children to the north, west, east, south and center.
 Depending its position in the container, the resizing rules apply differently :
 <ul>
@@ -3431,6 +3532,7 @@ Depending its position in the container, the resizing rules apply differently :
 <li>center is resized both horizontally and vertically
 </li>
 </ul>
+
 
 <table>
 <caption>mobileBorder properties</caption>
@@ -3477,7 +3579,9 @@ resized horizontally.</p></td>
 
 + **allowed previous element** : `border`
 + **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, form, mobileForm, mapView, mobileMapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
+
 Enable to set an in-line view in the east zone of a border
+
 
 <table>
 <caption>east properties</caption>
@@ -3505,7 +3609,9 @@ Enable to set an in-line view in the east zone of a border
 
 + **allowed previous element** : `border`
 + **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, form, mobileForm, mapView, mobileMapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
+
 Enable to set an in-line view in the west zone of a border
+
 
 <table>
 <caption>west properties</caption>
@@ -3533,7 +3639,9 @@ Enable to set an in-line view in the west zone of a border
 
 + **allowed previous element** : `border, mobileBorder`
 + **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, form, mobileForm, mapView, mobileMapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
+
 Enable to set an in-line view in the south zone of a border
+
 
 <table>
 <caption>south properties</caption>
@@ -3561,7 +3669,9 @@ Enable to set an in-line view in the south zone of a border
 
 + **allowed previous element** : `border, mobileBorder`
 + **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, form, mobileForm, mapView, mobileMapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
+
 Enable to set an in-line view in the north zone of a border
+
 
 <table>
 <caption>north properties</caption>
@@ -3589,7 +3699,9 @@ Enable to set an in-line view in the north zone of a border
 
 + **allowed previous element** : `border, mobileBorder`
 + **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, form, mobileForm, mapView, mobileMapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
+
 Enable to set an in-line view in the center zone of a border
+
 
 <table>
 <caption>center properties</caption>
@@ -3620,8 +3732,10 @@ Enable to set an in-line view in the center zone of a border
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `cells, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicConstrainedGridViewDescriptor`
+
 This composite view arranges its children in a grid where cell behaviour and dimensions are configured
 using cell constraints in a cells list
+
 
 <table>
 <caption>grid properties</caption>
@@ -3668,12 +3782,14 @@ than the outer composite unless explicitely specified differently.</p></td>
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `cells, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicEvenGridViewDescriptor`
+
 This composite view arranges its children in a grid where cells are distributed evenly. All cells are resized
 horizontally and vertically to fill its available space.
 The number of cells in a row / column is determined by the combination of the drivingDimension and
 drivingCellCount properties. the cells are spread along the driving dimension (row or
 column) until the maximum number of cells in the dimension has been reached. Then a new row (or column)
 is added. The process repeats until all the cells have been added
+
 
 <table>
 <caption>evenGrid properties</caption>
@@ -3737,7 +3853,9 @@ or column is then created to host the remaining cells.</p></td>
 
 + **allowed previous element** : `grid, evenGrid`
 + **allowed next element** : `propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, cell, evenCell`
+
 open a cells list in grid or in an evenGrid
+
 
 <table>
 <caption>cells properties</caption>
@@ -3765,7 +3883,9 @@ open a cells list in grid or in an evenGrid
 
 + **allowed previous element** : `cells`
 + **allowed next element** : `polarChart, cartesianChart, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
+
 Describes constraints on a cell of a grid
+
 
 <table>
 <caption>cell properties</caption>
@@ -3824,9 +3944,11 @@ Describes constraints on a cell of a grid
 
 + **allowed previous element** : `cells`
 + **allowed next element** : `polarChart, cartesianChart, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
+
 Describes a cell of an evenGrid
 <b>evenCell IS NEVER DIRECTLY USED</b>, like for a grid, cell is used.
 <b>SJS automatically transforms cell it in evenCell in an evenGrid context</b>
+
 
 <table>
 <caption>evenCell properties</caption>
@@ -3858,12 +3980,14 @@ Describes a cell of an evenGrid
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `views, actionMap, secondaryActionMap`
 + **Jspresso** : `EntityCardViewDescriptor`
+
 A card view is a view
 stack made of children views (the cards) where only the view (card) at the top of the stack is visible. The
 actual child view to place on the top of the stack is dynamically determined based on the bound model.
 
 An entityCardView view provides a simple card determination strategy that is based on the bound model type. This
 strategy pulls up the card whose model descriptor matches the type of the bound model
+
 
 <table>
 <caption>entityCardView properties</caption>
@@ -3904,6 +4028,7 @@ card matches, an empty view is displayed.</p></td>
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `views, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicCardViewDescriptor`
+
 A card view is a view stack made of children views (the cards) where only the view (card) at the top
 of the stack is visible. The actual child view to place on the top of the stack is dynamically
 determined based on the bound model.
@@ -3912,6 +4037,7 @@ determined based on the bound model.
 A basicCardView describes a multi-purpose card view that is configurable with a custom card determination strategy.
 Cards are registered with a name key that is used to retrieve the card to display based on the card selector
 selected name key.
+
 
 <table>
 <caption>basicCardView properties</caption>
@@ -3961,6 +4087,7 @@ registered card name selector.</p></td>
 + **allowed previous element** : `Front, treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart`
 + **allowed next element** : `actionList`
 + **Jspresso** : `ActionMap`
+
 An action map is generally represented as a toolbar attached to the view.
 The toolbar follows the structure of the action map :
 <ul>
@@ -3973,6 +4100,7 @@ button using the action image as icon and translated action description
 as tooltip.
 </li>
 </ul>
+
 
 <table>
 <caption>actionMap properties</caption>
@@ -4044,6 +4172,7 @@ assigning a model to the action gates.</p></td>
 + **allowed previous element** : `treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart`
 + **allowed next element** : `actionList`
 + **Jspresso** : `ActionMap`
+
 A secondary action map is generally represented as a toolbar attached at the bottom of the view.
 It is always declared as an "inline" statement.
 The toolbar follows the structure of the action map :
@@ -4057,6 +4186,7 @@ button using the action image as icon and translated action description
 as tooltip.
 </li>
 </ul>
+
 
 <table>
 <caption>secondaryActionMap properties</caption>
@@ -4128,9 +4258,11 @@ assigning a model to the action gates.</p></td>
 + **allowed previous element** : `actionMap, secondaryActionMap`
 + **allowed next element** : `action, next, wrapped`
 + **Jspresso** : `ActionList`
+
 In an actionMap, an action list is contained in its own toolbar section which is visually
 separated from the other sections. This allows for visually
 grouping related actions as they are grouped in the action lists
+
 
 <table>
 <caption>actionList properties</caption>
@@ -4239,6 +4371,7 @@ assigning a model to the action gates.</p></td>
 
 + **allowed previous element** : `Front, actionList, controller, actionView`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
+
 This descriptor establishes the foundation of the Jspresso action
 framework, i.e. each action can link :
 <ul>
@@ -4268,6 +4401,7 @@ The next action is perfectly suited to chain 2 actions of the same type (i.e. 2 
 actions). Using this scheme helps keeping layer dependencies clear. Of course, this dual chaining
 mechanism is completely recursive thus allowing to compose small (generic) actions into larger composite
 ones and promoting reusability.
+
 
 <table>
 <caption>action properties</caption>
@@ -4547,7 +4681,9 @@ assigning a model to the action gates.</p></td>
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
 + **allowed previous element** : `actionList, controller, actionView, action, next, wrapped, rowAction, itemSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
+
 Allows defining "inline" next action for the current action. A next action is an action to be executed after this action and after the wrapped one. This is perfectly suited to chain an action of the same type (frontend or backend) as this one.
+
 
 <table>
 <caption>next properties</caption>
@@ -4577,7 +4713,9 @@ Allows defining "inline" next action for the current action. A next action is an
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
 + **allowed previous element** : `actionList, controller, actionView, action, next, wrapped, rowAction, itemSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
+
 Allows defining "inline" wrapped action for the current action. This is perfectly suited to chain a backend action from a frontend action since the control flow will return back to the calling layer (the frontend).
+
 
 <table>
 <caption>wrapped properties</caption>
@@ -4607,12 +4745,14 @@ Allows defining "inline" wrapped action for the current action. This is perfectl
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
 + **allowed previous element** : `controller, actionView, table, listView, tree`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
+
 Allows defining "inline" rowAction for the current action. It is an action
 that is implicitely triggered everytime a row is activated
 (e.g. double-clicked for current UI channels) on the collection
 view UI peer. The context of the action
 execution is the same as if the action was registered in the view action
 map.
+
 
 <table>
 <caption>rowAction properties</caption>
@@ -4642,11 +4782,13 @@ map.
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
 + **allowed previous element** : `controller, actionView, table, listView, mobileListView, tree, mobileTree`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
+
 Allows defining "inline" itemSelectionAction for the current action.
 It is an action that is implicitely triggered everytime the selection
 changes on the collection view UI peer. The context of the action
 execution is the same as if the action was registered in the view action
 map.
+
 
 <table>
 <caption>itemSelectionAction properties</caption>
@@ -4676,10 +4818,12 @@ map.
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
 + **allowed previous element** : `controller, actionView, table`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
+
 Allows defining "inline" sortingAction for the current action.
 It configures the action to be activated when a sort is triggered by the
 user. It should be used with caution and rarely be overriden from the
 default.
+
 
 <table>
 <caption>sortingAction properties</caption>
@@ -4711,7 +4855,9 @@ default.
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center, nextPage`
 + **allowed next element** : `actionMap, secondaryActionMap, selection, headerSections, nextPage`
 + **Jspresso** : `MobileNavPageViewDescriptor`
+
 A Navigation page is a mobile page that displays a collection view (list or tree) in order to navigate to sub pages.
+
 
 <table>
 <caption>mobileNavPage properties</caption>
@@ -4758,7 +4904,9 @@ A Navigation page is a mobile page that displays a collection view (list or tree
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center, nextPage`
 + **allowed next element** : `actionMap, secondaryActionMap, pages`
 + **Jspresso** : `MobileCardPageViewDescriptor`
+
 Defines a page that displays a card view as its main content.
+
 
 <table>
 <caption>mobileCardPage properties</caption>
@@ -4795,6 +4943,7 @@ Defines a page that displays a card view as its main content.
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center, nextPage`
 + **allowed next element** : `actionMap, secondaryActionMap, sections, editorPage`
 + **Jspresso** : `MobileCompositePageViewDescriptor`
+
 Defines a composite page. A composite page is made of sections. A section can be :
 <ul>
 <li>Another page. In that case, a selection item is installed and the other page is
@@ -4804,6 +4953,7 @@ navigated to when the user clicks the selection item.
 </li>
 </ul>
 You can install as many sections as you wish in any order.
+
 
 <table>
 <caption>mobileCompositePage properties</caption>
@@ -4849,7 +4999,9 @@ flag is turned on.</p></td>
 
 + **allowed previous element** : `mobileNavPage`
 + **allowed next element** : `mobileListView, mobileTree`
+
 Defines the selection view of a navigation page, either tree or list.
+
 
 <table>
 <caption>selection properties</caption>
@@ -4877,7 +5029,9 @@ Defines the selection view of a navigation page, either tree or list.
 
 + **allowed previous element** : `mobileNavPage`
 + **allowed next element** : `mobilePolarChart, mobileCartesianChart, mobileForm, mobileMapView, mobileBorder, mobileNavPage, mobileCardPage, mobileCompositePage`
+
 Defines a list of section views to be placed above the selection view.
+
 
 <table>
 <caption>headerSections properties</caption>
@@ -4905,7 +5059,9 @@ Defines a list of section views to be placed above the selection view.
 
 + **allowed previous element** : `mobileNavPage`
 + **allowed next element** : `mobileNavPage, mobileCardPage, mobileCompositePage`
+
 Defines the page that will be navigated to when the user clicks an item in the selection view of a navigation page.
+
 
 <table>
 <caption>nextPage properties</caption>
@@ -4932,7 +5088,9 @@ Defines the page that will be navigated to when the user clicks an item in the s
 
 
 + **allowed previous element** : `mobileCardPage`
+
 Defines the card view that is displayed in the card page.
+
 
 <table>
 <caption>pages properties</caption>
@@ -4960,7 +5118,9 @@ Defines the card view that is displayed in the card page.
 
 + **allowed previous element** : `mobileCompositePage`
 + **allowed next element** : `mobilePolarChart, mobileCartesianChart, mobileForm, mobileMapView, mobileBorder, mobileNavPage, mobileCardPage, mobileCompositePage`
+
 Defines a composite page sections.
+
 
 <table>
 <caption>sections properties</caption>
@@ -4987,7 +5147,9 @@ Defines a composite page sections.
 
 
 + **allowed previous element** : `mobileCompositePage`
+
 Defines the editor page of a composite page.
+
 
 <table>
 <caption>editorPage properties</caption>
@@ -5017,6 +5179,7 @@ Defines the editor page of a composite page.
 + **mandatory** : `nameElement`
 + **allowed previous element** : `Front`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
+
 A workspace is an group of functional application modules. You may decide arbitrarily how to group modules
 into workspaces but a good approach might be to design the workspaces based on roles (i.e. business
 activities). This helps to clearly seperates tasks-unrelated modules and eases authorization management
@@ -5028,6 +5191,7 @@ the Swing and ULC channels use a MDI UI in which each workspace is represented a
 frame (document). On the other hand, Flex and Qooxdoo channels represent workspaces stacked in
 an accordion. Whatever the graphical representation is, there is at most one workspace active at a time
 for a user session - either the active (focused) internal frame or the expanded accordion section.
+
 
 <table>
 <caption>workspace properties</caption>
@@ -5129,6 +5293,7 @@ value) disables role based authorization on this workspace.</p></td>
 
 + **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
+
 A module is an entry point in the application. Modules are organized in bi-directional, parent-children
 hierarchy. As such, they can be viewed (and they are materalized in the UI) as trees. Modules can be
 (re)organized dynamically by changing their parent-children relationship and their owning workspace UI
@@ -5142,6 +5307,7 @@ and run a large variety of different module types.
 
 
 A module can also be as simple as a grouping structure for other modules (nodeModule).
+
 
 <table>
 <caption>module properties</caption>
@@ -5266,6 +5432,7 @@ their model.</p></td>
 + **Inherited properties ** : `parent, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
+
 This type of module keeps a reference on a beans collection. There is no assumption made on wether
 these beans are actually persistent entites or any other type of java beans.
 
@@ -5273,6 +5440,7 @@ these beans are actually persistent entites or any other type of java beans.
 Simple bean collection modules must have their collection of referenced beans initialized somehow.
 There is no standard built-in action to do so, since it is highly dependent on what's needed. So it's rather
 common to have the module content initialized through a startup action depending on the session state.
+
 
 <table>
 <caption>collectionModule properties</caption>
@@ -5326,9 +5494,11 @@ of the module managed beans.</p></td>
 + **Inherited properties ** : `detailView, parent, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
+
 This is a specialized type of bean collection module that provides a filter ( an instance of IQueryComponent
 ). This type of module, coupled with a generic, built-in, action map is perfectly suited for CRUD-like
 operations.
+
 
 <table>
 <caption>filterModule properties</caption>
@@ -5416,6 +5586,7 @@ the default, the elements default page size is used.</p></td>
 + **Inherited properties ** : `parent, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
+
 This type of module keeps a reference on a beans collection. There is no assumption made on wether
 these beans are actually persistent entites or any other type of java beans.
 
@@ -5423,6 +5594,7 @@ these beans are actually persistent entites or any other type of java beans.
 Simple bean collection modules must have their collection of referenced beans initialized somehow.
 There is no standard built-in action to do so, since it is highly dependent on what's needed. So it's rather
 common to have the module content initialized through a startup action depending on the session state.
+
 
 <table>
 <caption>beanModule properties</caption>
@@ -5464,7 +5636,9 @@ view descriptor.</p></td>
 + **Inherited properties ** : `parent, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
+
 Allows to group modules under a simple node in a hierarchy of modules.
+
 
 <table>
 <caption>nodeModule properties</caption>
@@ -5494,8 +5668,10 @@ Allows to group modules under a simple node in a hierarchy of modules.
 + **mandatory** : `nameElement`
 + **allowed previous element** : `Front`
 + **allowed next element** : `actionMap, secondaryActionMap, action, next, wrapped, rowAction, itemSelectionAction, sortingAction`
+
 Sets the frontend application controllers. This controller is the place where you define the toplevel
 application structure like the workspace list, the name, the application-wide actions, ...
+
 
 <table>
 <caption>controller properties</caption>
@@ -5661,7 +5837,9 @@ of modules / sub-modules.</p></td>
 
 + **mandatory** : `basenames`
 + **allowed previous element** : `Front`
+
 Jspresso relies on the well-known java I18N mechanism through the use of resource bundle property files.
+
 
 <table>
 <caption>messageSource properties</caption>
@@ -5690,7 +5868,9 @@ Jspresso relies on the well-known java I18N mechanism through the use of resourc
 
 
 + **allowed previous element** : `Front`
+
 External gives SJS the List of references witch are not declared in SJS witch but can be used as reference.
+
 
 <table>
 <caption>external properties</caption>
@@ -5719,6 +5899,7 @@ External gives SJS the List of references witch are not declared in SJS witch bu
 
 
 + **allowed previous element** : `Front`
+
 template configures a Map of default properties values for a descriptor
 <pre>
 template 'form', parent: 'decoratedView', labelsPosition: 'ABOVE', columnCount: 2
@@ -5726,6 +5907,7 @@ template 'form', parent: 'decoratedView', labelsPosition: 'ABOVE', columnCount: 
 template 'table', parent: 'decoratedView'
 </pre>
 All new forms and tables will have these properties set
+
 
 <table>
 <caption>template properties</caption>
@@ -5753,11 +5935,13 @@ All new forms and tables will have these properties set
 
 
 + **allowed previous element** : `Front`
+
 paramSet allows to create a reusable groups of properties in SJS declarations.
 <pre>
 paramSet 'myCommon', readOnly:true, mandatory:true
 </pre>
 paramSet can be used by declaration SJS using the attribute paramSets
+
 
 <table>
 <caption>paramSet properties</caption>
@@ -5785,6 +5969,7 @@ paramSet can be used by declaration SJS using the attribute paramSets
 
 
 + **allowed previous element** : `*`
+
 namespace allows to declare and open a namespace scope. The use of namespaces allows simplifying the declarations SJS referring to resources with a complex path.
 <pre>
 namespace('org.jspresso.hrsample'){...}
@@ -5801,6 +5986,7 @@ by
 </pre>
 With namespaces, conventions on the organization of the Jspresso's directories are used.
 In this exemple, images are in the subdirectory /images of the project
+
 
 <table>
 <caption>namespace properties</caption>
@@ -5827,6 +6013,7 @@ In this exemple, images are in the subdirectory /images of the project
 
 
 + **allowed previous element** : `*`
+
 spec allows to declare and open a named scope. Each definition declared into this spec will remain visible
 from outer specs but sibling specs are isolated from each other. What a spec means depends on what you want
 to use it for. For instance you can have 1 spec per UI channel to customize a Jspresso application based on
@@ -5836,6 +6023,7 @@ in any Spring context.
 <pre>
 spec('Flex'){...}
 </pre>
+
 
 <table>
 <caption>spec properties</caption>
@@ -5862,10 +6050,12 @@ spec('Flex'){...}
 
 
 + **allowed previous element** : `*`
+
 include allows to use multi SJS sources files and to include them into each other.
 <pre>
 include('fileName')
 </pre>
+
 
 <table>
 <caption>include properties</caption>
@@ -5894,7 +6084,9 @@ include('fileName')
 
 + **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `bean, list, set, map`
+
 Allows to generate a bean Spring in the XML generated file
+
 
 <table>
 <caption>bean properties</caption>
@@ -5968,7 +6160,9 @@ custom:[
 + **mandatory** : `nameElement`
 + **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `bean, list, set, map`
+
 Allows to generate a list Spring in the XML generated file
+
 
 <table>
 <caption>list properties</caption>
@@ -5998,7 +6192,9 @@ Allows to generate a list Spring in the XML generated file
 + **mandatory** : `nameElement`
 + **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `bean, list, set, map`
+
 Allows to generate a list Spring in the XML generated file
+
 
 <table>
 <caption>set properties</caption>
@@ -6028,7 +6224,9 @@ Allows to generate a list Spring in the XML generated file
 + **mandatory** : `nameElement`
 + **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `bean, list, set, map`
+
 Allows to generate a Map Spring in the XML generated file
+
 
 <table>
 <caption>map properties</caption>
