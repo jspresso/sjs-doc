@@ -117,6 +117,7 @@ help, ...</p></td>
 <td align="left"><p><strong>icon</strong></p><p><code>String</code></p><p><code>iconImageURL</code></p>
 </td>
 <td><p>Sets the icon image URL of this descriptor. Supported URL protocols include :
+
 <ul>
 <li>all JVM supported protocols
 </li>
@@ -125,6 +126,7 @@ help, ...</p></td>
 <li>the classpath:/ pseudo URL protocol
 </li>
 </ul>
+
 <pre>Interface('Traceable', <b>icon</b>: 'traceable-48x48.png'){...}</pre></p></td>
 </tr>
 <tr class="odd">
@@ -236,12 +238,14 @@ be considered writable (updatable) if and only if all booleanGates gates are ope
 entity 'invoice', booleanWritabilityGates: ['val1', '!val2']
  
 </pre>
+
 <ul>
 <li>The first 'val1' gate is open if the val1 property is true on the underlying model
 </li>
 <li>The second '!val2' gate is open if val2 is false on the underlying model
 </li>
 </ul>
+
 
 
 This mecanism is mainly used for dynamic UI authorization based on
@@ -263,12 +267,14 @@ be considered writable (updatable) if and only if all RolesGates gates are open.
 <pre>
 entity 'invoice', rolesWritabilityGates: ['role1', '!role2']
 </pre>
+
 <ul>
 <li>The first gate 'role1' is open if the connected user has the role1
 </li>
 <li>The second gate '!role2' is open if the connected user does not have the role2
 </li>
 </ul>
+
 Same mecanism has booleanWritabilityGates</p></td>
 </tr>
 <tr class="even">
@@ -326,12 +332,14 @@ default constructor.</p></td>
 of providing a map valued with Spring bean names, you provide
 a map valued with fully qualified class names. These class
 must :
+
 <ul>
 <li>provide a default constructor
 </li>
 <li>implement the IComponentService marker interface.
 </li>
 </ul>
+
 When needed, Jspresso will create service delegate instances.</p></td>
 </tr>
 <tr class="odd">
@@ -340,6 +348,7 @@ When needed, Jspresso will create service delegate instances.</p></td>
 <td><p>Registers the collection of service delegate instances attached to this
 component. These delegate instances will automatically be triggered
 whenever a method of the service interface it implements get executed.For instance :
+
 <ul>
 <li>the component interface is MyBeanClass. It implements the service
 interface MyService.
@@ -359,6 +368,7 @@ the framework will trigger the delegate implementation, passing the
 instance of the component itself as parameter.
 </li>
 </ul>
+
 This property must be set with a map keyed by service interfaces
 and valued by Spring bean names (i.e. Spring ids). Each bean name
 corresponds to an instance of service delegate. When needed, Jspresso
@@ -381,12 +391,14 @@ resulting from Spring configuration is generally not used in the model</p></td>
 The property name assigned will be used when displaying the component instance as a string.
 It may be a computed property that composes several other properties in a human friendly format. 
 Whenever this property is null, the following rule apply to determine the toString property : 
+
 <ul>
 <li>the first string property from the rendered property
 </li>
 <li>the first rendered property if no string property is found among them
 </li>
 </ul>
+
 Note that this property is not inherited by children descriptors, i.e.
 even if an ancestor defines an explicit toString property, its children
 ignore this setting.</p></td>
@@ -407,6 +419,7 @@ i.e. even if an ancestor defines an explicit toHtmlProperty property, its childr
 this component.
 Whenever this property is null, the following rule apply to
 determine the lovProperty :
+
 <ul>
 <li>the toString property if not a computed one
 </li>
@@ -415,6 +428,7 @@ determine the lovProperty :
 <li>the first rendered property if no string property is found among them
 </li>
 </ul>
+
 Note that this property is not inherited by children descriptors, i.e. even
 if an ancestor defines an explicit lovProperty, its children ignore
 this setting.</p></td>
@@ -683,12 +697,14 @@ be considered writable (updatable) if and only if all booleanGates gates are ope
 entity 'invoice', booleanWritabilityGates: ['val1', '!val2']
  
 </pre>
+
 <ul>
 <li>The first 'val1' gate is open if the val1 property is true on the underlying model
 </li>
 <li>The second '!val2' gate is open if val2 is false on the underlying model
 </li>
 </ul>
+
 This mecanism is mainly used for dynamic UI authorization based on
 model state, e.g. a validated invoice should not be editable anymore.
 component assigned gates will be cloned for each component instance created
@@ -708,12 +724,14 @@ be considered writable (updatable) if and only if all RolesGates gates are open.
 <pre>
 entity 'invoice', rolesWritabilityGates: ['role1', '!role2']
 </pre>
+
 <ul>
 <li>The first gate 'role1' is open if the connected user has the role1
 </li>
 <li>The second gate '!role2' is open if the connected user does not have the role2
 </li>
 </ul>
+
 Same mecanism has booleanWritabilityGates</p></td>
 </tr>
 <tr class="odd">
@@ -741,6 +759,7 @@ Defult value is false.</p></td>
 </td>
 <td><p>Registers a list of property processor instances that will be triggered
 on the different phases of the property modification, i.e. :
+
 <ul>
 <li>before the property is modified, usually for controlling the incoming value
 </li>
@@ -751,6 +770,7 @@ modified, allowing to intercept and change the incoming value
 behaviour (e.g. tracing, domain integrity management, ...)
 </li>
 </ul>
+
 Property processor instances must implement the IPropertyProcessor&lt;
 E, F&gt; interface where &lt;E, F&gt; represent respectively the
 type of the owning component and the type of the property. Since
@@ -764,6 +784,7 @@ Whenever the underlying property is a collection property, the interface
 to implement is ICollectionPropertyProcessor&lt;E, F&gt; 
 (or extend EmptyCollectionPropertyProcessor&lt;E, F&gt;) with
 4 new phases introduced :
+
 <ul>
 <li>before an element is added to the collection property
 </li>
@@ -773,29 +794,34 @@ to implement is ICollectionPropertyProcessor&lt;E, F&gt;
 </li>
 <li>after an element is removed from the collection property
 </li>
-</ul></p></td>
+</ul>
+</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>initializationMapping</strong></p><p><code>Map</code></p>
 </td>
 <td><p>This property allows to pre-initialize UI filters that are based on this
 reference property. This includes :
+
 <ul>
 <li>explicit filters that are dispayed for "list of values"
 </li>
 <li>implicit filters thet are use behind the scene for UI auto-completion
 </li>
 </ul>
+
 The initialization mapping property is a Map keyed by referenced type
 property names (the properties to be initialized).
 Values in this map can be either :
+
 <ul>
 <li>a constant value. In that case, the filter property is initialize with this constant value.
 </li>
 <li>a owning component property name. In that case, the filter property 
 is initialize with the value of the owning component property.
 </li>
-</ul></p></td>
+</ul>
+</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>paramSets</strong></p><p><code>ListOfString</code></p>
@@ -966,15 +992,18 @@ Field declaration of type text. To be used with _n where the value n determine t
 <td><p>This property allows to configure the file filter that has to be displayed
 whenever a file system operation is initiated from the UI to operate on
 this property. This includes :
+
 <ul>
 <li>setting the property value from a text file loaded from the file system
 </li>
 <li>saving the property text value to a file on the file system
 </li>
 </ul>
+
 Jspresso provides built-in actions that do the above and configure
 their UI automatically based on the fileFilter property.
 The incoming Map must be structured like following :
+
 <ul>
 <li>keys are translation keys that will be translated by Jspresso i18n
 layer and presented to the user as the group name of the associated
@@ -983,7 +1012,8 @@ extensions, e.g. "HTML files"
 <li>values are the extension list associated to a certain group name, e
 .g. a list containing [".html",".htm"]
 </li>
-</ul></p></td>
+</ul>
+</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>fileName</strong></p><p><code>String</code></p>
@@ -1732,15 +1762,18 @@ Describes a property used to store a binary value in the form of a byte array
 <td><p>This property allows to configure the file filter that has to be displayed
 whenever a file system operation is initiated from the UI to operate on
 this property. This includes :
+
 <ul>
 <li>setting the property binary value from a file loaded from the file system
 </li>
 <li>saving the property binary value to a file on the file system
 </li>
 </ul>
+
 Jspresso provides built-in actions that do the above and configure
 their UI automatically based on the fileFilter property.
 The incoming Map must be structured like following :
+
 <ul>
 <li>keys are translation keys that will be translated by Jspresso i18n
 layer and presented to the user as the group name of the associated
@@ -1749,7 +1782,8 @@ extensions, e.g. "JPEG images"
 <li>values are the extension list associated to a certain group name, e
 .g. a list containing [".jpeg",".jpg"]
 </li>
-</ul></p></td>
+</ul>
+</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>fileName</strong></p><p><code>String</code></p>
@@ -1999,6 +2033,7 @@ end is defined, it is only navigable from the owning component
 to the described end (default value is null). Assigning a reverse
 relationship ends instructs the framework that the relationship
 is bi-derectional. This implies several complementary features :
+
 <ul>
 <li>When one of the relationship ends is updated, the other
 side is automatically maintained by Jspresso, i.e. you never
@@ -2016,6 +2051,7 @@ constraint in the datastore behind the scene) by assigning 2 reference
 property decriptors as reverse relation ends of each other.
 </li>
 </ul>
+
 Setting the reverse relation end operation is commmutative so that
 it automatically assigns bot ends as reverse, i.e. you only have to set
 the property on one side of the relationship.</p></td>
@@ -2030,6 +2066,7 @@ For instance, when the owning entity is deleted, the referenced entities
 in composition properties are also deleted.
 Whenever this property is not explicitely set by the developer, Jspresso
 uses sensible defaults :
+
 <ul>
 <li>collection properties are compositions unless they are bidirectional
 "N to N"
@@ -2037,6 +2074,7 @@ uses sensible defaults :
 <li>reference properties are not composition
 </li>
 </ul>
+
 This property is strictly behavioural and does not impact the domain
 state itself.</p></td>
 </tr>
@@ -2120,6 +2158,7 @@ if it is un-indexed (not a List). The sort order set on the collection
 property can refine the default one that might have been set on the
 referenced collection level. This property consist of a Map whose entries
 are composed with :
+
 <ul>
 <li>the property name as key
 </li>
@@ -2128,6 +2167,7 @@ ESort enum (ASCENDING or DESCENDING) or its equivalent
 string representation.
 </li>
 </ul>
+
 Ordering properties are considered following their order in the map
 iterator. A null value (default) will not give any indication for the collection
 property sort order and thus, will delegate to higher specification
