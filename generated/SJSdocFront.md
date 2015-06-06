@@ -29,6 +29,7 @@ There is generally no need to change it.
 </table>
 
 ---
+
 #### <a name=""></a>Common
 #### <a name=""></a>Security
 This descriptor is an internal s SJS descriptor which is never used by the application.It is used by SJS to factorize
@@ -163,6 +164,7 @@ writability is the combination of view and model writability.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>common
 
 
@@ -399,6 +401,7 @@ The properties brought by the paramSet can be overridden  by the current descrip
 </table>
 
 ---
+
 #### <a name=""></a>commonMobile
 
 
@@ -574,6 +577,7 @@ The properties brought by the paramSet can be overridden  by the current descrip
 </table>
 
 ---
+
 #### <a name=""></a>mobileSection
 Defines a page section that can be aggregated in a composite page.
 
@@ -609,6 +613,7 @@ or regex like DEFKTOP, MOBILE, HTML5, ...</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>mobilePageAware
 
 
@@ -664,6 +669,7 @@ commons properties for views that can react to common page interactions.
 </table>
 
 ---
+
 #### <a name=""></a>View
 #### <a name=""></a>abstractChart
 This descriptor is an internal s SJS descriptor which is never used by the application.It is used by SJS to factorize
@@ -724,6 +730,7 @@ It defaults to true otherwise.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>abstractPolarChart
 Defines at pie chart.
 
@@ -749,6 +756,7 @@ Defines at pie chart.
 </table>
 
 ---
+
 #### <a name=""></a>abstractCartesianChart
 Defines a 2+ dimensional chart.
 
@@ -837,6 +845,7 @@ Default value is EBarChartType.CLUSTERED, i.e. the series are drawn side by side
 </table>
 
 ---
+
 #### <a name=""></a>chart
 
 
@@ -865,6 +874,7 @@ descriptor for charts
 </table>
 
 ---
+
 #### <a name=""></a>polarChart
 
 
@@ -896,6 +906,7 @@ descriptor for pie charts
 </table>
 
 ---
+
 #### <a name=""></a>cartesianChart
 
 
@@ -927,6 +938,7 @@ descriptor for cartesian charts
 </table>
 
 ---
+
 #### <a name=""></a>mobileChart
 
 
@@ -955,6 +967,7 @@ descriptor for charts
 </table>
 
 ---
+
 #### <a name=""></a>mobilePolarChart
 
 
@@ -986,6 +999,7 @@ descriptor for pie charts
 </table>
 
 ---
+
 #### <a name=""></a>mobileCartesianChart
 
 
@@ -1017,6 +1031,7 @@ descriptor for cartesian charts
 </table>
 
 ---
+
 #### <a name=""></a>commonCartesianSeries
 This descriptor is an internal s SJS descriptor which is never used by the application.It is used by SJS to factorize
 chart series properties. Charts series in Jspresso are very similar to property views in the way they are defined.
@@ -1106,6 +1121,7 @@ of actions defined on table columns.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>lineSeries
 
 
@@ -1136,6 +1152,7 @@ Defines a line series.
 </table>
 
 ---
+
 #### <a name=""></a>barSeries
 
 
@@ -1166,6 +1183,7 @@ Defines a bar series.
 </table>
 
 ---
+
 #### <a name=""></a>plotSeries
 
 
@@ -1196,6 +1214,7 @@ Defines a plot series.
 </table>
 
 ---
+
 #### <a name=""></a>areaSeries
 
 
@@ -1226,6 +1245,7 @@ Defines a area series.
 </table>
 
 ---
+
 #### <a name=""></a>pieSeries
 
 
@@ -1308,6 +1328,7 @@ of actions defined on table columns.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>form
 
 
@@ -1477,6 +1498,7 @@ room.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>mobileForm
 
 
@@ -1550,6 +1572,7 @@ model descriptor.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>mapView
 
 
@@ -1593,6 +1616,7 @@ its model.
 </table>
 
 ---
+
 #### <a name=""></a>mobileMapView
 
 
@@ -1636,6 +1660,7 @@ its model.
 </table>
 
 ---
+
 #### <a name=""></a>fields
 
 
@@ -1664,6 +1689,7 @@ Open a list of propertyView to individually fine-tunes each field  in a form
 </table>
 
 ---
+
 #### <a name=""></a>table
 
 
@@ -1813,6 +1839,7 @@ the view are kept in sync with the bound model collection.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>listView
 
 
@@ -1938,6 +1965,7 @@ the view are kept in sync with the bound model collection.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>mobileListView
 
 
@@ -2058,6 +2086,7 @@ indicates that the user can navigate to another page when clicking a list item.<
 </table>
 
 ---
+
 #### <a name=""></a>columns
 
 
@@ -2086,6 +2115,7 @@ Open a list of propertyView to individually fine-tunes each column in a table
 </table>
 
 ---
+
 #### <a name=""></a>propertyView
 
 
@@ -2265,6 +2295,7 @@ Allowed values are</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>stringPropertyView
 
 
@@ -2298,6 +2329,7 @@ to be triggered when a character is typed in the UI.
 </table>
 
 ---
+
 #### <a name=""></a>referencePropertyView
 
 
@@ -2335,6 +2367,7 @@ property view. A null value (default) keeps the standard action.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>enumerationPropertyView
 
 
@@ -2399,6 +2432,7 @@ values should be rendered horizontally and VERTICAL otherwise. Default value is 
 </table>
 
 ---
+
 #### <a name=""></a>image
 
 
@@ -2458,6 +2492,7 @@ POD for instance.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>html
 
 
@@ -2499,6 +2534,7 @@ means that the html view will be made scrollable horizontally.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>actionView
 
 
@@ -2552,6 +2588,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 </table>
 
 ---
+
 #### <a name=""></a>Tree
 #### <a name=""></a>treeNode
 
@@ -2603,6 +2640,7 @@ treeNode('Company-teams.treeNode',
 </table>
 
 ---
+
 #### <a name=""></a>tree
 
 
@@ -2766,6 +2804,7 @@ be nested.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>mobileTree
 
 
@@ -2922,6 +2961,7 @@ be nested.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>subTree
 
 
@@ -2960,6 +3000,7 @@ In SJS a subTree has the same identifier as the treeNode it instantiates.
 </table>
 
 ---
+
 #### <a name=""></a>Composite view
 #### <a name=""></a>tabs
 
@@ -3036,6 +3077,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 </table>
 
 ---
+
 #### <a name=""></a>mobileTabs
 
 
@@ -3102,6 +3144,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 </table>
 
 ---
+
 #### <a name=""></a>views
 
 
@@ -3130,6 +3173,7 @@ Open a list of views where each view can be defined "inline"
 </table>
 
 ---
+
 #### <a name=""></a>split
 
 
@@ -3206,6 +3250,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>left
 
 
@@ -3234,6 +3279,7 @@ Enable to set an in-line view in in the left zone of a split_horizontal
 </table>
 
 ---
+
 #### <a name=""></a>right
 
 
@@ -3262,6 +3308,7 @@ Enable to set an in-line view in in the rigth zone of a split_horizontal
 </table>
 
 ---
+
 #### <a name=""></a>top
 
 
@@ -3290,6 +3337,7 @@ Enable to set an in-line view in in the top zone of a split_vertical
 </table>
 
 ---
+
 #### <a name=""></a>bottom
 
 
@@ -3318,6 +3366,7 @@ Enable to set an in-line view in in the the bottom zone of a split_vertical
 </table>
 
 ---
+
 #### <a name=""></a>border
 
 
@@ -3402,6 +3451,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>mobileBorder
 
 
@@ -3458,6 +3508,7 @@ resized horizontally.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>east
 
 
@@ -3486,6 +3537,7 @@ Enable to set an in-line view in the east zone of a border
 </table>
 
 ---
+
 #### <a name=""></a>west
 
 
@@ -3514,6 +3566,7 @@ Enable to set an in-line view in the west zone of a border
 </table>
 
 ---
+
 #### <a name=""></a>south
 
 
@@ -3542,6 +3595,7 @@ Enable to set an in-line view in the south zone of a border
 </table>
 
 ---
+
 #### <a name=""></a>north
 
 
@@ -3570,6 +3624,7 @@ Enable to set an in-line view in the north zone of a border
 </table>
 
 ---
+
 #### <a name=""></a>center
 
 
@@ -3598,6 +3653,7 @@ Enable to set an in-line view in the center zone of a border
 </table>
 
 ---
+
 #### <a name=""></a>grid
 
 
@@ -3645,6 +3701,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>evenGrid
 
 
@@ -3718,6 +3775,7 @@ or column is then created to host the remaining cells.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>cells
 
 
@@ -3746,6 +3804,7 @@ open a cells list in grid or in an evenGrid
 </table>
 
 ---
+
 #### <a name=""></a>cell
 
 
@@ -3805,6 +3864,7 @@ Describes constraints on a cell of a grid
 </table>
 
 ---
+
 #### <a name=""></a>evenCell
 
 
@@ -3836,6 +3896,7 @@ Describes a cell of an evenGrid
 </table>
 
 ---
+
 #### <a name=""></a>entityCardView
 
 
@@ -3881,6 +3942,7 @@ card matches, an empty view is displayed.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>basicCardView
 
 
@@ -3940,6 +4002,7 @@ registered card name selector.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>Action
 #### <a name=""></a>actionMap
 
@@ -4022,6 +4085,7 @@ assigning a model to the action gates.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>secondaryActionMap
 
 
@@ -4104,6 +4168,7 @@ assigning a model to the action gates.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>actionList
 
 
@@ -4216,6 +4281,7 @@ assigning a model to the action gates.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>action
 
 
@@ -4517,6 +4583,7 @@ assigning a model to the action gates.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>next
 
 
@@ -4547,6 +4614,7 @@ Allows defining "inline" next action for the current action. A next action is an
 </table>
 
 ---
+
 #### <a name=""></a>wrapped
 
 
@@ -4577,6 +4645,7 @@ Allows defining "inline" wrapped action for the current action. This is perfectl
 </table>
 
 ---
+
 #### <a name=""></a>rowAction
 
 
@@ -4612,6 +4681,7 @@ map.
 </table>
 
 ---
+
 #### <a name=""></a>itemSelectionAction
 
 
@@ -4646,6 +4716,7 @@ map.
 </table>
 
 ---
+
 #### <a name=""></a>sortingAction
 
 
@@ -4679,6 +4750,7 @@ default.
 </table>
 
 ---
+
 #### <a name=""></a>View
 #### <a name=""></a>mobileNavPage
 
@@ -4727,6 +4799,7 @@ A Navigation page is a mobile page that displays a collection view (list or tree
 </table>
 
 ---
+
 #### <a name=""></a>mobileCardPage
 
 
@@ -4764,6 +4837,7 @@ Defines a page that displays a card view as its main content.
 </table>
 
 ---
+
 #### <a name=""></a>mobileCompositePage
 
 
@@ -4819,6 +4893,7 @@ flag is turned on.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>selection
 
 
@@ -4847,6 +4922,7 @@ Defines the selection view of a navigation page, either tree or list.
 </table>
 
 ---
+
 #### <a name=""></a>headerSections
 
 
@@ -4875,6 +4951,7 @@ Defines a list of section views to be placed above the selection view.
 </table>
 
 ---
+
 #### <a name=""></a>nextPage
 
 
@@ -4903,6 +4980,7 @@ Defines the page that will be navigated to when the user clicks an item in the s
 </table>
 
 ---
+
 #### <a name=""></a>pages
 
 
@@ -4930,6 +5008,7 @@ Defines the card view that is displayed in the card page.
 </table>
 
 ---
+
 #### <a name=""></a>sections
 
 
@@ -4958,6 +5037,7 @@ Defines a composite page sections.
 </table>
 
 ---
+
 #### <a name=""></a>editorPage
 
 
@@ -4985,6 +5065,7 @@ Defines the editor page of a composite page.
 </table>
 
 ---
+
 #### <a name=""></a>workspace
 #### <a name=""></a>workspace
 
@@ -5097,6 +5178,7 @@ value) disables role based authorization on this workspace.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>Module
 #### <a name=""></a>module
 
@@ -5231,6 +5313,7 @@ their model.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>collectionModule
 
 
@@ -5290,6 +5373,7 @@ of the module managed beans.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>filterModule
 
 
@@ -5380,6 +5464,7 @@ the default, the elements default page size is used.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>beanModule
 
 
@@ -5427,6 +5512,7 @@ view descriptor.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>nodeModule
 
 
@@ -5457,6 +5543,7 @@ Allows to group modules under a simple node in a hierarchy of modules.
 </table>
 
 ---
+
 #### <a name=""></a>Controller
 #### <a name=""></a>controller
 
@@ -5625,6 +5712,7 @@ of modules / sub-modules.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>Message
 #### <a name=""></a>messageSource
 
@@ -5655,6 +5743,7 @@ Jspresso relies on the well-known java I18N mechanism through the use of resourc
 </table>
 
 ---
+
 #### <a name=""></a>Suppoprort
 #### <a name=""></a>external
 
@@ -5684,6 +5773,7 @@ External gives SJS the List of references witch are not declared in SJS witch bu
 </table>
 
 ---
+
 #### <a name=""></a>Support
 #### <a name=""></a>template
 
@@ -5719,6 +5809,7 @@ All new forms and tables will have these properties set
 </table>
 
 ---
+
 #### <a name=""></a>paramSet
 
 
@@ -5751,6 +5842,7 @@ paramSet can be used by declaration SJS using the attribute paramSets
 </table>
 
 ---
+
 #### <a name=""></a>namespace
 
 
@@ -5793,6 +5885,7 @@ In this exemple, images are in the subdirectory /images of the project
 </table>
 
 ---
+
 #### <a name=""></a>spec
 
 
@@ -5828,6 +5921,7 @@ spec('Flex'){...}
 </table>
 
 ---
+
 #### <a name=""></a>include
 
 
@@ -5858,6 +5952,7 @@ include('fileName')
 </table>
 
 ---
+
 #### <a name=""></a>Generic
 #### <a name=""></a>bean
 
@@ -5932,6 +6027,7 @@ custom:[
 </table>
 
 ---
+
 #### <a name=""></a>list
 
 
@@ -5962,6 +6058,7 @@ Allows to generate a list Spring in the XML generated file
 </table>
 
 ---
+
 #### <a name=""></a>set
 
 
@@ -5992,6 +6089,7 @@ Allows to generate a list Spring in the XML generated file
 </table>
 
 ---
+
 #### <a name=""></a>map
 
 
@@ -6022,3 +6120,4 @@ Allows to generate a Map Spring in the XML generated file
 </table>
 
 ---
+

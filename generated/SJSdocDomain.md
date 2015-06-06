@@ -39,6 +39,7 @@ This root descriptor is used in the file application.groovy generated during the
 </table>
 
 ---
+
 #### <a name=""></a>Component
 #### <a name=""></a>Entity
 
@@ -434,6 +435,7 @@ Entity('Department', extend: 'OrganizationalUnit'){...} </pre></p></td>
 </table>
 
 ---
+
 #### <a name=""></a>Interface
 
 
@@ -490,6 +492,7 @@ Entity('Employee', <b>extend</b>: ['Nameable', 'Traceable']){
 </table>
 
 ---
+
 #### <a name=""></a>Component
 
 
@@ -548,6 +551,7 @@ Entity('Employee') {
 </table>
 
 ---
+
 #### <a name=""></a>Common
 #### <a name=""></a>common
 This descriptor is an internal s SJS descriptor which is never used by the application.It s used by SJS to factorize
@@ -845,6 +849,7 @@ number, date, time, and duration properties behave this way.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>BasicType
 #### <a name=""></a>string
 
@@ -917,6 +922,7 @@ properties support searching, ordering,... exactly like non-translatable propert
 </table>
 
 ---
+
 #### <a name=""></a>text
 
 
@@ -984,6 +990,7 @@ text view in order to allow for multi-line text in filters. Default value is fal
 </table>
 
 ---
+
 #### <a name=""></a>imageUrl
 
 
@@ -1025,6 +1032,7 @@ ratio.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>password
 
 
@@ -1058,6 +1066,7 @@ fields, to interact with password properties.
 </table>
 
 ---
+
 #### <a name=""></a>integer
 
 
@@ -1113,6 +1122,7 @@ Default value is false which means java.lang.Integer will be used.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>date
 
 
@@ -1168,6 +1178,7 @@ Default value is false, meaning that the date is considered as a string. It is i
 </table>
 
 ---
+
 #### <a name=""></a>bool
 
 
@@ -1199,6 +1210,7 @@ Describes a boolean property
 </table>
 
 ---
+
 #### <a name=""></a>decimal
 
 
@@ -1261,6 +1273,7 @@ null which means unlimited.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>time
 
 
@@ -1303,6 +1316,7 @@ only the time part of the value is relevant
 </table>
 
 ---
+
 #### <a name=""></a>duration
 
 
@@ -1342,6 +1356,7 @@ Default value is null, meaning unbound.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>percent
 
 
@@ -1374,6 +1389,7 @@ instead of their raw decimal values.
 </table>
 
 ---
+
 #### <a name=""></a>enumeration
 
 
@@ -1451,6 +1467,7 @@ disjunctions in filters. Default value is false.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>typeEnumeration
 
 
@@ -1509,6 +1526,7 @@ disjunctions in filters. Default value is false.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>range
 
 
@@ -1570,6 +1588,7 @@ disjunctions in filters. Default value is false.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>refId
 
 
@@ -1599,6 +1618,7 @@ allows to point on a reference
 </table>
 
 ---
+
 #### <a name=""></a>color
 
 
@@ -1633,6 +1653,7 @@ colors manipulation and helps converting to/from their hexadecimal representatio
 </table>
 
 ---
+
 #### <a name=""></a>binary
 
 
@@ -1699,6 +1720,7 @@ extensions, e.g. "JPEG images"
 </table>
 
 ---
+
 #### <a name=""></a>image
 
 
@@ -1746,6 +1768,7 @@ format before being stored.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>java
 
 
@@ -1779,6 +1802,7 @@ never plays with the serialized form.
 </table>
 
 ---
+
 #### <a name=""></a>any
 
 
@@ -1811,6 +1835,7 @@ explicitely declared.
 </table>
 
 ---
+
 #### <a name=""></a>sourcecode
 
 
@@ -1845,6 +1870,7 @@ language used to format the property text content may be defined explicitely usi
 </table>
 
 ---
+
 #### <a name=""></a>html
 
 
@@ -1876,6 +1902,7 @@ HTML instead of raw text content.
 </table>
 
 ---
+
 #### <a name=""></a>Association
 #### <a name=""></a>reference
 
@@ -2001,6 +2028,7 @@ properties based on the referenced component descriptor.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>list
 
 
@@ -2079,6 +2107,7 @@ determines the size of th IN clause.</p></td>
 </table>
 
 ---
+
 #### <a name=""></a>set
 
 
@@ -2111,6 +2140,7 @@ in the datastore.
 </table>
 
 ---
+
 #### <a name=""></a>Support
 #### <a name=""></a>external
 
@@ -2144,6 +2174,7 @@ since all references are controlled by SJS, it is necessary to declare the exter
 </table>
 
 ---
+
 #### <a name=""></a>paramSet
 
 
@@ -2175,6 +2206,7 @@ paramSet can be used by declaration SJS using the attribute paramSets
 </table>
 
 ---
+
 #### <a name=""></a>namespace
 
 
@@ -2217,6 +2249,7 @@ In this exemple, images are in the subdirectory /images of the project
 </table>
 
 ---
+
 #### <a name=""></a>include
 
 
@@ -2247,3 +2280,4 @@ include('fileName')
 </table>
 
 ---
+
