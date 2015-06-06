@@ -53,6 +53,7 @@ This root descriptor is used in the file application.groovy generated during the
 This descriptor key to the description of the application model. It is used to describe a model entity.
 
 The description of an entity can be very simple :
+
 <pre>Entite('person'){
 
   string_32 'name'
@@ -61,7 +62,9 @@ The description of an entity can be very simple :
 
   integer age
 }</pre>
+
 or be richer to meet more complex needs :
+
 <pre>Entity('Department', extend: 'OrganizationalUnit',
 
         icon: 'department-48x48.png',
@@ -76,8 +79,12 @@ or be richer to meet more complex needs :
   set 'teams', ref: 'Team', composition: true
 
 }</pre>
-<br>Note : Concurrent access conflicts are automatically manage by Jspresso through optimistic locking
+
+
+<br>Note : 
+Concurrent access conflicts are automatically manage by Jspresso through optimistic locking
 </br>
+
 
 
 <table>
@@ -99,9 +106,11 @@ or be richer to meet more complex needs :
 <td><p>Registers this Entity with a collection of ancestors. It directly translates the components inheritance hierarchy since the component
 property descriptors are the union of the declared property descriptors of the component and of its ancestors one.
 A component may have multiple ancestors which means that complex multiple-inheritance hierarchy can be mapped
+
 <pre>Interface('Nameable') { string_64 'name', mandatory: true }
 
-Entity('City', <b>extend</b>: 'Nameable'){...}</pre></p></td>
+Entity('City', <b>extend</b>: 'Nameable'){...}</pre>
+</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>description</strong></p><p><code>String</code></p>
@@ -119,15 +128,20 @@ help, ...</p></td>
 <td><p>Sets the icon image URL of this descriptor. Supported URL protocols include :
 
 <ul>
-<li>all JVM supported protocols
+<li>
+all JVM supported protocols
 </li>
-<li>the jar:/ pseudo URL protocol
+<li>
+the jar:/ pseudo URL protocol
 </li>
-<li>the classpath:/ pseudo URL protocol
+<li>
+the classpath:/ pseudo URL protocol
 </li>
 </ul>
 
-<pre>Interface('Traceable', <b>icon</b>: 'traceable-48x48.png'){...}</pre></p></td>
+
+<pre>Interface('Traceable', <b>icon</b>: 'traceable-48x48.png'){...}</pre>
+</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>iconWidth</strong></p><p><code>Integer</code></p><p><code>iconPreferredWidth</code></p>
@@ -156,9 +170,11 @@ collection properties.
 Note that this property is not inherited by children descriptors, i.e.
 even if an ancestor defines an explicit set of rendered properties, its
 children ignore this setting.
+
 <pre>Entity('Employee',
  
-<b>rendered</b>: ['name', 'firstName', 'ssn', 'age']){...}</pre></p></td>
+<b>rendered</b>: ['name', 'firstName', 'ssn', 'age']){...}</pre>
+</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>queryable</strong></p><p><code>ListOfRefField</code></p><p><code>queryableProperties</code></p>
@@ -176,9 +192,11 @@ be queried upon.
 Note that this property is not inherited by children descriptors, i.e.
 even if an ancestor defines an explicit set of queryable properties, its
 children ignore this setting
+
 <pre>Entity('Employee',
  
-<b>queryable</b>: ['name', 'firstName', 'ssn', 'age']){...}</pre></p></td>
+<b>queryable</b>: ['name', 'firstName', 'ssn', 'age']){...}</pre>
+</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>uncloned</strong></p><p><code>ListOfRefField</code></p><p><code>unclonedProperties</code></p>
@@ -189,7 +207,9 @@ timestamp should not be cloned; a SSN neither. For a given component,
 the uncloned properties are the ones it defines augmented by
 the ones its ancestors define. There is no mean to make a component
 property clonable if one of the ancestor declares it un-clonable.
-<pre>Entity('Employee', <b>uncloned</b>: ['managedOu', 'ssn']){...}</pre></p></td>
+
+<pre>Entity('Employee', <b>uncloned</b>: ['managedOu', 'ssn']){...}</pre>
+</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>ordering</strong></p><p><code>Map</code></p><p><code>orderingProperties</code></p>
@@ -199,7 +219,9 @@ of components backed by this descriptor. This sort order can
 be overridden on the finer collection property level to change the way
 a specific collection is sorted. This property consist of a Map whose
 entries are composed with the property name as key and the sort order for this property as String "ASCENDING" or "DESCENDING"
-<pre>Entity('Employee', <b>ordering</b>: [name: "ASCENDING"]){...}</pre></p></td>
+
+<pre>Entity('Employee', <b>ordering</b>: [name: "ASCENDING"]){...}</pre>
+</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>pageSize</strong></p><p><code>Integer</code></p>
@@ -209,7 +231,9 @@ UI, this property gives the size (number of component instances)
 of one page. This size can usually be refined at a lower level (e.g. at
 reference property descriptor for "lists of values"). A null value (default)
 disables paging for this component.
-<pre>Entity('Employee', <b>pageSize</b>: 10){...}</pre></p></td>
+
+<pre>Entity('Employee', <b>pageSize</b>: 10){...}</pre>
+</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>sqlName</strong></p><p><code>String</code></p>
@@ -218,7 +242,9 @@ disables paging for this component.
 type name to the data store namespace. This includes , but is not
 limited to, database table names.
 By default Jspresso uses its default naming policy
-<pre>Entity('Employee', <b>sqlName</b>: "T_EMPLOYEE"){...}</pre></p></td>
+
+<pre>Entity('Employee', <b>sqlName</b>: "T_EMPLOYEE"){...}</pre>
+</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>grantedRoles</strong></p><p><code>ListOfString</code></p>
@@ -227,24 +253,31 @@ By default Jspresso uses its default naming policy
 backed by this descriptor. This will directly influence the UI behaviour
 and even composition. Note that this authorization enforcement does not prevent programatic
 access that is of the developer responsbility.
-<pre>Entity('Employee',<b>grantedRoles</b>: ['administrator', 'manager']){...}</pre></p></td>
+
+<pre>Entity('Employee',<b>grantedRoles</b>: ['administrator', 'manager']){...}</pre>
+</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>booleanWritabilityGates</strong></p><p><code>ListOfString</code></p>
 </td>
 <td><p>Assigns a collection of gates to determine component writability. A component will
 be considered writable (updatable) if and only if all booleanGates gates are open.
+
 <pre>
 entity 'invoice', booleanWritabilityGates: ['val1', '!val2']
  
 </pre>
 
+
 <ul>
-<li>The first 'val1' gate is open if the val1 property is true on the underlying model
+<li>
+The first 'val1' gate is open if the val1 property is true on the underlying model
 </li>
-<li>The second '!val2' gate is open if val2 is false on the underlying model
+<li>
+The second '!val2' gate is open if val2 is false on the underlying model
 </li>
 </ul>
+
 
 
 
@@ -253,6 +286,7 @@ model state, e.g. a validated invoice should not be editable anymore.
 component assigned gates will be cloned for each component instance created
 and backed by this descriptor. So basically, each component instance will
 have its own, unshared collection of writability gates.
+
 
 
 By default, component descriptors are not assigned any gates collection,
@@ -264,14 +298,18 @@ programatic writability of a component; only UI is impacted.</p></td>
 </td>
 <td><p>Assigns a collection of gates to determine component writability. A component will
 be considered writable (updatable) if and only if all RolesGates gates are open.
+
 <pre>
 entity 'invoice', rolesWritabilityGates: ['role1', '!role2']
 </pre>
 
+
 <ul>
-<li>The first gate 'role1' is open if the connected user has the role1
+<li>
+The first gate 'role1' is open if the connected user has the role1
 </li>
-<li>The second gate '!role2' is open if the connected user does not have the role2
+<li>
+The second gate '!role2' is open if the connected user does not have the role2
 </li>
 </ul>
 
@@ -297,17 +335,21 @@ provides the methods to access the enclosing component from the
 delegate implementation as well as the Spring context it comes from,
 when needed.
 
+
 <pre>Entity('Employee', <b>extension</b>: 'EmployeeExtension'){
 
  integer 'age', <b>useExtension</b>: true
-}</pre></p></td>
+}</pre>
+</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>processor</strong></p><p><code>String</code></p>
 </td>
 <td><p>Class name in which all class processors associated with the properties of this component are grouped
+
 <pre>Entity('Employee', 
-<b>processor:</b>'EmployeePropertyProcessors'){...}</pre></p></td>
+<b>processor:</b>'EmployeePropertyProcessors'){...}</pre>
+</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>interceptors</strong></p><p><code>ListOfString</code></p><p><code>lifecycleInterceptorClassNames</code></p>
@@ -315,8 +357,10 @@ when needed.
 <td><p>List of lifecycle interceptor instances that will be triggered on the different phases of the
 component lifecycle : when the component is instanciated in memory or when the component is created,
 updated, loaded or deleted in the data store.
+
 <pre>Interface('Traceable',
-<b>interceptors</b>: 'TraceableLifecycleInterceptor'){...}</pre></p></td>
+<b>interceptors</b>: 'TraceableLifecycleInterceptor'){...}</pre>
+</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>interceptorBeans</strong></p><p><code>ListOfString</code></p><p><code>lifecycleInterceptorBeanNames</code></p>
@@ -334,9 +378,11 @@ a map valued with fully qualified class names. These class
 must :
 
 <ul>
-<li>provide a default constructor
+<li>
+provide a default constructor
 </li>
-<li>implement the IComponentService marker interface.
+<li>
+implement the IComponentService marker interface.
 </li>
 </ul>
 
@@ -350,20 +396,24 @@ component. These delegate instances will automatically be triggered
 whenever a method of the service interface it implements get executed.For instance :
 
 <ul>
-<li>the component interface is MyBeanClass. It implements the service
+<li>
+the component interface is MyBeanClass. It implements the service
 interface MyService.
 </li>
-<li>the service interface MyService contains method int
+<li>
+the service interface MyService contains method int
 foo(String).
 </li>
-<li>the service delegate class, e.g. MyServiceImpl must implement
+<li>
+the service delegate class, e.g. MyServiceImpl must implement
 the method int foo(MyBeanClass,String). Note that the parameter
 list is augmented with the owing component type as 1st
 parameter. This allows to have stateless implementation for delegates,
 thus sharing instances of delegates among instances of
 components.
 </li>
-<li>when foo(String) is executed on an instance of MyBeanClass,
+<li>
+when foo(String) is executed on an instance of MyBeanClass,
 the framework will trigger the delegate implementation, passing the
 instance of the component itself as parameter.
 </li>
@@ -393,9 +443,11 @@ It may be a computed property that composes several other properties in a human 
 Whenever this property is null, the following rule apply to determine the toString property : 
 
 <ul>
-<li>the first string property from the rendered property
+<li>
+the first string property from the rendered property
 </li>
-<li>the first rendered property if no string property is found among them
+<li>
+the first rendered property if no string property is found among them
 </li>
 </ul>
 
@@ -421,11 +473,14 @@ Whenever this property is null, the following rule apply to
 determine the lovProperty :
 
 <ul>
-<li>the toString property if not a computed one
+<li>
+the toString property if not a computed one
 </li>
-<li>the first string property from the rendered property
+<li>
+the first string property from the rendered property
 </li>
-<li>the first rendered property if no string property is found among them
+<li>
+the first rendered property if no string property is found among them
 </li>
 </ul>
 
@@ -446,9 +501,11 @@ data store that depends on the inheritance mapping strategy used
 . As of now, Jspresso uses the join-subclass inheritance mapping
 strategy when generating the Hibernate mapping so an abstract entity
 will end up as a table in the data store.
+
 <pre>Entity('OrganizationalUnit', <b>purelyAbstract</b>: true){...}
 
-Entity('Department', extend: 'OrganizationalUnit'){...} </pre></p></td>
+Entity('Department', extend: 'OrganizationalUnit'){...} </pre>
+</p></td>
 </tr>
 </tbody>
 </table>
@@ -467,6 +524,7 @@ Entity('Department', extend: 'OrganizationalUnit'){...} </pre></p></td>
 This descriptor is a mean of factorizing state/behaviour among components, entities or even sub-interfaces.
 This is a much less coupling mecanism than actual entity inheritance and can be used across entities
 that don't belong the the same inheritance hierarchy, or even accross types (entities, components, interfaces).
+
 <pre><b>Interface</b>('Nameable') { string_64 'name', mandatory: true }
 
 
@@ -490,6 +548,7 @@ Entity('Employee', <b>extend</b>: ['Nameable', 'Traceable']){
   ...
 
 }</pre>
+
 
 
 <table>
@@ -528,6 +587,7 @@ MoneyAmount component could be composed of a decimal and a reference to a Money 
 This structure could then be reused in other elements of the domain like an Invoice or an Article.
 Jspresso terminology for these type of structures is "Inlined Component".
 Another example could be reused of contact informations
+
 <pre>Component('ContactInfo') {
 
   string_256 'address'
@@ -551,6 +611,7 @@ Entity('Employee') {
   ...
 
 }</pre>
+
 
 
 <table>
@@ -649,6 +710,7 @@ property is read-only</p></td>
 this property in a view.
 
 
+
 Default value is null, so that the view factory will make its decision
 based on the type and/or other characteristics of the property (e.g.
 max length).</p></td>
@@ -693,15 +755,19 @@ responsbility.</p></td>
 </td>
 <td><p>Assigns a collection of gates to determine component writability. A component will
 be considered writable (updatable) if and only if all booleanGates gates are open.
+
 <pre>
 entity 'invoice', booleanWritabilityGates: ['val1', '!val2']
  
 </pre>
 
+
 <ul>
-<li>The first 'val1' gate is open if the val1 property is true on the underlying model
+<li>
+The first 'val1' gate is open if the val1 property is true on the underlying model
 </li>
-<li>The second '!val2' gate is open if val2 is false on the underlying model
+<li>
+The second '!val2' gate is open if val2 is false on the underlying model
 </li>
 </ul>
 
@@ -710,6 +776,7 @@ model state, e.g. a validated invoice should not be editable anymore.
 component assigned gates will be cloned for each component instance created
 and backed by this descriptor. So basically, each component instance will
 have its own, unshared collection of writability gates.
+
 
 
 By default, component descriptors are not assigned any gates collection,
@@ -721,14 +788,18 @@ programatic writability of a component; only UI is impacted.</p></td>
 </td>
 <td><p>Assigns a collection of gates to determine component writability. A component will
 be considered writable (updatable) if and only if all RolesGates gates are open.
+
 <pre>
 entity 'invoice', rolesWritabilityGates: ['role1', '!role2']
 </pre>
 
+
 <ul>
-<li>The first gate 'role1' is open if the connected user has the role1
+<li>
+The first gate 'role1' is open if the connected user has the role1
 </li>
-<li>The second gate '!role2' is open if the connected user does not have the role2
+<li>
+The second gate '!role2' is open if the connected user does not have the role2
 </li>
 </ul>
 
@@ -761,12 +832,15 @@ Defult value is false.</p></td>
 on the different phases of the property modification, i.e. :
 
 <ul>
-<li>before the property is modified, usually for controlling the incoming value
+<li>
+before the property is modified, usually for controlling the incoming value
 </li>
-<li>while (actually just before the actual assignment) the property is
+<li>
+while (actually just before the actual assignment) the property is
 modified, allowing to intercept and change the incoming value
 </li>
-<li>after the property is modified, allowing to trigger some post-modification
+<li>
+after the property is modified, allowing to trigger some post-modification
 behaviour (e.g. tracing, domain integrity management, ...)
 </li>
 </ul>
@@ -780,19 +854,24 @@ empty implementations to override : EmptyPropertyProcessor&lt;E
 , F&gt;.
 
 
+
 Whenever the underlying property is a collection property, the interface
 to implement is ICollectionPropertyProcessor&lt;E, F&gt; 
 (or extend EmptyCollectionPropertyProcessor&lt;E, F&gt;) with
 4 new phases introduced :
 
 <ul>
-<li>before an element is added to the collection property
+<li>
+before an element is added to the collection property
 </li>
-<li>after an element is added to the collection property
+<li>
+after an element is added to the collection property
 </li>
-<li>before an element is removed from the collection property
+<li>
+before an element is removed from the collection property
 </li>
-<li>after an element is removed from the collection property
+<li>
+after an element is removed from the collection property
 </li>
 </ul>
 </p></td>
@@ -804,9 +883,11 @@ to implement is ICollectionPropertyProcessor&lt;E, F&gt;
 reference property. This includes :
 
 <ul>
-<li>explicit filters that are dispayed for "list of values"
+<li>
+explicit filters that are dispayed for "list of values"
 </li>
-<li>implicit filters thet are use behind the scene for UI auto-completion
+<li>
+implicit filters thet are use behind the scene for UI auto-completion
 </li>
 </ul>
 
@@ -815,9 +896,11 @@ property names (the properties to be initialized).
 Values in this map can be either :
 
 <ul>
-<li>a constant value. In that case, the filter property is initialize with this constant value.
+<li>
+a constant value. In that case, the filter property is initialize with this constant value.
 </li>
-<li>a owning component property name. In that case, the filter property 
+<li>
+a owning component property name. In that case, the filter property 
 is initialize with the value of the owning component property.
 </li>
 </ul>
@@ -839,6 +922,7 @@ properties that should be ignored regarding optimistic versioning thus
 lowering the risk of version conflicts between concurrent users.
 Of course, this feature has to be used with care since it may generate
 phantom updates to the data store.
+
 
 
 Default value is true so that any change in the described property
@@ -873,6 +957,7 @@ Note that the cached value will be reset whenever a firePropertyChange regarding
 is detected to be fired.
 
 
+
 Default value is false in order to prevent un-desired side-effects if computed property change
 notification is not correctly wired.</p></td>
 </tr>
@@ -897,10 +982,12 @@ number, date, time, and duration properties behave this way.</p></td>
 + **Jspresso** : `BasicStringPropertyDescriptor`
 
 Field Declaration of type String. To be used with _n where the value n determine the maximum string length 
+
 <pre><b>string_32</b> 'name'
 
 <b>string_10</b> 'zipCode'
 </pre>
+
 
 
 <table>
@@ -925,11 +1012,13 @@ Field Declaration of type String. To be used with _n where the value n determine
 <td align="left"><p><strong>regex</strong></p><p><code>Regexp</code></p><p><code>regexpPattern</code></p>
 </td>
 <td><p>regex pattern (regular expression) to be applied to validate the string
+
 <pre>
 string_128 'email', <b>regex</b>: "[\w\-\.]*@[\w\-\.]", 
 
        <b>regexSample</b>: 'contact@acme.com'
-</pre></p></td>
+</pre>
+</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>regexSample</strong></p><p><code>String</code></p><p><code>regexpPatternSample</code></p>
@@ -994,9 +1083,11 @@ whenever a file system operation is initiated from the UI to operate on
 this property. This includes :
 
 <ul>
-<li>setting the property value from a text file loaded from the file system
+<li>
+setting the property value from a text file loaded from the file system
 </li>
-<li>saving the property text value to a file on the file system
+<li>
+saving the property text value to a file on the file system
 </li>
 </ul>
 
@@ -1005,11 +1096,13 @@ their UI automatically based on the fileFilter property.
 The incoming Map must be structured like following :
 
 <ul>
-<li>keys are translation keys that will be translated by Jspresso i18n
+<li>
+keys are translation keys that will be translated by Jspresso i18n
 layer and presented to the user as the group name of the associated
 extensions, e.g. "HTML files"
 </li>
-<li>values are the extension list associated to a certain group name, e
+<li>
+values are the extension list associated to a certain group name, e
 .g. a list containing [".html",".htm"]
 </li>
 </ul>
@@ -1208,6 +1301,7 @@ configured using <b>date</b> or <b>date_time</b> declaration
 <td align="left"><p><strong>timeZoneAware</strong></p><p><code>Boolean</code></p>
 </td>
 <td><p>Sets wether this date property should have its string representation vary depending on the client timezone.
+
 
 
 Default value is false, meaning that the date is considered as a string. It is in fact expressed in the server timezone.</p></td>
@@ -1764,9 +1858,11 @@ whenever a file system operation is initiated from the UI to operate on
 this property. This includes :
 
 <ul>
-<li>setting the property binary value from a file loaded from the file system
+<li>
+setting the property binary value from a file loaded from the file system
 </li>
-<li>saving the property binary value to a file on the file system
+<li>
+saving the property binary value to a file on the file system
 </li>
 </ul>
 
@@ -1775,11 +1871,13 @@ their UI automatically based on the fileFilter property.
 The incoming Map must be structured like following :
 
 <ul>
-<li>keys are translation keys that will be translated by Jspresso i18n
+<li>
+keys are translation keys that will be translated by Jspresso i18n
 layer and presented to the user as the group name of the associated
 extensions, e.g. "JPEG images"
 </li>
-<li>values are the extension list associated to a certain group name, e
+<li>
+values are the extension list associated to a certain group name, e
 .g. a list containing [".jpeg",".jpg"]
 </li>
 </ul>
@@ -2035,18 +2133,21 @@ relationship ends instructs the framework that the relationship
 is bi-derectional. This implies several complementary features :
 
 <ul>
-<li>When one of the relationship ends is updated, the other
+<li>
+When one of the relationship ends is updated, the other
 side is automatically maintained by Jspresso, i.e. you never
 have to worry about reverse state. For instance, considering
 a Invoice - InvoiceLine bi-directional relationship
 , InvoiceLine.setInvoice(Invoice) and Invoice
 .addToInvoiceLines(InvoiceLine) are strictly equivalent.
 </li>
-<li>You can qualify a "N-N" relationship (thus creating an association
+<li>
+You can qualify a "N-N" relationship (thus creating an association
 table in the datastore behind the scene) by assigning 2 collection
 property decriptors as reverse relation ends of each other.
 </li>
-<li>You can qualify a "1-1" relationship (thus enforcing some unicity
+<li>
+You can qualify a "1-1" relationship (thus enforcing some unicity
 constraint in the datastore behind the scene) by assigning 2 reference
 property decriptors as reverse relation ends of each other.
 </li>
@@ -2068,10 +2169,12 @@ Whenever this property is not explicitely set by the developer, Jspresso
 uses sensible defaults :
 
 <ul>
-<li>collection properties are compositions unless they are bidirectional
+<li>
+collection properties are compositions unless they are bidirectional
 "N to N"
 </li>
-<li>reference properties are not composition
+<li>
+reference properties are not composition
 </li>
 </ul>
 
@@ -2160,9 +2263,11 @@ referenced collection level. This property consist of a Map whose entries
 are composed with :
 
 <ul>
-<li>the property name as key
+<li>
+the property name as key
 </li>
-<li>the sort order for this property as value. This is either a value of the
+<li>
+the sort order for this property as value. This is either a value of the
 ESort enum (ASCENDING or DESCENDING) or its equivalent
 string representation.
 </li>
@@ -2269,9 +2374,11 @@ since all references are controlled by SJS, it is necessary to declare the exter
 <td align="left"><p><strong>id</strong></p><p><code>ListOfString</code></p>
 </td>
 <td><p>list identifiers of descriptors
+
 <pre><b>external</b>(id: ['com.appli.model.content.aCatalog',
 
-              'com.appli.model.content.aMenu'])</pre></p></td>
+              'com.appli.model.content.aMenu'])</pre>
+</p></td>
 </tr>
 </tbody>
 </table>
@@ -2284,9 +2391,11 @@ since all references are controlled by SJS, it is necessary to declare the exter
 + **allowed previous element** : `Domain, Entity, Interface, Component`
 
 paramSet allows to create a reusable groups of properties in SJS declarations.
+
 <pre>
 paramSet 'myCommon', readOnly:true, mandatory:true 
 </pre>
+
 paramSet can be used by declaration SJS using the attribute paramSets
 
 
@@ -2318,19 +2427,25 @@ paramSet can be used by declaration SJS using the attribute paramSets
 + **allowed previous element** : `Domain, Entity, Interface, Component`
 
 namespace allows to declare and open a namespace scope. The use of namespaces allows simplifying the declarations SJS referring to resources with a complex path.
+
 <pre>
 namespace('org.jspresso.hrsample'){...}
 </pre>
+
 This declaration allows, for example, to replace the following statement
+
 <pre>
 Entity('City', 
  
         icon: 'classpath:org/jspresso/hrsample/images/city-48x48.png'){...}
 </pre>
+
 by
+
 <pre>
 ('City',icon:'city-48x48.png') {...}
 </pre>
+
 With namespaces, conventions on the organization of the Jspresso's directories are used.
 In this exemple, images are in the subdirectory /images of the project
 
@@ -2363,9 +2478,11 @@ In this exemple, images are in the subdirectory /images of the project
 + **allowed previous element** : `Domain, Entity, Interface, Component`
 
 include allows to use multi SJS sources files and to include them into each other.
+
 <pre>
 include('fileName')
 </pre>
+
 
 
 <table>

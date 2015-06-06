@@ -77,15 +77,19 @@ roles collections are null, then access is granted to anyone.</p></td>
 </td>
 <td><p>Assigns a collection of gates to determine view writability. A view will
 be considered writable (updatable) if and only if all boolean gates are open.
+
 <pre>
 form 'form1', booleanWritabilityGates: ['prop1', '!prop2']
 
 </pre>
 
+
 <ul>
-<li>The first 'prop1' gate is open if the prop1 property is true on the underlying model
+<li>
+The first 'prop1' gate is open if the prop1 property is true on the underlying model
 </li>
-<li>The second '!prop2' gate is open if prop2 property is false on the underlying model
+<li>
+The second '!prop2' gate is open if prop2 property is false on the underlying model
 </li>
 </ul>
 
@@ -104,14 +108,18 @@ writability is the combination of view and model writability.</p></td>
 </td>
 <td><p>Assigns a collection of gates to determine view writability. A view will
 be considered writable (updatable) if and only if the user role matches at least one of the role.
+
 <pre>
 form 'form2', rolesWritabilityGates: ['role1', '!role2']
 </pre>
 
+
 <ul>
-<li>The first gate 'role1' is open if the connected user has the role1
+<li>
+The first gate 'role1' is open if the connected user has the role1
 </li>
-<li>The second gate '!role2' is open if the connected user does not have the role2
+<li>
+The second gate '!role2' is open if the connected user does not have the role2
 </li>
 </ul>
 
@@ -123,15 +131,19 @@ In the example, if the user has role1 OR does not have role2, then the access is
 </td>
 <td><p>Assigns a collection of gates to determine view writability. A view will
 be considered writable (updatable) if and only if all enum gates are open.
+
 <pre>
 form 'form1', enumWritabilityGates: ['prop1':['VAL1','VAL2'], '!prop2':['VAL3']]
 
 </pre>
 
+
 <ul>
-<li>The first 'prop1' gate is open if 'prop1' property value is either 'VAL1' or 'VAL2' on the underlying model
+<li>
+The first 'prop1' gate is open if 'prop1' property value is either 'VAL1' or 'VAL2' on the underlying model
 </li>
-<li>The second '!prop2' gate is open if 'prop2' propety value is not 'VAL3' on the underlying model
+<li>
+The second '!prop2' gate is open if 'prop2' propety value is not 'VAL3' on the underlying model
 </li>
 </ul>
 
@@ -150,15 +162,19 @@ writability is the combination of view and model writability.</p></td>
 </td>
 <td><p>Assigns a collection of gates to determine view writability. A view will
 be considered writable (updatable) if and only if all regex gates are open.
+
 <pre>
 form 'form1', regexWritabilityGates: ['prop1':'[A-Z]*', '!prop2':'[a-z]*']
 
 </pre>
 
+
 <ul>
-<li>The first 'prop1' gate is open if the prop1 property matches [A-Z]* on the underlying model
+<li>
+The first 'prop1' gate is open if the prop1 property matches [A-Z]* on the underlying model
 </li>
-<li>The second '!prop2' gate is open if prop2 property does not match [a-z]* regex on the underlying model
+<li>
+The second '!prop2' gate is open if prop2 property does not match [a-z]* regex on the underlying model
 </li>
 </ul>
 
@@ -207,12 +223,14 @@ commons properties for desktop views.
 serves several purposes :
 
 <ul>
-<li>configuration of the view content. For instance whenever a form
+<li>
+configuration of the view content. For instance whenever a form
 is assigned a component model descriptor, it will install 1 field per
 component rendering properties, unless otherwise specified in the
 view descriptor itself.
 </li>
-<li>configuration of the binding layer. There is no need for the developer
+<li>
+configuration of the binding layer. There is no need for the developer
 to configure anything for the binding to occur between the
 view and the model. Based on their model descriptor, Jspresso will
 setup all the necessary plumbing to efficiently synchronize model
@@ -236,9 +254,11 @@ the children as an implicite model inheritance enablement.
 Most of the time it is not necessary to explicitly use the property model. By convention, with SJS,
 the name of the componant is prefixed by the name of the model.
 In the following example SJS automatically determines that the form uses the entity "Company"
+
 <pre>
 form 'Company.pane', ...
-</pre></p></td>
+</pre>
+</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>validationModel</strong></p><p><code>RefDomain</code></p>
@@ -253,11 +273,14 @@ the default result table view on collection modules where the table model is det
 <td><p>Sets the icon image URL of this descriptor. Supported URL protocols include :
 
 <ul>
-<li>all JVM supported protocols
+<li>
+all JVM supported protocols
 </li>
-<li>the jar:/ pseudo URL protocol
+<li>
+the jar:/ pseudo URL protocol
 </li>
-<li>the classpath:/ pseudo URL protocol
+<li>
+the classpath:/ pseudo URL protocol
 </li>
 </ul>
 </p></td>
@@ -313,11 +336,13 @@ as a toolbar attached to the view. The toolbar follows the structure of
 the action map :
 
 <ul>
-<li>each action list is contained in its own toolbar section which is visually
+<li>
+each action list is contained in its own toolbar section which is visually
 separated from the other sections. This allows for visually
 grouping related actions as they are grouped in the action lists.
 </li>
-<li>each action contained in an action list is represented by a toolbar
+<li>
+each action contained in an action list is represented by a toolbar
 button using the action image as icon and translated action description
 as tooltip.
 </li>
@@ -367,12 +392,15 @@ Default value is null, meaning use UI default.</p></td>
 must be string encoded using the pattern "[name];[style];[size]" :
 
 <ul>
-<li>[name] is the name of the font, e.g. arial.
+<li>
+[name] is the name of the font, e.g. arial.
 </li>
-<li>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
+<li>
+[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
 combined with the "**" character, e.g. BOLD**ITALIC.
 </li>
-<li>[size] is the size of the font, e.g. 10.
+<li>
+[size] is the size of the font, e.g. 10.
 </li>
 </ul>
 
@@ -388,11 +416,14 @@ Default value is null, meaning use default component font.</p></td>
 enum or its equivalent string representation :
 
 <ul>
-<li>NONE for no border
+<li>
+NONE for no border
 </li>
-<li>SIMPLE for a line border
+<li>
+SIMPLE for a line border
 </li>
-<li>TITLED for a titled border. The view is then labeled with its translated
+<li>
+TITLED for a titled border. The view is then labeled with its translated
 name and and icon. Whenever the view name has not been
 explicitely set, the model name is used is used.
 </li>
@@ -456,12 +487,14 @@ commons properties for mobile views.
 serves several purposes :
 
 <ul>
-<li>configuration of the view content. For instance whenever a form
+<li>
+configuration of the view content. For instance whenever a form
 is assigned a component model descriptor, it will install 1 field per
 component rendering properties, unless otherwise specified in the
 view descriptor itself.
 </li>
-<li>configuration of the binding layer. There is no need for the developer
+<li>
+configuration of the binding layer. There is no need for the developer
 to configure anything for the binding to occur between the
 view and the model. Based on their model descriptor, Jspresso will
 setup all the necessary plumbing to efficiently synchronize model
@@ -485,9 +518,11 @@ the children as an implicite model inheritance enablement.
 Most of the time it is not necessary to explicitly use the property model. By convention, with SJS,
 the name of the componant is prefixed by the name of the model.
 In the following example SJS automatically determines that the form uses the entity "Company"
+
 <pre>
 form 'Company.pane', ...
-</pre></p></td>
+</pre>
+</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>validationModel</strong></p><p><code>RefDomain</code></p>
@@ -502,11 +537,14 @@ the default result table view on collection modules where the table model is det
 <td><p>Sets the icon image URL of this descriptor. Supported URL protocols include :
 
 <ul>
-<li>all JVM supported protocols
+<li>
+all JVM supported protocols
 </li>
-<li>the jar:/ pseudo URL protocol
+<li>
+the jar:/ pseudo URL protocol
 </li>
-<li>the classpath:/ pseudo URL protocol
+<li>
+the classpath:/ pseudo URL protocol
 </li>
 </ul>
 </p></td>
@@ -550,11 +588,13 @@ as a toolbar attached to the view. The toolbar follows the structure of
 the action map :
 
 <ul>
-<li>each action list is contained in its own toolbar section which is visually
+<li>
+each action list is contained in its own toolbar section which is visually
 separated from the other sections. This allows for visually
 grouping related actions as they are grouped in the action lists.
 </li>
-<li>each action contained in an action list is represented by a toolbar
+<li>
+each action contained in an action list is represented by a toolbar
 button using the action image as icon and translated action description
 as tooltip.
 </li>
@@ -588,11 +628,14 @@ Default value is false, i.e. view is updatable.</p></td>
 enum or its equivalent string representation :
 
 <ul>
-<li>NONE for no border
+<li>
+NONE for no border
 </li>
-<li>SIMPLE for a line border
+<li>
+SIMPLE for a line border
 </li>
-<li>TITLED for a titled border. The view is then labeled with its translated
+<li>
+TITLED for a titled border. The view is then labeled with its translated
 name and and icon. Whenever the view name has not been
 explicitely set, the model name is used is used.
 </li>
@@ -849,9 +892,11 @@ Defines a 2+ dimensional chart.
 This is either a value of the EOrientation enum or its equivalent string representation :
 
 <ul>
-<li>VERTICAL for a vertical value axis
+<li>
+VERTICAL for a vertical value axis
 </li>
-<li>HORIZONAL for an horizontal value axis
+<li>
+HORIZONAL for an horizontal value axis
 </li>
 </ul>
 
@@ -876,13 +921,17 @@ the chart adapts the axis maximum value depending on the data it has to display.
 or its equivalent string representation :
 
 <ul>
-<li>CLUSTERED the series are drawn side by side
+<li>
+CLUSTERED the series are drawn side by side
 </li>
-<li>OVERLAID the series are drawn on each other
+<li>
+OVERLAID the series are drawn on each other
 </li>
-<li>STACKED the series are drawn additively
+<li>
+STACKED the series are drawn additively
 </li>
-<li>STACKED_PERCENT the series are drawn additively based on their percentage of the total
+<li>
+STACKED_PERCENT the series are drawn additively based on their percentage of the total
 value of all series
 </li>
 </ul>
@@ -1154,12 +1203,15 @@ the pattern "[name];[style];[size]" :
 
 
 <ul>
-<li>[name] is the name of the font, e.g. arial.
+<li>
+[name] is the name of the font, e.g. arial.
 </li>
-<li>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
+<li>
+[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
 combined with the "**" character, e.g. BOLD**ITALIC.
 </li>
-<li>[size] is the size of the font, e.g. 10.
+<li>
+[size] is the size of the font, e.g. 10.
 </li>
 </ul>
 
@@ -1373,12 +1425,15 @@ the pattern "[name];[style];[size]" :
 
 
 <ul>
-<li>[name] is the name of the font, e.g. arial.
+<li>
+[name] is the name of the font, e.g. arial.
 </li>
-<li>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
+<li>
+[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
 combined with the "**" character, e.g. BOLD**ITALIC.
 </li>
-<li>[size] is the size of the font, e.g. 10.
+<li>
+[size] is the size of the font, e.g. 10.
 </li>
 </ul>
 
@@ -1448,11 +1503,14 @@ that allows to fine-tune each component UI field individually in a fields list.
 of the ELabelPosition enum or its equivalent string representation :
 
 <ul>
-<li>ABOVE for placing each field label above the property UI component
+<li>
+ABOVE for placing each field label above the property UI component
 </li>
-<li>ASIDE for placing each field label aside the property UI component
+<li>
+ASIDE for placing each field label aside the property UI component
 </li>
-<li>NONE for completely disabling fields labelling on the view
+<li>
+NONE for completely disabling fields labelling on the view
 </li>
 </ul>
 
@@ -1465,9 +1523,11 @@ Default value is ELabelPosition.ASIDE, i.e. fields label next to the property UI
 of the EHorizontalPosition enum or its equivalent string representation :
 
 <ul>
-<li>LEFT for placing each field label at the left of the property UI component
+<li>
+LEFT for placing each field label at the left of the property UI component
 </li>
-<li>RIGHT for placing each field label at the right of the property UI component
+<li>
+RIGHT for placing each field label at the right of the property UI component
 </li>
 </ul>
 
@@ -1481,12 +1541,15 @@ the pattern "[name];[style];[size]" :
 
 
 <ul>
-<li>[name] is the name of the font, e.g. arial.
+<li>
+[name] is the name of the font, e.g. arial.
 </li>
-<li>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
+<li>
+[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
 combined with the "**" character, e.g. BOLD**ITALIC.
 </li>
-<li>[size] is the size of the font, e.g. 10.
+<li>
+[size] is the size of the font, e.g. 10.
 </li>
 </ul>
 
@@ -1506,12 +1569,15 @@ the pattern "[name];[style];[size]" :
 
 
 <ul>
-<li>[name] is the name of the font, e.g. arial.
+<li>
+[name] is the name of the font, e.g. arial.
 </li>
-<li>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
+<li>
+[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
 combined with the "**" character, e.g. BOLD**ITALIC.
 </li>
-<li>[size] is the size of the font, e.g. 10.
+<li>
+[size] is the size of the font, e.g. 10.
 </li>
 </ul>
 
@@ -1563,9 +1629,11 @@ properties will follow the default span of 1.
 The Map is :
 
 <ul>
-<li>keyed by the name of the property
+<li>
+keyed by the name of the property
 </li>
-<li>valued by the number of columns of the property span
+<li>
+valued by the number of columns of the property span
 </li>
 </ul>
 
@@ -1630,11 +1698,14 @@ that allows to fine-tune each component UI field individually in a fields list.
 of the ELabelPosition enum or its equivalent string representation :
 
 <ul>
-<li>ABOVE for placing each field label above the property UI component
+<li>
+ABOVE for placing each field label above the property UI component
 </li>
-<li>ASIDE for placing each field label aside the property UI component
+<li>
+ASIDE for placing each field label aside the property UI component
 </li>
-<li>NONE for completely disabling fields labelling on the view
+<li>
+NONE for completely disabling fields labelling on the view
 </li>
 </ul>
 
@@ -1804,19 +1875,25 @@ The table view will automatically adapt its columuns depending on the underlying
 e.g. :
 
 <ul>
-<li>columns for read-only properties won't be editable
+<li>
+columns for read-only properties won't be editable
 </li>
-<li>columns that are assigned writability gates will compute the editability of their cells based on each
+<li>
+columns that are assigned writability gates will compute the editability of their cells based on each
 cell's gates
 </li>
-<li>columns will adapt their renderer/editor based on the underlying property type, e.g. a calendar component
+<li>
+columns will adapt their renderer/editor based on the underlying property type, e.g. a calendar component
 will be used for dates
 </li>
-<li>column titles will be filled with property names translations based on the user locale
+<li>
+column titles will be filled with property names translations based on the user locale
 </li>
-<li>mandatory properties will be visually indicated
+<li>
+mandatory properties will be visually indicated
 </li>
-<li>...
+<li>
+...
 </li>
 </ul>
 
@@ -1880,17 +1957,22 @@ Default value is true, i.e. table allows for its rows to be sorted</p></td>
 <td><p>Sets the selection mode of the collection view.
 
 <ul>
-<li>MULTIPLE_INTERVAL_SELECTION for allowing any type of selection
+<li>
+MULTIPLE_INTERVAL_SELECTION for allowing any type of selection
 </li>
-<li>MULTIPLE_INTERVAL_CUMULATIVE_SELECTION for allowing any type of selection with toggle behaviour
+<li>
+MULTIPLE_INTERVAL_CUMULATIVE_SELECTION for allowing any type of selection with toggle behaviour
 </li>
-<li>SINGLE_INTERVAL_SELECTION for allowing only contiguous interval
+<li>
+SINGLE_INTERVAL_SELECTION for allowing only contiguous interval
 selection
 </li>
-<li>SINGLE_INTERVAL_CUMULATIVE_SELECTION for allowing only contiguous interval
+<li>
+SINGLE_INTERVAL_CUMULATIVE_SELECTION for allowing only contiguous interval
 selection with toggle behaviour
 </li>
-<li>SINGLE_SELECTION for allowing only a single item selection
+<li>
+SINGLE_SELECTION for allowing only a single item selection
 </li>
 </ul>
 
@@ -2012,17 +2094,22 @@ of the element component descriptor is used.</p></td>
 <td><p>Sets the selection mode of the collection view.
 
 <ul>
-<li>MULTIPLE_INTERVAL_SELECTION for allowing any type of selection
+<li>
+MULTIPLE_INTERVAL_SELECTION for allowing any type of selection
 </li>
-<li>MULTIPLE_INTERVAL_CUMULATIVE_SELECTION for allowing any type of selection with toggle behaviour
+<li>
+MULTIPLE_INTERVAL_CUMULATIVE_SELECTION for allowing any type of selection with toggle behaviour
 </li>
-<li>SINGLE_INTERVAL_SELECTION for allowing only contiguous interval
+<li>
+SINGLE_INTERVAL_SELECTION for allowing only contiguous interval
 selection
 </li>
-<li>SINGLE_INTERVAL_CUMULATIVE_SELECTION for allowing only contiguous interval
+<li>
+SINGLE_INTERVAL_CUMULATIVE_SELECTION for allowing only contiguous interval
 selection with toggle behaviour
 </li>
-<li>SINGLE_SELECTION for allowing only a single item selection
+<li>
+SINGLE_SELECTION for allowing only a single item selection
 </li>
 </ul>
 
@@ -2142,17 +2229,22 @@ of the element component descriptor is used.</p></td>
 <td><p>Sets the selection mode of the collection view.
 
 <ul>
-<li>MULTIPLE_INTERVAL_SELECTION for allowing any type of selection
+<li>
+MULTIPLE_INTERVAL_SELECTION for allowing any type of selection
 </li>
-<li>MULTIPLE_INTERVAL_CUMULATIVE_SELECTION for allowing any type of selection with toggle behaviour
+<li>
+MULTIPLE_INTERVAL_CUMULATIVE_SELECTION for allowing any type of selection with toggle behaviour
 </li>
-<li>SINGLE_INTERVAL_SELECTION for allowing only contiguous interval
+<li>
+SINGLE_INTERVAL_SELECTION for allowing only contiguous interval
 selection
 </li>
-<li>SINGLE_INTERVAL_CUMULATIVE_SELECTION for allowing only contiguous interval
+<li>
+SINGLE_INTERVAL_CUMULATIVE_SELECTION for allowing only contiguous interval
 selection with toggle behaviour
 </li>
-<li>SINGLE_SELECTION for allowing only a single item selection
+<li>
+SINGLE_SELECTION for allowing only a single item selection
 </li>
 </ul>
 
@@ -2248,9 +2340,11 @@ Open a list of propertyView to individually fine-tunes each column in a table
 This view descriptor serves 2 purposes :
 
 <ul>
-<li>configure complex, component based views : refine columns of table views and fields of form views.
+<li>
+configure complex, component based views : refine columns of table views and fields of form views.
 </li>
-<li>display a single property as an autonomous view, i.e. not as a table column or a form field.
+<li>
+display a single property as an autonomous view, i.e. not as a table column or a form field.
 </li>
 </ul>
 
@@ -2299,6 +2393,7 @@ component view), this property defines the umber of grid columns the
 corresponding UI component will span.
 
 
+
 Default value is null, meaning use default span of 1</p></td>
 </tr>
 <tr class="even">
@@ -2320,12 +2415,15 @@ the pattern "[name];[style];[size]" :
 
 
 <ul>
-<li>[name] is the name of the font, e.g. arial.
+<li>
+[name] is the name of the font, e.g. arial.
 </li>
-<li>[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
+<li>
+[style] is PLAIN, BOLD, ITALIC or a union of BOLD and ITALIC
 combined with the "**" character, e.g. BOLD**ITALIC.
 </li>
-<li>[size] is the size of the font, e.g. 10.
+<li>
+[size] is the size of the font, e.g. 10.
 </li>
 </ul>
 
@@ -2350,9 +2448,11 @@ Default value is null, meaning use UI default.</p></td>
 This is either a value of the EHorizontalPosition enum or its equivalent string representation :
 
 <ul>
-<li>LEFT for placing field label at the left of the property UI component
+<li>
+LEFT for placing field label at the left of the property UI component
 </li>
-<li>RIGHT for placing field label at the right of the property UI component
+<li>
+RIGHT for placing field label at the right of the property UI component
 </li>
 </ul>
 
@@ -2364,9 +2464,11 @@ Default value is ELabelPosition.LEFT, i.e. field label at the left of the proper
 <td><p>Configures the action to be triggered when acting on this property. There are 2 cases :
 
 <ul>
-<li>If the property is read-only, then assigning an action turns the property into a clickable hyperlink.
+<li>
+If the property is read-only, then assigning an action turns the property into a clickable hyperlink.
 </li>
-<li>If the property is read-write, the registered action will be trigerred when the user changes the value of the field.
+<li>
+If the property is read-write, the registered action will be trigerred when the user changes the value of the field.
 Note thet in that case, the action is executed after the model has been updated.
 However the old property value can be retrieved from the context action param.
 </li>
@@ -2380,9 +2482,11 @@ However the old property value can be retrieved from the context action param.
 referenced component fields should be displayed :
 
 <ul>
-<li>as columns when the rendered property is a collection property
+<li>
+as columns when the rendered property is a collection property
 </li>
-<li>as fields when the rendered property is a reference property
+<li>
+as fields when the rendered property is a reference property
 </li>
 </ul>
 
@@ -2402,11 +2506,14 @@ using composite views; so the latter is by far recommended.</p></td>
 of the EHorizontalAlignment enum or its equivalent string representation :
 
 <ul>
-<li>LEFT for left alignment
+<li>
+LEFT for left alignment
 </li>
-<li>CENTER for center alignment
+<li>
+CENTER for center alignment
 </li>
-<li>RIGHT for right alignment
+<li>
+RIGHT for right alignment
 </li>
 </ul>
 
@@ -2724,11 +2831,14 @@ the preferredWidth / preferredHeight properties.</p></td>
 of the ERenderingOptions enum or its equivalent string representation :
 
 <ul>
-<li>LABEL_ICON for label and icon
+<li>
+LABEL_ICON for label and icon
 </li>
-<li>LABEL for label only
+<li>
+LABEL for label only
 </li>
-<li>ICON for icon only
+<li>
+ICON for icon only
 </li>
 </ul>
 
@@ -2749,6 +2859,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 + **allowed previous element** : `Front`
 + **allowed next element** : `actionMap, secondaryActionMap`
 
+
 <pre>
 treeNode('Department-teams.treeNode',
 
@@ -2763,6 +2874,7 @@ treeNode('Company-teams.treeNode',
         render: 'ouId', actionMap: 'masterDetail')
 
 </pre>
+
 
 
 <table>
@@ -2808,6 +2920,7 @@ represent a component collection property. Each individual treeNode collection c
 using role-based authorization (i.e. grantedRoles) on its descriptor.
 There are no properties child or children with SJS.
 The way in which the hierarchy of the tree is built depends on the overlap of the subTree declarations.
+
 <pre>
 
 tree('Company.tree', render: 'name', icon: 'structure-48x48.png'){
@@ -2821,7 +2934,9 @@ tree('Company.tree', render: 'name', icon: 'structure-48x48.png'){
 }
 
 </pre>
+
 This SJS declaration produces this type of tree
+
 <pre>
 
 Company
@@ -2842,7 +2957,9 @@ Company
 
 </pre>
 
+
 But it is also possible to define a tree this way :
+
 <pre>
 
 tree('Company.tree', render: 'name', icon: 'structure-48x48.png') {
@@ -2854,7 +2971,9 @@ tree('Company.tree', render: 'name', icon: 'structure-48x48.png') {
 }
 
 </pre>
+
 which produces this type of tree
+
 <pre>
 
 Company
@@ -2876,6 +2995,7 @@ Company
         ...
 
 </pre>
+
 In this second example you should notice intermediate collection property
 grouping nodes (departments and teams). They automatically appeared
 to clearly group the tree nodes belonging to the different collections.
@@ -2974,6 +3094,7 @@ represent a component collection property. Each individual treeNode collection c
 using role-based authorization (i.e. grantedRoles) on its descriptor.
 There are no properties child or children with SJS.
 The way in which the hierarchy of the tree is built depends on the overlap of the subTree declarations.
+
 <pre>
 
 tree('Company.tree', render: 'name', icon: 'structure-48x48.png'){
@@ -2987,7 +3108,9 @@ tree('Company.tree', render: 'name', icon: 'structure-48x48.png'){
 }
 
 </pre>
+
 This SJS declaration produces this type of tree
+
 <pre>
 
 Company
@@ -3008,7 +3131,9 @@ Company
 
 </pre>
 
+
 But it is also possible to define a tree this way :
+
 <pre>
 
 tree('Company.tree', render: 'name', icon: 'structure-48x48.png') {
@@ -3020,7 +3145,9 @@ tree('Company.tree', render: 'name', icon: 'structure-48x48.png') {
 }
 
 </pre>
+
 which produces this type of tree
+
 <pre>
 
 Company
@@ -3042,6 +3169,7 @@ Company
         ...
 
 </pre>
+
 In this second example you should notice intermediate collection property
 grouping nodes (departments and teams). They automatically appeared
 to clearly group the tree nodes belonging to the different collections.
@@ -3220,11 +3348,14 @@ than the outer composite unless explicitely specified differently.</p></td>
 of the ERenderingOptions enum or its equivalent string representation :
 
 <ul>
-<li>LABEL_ICON for label and icon
+<li>
+LABEL_ICON for label and icon
 </li>
-<li>LABEL for label only
+<li>
+LABEL for label only
 </li>
-<li>ICON for icon only
+<li>
+ICON for icon only
 </li>
 </ul>
 
@@ -3286,11 +3417,14 @@ the children views order of this list.</p></td>
 of the ERenderingOptions enum or its equivalent string representation :
 
 <ul>
-<li>LABEL_ICON for label and icon
+<li>
+LABEL_ICON for label and icon
 </li>
-<li>LABEL for label only
+<li>
+LABEL for label only
 </li>
-<li>ICON for icon only
+<li>
+ICON for icon only
 </li>
 </ul>
 
@@ -3558,11 +3692,14 @@ A border view is a composite view that arranges its children to the north, west,
 Depending its position in the container, the resizing rules apply differently :
 
 <ul>
-<li>north and south are resized horizontally and kept to their preferred size vertically
+<li>
+north and south are resized horizontally and kept to their preferred size vertically
 </li>
-<li>west and east are resized vertically and kept to their preferred size horizontally
+<li>
+west and east are resized vertically and kept to their preferred size horizontally
 </li>
-<li>center is resized both horizontally and vertically
+<li>
+center is resized both horizontally and vertically
 </li>
 </ul>
 
@@ -3650,11 +3787,14 @@ A border view is a composite view that arranges its children to the north, west,
 Depending its position in the container, the resizing rules apply differently :
 
 <ul>
-<li>north and south are resized horizontally and kept to their preferred size vertically
+<li>
+north and south are resized horizontally and kept to their preferred size vertically
 </li>
-<li>west and east are resized vertically and kept to their preferred size horizontally
+<li>
+west and east are resized vertically and kept to their preferred size horizontally
 </li>
-<li>center is resized both horizontally and vertically
+<li>
+center is resized both horizontally and vertically
 </li>
 </ul>
 
@@ -3962,9 +4102,11 @@ than the outer composite unless explicitely specified differently.</p></td>
 <td><p>Configures the driving dimension of the grid :
 
 <ul>
-<li>ROW for distributing cells along rows then columns
+<li>
+ROW for distributing cells along rows then columns
 </li>
-<li>COLUMN for distributing cells along columns then rows
+<li>
+COLUMN for distributing cells along columns then rows
 </li>
 </ul>
 
@@ -4233,11 +4375,13 @@ An action map is generally represented as a toolbar attached to the view.
 The toolbar follows the structure of the action map :
 
 <ul>
-<li>each action list is contained in its own toolbar section which is visually
+<li>
+each action list is contained in its own toolbar section which is visually
 separated from the other sections. This allows for visually
 grouping related actions as they are grouped in the action lists.
 </li>
-<li>each action contained in an action list is represented by a toolbar
+<li>
+each action contained in an action list is represented by a toolbar
 button using the action image as icon and translated action description
 as tooltip.
 </li>
@@ -4274,11 +4418,14 @@ parent actions with the same name.</p></td>
 of the ERenderingOptions enum or its equivalent string representation :
 
 <ul>
-<li>LABEL_ICON for label and icon
+<li>
+LABEL_ICON for label and icon
 </li>
-<li>LABEL for label only
+<li>
+LABEL for label only
 </li>
-<li>ICON for icon only
+<li>
+ICON for icon only
 </li>
 </ul>
 
@@ -4324,11 +4471,13 @@ It is always declared as an "inline" statement.
 The toolbar follows the structure of the action map :
 
 <ul>
-<li>each action list is contained in its own toolbar section which is visually
+<li>
+each action list is contained in its own toolbar section which is visually
 separated from the other sections. This allows for visually
 grouping related actions as they are grouped in the action lists.
 </li>
-<li>each action contained in an action list is represented by a toolbar
+<li>
+each action contained in an action list is represented by a toolbar
 button using the action image as icon and translated action description
 as tooltip.
 </li>
@@ -4365,11 +4514,14 @@ parent actions with the same name.</p></td>
 of the ERenderingOptions enum or its equivalent string representation :
 
 <ul>
-<li>LABEL_ICON for label and icon
+<li>
+LABEL_ICON for label and icon
 </li>
-<li>LABEL for label only
+<li>
+LABEL for label only
 </li>
-<li>ICON for icon only
+<li>
+ICON for icon only
 </li>
 </ul>
 
@@ -4441,11 +4593,14 @@ description property set here is actually an i18n key used for translation.</p><
 <td><p>Sets the icon image URL of this descriptor. Supported URL protocols include :
 
 <ul>
-<li>all JVM supported protocols
+<li>
+all JVM supported protocols
 </li>
-<li>the jar:/ pseudo URL protocol
+<li>
+the jar:/ pseudo URL protocol
 </li>
-<li>the classpath:/ pseudo URL protocol
+<li>
+the classpath:/ pseudo URL protocol
 </li>
 </ul>
 </p></td>
@@ -4474,11 +4629,14 @@ factory is ignored.</p></td>
 of the ERenderingOptions enum or its equivalent string representation :
 
 <ul>
-<li>LABEL_ICON for label and icon
+<li>
+LABEL_ICON for label and icon
 </li>
-<li>LABEL for label only
+<li>
+LABEL for label only
 </li>
-<li>ICON for icon only
+<li>
+ICON for icon only
 </li>
 </ul>
 
@@ -4490,6 +4648,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 <td><p>Configures the actionlist so that it can be collapsed by view factories.
 Collapsable action lists can typically be rendered as combo buttons in UI
 channels that support it.
+
 
 
 Default value is false.</p></td>
@@ -4532,9 +4691,11 @@ This descriptor establishes the foundation of the Jspresso action
 framework, i.e. each action can link :
 
 <ul>
-<li>a wrapped action that will execute a return back to the caller action
+<li>
+a wrapped action that will execute a return back to the caller action
 </li>
-<li>a next action that will execute after the caller
+<li>
+a next action that will execute after the caller
 </li>
 </ul>
 
@@ -4542,10 +4703,12 @@ The action chaining described above supports the separation of concerns that con
 actions in two distinct categrories :
 
 <ul>
-<li>frontend actions that deal with user interaction. They are typically used to bootstrap a service request
+<li>
+frontend actions that deal with user interaction. They are typically used to bootstrap a service request
 from th UI, update the UI state, trigger the display of informations, errors, ...
 </li>
-<li>backend actions that are faceless, UI agnostic and deal with the manipulation of the domain model,
+<li>
+backend actions that are faceless, UI agnostic and deal with the manipulation of the domain model,
 backend services, ...
 </li>
 </ul>
@@ -4553,6 +4716,7 @@ backend services, ...
 Conceptually, a frontend action can call a backend action or another frontend action but a backend action
 should stay on the backend, thus should only reference another backend action. In other words, the
 backend layer should never explicitely reference the frontend layer.
+
 
 
 That's the main reason for having a wrapped and a next action in the action chain. The wrapped action is
@@ -4610,13 +4774,15 @@ layer (the frontend).</p></td>
 <td align="left"><p><strong>custom</strong></p><p><code>Map</code></p>
 </td>
 <td><p>Map of custom properties that have to be set on the action. When a property is a reference, its key has to be suffixed by "_ref". This enables SJS to generate the appropriate XML and to control the existence of the reference.
+
 <pre>
 custom:[
 
     parentModuleName:'Projects', 
 
     componentDescriptor_ref:'Project'])
-</pre></p></td>
+</pre>
+</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>name</strong></p><p><code>String</code></p>
@@ -4645,11 +4811,14 @@ This is the syntax supported by the javax.swing.KeyStroke</p></td>
 <td><p>Sets the icon image URL of this descriptor. Supported URL protocols include :
 
 <ul>
-<li>all JVM supported protocols
+<li>
+all JVM supported protocols
 </li>
-<li>the jar:/ pseudo URL protocol
+<li>
+the jar:/ pseudo URL protocol
 </li>
-<li>the classpath:/ pseudo URL protocol
+<li>
+the classpath:/ pseudo URL protocol
 </li>
 </ul>
 </p></td>
@@ -4705,15 +4874,19 @@ Moreover, boolean actionnability gates that are configured on collection based a
 view selected components instead of the view model itself. In case of multi-selection enabled UI views, the actionability gates
 will actually open if and only if their opening condition is met for all the selected items.
 
+
 <pre>
 action('actionA', booleanActionabilityGates: ['!prop1', 'prop2_cb'] ...
 </pre>
 
 
+
 <ul>
-<li>The first '!prop1' gate is open if prop1 is false, the gate is not applied to each collection item individually
+<li>
+The first '!prop1' gate is open if prop1 is false, the gate is not applied to each collection item individually
 </li>
-<li>The second 'prop2' gate is open if prop2 is true, the gate is applied to each collection item individually
+<li>
+The second 'prop2' gate is open if prop2 is true, the gate is applied to each collection item individually
 </li>
 </ul>
 
@@ -4733,14 +4906,18 @@ By default, frontend actions are assigned a generic gate that closes
 </td>
 <td><p>Assigns a collection of gates to determine action actionability. An action will be
 considered actionable (enabled) if and only if all rolesGates are open.
+
 <pre>
 action('actionA', rolesActionabilityGates: ['role1', '!role2'] ...
 </pre>
 
+
 <ul>
-<li>The first gate 'role1' is open if the connected user has the role1
+<li>
+The first gate 'role1' is open if the connected user has the role1
 </li>
-<li>The second gate '!role2' is open if the connected user does not have the role2
+<li>
+The second gate '!role2' is open if the connected user does not have the role2
 </li>
 </ul>
 
@@ -4757,15 +4934,19 @@ Moreover, enum actionnability gates that are configured on collection based acti
 view selected components instead of the view model itself. In case of multi-selection enabled UI views, the actionability gates
 will actually open if and only if their opening condition is met for all the selected items.
 
+
 <pre>
 action('actionA', enumActionabilityGates: ['!prop1':['VAL1','VAL2'], 'prop2_cb':['VAL3']] ...
 </pre>
 
 
+
 <ul>
-<li>The first '!prop1' gate is open if prop1 is not one of 'VAL1' or 'VAL'2', the gate is not applied to each collection item individually
+<li>
+The first '!prop1' gate is open if prop1 is not one of 'VAL1' or 'VAL'2', the gate is not applied to each collection item individually
 </li>
-<li>The second 'prop2' gate is open if prop2 is 'VAL3', the gate is applied to each collection item individually
+<li>
+The second 'prop2' gate is open if prop2 is 'VAL3', the gate is applied to each collection item individually
 </li>
 </ul>
 
@@ -4791,15 +4972,19 @@ Moreover, boolean actionnability gates that are configured on collection based a
 view selected components instead of the view model itself. In case of multi-selection enabled UI views, the actionability gates
 will actually open if and only if their opening condition is met for all the selected items.
 
+
 <pre>
 action('actionA', regexActionabilityGates: ['!prop1':'[A-Z]*', 'prop2_cb':'[a-z]*'] ...
 </pre>
 
 
+
 <ul>
-<li>The first '!prop1' gate is open if prop1 does not match [A-Z]*, the gate is not applied to each collection item individually
+<li>
+The first '!prop1' gate is open if prop1 does not match [A-Z]*, the gate is not applied to each collection item individually
 </li>
-<li>The second 'prop2' gate is open if prop2 matches [a-z]*, the gate is applied to each collection item individually
+<li>
+The second 'prop2' gate is open if prop2 matches [a-z]*, the gate is applied to each collection item individually
 </li>
 </ul>
 
@@ -5125,10 +5310,12 @@ Defines a page that displays a card view as its main content.
 Defines a composite page. A composite page is made of sections. A section can be :
 
 <ul>
-<li>Another page. In that case, a selection item is installed and the other page is
+<li>
+Another page. In that case, a selection item is installed and the other page is
 navigated to when the user clicks the selection item.
 </li>
-<li>A form. In that case, the form is displayed inline in the page.
+<li>
+A form. In that case, the form is displayed inline in the page.
 </li>
 </ul>
 
@@ -5373,6 +5560,7 @@ activities). This helps to clearly seperates tasks-unrelated modules and eases a
 since a workspace can be granted or forbidden as a whole by Jspresso security.
 
 
+
 Workspaces might be graphically represented differently depending on the UI technology used. For instance,
 the Swing and ULC channels use a MDI UI in which each workspace is represented as an internal
 frame (document). On the other hand, Flex and Qooxdoo channels represent workspaces stacked in
@@ -5426,11 +5614,14 @@ leveraged as a textual section that explains the workspace goal.</p></td>
 <td><p>Sets the icon image URL of this descriptor. Supported URL protocols include :
 
 <ul>
-<li>all JVM supported protocols
+<li>
+all JVM supported protocols
 </li>
-<li>the jar:/ pseudo URL protocol
+<li>
+the jar:/ pseudo URL protocol
 </li>
-<li>the classpath:/ pseudo URL protocol
+<li>
+the classpath:/ pseudo URL protocol
 </li>
 </ul>
 </p></td>
@@ -5491,9 +5682,11 @@ will reflect the change seamlessly, as with any Jspresso model (in fact workspac
 beans that are used as model in standard Jspresso views).
 
 
+
 Modules, among other features, are capable of providing a view to be installed in the UI wen they are selected.
 This makes Jspresso applications really modular and their architecture flexible enough to embed
 and run a large variety of different module types.
+
 
 
 A module can also be as simple as a grouping structure for other modules (nodeModule).
@@ -5537,11 +5730,14 @@ tooltip on the UI side but its use may be extended for online help.</p></td>
 <td><p>Sets the icon image URL of this descriptor. Supported URL protocols include :
 
 <ul>
-<li>all JVM supported protocols
+<li>
+all JVM supported protocols
 </li>
-<li>the jar:/ pseudo URL protocol
+<li>
+the jar:/ pseudo URL protocol
 </li>
-<li>the classpath:/ pseudo URL protocol
+<li>
+the classpath:/ pseudo URL protocol
 </li>
 </ul>
 </p></td>
@@ -5609,6 +5805,7 @@ privileges, the module is simply not installed in the workspace
 role based authorization on this module.
 
 
+
 Some specific modules that are component/entity model based i.e.
 Bean(Collection)Module also inherit their authrorizations from
 their model.</p></td>
@@ -5628,6 +5825,7 @@ their model.</p></td>
 
 This type of module keeps a reference on a beans collection. There is no assumption made on wether
 these beans are actually persistent entites or any other type of java beans.
+
 
 
 Simple bean collection modules must have their collection of referenced beans initialized somehow.
@@ -5660,6 +5858,7 @@ that bean collection modules based on forbidden entities will automatically
 be excluded from the workspace of the logged-in user.
 
 
+
 if not explicitely configured, the eement component descriptor can be
 inferred from the collection view descriptor configured as projected
 view descriptor.</p></td>
@@ -5669,6 +5868,7 @@ view descriptor.</p></td>
 </td>
 <td><p>This property is not used by the module itself, but by built-in actions
 that maybe registered on this module. One of tese actions is AddBeanAsSubModuleAction.
+
 
 
 This property indicates the view to use whenever the user requests a
@@ -5754,9 +5954,11 @@ not set, which is the default, the elements ordering properties is used.
 This property consist of a Map whose entries are composed with :
 
 <ul>
-<li>the property name as key
+<li>
+the property name as key
 </li>
-<li>the sort order for this property as value. This is either a value of the
+<li>
+the sort order for this property as value. This is either a value of the
 ESort enum (ASCENDING or DESCENDING) or its equivalent
 string representation.
 </li>
@@ -5788,6 +5990,7 @@ This type of module keeps a reference on a beans collection. There is no assumpt
 these beans are actually persistent entites or any other type of java beans.
 
 
+
 Simple bean collection modules must have their collection of referenced beans initialized somehow.
 There is no standard built-in action to do so, since it is highly dependent on what's needed. So it's rather
 common to have the module content initialized through a startup action depending on the session state.
@@ -5816,6 +6019,7 @@ one unless explicitely set. Same goes for icon image URL,
 default ordering properties or even granted roles. The latter means
 that bean collection modules based on forbidden entities will automatically
 be excluded from the workspace of the logged-in user.
+
 
 
 if not explicitely configured, the element component descriptor can be
@@ -5901,11 +6105,14 @@ application structure like the workspace list, the name, the application-wide ac
 <td><p>Sets the icon image URL that is used as the application icon.
 
 <ul>
-<li>all JVM supported protocols
+<li>
+all JVM supported protocols
 </li>
-<li>the jar:/ pseudo URL protocol
+<li>
+the jar:/ pseudo URL protocol
 </li>
-<li>the classpath:/ pseudo URL protocol
+<li>
+the classpath:/ pseudo URL protocol
 </li>
 </ul>
 </p></td>
@@ -5951,6 +6158,7 @@ actions that are related to helping the user (online help, reference
 manual, tutorial, version dialog...).
 
 
+
 The help action map is visually distinguished from the regular aplication
 action map. For instance elp actions can be represented in a
 menu that is right-aligned in the menubar.</p></td>
@@ -5968,6 +6176,7 @@ the JVM, either through setting the java.security.auth.login
 </td>
 <td><p>Configures the locale used to initiate the login process. Whenever the
 forced starting locale is null, the client host default locale is used.
+
 
 
 As soon as the user logs-in, his locale is then used to translate the UI
@@ -6105,11 +6314,13 @@ External gives SJS the List of references witch are not declared in SJS witch bu
 + **allowed previous element** : `Front`
 
 template configures a Map of default properties values for a descriptor
+
 <pre>
 template 'form', parent: 'decoratedView', labelsPosition: 'ABOVE', columnCount: 2
 
 template 'table', parent: 'decoratedView'
 </pre>
+
 All new forms and tables will have these properties set
 
 
@@ -6142,9 +6353,11 @@ All new forms and tables will have these properties set
 + **allowed previous element** : `Front`
 
 paramSet allows to create a reusable groups of properties in SJS declarations.
+
 <pre>
 paramSet 'myCommon', readOnly:true, mandatory:true
 </pre>
+
 paramSet can be used by declaration SJS using the attribute paramSets
 
 
@@ -6177,19 +6390,25 @@ paramSet can be used by declaration SJS using the attribute paramSets
 + **allowed previous element** : `*`
 
 namespace allows to declare and open a namespace scope. The use of namespaces allows simplifying the declarations SJS referring to resources with a complex path.
+
 <pre>
 namespace('org.jspresso.hrsample'){...}
 </pre>
+
 This declaration allows, for example, to replace the following statement
+
 <pre>
 Entity('City', 
 
         icon: 'classpath:org/jspresso/hrsample/images/city-48x48.png'){...}
 </pre>
+
 by
+
 <pre>
 ('City',icon:'city-48x48.png') {...}
 </pre>
+
 With namespaces, conventions on the organization of the Jspresso's directories are used.
 In this exemple, images are in the subdirectory /images of the project
 
@@ -6227,9 +6446,11 @@ to use it for. For instance you can have 1 spec per UI channel to customize a Js
 the runtime UI. Once a spec is used, it can be generated in its own Spring XML so that you can reference it
 in any Spring context.
 
+
 <pre>
 spec('Flex'){...}
 </pre>
+
 
 
 <table>
@@ -6260,9 +6481,11 @@ spec('Flex'){...}
 + **allowed previous element** : `*`
 
 include allows to use multi SJS sources files and to include them into each other.
+
 <pre>
 include('fileName')
 </pre>
+
 
 
 <table>
@@ -6351,13 +6574,15 @@ description property set here is actually an i18n key used for translation.</p><
 <td><p>Map of custom properties that have to be set on the action. When a property is a reference,
 its key has to be suffixed by "_ref". This enables SJS to generate the appropriate XML and
 to control the existence of the reference.
+
 <pre>
 custom:[
 
     parentModuleName:'Projects', 
 
     componentDescriptor_ref:'Project'])
-</pre></p></td>
+</pre>
+</p></td>
 </tr>
 </tbody>
 </table>
