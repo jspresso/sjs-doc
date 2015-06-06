@@ -29,7 +29,6 @@ There is generally no need to change it.
 </table>
 
 ---
-
 #### <a name=""></a>Common
 #### <a name=""></a>Security
 This descriptor is an internal s SJS descriptor which is never used by the application.It is used by SJS to factorize
@@ -164,7 +163,6 @@ writability is the combination of view and model writability.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>common
 
 
@@ -401,7 +399,6 @@ The properties brought by the paramSet can be overridden  by the current descrip
 </table>
 
 ---
-
 #### <a name=""></a>commonMobile
 
 
@@ -577,7 +574,6 @@ The properties brought by the paramSet can be overridden  by the current descrip
 </table>
 
 ---
-
 #### <a name=""></a>mobileSection
 Defines a page section that can be aggregated in a composite page.
 
@@ -613,7 +609,6 @@ or regex like DEFKTOP, MOBILE, HTML5, ...</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>mobilePageAware
 
 
@@ -669,7 +664,6 @@ commons properties for views that can react to common page interactions.
 </table>
 
 ---
-
 #### <a name=""></a>View
 #### <a name=""></a>abstractChart
 This descriptor is an internal s SJS descriptor which is never used by the application.It is used by SJS to factorize
@@ -730,7 +724,6 @@ It defaults to true otherwise.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>abstractPolarChart
 Defines at pie chart.
 
@@ -756,7 +749,6 @@ Defines at pie chart.
 </table>
 
 ---
-
 #### <a name=""></a>abstractCartesianChart
 Defines a 2+ dimensional chart.
 
@@ -845,7 +837,6 @@ Default value is EBarChartType.CLUSTERED, i.e. the series are drawn side by side
 </table>
 
 ---
-
 #### <a name=""></a>chart
 
 
@@ -874,7 +865,6 @@ descriptor for charts
 </table>
 
 ---
-
 #### <a name=""></a>polarChart
 
 
@@ -906,7 +896,6 @@ descriptor for pie charts
 </table>
 
 ---
-
 #### <a name=""></a>cartesianChart
 
 
@@ -938,7 +927,6 @@ descriptor for cartesian charts
 </table>
 
 ---
-
 #### <a name=""></a>mobileChart
 
 
@@ -967,7 +955,6 @@ descriptor for charts
 </table>
 
 ---
-
 #### <a name=""></a>mobilePolarChart
 
 
@@ -999,7 +986,6 @@ descriptor for pie charts
 </table>
 
 ---
-
 #### <a name=""></a>mobileCartesianChart
 
 
@@ -1031,7 +1017,6 @@ descriptor for cartesian charts
 </table>
 
 ---
-
 #### <a name=""></a>commonCartesianSeries
 This descriptor is an internal s SJS descriptor which is never used by the application.It is used by SJS to factorize
 chart series properties. Charts series in Jspresso are very similar to property views in the way they are defined.
@@ -1121,7 +1106,6 @@ of actions defined on table columns.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>lineSeries
 
 
@@ -1152,7 +1136,6 @@ Defines a line series.
 </table>
 
 ---
-
 #### <a name=""></a>barSeries
 
 
@@ -1183,7 +1166,6 @@ Defines a bar series.
 </table>
 
 ---
-
 #### <a name=""></a>plotSeries
 
 
@@ -1214,7 +1196,6 @@ Defines a plot series.
 </table>
 
 ---
-
 #### <a name=""></a>areaSeries
 
 
@@ -1245,7 +1226,6 @@ Defines a area series.
 </table>
 
 ---
-
 #### <a name=""></a>pieSeries
 
 
@@ -1328,7 +1308,6 @@ of actions defined on table columns.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>form
 
 
@@ -1498,7 +1477,6 @@ room.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>mobileForm
 
 
@@ -1572,7 +1550,6 @@ model descriptor.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>mapView
 
 
@@ -1616,7 +1593,6 @@ its model.
 </table>
 
 ---
-
 #### <a name=""></a>mobileMapView
 
 
@@ -1660,7 +1636,6 @@ its model.
 </table>
 
 ---
-
 #### <a name=""></a>fields
 
 
@@ -1689,7 +1664,6 @@ Open a list of propertyView to individually fine-tunes each field  in a form
 </table>
 
 ---
-
 #### <a name=""></a>table
 
 
@@ -1703,16 +1677,22 @@ descriptor in Jspresso. A table view displays a collection of components (one ro
 collection) detailed by a set of properties (one column per displayed component property).
 The table view will automatically adapt its columuns depending on the underlying property descriptors,
 e.g. :
-<itemizedlist>
-<listitem><para>columns for read-only properties won't be editable</para></listitem>
-<listitem><para>columns that are assigned writability gates will compute the editability of their cells based on each
-cell's gates</para></listitem>
-<listitem><para>columns will adapt their renderer/editor based on the underlying property type, e.g. a calendar component
-will be used for dates</para></listitem>
-<listitem><para>column titles will be filled with property names translations based on the user locale</para></listitem>
-<listitem><para>mandatory properties will be visually indicated</para></listitem>
-<listitem><para>...</para></listitem>
-</itemizedlist>
+<ul>
+<li>columns for read-only properties won't be editable
+</li>
+<li>columns that are assigned writability gates will compute the editability of their cells based on each
+cell's gates
+</li>
+<li>columns will adapt their renderer/editor based on the underlying property type, e.g. a calendar component
+will be used for dates
+</li>
+<li>column titles will be filled with property names translations based on the user locale
+</li>
+<li>mandatory properties will be visually indicated
+</li>
+<li>...
+</li>
+</ul>
 A table view provides sensible defaults regarding its configuration, but it can be refined using either the
 simple rendered property or the more advanced yet lot more powerful columns declaration that opens a list of propertyView
 to individually fine-tunes each column
@@ -1839,7 +1819,6 @@ the view are kept in sync with the bound model collection.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>listView
 
 
@@ -1965,7 +1944,6 @@ the view are kept in sync with the bound model collection.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>mobileListView
 
 
@@ -2086,7 +2064,6 @@ indicates that the user can navigate to another page when clicking a list item.<
 </table>
 
 ---
-
 #### <a name=""></a>columns
 
 
@@ -2115,7 +2092,6 @@ Open a list of propertyView to individually fine-tunes each column in a table
 </table>
 
 ---
-
 #### <a name=""></a>propertyView
 
 
@@ -2125,10 +2101,12 @@ Open a list of propertyView to individually fine-tunes each column in a table
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicPropertyViewDescriptor`
 This view descriptor serves 2 purposes :
-<itemizedlist>
-<listitem><para>configure complex, component based views : refine columns of table views and fields of form views.</para></listitem>
-<listitem><para>display a single property as an autonomous view, i.e. not as a table column or a form field.</para></listitem>
-</itemizedlist>
+<ul>
+<li>configure complex, component based views : refine columns of table views and fields of form views.
+</li>
+<li>display a single property as an autonomous view, i.e. not as a table column or a form field.
+</li>
+</ul>
 The second usage might be a little bit unusual, but here is a use-case scenario : display a text area
 which maps a text property that contains XML content. This text area must be displayed in a split pane
 and provide actions to interact directly with the FS (save content to a file, load content from a file, ...). In
@@ -2295,7 +2273,6 @@ Allowed values are</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>stringPropertyView
 
 
@@ -2329,7 +2306,6 @@ to be triggered when a character is typed in the UI.
 </table>
 
 ---
-
 #### <a name=""></a>referencePropertyView
 
 
@@ -2367,7 +2343,6 @@ property view. A null value (default) keeps the standard action.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>enumerationPropertyView
 
 
@@ -2432,7 +2407,6 @@ values should be rendered horizontally and VERTICAL otherwise. Default value is 
 </table>
 
 ---
-
 #### <a name=""></a>image
 
 
@@ -2492,7 +2466,6 @@ POD for instance.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>html
 
 
@@ -2534,7 +2507,6 @@ means that the html view will be made scrollable horizontally.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>actionView
 
 
@@ -2588,7 +2560,6 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 </table>
 
 ---
-
 #### <a name=""></a>Tree
 #### <a name=""></a>treeNode
 
@@ -2598,7 +2569,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 + **mandatory** : `nameElement`
 + **allowed previous element** : `Front`
 + **allowed next element** : `actionMap, secondaryActionMap`
-<programlisting>
+<pre>
 treeNode('Department-teams.treeNode',
 
         render: 'ouId', actionMap: 'masterDetail')
@@ -2611,7 +2582,7 @@ treeNode('Company-teams.treeNode',
 
         render: 'ouId', actionMap: 'masterDetail')
 
-</programlisting>
+</pre>
 
 <table>
 <caption>treeNode properties</caption>
@@ -2640,7 +2611,6 @@ treeNode('Company-teams.treeNode',
 </table>
 
 ---
-
 #### <a name=""></a>tree
 
 
@@ -2655,7 +2625,7 @@ represent a component collection property. Each individual treeNode collection c
 using role-based authorization (i.e. grantedRoles) on its descriptor.
 There are no properties child or children with SJS.
 The way in which the hierarchy of the tree is built depends on the overlap of the subTree declarations.
-<programlisting>
+<pre>
 
 tree('Company.tree', render: 'name', icon: 'structure-48x48.png'){
 
@@ -2667,9 +2637,9 @@ tree('Company.tree', render: 'name', icon: 'structure-48x48.png'){
 
 }
 
-</programlisting>
+</pre>
 This SJS declaration produces this type of tree
-<programlisting>
+<pre>
 
 Company
 
@@ -2687,10 +2657,10 @@ Company
 
     ...
 
-</programlisting>
+</pre>
 
 But it is also possible to define a tree this way :
-<programlisting>
+<pre>
 
 tree('Company.tree', render: 'name', icon: 'structure-48x48.png') {
 
@@ -2700,9 +2670,9 @@ tree('Company.tree', render: 'name', icon: 'structure-48x48.png') {
 
 }
 
-</programlisting>
+</pre>
 which produces this type of tree
-<programlisting>
+<pre>
 
 Company
 
@@ -2722,7 +2692,7 @@ Company
 
         ...
 
-</programlisting>
+</pre>
 In this second example you should notice intermediate collection property
 grouping nodes (departments and teams). They automatically appeared
 to clearly group the tree nodes belonging to the different collections.
@@ -2804,7 +2774,6 @@ be nested.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>mobileTree
 
 
@@ -2819,7 +2788,7 @@ represent a component collection property. Each individual treeNode collection c
 using role-based authorization (i.e. grantedRoles) on its descriptor.
 There are no properties child or children with SJS.
 The way in which the hierarchy of the tree is built depends on the overlap of the subTree declarations.
-<programlisting>
+<pre>
 
 tree('Company.tree', render: 'name', icon: 'structure-48x48.png'){
 
@@ -2831,9 +2800,9 @@ tree('Company.tree', render: 'name', icon: 'structure-48x48.png'){
 
 }
 
-</programlisting>
+</pre>
 This SJS declaration produces this type of tree
-<programlisting>
+<pre>
 
 Company
 
@@ -2851,10 +2820,10 @@ Company
 
     ...
 
-</programlisting>
+</pre>
 
 But it is also possible to define a tree this way :
-<programlisting>
+<pre>
 
 tree('Company.tree', render: 'name', icon: 'structure-48x48.png') {
 
@@ -2864,9 +2833,9 @@ tree('Company.tree', render: 'name', icon: 'structure-48x48.png') {
 
 }
 
-</programlisting>
+</pre>
 which produces this type of tree
-<programlisting>
+<pre>
 
 Company
 
@@ -2886,7 +2855,7 @@ Company
 
         ...
 
-</programlisting>
+</pre>
 In this second example you should notice intermediate collection property
 grouping nodes (departments and teams). They automatically appeared
 to clearly group the tree nodes belonging to the different collections.
@@ -2961,7 +2930,6 @@ be nested.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>subTree
 
 
@@ -3000,7 +2968,6 @@ In SJS a subTree has the same identifier as the treeNode it instantiates.
 </table>
 
 ---
-
 #### <a name=""></a>Composite view
 #### <a name=""></a>tabs
 
@@ -3077,7 +3044,6 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 </table>
 
 ---
-
 #### <a name=""></a>mobileTabs
 
 
@@ -3144,7 +3110,6 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 </table>
 
 ---
-
 #### <a name=""></a>views
 
 
@@ -3173,7 +3138,6 @@ Open a list of views where each view can be defined "inline"
 </table>
 
 ---
-
 #### <a name=""></a>split
 
 
@@ -3250,7 +3214,6 @@ than the outer composite unless explicitely specified differently.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>left
 
 
@@ -3279,7 +3242,6 @@ Enable to set an in-line view in in the left zone of a split_horizontal
 </table>
 
 ---
-
 #### <a name=""></a>right
 
 
@@ -3308,7 +3270,6 @@ Enable to set an in-line view in in the rigth zone of a split_horizontal
 </table>
 
 ---
-
 #### <a name=""></a>top
 
 
@@ -3337,7 +3298,6 @@ Enable to set an in-line view in in the top zone of a split_vertical
 </table>
 
 ---
-
 #### <a name=""></a>bottom
 
 
@@ -3366,7 +3326,6 @@ Enable to set an in-line view in in the the bottom zone of a split_vertical
 </table>
 
 ---
-
 #### <a name=""></a>border
 
 
@@ -3377,11 +3336,14 @@ Enable to set an in-line view in in the the bottom zone of a split_vertical
 + **Jspresso** : `BasicBorderViewDescriptor`
 A border view is a composite view that arranges its children to the north, west, east, south and center.
 Depending its position in the container, the resizing rules apply differently :
-<itemizedlist>
-<listitem><para>north and south are resized horizontally and kept to their preferred size vertically</para></listitem>
-<listitem><para>west and east are resized vertically and kept to their preferred size horizontally</para></listitem>
-<listitem><para>center is resized both horizontally and vertically</para></listitem>
-</itemizedlist>
+<ul>
+<li>north and south are resized horizontally and kept to their preferred size vertically
+</li>
+<li>west and east are resized vertically and kept to their preferred size horizontally
+</li>
+<li>center is resized both horizontally and vertically
+</li>
+</ul>
 Default cascading order for master-detail is :
 north -> west -> center -> east -> south
 
@@ -3451,7 +3413,6 @@ than the outer composite unless explicitely specified differently.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>mobileBorder
 
 
@@ -3462,11 +3423,14 @@ than the outer composite unless explicitely specified differently.</p></td>
 + **Jspresso** : `MobileBorderViewDescriptor`
 A border view is a composite view that arranges its children to the north, west, east, south and center.
 Depending its position in the container, the resizing rules apply differently :
-<itemizedlist>
-<listitem><para>north and south are resized horizontally and kept to their preferred size vertically</para></listitem>
-<listitem><para>west and east are resized vertically and kept to their preferred size horizontally</para></listitem>
-<listitem><para>center is resized both horizontally and vertically</para></listitem>
-</itemizedlist>
+<ul>
+<li>north and south are resized horizontally and kept to their preferred size vertically
+</li>
+<li>west and east are resized vertically and kept to their preferred size horizontally
+</li>
+<li>center is resized both horizontally and vertically
+</li>
+</ul>
 
 <table>
 <caption>mobileBorder properties</caption>
@@ -3508,7 +3472,6 @@ resized horizontally.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>east
 
 
@@ -3537,7 +3500,6 @@ Enable to set an in-line view in the east zone of a border
 </table>
 
 ---
-
 #### <a name=""></a>west
 
 
@@ -3566,7 +3528,6 @@ Enable to set an in-line view in the west zone of a border
 </table>
 
 ---
-
 #### <a name=""></a>south
 
 
@@ -3595,7 +3556,6 @@ Enable to set an in-line view in the south zone of a border
 </table>
 
 ---
-
 #### <a name=""></a>north
 
 
@@ -3624,7 +3584,6 @@ Enable to set an in-line view in the north zone of a border
 </table>
 
 ---
-
 #### <a name=""></a>center
 
 
@@ -3653,7 +3612,6 @@ Enable to set an in-line view in the center zone of a border
 </table>
 
 ---
-
 #### <a name=""></a>grid
 
 
@@ -3701,7 +3659,6 @@ than the outer composite unless explicitely specified differently.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>evenGrid
 
 
@@ -3775,7 +3732,6 @@ or column is then created to host the remaining cells.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>cells
 
 
@@ -3804,7 +3760,6 @@ open a cells list in grid or in an evenGrid
 </table>
 
 ---
-
 #### <a name=""></a>cell
 
 
@@ -3864,7 +3819,6 @@ Describes constraints on a cell of a grid
 </table>
 
 ---
-
 #### <a name=""></a>evenCell
 
 
@@ -3896,7 +3850,6 @@ Describes a cell of an evenGrid
 </table>
 
 ---
-
 #### <a name=""></a>entityCardView
 
 
@@ -3942,7 +3895,6 @@ card matches, an empty view is displayed.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>basicCardView
 
 
@@ -4002,7 +3954,6 @@ registered card name selector.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>Action
 #### <a name=""></a>actionMap
 
@@ -4012,14 +3963,16 @@ registered card name selector.</p></td>
 + **Jspresso** : `ActionMap`
 An action map is generally represented as a toolbar attached to the view.
 The toolbar follows the structure of the action map :
-<itemizedlist>
-<listitem><para>each action list is contained in its own toolbar section which is visually
+<ul>
+<li>each action list is contained in its own toolbar section which is visually
 separated from the other sections. This allows for visually
-grouping related actions as they are grouped in the action lists.</para></listitem>
-<listitem><para>each action contained in an action list is represented by a toolbar
+grouping related actions as they are grouped in the action lists.
+</li>
+<li>each action contained in an action list is represented by a toolbar
 button using the action image as icon and translated action description
-as tooltip.</para></listitem>
-</itemizedlist>
+as tooltip.
+</li>
+</ul>
 
 <table>
 <caption>actionMap properties</caption>
@@ -4085,7 +4038,6 @@ assigning a model to the action gates.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>secondaryActionMap
 
 
@@ -4095,14 +4047,16 @@ assigning a model to the action gates.</p></td>
 A secondary action map is generally represented as a toolbar attached at the bottom of the view.
 It is always declared as an "inline" statement.
 The toolbar follows the structure of the action map :
-<itemizedlist>
-<listitem><para>each action list is contained in its own toolbar section which is visually
+<ul>
+<li>each action list is contained in its own toolbar section which is visually
 separated from the other sections. This allows for visually
-grouping related actions as they are grouped in the action lists.</para></listitem>
-<listitem><para>each action contained in an action list is represented by a toolbar
+grouping related actions as they are grouped in the action lists.
+</li>
+<li>each action contained in an action list is represented by a toolbar
 button using the action image as icon and translated action description
-as tooltip.</para></listitem>
-</itemizedlist>
+as tooltip.
+</li>
+</ul>
 
 <table>
 <caption>secondaryActionMap properties</caption>
@@ -4168,7 +4122,6 @@ assigning a model to the action gates.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>actionList
 
 
@@ -4281,7 +4234,6 @@ assigning a model to the action gates.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>action
 
 
@@ -4289,22 +4241,27 @@ assigning a model to the action gates.</p></td>
 + **allowed next element** : `next, wrapped, bean, list, set, map`
 This descriptor establishes the foundation of the Jspresso action
 framework, i.e. each action can link :
-<itemizedlist>
-<listitem><para>a wrapped action that will execute a return back to the caller action</para></listitem>
-<listitem><para>a next action that will execute after the caller</para></listitem>
-</itemizedlist>
+<ul>
+<li>a wrapped action that will execute a return back to the caller action
+</li>
+<li>a next action that will execute after the caller
+</li>
+</ul>
 The action chaining described above supports the separation of concerns that consists in splitting the
 actions in two distinct categrories :
-<itemizedlist>
-<listitem><para>frontend actions that deal with user interaction. They are typically used to bootstrap a service request
-from th UI, update the UI state, trigger the display of informations, errors, ...</para></listitem>
-<listitem><para>backend actions that are faceless, UI agnostic and deal with the manipulation of the domain model,
-backend services, ...</para></listitem>
-</itemizedlist>
+<ul>
+<li>frontend actions that deal with user interaction. They are typically used to bootstrap a service request
+from th UI, update the UI state, trigger the display of informations, errors, ...
+</li>
+<li>backend actions that are faceless, UI agnostic and deal with the manipulation of the domain model,
+backend services, ...
+</li>
+</ul>
 Conceptually, a frontend action can call a backend action or another frontend action but a backend action
 should stay on the backend, thus should only reference another backend action. In other words, the
 backend layer should never explicitely reference the frontend layer.
-</para><para>
+
+
 That's the main reason for having a wrapped and a next action in the action chain. The wrapped action is
 perfectly suited to call the backend layer (a backend action) and give the flow back to the frontend layer.
 The next action is perfectly suited to chain 2 actions of the same type (i.e. 2 frontend actions or 2 backend
@@ -4583,7 +4540,6 @@ assigning a model to the action gates.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>next
 
 
@@ -4614,7 +4570,6 @@ Allows defining "inline" next action for the current action. A next action is an
 </table>
 
 ---
-
 #### <a name=""></a>wrapped
 
 
@@ -4645,7 +4600,6 @@ Allows defining "inline" wrapped action for the current action. This is perfectl
 </table>
 
 ---
-
 #### <a name=""></a>rowAction
 
 
@@ -4681,7 +4635,6 @@ map.
 </table>
 
 ---
-
 #### <a name=""></a>itemSelectionAction
 
 
@@ -4716,7 +4669,6 @@ map.
 </table>
 
 ---
-
 #### <a name=""></a>sortingAction
 
 
@@ -4750,7 +4702,6 @@ default.
 </table>
 
 ---
-
 #### <a name=""></a>View
 #### <a name=""></a>mobileNavPage
 
@@ -4799,7 +4750,6 @@ A Navigation page is a mobile page that displays a collection view (list or tree
 </table>
 
 ---
-
 #### <a name=""></a>mobileCardPage
 
 
@@ -4837,7 +4787,6 @@ Defines a page that displays a card view as its main content.
 </table>
 
 ---
-
 #### <a name=""></a>mobileCompositePage
 
 
@@ -4847,11 +4796,13 @@ Defines a page that displays a card view as its main content.
 + **allowed next element** : `actionMap, secondaryActionMap, sections, editorPage`
 + **Jspresso** : `MobileCompositePageViewDescriptor`
 Defines a composite page. A composite page is made of sections. A section can be :
-<itemizedlist>
-<listitem><para>Another page. In that case, a selection item is installed and the other page is
-navigated to when the user clicks the selection item.</para></listitem>
-<listitem><para>A form. In that case, the form is displayed inline in the page.</para></listitem>
-</itemizedlist>
+<ul>
+<li>Another page. In that case, a selection item is installed and the other page is
+navigated to when the user clicks the selection item.
+</li>
+<li>A form. In that case, the form is displayed inline in the page.
+</li>
+</ul>
 You can install as many sections as you wish in any order.
 
 <table>
@@ -4893,7 +4844,6 @@ flag is turned on.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>selection
 
 
@@ -4922,7 +4872,6 @@ Defines the selection view of a navigation page, either tree or list.
 </table>
 
 ---
-
 #### <a name=""></a>headerSections
 
 
@@ -4951,7 +4900,6 @@ Defines a list of section views to be placed above the selection view.
 </table>
 
 ---
-
 #### <a name=""></a>nextPage
 
 
@@ -4980,7 +4928,6 @@ Defines the page that will be navigated to when the user clicks an item in the s
 </table>
 
 ---
-
 #### <a name=""></a>pages
 
 
@@ -5008,7 +4955,6 @@ Defines the card view that is displayed in the card page.
 </table>
 
 ---
-
 #### <a name=""></a>sections
 
 
@@ -5037,7 +4983,6 @@ Defines a composite page sections.
 </table>
 
 ---
-
 #### <a name=""></a>editorPage
 
 
@@ -5065,7 +5010,6 @@ Defines the editor page of a composite page.
 </table>
 
 ---
-
 #### <a name=""></a>workspace
 #### <a name=""></a>workspace
 
@@ -5077,7 +5021,8 @@ A workspace is an group of functional application modules. You may decide arbitr
 into workspaces but a good approach might be to design the workspaces based on roles (i.e. business
 activities). This helps to clearly seperates tasks-unrelated modules and eases authorization management
 since a workspace can be granted or forbidden as a whole by Jspresso security.
-</para><para>
+
+
 Workspaces might be graphically represented differently depending on the UI technology used. For instance,
 the Swing and ULC channels use a MDI UI in which each workspace is represented as an internal
 frame (document). On the other hand, Flex and Qooxdoo channels represent workspaces stacked in
@@ -5178,7 +5123,6 @@ value) disables role based authorization on this workspace.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>Module
 #### <a name=""></a>module
 
@@ -5190,11 +5134,13 @@ hierarchy. As such, they can be viewed (and they are materalized in the UI) as t
 (re)organized dynamically by changing their parent-children relationship and their owning workspace UI
 will reflect the change seamlessly, as with any Jspresso model (in fact workspaces and modules are regular
 beans that are used as model in standard Jspresso views).
-</para><para>
+
+
 Modules, among other features, are capable of providing a view to be installed in the UI wen they are selected.
 This makes Jspresso applications really modular and their architecture flexible enough to embed
 and run a large variety of different module types.
-</para><para>
+
+
 A module can also be as simple as a grouping structure for other modules (nodeModule).
 
 <table>
@@ -5313,7 +5259,6 @@ their model.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>collectionModule
 
 
@@ -5323,7 +5268,8 @@ their model.</p></td>
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
 This type of module keeps a reference on a beans collection. There is no assumption made on wether
 these beans are actually persistent entites or any other type of java beans.
-</para><para>
+
+
 Simple bean collection modules must have their collection of referenced beans initialized somehow.
 There is no standard built-in action to do so, since it is highly dependent on what's needed. So it's rather
 common to have the module content initialized through a startup action depending on the session state.
@@ -5373,7 +5319,6 @@ of the module managed beans.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>filterModule
 
 
@@ -5464,7 +5409,6 @@ the default, the elements default page size is used.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>beanModule
 
 
@@ -5474,7 +5418,8 @@ the default, the elements default page size is used.</p></td>
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
 This type of module keeps a reference on a beans collection. There is no assumption made on wether
 these beans are actually persistent entites or any other type of java beans.
-</para><para>
+
+
 Simple bean collection modules must have their collection of referenced beans initialized somehow.
 There is no standard built-in action to do so, since it is highly dependent on what's needed. So it's rather
 common to have the module content initialized through a startup action depending on the session state.
@@ -5512,7 +5457,6 @@ view descriptor.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>nodeModule
 
 
@@ -5543,7 +5487,6 @@ Allows to group modules under a simple node in a hierarchy of modules.
 </table>
 
 ---
-
 #### <a name=""></a>Controller
 #### <a name=""></a>controller
 
@@ -5712,7 +5655,6 @@ of modules / sub-modules.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>Message
 #### <a name=""></a>messageSource
 
@@ -5743,7 +5685,6 @@ Jspresso relies on the well-known java I18N mechanism through the use of resourc
 </table>
 
 ---
-
 #### <a name=""></a>Suppoprort
 #### <a name=""></a>external
 
@@ -5773,18 +5714,17 @@ External gives SJS the List of references witch are not declared in SJS witch bu
 </table>
 
 ---
-
 #### <a name=""></a>Support
 #### <a name=""></a>template
 
 
 + **allowed previous element** : `Front`
 template configures a Map of default properties values for a descriptor
-<programlisting>
+<pre>
 template 'form', parent: 'decoratedView', labelsPosition: 'ABOVE', columnCount: 2
 
 template 'table', parent: 'decoratedView'
-</programlisting>
+</pre>
 All new forms and tables will have these properties set
 
 <table>
@@ -5809,15 +5749,14 @@ All new forms and tables will have these properties set
 </table>
 
 ---
-
 #### <a name=""></a>paramSet
 
 
 + **allowed previous element** : `Front`
 paramSet allows to create a reusable groups of properties in SJS declarations.
-<programlisting>
+<pre>
 paramSet 'myCommon', readOnly:true, mandatory:true
-</programlisting>
+</pre>
 paramSet can be used by declaration SJS using the attribute paramSets
 
 <table>
@@ -5842,25 +5781,24 @@ paramSet can be used by declaration SJS using the attribute paramSets
 </table>
 
 ---
-
 #### <a name=""></a>namespace
 
 
 + **allowed previous element** : `*`
 namespace allows to declare and open a namespace scope. The use of namespaces allows simplifying the declarations SJS referring to resources with a complex path.
-<programlisting>
+<pre>
 namespace('org.jspresso.hrsample'){...}
-</programlisting>
+</pre>
 This declaration allows, for example, to replace the following statement
-<programlisting>
+<pre>
 Entity('City', 
 
         icon: 'classpath:org/jspresso/hrsample/images/city-48x48.png'){...}
-</programlisting>
+</pre>
 by
-<programlisting>
+<pre>
 ('City',icon:'city-48x48.png') {...}
-</programlisting>
+</pre>
 With namespaces, conventions on the organization of the Jspresso's directories are used.
 In this exemple, images are in the subdirectory /images of the project
 
@@ -5885,7 +5823,6 @@ In this exemple, images are in the subdirectory /images of the project
 </table>
 
 ---
-
 #### <a name=""></a>spec
 
 
@@ -5896,9 +5833,9 @@ to use it for. For instance you can have 1 spec per UI channel to customize a Js
 the runtime UI. Once a spec is used, it can be generated in its own Spring XML so that you can reference it
 in any Spring context.
 
-<programlisting>
+<pre>
 spec('Flex'){...}
-</programlisting>
+</pre>
 
 <table>
 <caption>spec properties</caption>
@@ -5921,15 +5858,14 @@ spec('Flex'){...}
 </table>
 
 ---
-
 #### <a name=""></a>include
 
 
 + **allowed previous element** : `*`
 include allows to use multi SJS sources files and to include them into each other.
-<programlisting>
+<pre>
 include('fileName')
-</programlisting>
+</pre>
 
 <table>
 <caption>include properties</caption>
@@ -5952,7 +5888,6 @@ include('fileName')
 </table>
 
 ---
-
 #### <a name=""></a>Generic
 #### <a name=""></a>bean
 
@@ -6027,7 +5962,6 @@ custom:[
 </table>
 
 ---
-
 #### <a name=""></a>list
 
 
@@ -6058,7 +5992,6 @@ Allows to generate a list Spring in the XML generated file
 </table>
 
 ---
-
 #### <a name=""></a>set
 
 
@@ -6089,7 +6022,6 @@ Allows to generate a list Spring in the XML generated file
 </table>
 
 ---
-
 #### <a name=""></a>map
 
 
@@ -6120,4 +6052,3 @@ Allows to generate a Map Spring in the XML generated file
 </table>
 
 ---
-

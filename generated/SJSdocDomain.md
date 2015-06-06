@@ -39,7 +39,6 @@ This root descriptor is used in the file application.groovy generated during the
 </table>
 
 ---
-
 #### <a name=""></a>Component
 #### <a name=""></a>Entity
 
@@ -50,16 +49,16 @@ This root descriptor is used in the file application.groovy generated during the
 This descriptor key to the description of the application model. It is used to describe a model entity.
 
 The description of an entity can be very simple :
-<programlisting>Entite('person'){
+<pre>Entite('person'){
 
   string_32 'name'
 
   string_32 'firstName'
 
   integer age
-}</programlisting>
+}</pre>
 or be richer to meet more complex needs :
-<programlisting>Entity('Department', extend: 'OrganizationalUnit',
+<pre>Entity('Department', extend: 'OrganizationalUnit',
 
         icon: 'department-48x48.png',
 
@@ -72,8 +71,9 @@ or be richer to meet more complex needs :
 
   set 'teams', ref: 'Team', composition: true
 
-}</programlisting>
-<note><para>Concurrent access conflicts are automatically manage by Jspresso through optimistic locking</para></note>
+}</pre>
+<br>Note : Concurrent access conflicts are automatically manage by Jspresso through optimistic locking
+</br>
 
 <table>
 <caption>Entity properties</caption>
@@ -435,7 +435,6 @@ Entity('Department', extend: 'OrganizationalUnit'){...} </pre></p></td>
 </table>
 
 ---
-
 #### <a name=""></a>Interface
 
 
@@ -447,7 +446,7 @@ Entity('Department', extend: 'OrganizationalUnit'){...} </pre></p></td>
 This descriptor is a mean of factorizing state/behaviour among components, entities or even sub-interfaces.
 This is a much less coupling mecanism than actual entity inheritance and can be used across entities
 that don't belong the the same inheritance hierarchy, or even accross types (entities, components, interfaces).
-<programlisting><b>Interface</b>('Nameable') { string_64 'name', mandatory: true }
+<pre><b>Interface</b>('Nameable') { string_64 'name', mandatory: true }
 
 
 <b>Interface</b>('Traceable',
@@ -469,7 +468,7 @@ Entity('Employee', <b>extend</b>: ['Nameable', 'Traceable']){
 
   ...
 
-}</programlisting>
+}</pre>
 
 <table>
 <caption>Interface properties</caption>
@@ -492,7 +491,6 @@ Entity('Employee', <b>extend</b>: ['Nameable', 'Traceable']){
 </table>
 
 ---
-
 #### <a name=""></a>Component
 
 
@@ -506,7 +504,7 @@ MoneyAmount component could be composed of a decimal and a reference to a Money 
 This structure could then be reused in other elements of the domain like an Invoice or an Article.
 Jspresso terminology for these type of structures is "Inlined Component".
 Another example could be reused of contact informations
-<programlisting>Component('ContactInfo') {
+<pre>Component('ContactInfo') {
 
   string_256 'address'
 
@@ -528,7 +526,7 @@ Entity('Employee') {
 
   ...
 
-}</programlisting>
+}</pre>
 
 <table>
 <caption>Component properties</caption>
@@ -551,7 +549,6 @@ Entity('Employee') {
 </table>
 
 ---
-
 #### <a name=""></a>Common
 #### <a name=""></a>common
 This descriptor is an internal s SJS descriptor which is never used by the application.It s used by SJS to factorize
@@ -849,7 +846,6 @@ number, date, time, and duration properties behave this way.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>BasicType
 #### <a name=""></a>string
 
@@ -859,10 +855,10 @@ number, date, time, and duration properties behave this way.</p></td>
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicStringPropertyDescriptor`
 Field Declaration of type String. To be used with _n where the value n determine the maximum string length 
-<programlisting><b>string_32</b> 'name'
+<pre><b>string_32</b> 'name'
 
 <b>string_10</b> 'zipCode'
-</programlisting>
+</pre>
 
 <table>
 <caption>string properties</caption>
@@ -922,7 +918,6 @@ properties support searching, ordering,... exactly like non-translatable propert
 </table>
 
 ---
-
 #### <a name=""></a>text
 
 
@@ -990,7 +985,6 @@ text view in order to allow for multi-line text in filters. Default value is fal
 </table>
 
 ---
-
 #### <a name=""></a>imageUrl
 
 
@@ -1032,7 +1026,6 @@ ratio.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>password
 
 
@@ -1066,7 +1059,6 @@ fields, to interact with password properties.
 </table>
 
 ---
-
 #### <a name=""></a>integer
 
 
@@ -1122,7 +1114,6 @@ Default value is false which means java.lang.Integer will be used.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>date
 
 
@@ -1178,7 +1169,6 @@ Default value is false, meaning that the date is considered as a string. It is i
 </table>
 
 ---
-
 #### <a name=""></a>bool
 
 
@@ -1210,7 +1200,6 @@ Describes a boolean property
 </table>
 
 ---
-
 #### <a name=""></a>decimal
 
 
@@ -1273,7 +1262,6 @@ null which means unlimited.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>time
 
 
@@ -1316,7 +1304,6 @@ only the time part of the value is relevant
 </table>
 
 ---
-
 #### <a name=""></a>duration
 
 
@@ -1356,7 +1343,6 @@ Default value is null, meaning unbound.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>percent
 
 
@@ -1389,7 +1375,6 @@ instead of their raw decimal values.
 </table>
 
 ---
-
 #### <a name=""></a>enumeration
 
 
@@ -1467,7 +1452,6 @@ disjunctions in filters. Default value is false.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>typeEnumeration
 
 
@@ -1526,7 +1510,6 @@ disjunctions in filters. Default value is false.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>range
 
 
@@ -1588,7 +1571,6 @@ disjunctions in filters. Default value is false.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>refId
 
 
@@ -1618,7 +1600,6 @@ allows to point on a reference
 </table>
 
 ---
-
 #### <a name=""></a>color
 
 
@@ -1653,7 +1634,6 @@ colors manipulation and helps converting to/from their hexadecimal representatio
 </table>
 
 ---
-
 #### <a name=""></a>binary
 
 
@@ -1720,7 +1700,6 @@ extensions, e.g. "JPEG images"
 </table>
 
 ---
-
 #### <a name=""></a>image
 
 
@@ -1768,7 +1747,6 @@ format before being stored.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>java
 
 
@@ -1802,7 +1780,6 @@ never plays with the serialized form.
 </table>
 
 ---
-
 #### <a name=""></a>any
 
 
@@ -1835,7 +1812,6 @@ explicitely declared.
 </table>
 
 ---
-
 #### <a name=""></a>sourcecode
 
 
@@ -1870,7 +1846,6 @@ language used to format the property text content may be defined explicitely usi
 </table>
 
 ---
-
 #### <a name=""></a>html
 
 
@@ -1902,7 +1877,6 @@ HTML instead of raw text content.
 </table>
 
 ---
-
 #### <a name=""></a>Association
 #### <a name=""></a>reference
 
@@ -2028,7 +2002,6 @@ properties based on the referenced component descriptor.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>list
 
 
@@ -2107,7 +2080,6 @@ determines the size of th IN clause.</p></td>
 </table>
 
 ---
-
 #### <a name=""></a>set
 
 
@@ -2140,7 +2112,6 @@ in the datastore.
 </table>
 
 ---
-
 #### <a name=""></a>Support
 #### <a name=""></a>external
 
@@ -2174,15 +2145,14 @@ since all references are controlled by SJS, it is necessary to declare the exter
 </table>
 
 ---
-
 #### <a name=""></a>paramSet
 
 
 + **allowed previous element** : `Domain, Entity, Interface, Component`
 paramSet allows to create a reusable groups of properties in SJS declarations.
-<programlisting>
+<pre>
 paramSet 'myCommon', readOnly:true, mandatory:true 
-</programlisting>
+</pre>
 paramSet can be used by declaration SJS using the attribute paramSets
 
 <table>
@@ -2206,25 +2176,24 @@ paramSet can be used by declaration SJS using the attribute paramSets
 </table>
 
 ---
-
 #### <a name=""></a>namespace
 
 
 + **allowed previous element** : `Domain, Entity, Interface, Component`
 namespace allows to declare and open a namespace scope. The use of namespaces allows simplifying the declarations SJS referring to resources with a complex path.
-<programlisting>
+<pre>
 namespace('org.jspresso.hrsample'){...}
-</programlisting>
+</pre>
 This declaration allows, for example, to replace the following statement
-<programlisting>
+<pre>
 Entity('City', 
  
         icon: 'classpath:org/jspresso/hrsample/images/city-48x48.png'){...}
-</programlisting>
+</pre>
 by
-<programlisting>
+<pre>
 ('City',icon:'city-48x48.png') {...}
-</programlisting>
+</pre>
 With namespaces, conventions on the organization of the Jspresso's directories are used.
 In this exemple, images are in the subdirectory /images of the project
 
@@ -2249,15 +2218,14 @@ In this exemple, images are in the subdirectory /images of the project
 </table>
 
 ---
-
 #### <a name=""></a>include
 
 
 + **allowed previous element** : `Domain, Entity, Interface, Component`
 include allows to use multi SJS sources files and to include them into each other.
-<programlisting>
+<pre>
 include('fileName')
-</programlisting>
+</pre>
 
 <table>
 <caption>include properties</caption>
@@ -2280,4 +2248,3 @@ include('fileName')
 </table>
 
 ---
-
