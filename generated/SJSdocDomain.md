@@ -1,6 +1,6 @@
-#### <a name=""></a>Reference for SJS Domain
-#### <a name=""></a>Root
-#### <a name=""></a>Domain
+#### <a name=""></a> Reference for SJS Domain
+#### <a name=""></a> Root
+#### <a name=""></a> Domain
 
 
 + **mandatory** : `projectName`
@@ -42,8 +42,8 @@ This root descriptor is used in the file application.groovy generated during the
 
 ---
 
-#### <a name=""></a>Component
-#### <a name=""></a>Entity
+#### <a name=""></a> Component
+#### <a name=""></a> Entity
 
 
 + **allowed previous element** : `Domain`
@@ -441,7 +441,7 @@ Entity('Department', extend: 'OrganizationalUnit'){...} </pre></p></td>
 
 ---
 
-#### <a name=""></a>Interface
+#### <a name=""></a> Interface
 
 
 + **extend** : `Entity`
@@ -500,7 +500,7 @@ Entity('Employee', <b>extend</b>: ['Nameable', 'Traceable']){
 
 ---
 
-#### <a name=""></a>Component
+#### <a name=""></a> Component
 
 
 + **extend** : `Entity`
@@ -561,8 +561,8 @@ Entity('Employee') {
 
 ---
 
-#### <a name=""></a>Common
-#### <a name=""></a>common
+#### <a name=""></a> Common
+#### <a name=""></a> common
 
 This descriptor is an internal s SJS descriptor which is never used by the application.It s used by SJS to factorize
 commons properties.
@@ -861,8 +861,8 @@ number, date, time, and duration properties behave this way.</p></td>
 
 ---
 
-#### <a name=""></a>BasicType
-#### <a name=""></a>string
+#### <a name=""></a> BasicType
+#### <a name=""></a> string
 
 
 + **extend** : `common`
@@ -936,7 +936,7 @@ properties support searching, ordering,... exactly like non-translatable propert
 
 ---
 
-#### <a name=""></a>text
+#### <a name=""></a> text
 
 
 + **extend** : `string`
@@ -1006,7 +1006,7 @@ text view in order to allow for multi-line text in filters. Default value is fal
 
 ---
 
-#### <a name=""></a>imageUrl
+#### <a name=""></a> imageUrl
 
 
 + **extend** : `string`
@@ -1050,7 +1050,7 @@ ratio.</p></td>
 
 ---
 
-#### <a name=""></a>password
+#### <a name=""></a> password
 
 
 + **extend** : `string`
@@ -1086,7 +1086,7 @@ fields, to interact with password properties.
 
 ---
 
-#### <a name=""></a>integer
+#### <a name=""></a> integer
 
 
 + **extend** : `common`
@@ -1144,7 +1144,7 @@ Default value is false which means java.lang.Integer will be used.</p></td>
 
 ---
 
-#### <a name=""></a>date
+#### <a name=""></a> date
 
 
 + **extend** : `common`
@@ -1202,7 +1202,7 @@ Default value is false, meaning that the date is considered as a string. It is i
 
 ---
 
-#### <a name=""></a>bool
+#### <a name=""></a> bool
 
 
 + **extend** : `common`
@@ -1236,7 +1236,7 @@ Describes a boolean property
 
 ---
 
-#### <a name=""></a>decimal
+#### <a name=""></a> decimal
 
 
 + **extend** : `common`
@@ -1301,7 +1301,7 @@ null which means unlimited.</p></td>
 
 ---
 
-#### <a name=""></a>time
+#### <a name=""></a> time
 
 
 + **extend** : `common`
@@ -1346,7 +1346,7 @@ only the time part of the value is relevant
 
 ---
 
-#### <a name=""></a>duration
+#### <a name=""></a> duration
 
 
 + **extend** : `common`
@@ -1388,7 +1388,7 @@ Default value is null, meaning unbound.</p></td>
 
 ---
 
-#### <a name=""></a>percent
+#### <a name=""></a> percent
 
 
 + **extend** : `decimal`
@@ -1423,7 +1423,7 @@ instead of their raw decimal values.
 
 ---
 
-#### <a name=""></a>enumeration
+#### <a name=""></a> enumeration
 
 
 + **extend** : `common`
@@ -1503,7 +1503,7 @@ disjunctions in filters. Default value is false.</p></td>
 
 ---
 
-#### <a name=""></a>typeEnumeration
+#### <a name=""></a> typeEnumeration
 
 
 + **extend** : `common`
@@ -1564,7 +1564,7 @@ disjunctions in filters. Default value is false.</p></td>
 
 ---
 
-#### <a name=""></a>range
+#### <a name=""></a> range
 
 
 + **extend** : `common`
@@ -1628,7 +1628,7 @@ disjunctions in filters. Default value is false.</p></td>
 
 ---
 
-#### <a name=""></a>refId
+#### <a name=""></a> refId
 
 
 + **mandatory** : `id`
@@ -1660,7 +1660,7 @@ allows to point on a reference
 
 ---
 
-#### <a name=""></a>color
+#### <a name=""></a> color
 
 
 + **extend** : `common`
@@ -1697,7 +1697,7 @@ colors manipulation and helps converting to/from their hexadecimal representatio
 
 ---
 
-#### <a name=""></a>binary
+#### <a name=""></a> binary
 
 
 + **extend** : `common`
@@ -1766,7 +1766,7 @@ extensions, e.g. "JPEG images"
 
 ---
 
-#### <a name=""></a>image
+#### <a name=""></a> image
 
 
 + **extend** : `binary`
@@ -1816,7 +1816,7 @@ format before being stored.</p></td>
 
 ---
 
-#### <a name=""></a>java
+#### <a name=""></a> java
 
 
 + **extend** : `binary`
@@ -1852,7 +1852,7 @@ never plays with the serialized form.
 
 ---
 
-#### <a name=""></a>any
+#### <a name=""></a> any
 
 
 + **extend** : `common`
@@ -1887,7 +1887,7 @@ explicitely declared.
 
 ---
 
-#### <a name=""></a>sourcecode
+#### <a name=""></a> sourcecode
 
 
 + **extend** : `text`
@@ -1924,7 +1924,7 @@ language used to format the property text content may be defined explicitely usi
 
 ---
 
-#### <a name=""></a>html
+#### <a name=""></a> html
 
 
 + **extend** : `text`
@@ -1958,8 +1958,8 @@ HTML instead of raw text content.
 
 ---
 
-#### <a name=""></a>Association
-#### <a name=""></a>reference
+#### <a name=""></a> Association
+#### <a name=""></a> reference
 
 
 + **extend** : `common`
@@ -2086,7 +2086,7 @@ properties based on the referenced component descriptor.</p></td>
 
 ---
 
-#### <a name=""></a>list
+#### <a name=""></a> list
 
 
 + **extend** : `reference`
@@ -2167,7 +2167,7 @@ determines the size of th IN clause.</p></td>
 
 ---
 
-#### <a name=""></a>set
+#### <a name=""></a> set
 
 
 + **extend** : `list`
@@ -2202,8 +2202,8 @@ in the datastore.
 
 ---
 
-#### <a name=""></a>Support
-#### <a name=""></a>external
+#### <a name=""></a> Support
+#### <a name=""></a> external
 
 
 + **allowed previous element** : `Domain`
@@ -2238,7 +2238,7 @@ since all references are controlled by SJS, it is necessary to declare the exter
 
 ---
 
-#### <a name=""></a>paramSet
+#### <a name=""></a> paramSet
 
 
 + **allowed previous element** : `Domain, Entity, Interface, Component`
@@ -2272,7 +2272,7 @@ paramSet can be used by declaration SJS using the attribute paramSets
 
 ---
 
-#### <a name=""></a>namespace
+#### <a name=""></a> namespace
 
 
 + **allowed previous element** : `Domain, Entity, Interface, Component`
@@ -2317,7 +2317,7 @@ In this exemple, images are in the subdirectory /images of the project
 
 ---
 
-#### <a name=""></a>include
+#### <a name=""></a> include
 
 
 + **allowed previous element** : `Domain, Entity, Interface, Component`

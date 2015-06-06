@@ -1,6 +1,6 @@
-#### <a name=""></a>Reference for SJS Front
-#### <a name=""></a>Root
-#### <a name=""></a>Front
+#### <a name=""></a> Reference for SJS Front
+#### <a name=""></a> Root
+#### <a name=""></a> Front
 
 
 + **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, actionMap, action, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
@@ -32,8 +32,8 @@ There is generally no need to change it.
 
 ---
 
-#### <a name=""></a>Common
-#### <a name=""></a>Security
+#### <a name=""></a> Common
+#### <a name=""></a> Security
 
 This descriptor is an internal s SJS descriptor which is never used by the application.It is used by SJS to factorize
 Security properties.
@@ -169,7 +169,7 @@ writability is the combination of view and model writability.</p></td>
 
 ---
 
-#### <a name=""></a>common
+#### <a name=""></a> common
 
 
 + **extend** : `Security`
@@ -408,7 +408,7 @@ The properties brought by the paramSet can be overridden  by the current descrip
 
 ---
 
-#### <a name=""></a>commonMobile
+#### <a name=""></a> commonMobile
 
 
 + **extend** : `Security`
@@ -586,7 +586,7 @@ The properties brought by the paramSet can be overridden  by the current descrip
 
 ---
 
-#### <a name=""></a>mobileSection
+#### <a name=""></a> mobileSection
 
 Defines a page section that can be aggregated in a composite page.
 
@@ -624,7 +624,7 @@ or regex like DEFKTOP, MOBILE, HTML5, ...</p></td>
 
 ---
 
-#### <a name=""></a>mobilePageAware
+#### <a name=""></a> mobilePageAware
 
 
 + **extend** : `mobileSection`
@@ -682,8 +682,8 @@ commons properties for views that can react to common page interactions.
 
 ---
 
-#### <a name=""></a>View
-#### <a name=""></a>abstractChart
+#### <a name=""></a> View
+#### <a name=""></a> abstractChart
 
 This descriptor is an internal s SJS descriptor which is never used by the application.It is used by SJS to factorize
 charts properties. Charts in Jspresso are very similar to table collection view in the way they are defined.
@@ -745,7 +745,7 @@ It defaults to true otherwise.</p></td>
 
 ---
 
-#### <a name=""></a>abstractPolarChart
+#### <a name=""></a> abstractPolarChart
 
 Defines at pie chart.
 
@@ -773,7 +773,7 @@ Defines at pie chart.
 
 ---
 
-#### <a name=""></a>abstractCartesianChart
+#### <a name=""></a> abstractCartesianChart
 
 Defines a 2+ dimensional chart.
 
@@ -864,7 +864,7 @@ Default value is EBarChartType.CLUSTERED, i.e. the series are drawn side by side
 
 ---
 
-#### <a name=""></a>chart
+#### <a name=""></a> chart
 
 
 + **extend** : `common, abstractChart`
@@ -895,7 +895,7 @@ descriptor for charts
 
 ---
 
-#### <a name=""></a>polarChart
+#### <a name=""></a> polarChart
 
 
 + **extend** : `chart, abstractPolarChart`
@@ -929,7 +929,7 @@ descriptor for pie charts
 
 ---
 
-#### <a name=""></a>cartesianChart
+#### <a name=""></a> cartesianChart
 
 
 + **extend** : `chart, abstractCartesianChart`
@@ -963,7 +963,7 @@ descriptor for cartesian charts
 
 ---
 
-#### <a name=""></a>mobileChart
+#### <a name=""></a> mobileChart
 
 
 + **extend** : `commonMobile, mobileSection, abstractChart`
@@ -994,7 +994,7 @@ descriptor for charts
 
 ---
 
-#### <a name=""></a>mobilePolarChart
+#### <a name=""></a> mobilePolarChart
 
 
 + **extend** : `mobileChart, abstractPolarChart`
@@ -1028,7 +1028,7 @@ descriptor for pie charts
 
 ---
 
-#### <a name=""></a>mobileCartesianChart
+#### <a name=""></a> mobileCartesianChart
 
 
 + **extend** : `mobileChart, abstractCartesianChart`
@@ -1062,7 +1062,7 @@ descriptor for cartesian charts
 
 ---
 
-#### <a name=""></a>commonCartesianSeries
+#### <a name=""></a> commonCartesianSeries
 
 This descriptor is an internal s SJS descriptor which is never used by the application.It is used by SJS to factorize
 chart series properties. Charts series in Jspresso are very similar to property views in the way they are defined.
@@ -1154,7 +1154,7 @@ of actions defined on table columns.</p></td>
 
 ---
 
-#### <a name=""></a>lineSeries
+#### <a name=""></a> lineSeries
 
 
 + **extend** : `commonCartesianSeries`
@@ -1187,7 +1187,7 @@ Defines a line series.
 
 ---
 
-#### <a name=""></a>barSeries
+#### <a name=""></a> barSeries
 
 
 + **extend** : `commonCartesianSeries`
@@ -1220,7 +1220,7 @@ Defines a bar series.
 
 ---
 
-#### <a name=""></a>plotSeries
+#### <a name=""></a> plotSeries
 
 
 + **extend** : `commonCartesianSeries`
@@ -1253,7 +1253,7 @@ Defines a plot series.
 
 ---
 
-#### <a name=""></a>areaSeries
+#### <a name=""></a> areaSeries
 
 
 + **extend** : `commonCartesianSeries`
@@ -1286,7 +1286,7 @@ Defines a area series.
 
 ---
 
-#### <a name=""></a>pieSeries
+#### <a name=""></a> pieSeries
 
 
 + **allowed previous element** : `polarChart, mobilePolarChart`
@@ -1371,7 +1371,7 @@ of actions defined on table columns.</p></td>
 
 ---
 
-#### <a name=""></a>form
+#### <a name=""></a> form
 
 
 + **extend** : `common`
@@ -1543,7 +1543,7 @@ room.</p></td>
 
 ---
 
-#### <a name=""></a>mobileForm
+#### <a name=""></a> mobileForm
 
 
 + **extend** : `commonMobile, mobileSection`
@@ -1619,7 +1619,7 @@ model descriptor.</p></td>
 
 ---
 
-#### <a name=""></a>mapView
+#### <a name=""></a> mapView
 
 
 + **extend** : `common`
@@ -1665,7 +1665,7 @@ its model.
 
 ---
 
-#### <a name=""></a>mobileMapView
+#### <a name=""></a> mobileMapView
 
 
 + **extend** : `commonMobile, mobileSection`
@@ -1711,7 +1711,7 @@ its model.
 
 ---
 
-#### <a name=""></a>fields
+#### <a name=""></a> fields
 
 
 + **allowed previous element** : `form, mobileForm`
@@ -1742,7 +1742,7 @@ Open a list of propertyView to individually fine-tunes each field  in a form
 
 ---
 
-#### <a name=""></a>table
+#### <a name=""></a> table
 
 
 + **extend** : `common`
@@ -1900,7 +1900,7 @@ the view are kept in sync with the bound model collection.</p></td>
 
 ---
 
-#### <a name=""></a>listView
+#### <a name=""></a> listView
 
 
 + **extend** : `common`
@@ -2028,7 +2028,7 @@ the view are kept in sync with the bound model collection.</p></td>
 
 ---
 
-#### <a name=""></a>mobileListView
+#### <a name=""></a> mobileListView
 
 
 + **extend** : `commonMobile`
@@ -2151,7 +2151,7 @@ indicates that the user can navigate to another page when clicking a list item.<
 
 ---
 
-#### <a name=""></a>columns
+#### <a name=""></a> columns
 
 
 + **allowed previous element** : `table`
@@ -2182,7 +2182,7 @@ Open a list of propertyView to individually fine-tunes each column in a table
 
 ---
 
-#### <a name=""></a>propertyView
+#### <a name=""></a> propertyView
 
 
 + **extend** : `common`
@@ -2366,7 +2366,7 @@ Allowed values are</p></td>
 
 ---
 
-#### <a name=""></a>stringPropertyView
+#### <a name=""></a> stringPropertyView
 
 
 + **extend** : `propertyView`
@@ -2402,7 +2402,7 @@ to be triggered when a character is typed in the UI.
 
 ---
 
-#### <a name=""></a>referencePropertyView
+#### <a name=""></a> referencePropertyView
 
 
 + **extend** : `stringPropertyView`
@@ -2442,7 +2442,7 @@ property view. A null value (default) keeps the standard action.</p></td>
 
 ---
 
-#### <a name=""></a>enumerationPropertyView
+#### <a name=""></a> enumerationPropertyView
 
 
 + **extend** : `propertyView`
@@ -2509,7 +2509,7 @@ values should be rendered horizontally and VERTICAL otherwise. Default value is 
 
 ---
 
-#### <a name=""></a>image
+#### <a name=""></a> image
 
 
 + **extend** : `propertyView`
@@ -2571,7 +2571,7 @@ POD for instance.</p></td>
 
 ---
 
-#### <a name=""></a>html
+#### <a name=""></a> html
 
 
 + **extend** : `propertyView`
@@ -2615,7 +2615,7 @@ means that the html view will be made scrollable horizontally.</p></td>
 
 ---
 
-#### <a name=""></a>actionView
+#### <a name=""></a> actionView
 
 
 + **extend** : `common`
@@ -2671,8 +2671,8 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 
 ---
 
-#### <a name=""></a>Tree
-#### <a name=""></a>treeNode
+#### <a name=""></a> Tree
+#### <a name=""></a> treeNode
 
 
 + **extend** : `common`
@@ -2725,7 +2725,7 @@ treeNode('Company-teams.treeNode',
 
 ---
 
-#### <a name=""></a>tree
+#### <a name=""></a> tree
 
 
 + **extend** : `common`
@@ -2891,7 +2891,7 @@ be nested.</p></td>
 
 ---
 
-#### <a name=""></a>mobileTree
+#### <a name=""></a> mobileTree
 
 
 + **extend** : `commonMobile`
@@ -3050,7 +3050,7 @@ be nested.</p></td>
 
 ---
 
-#### <a name=""></a>subTree
+#### <a name=""></a> subTree
 
 
 + **extend** : `common`
@@ -3091,8 +3091,8 @@ In SJS a subTree has the same identifier as the treeNode it instantiates.
 
 ---
 
-#### <a name=""></a>Composite view
-#### <a name=""></a>tabs
+#### <a name=""></a> Composite view
+#### <a name=""></a> tabs
 
 
 + **extend** : `common`
@@ -3170,7 +3170,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 
 ---
 
-#### <a name=""></a>mobileTabs
+#### <a name=""></a> mobileTabs
 
 
 + **extend** : `commonMobile, mobileSection`
@@ -3239,7 +3239,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 
 ---
 
-#### <a name=""></a>views
+#### <a name=""></a> views
 
 
 + **allowed previous element** : `tabs, mobileTabs, entityCardView, basicCardView`
@@ -3270,7 +3270,7 @@ Open a list of views where each view can be defined "inline"
 
 ---
 
-#### <a name=""></a>split
+#### <a name=""></a> split
 
 
 + **extend** : `common`
@@ -3349,7 +3349,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 
 ---
 
-#### <a name=""></a>left
+#### <a name=""></a> left
 
 
 + **allowed previous element** : `split`
@@ -3380,7 +3380,7 @@ Enable to set an in-line view in in the left zone of a split_horizontal
 
 ---
 
-#### <a name=""></a>right
+#### <a name=""></a> right
 
 
 + **allowed previous element** : `split`
@@ -3411,7 +3411,7 @@ Enable to set an in-line view in in the rigth zone of a split_horizontal
 
 ---
 
-#### <a name=""></a>top
+#### <a name=""></a> top
 
 
 + **allowed previous element** : `split`
@@ -3442,7 +3442,7 @@ Enable to set an in-line view in in the top zone of a split_vertical
 
 ---
 
-#### <a name=""></a>bottom
+#### <a name=""></a> bottom
 
 
 + **allowed previous element** : `split`
@@ -3473,7 +3473,7 @@ Enable to set an in-line view in in the the bottom zone of a split_vertical
 
 ---
 
-#### <a name=""></a>border
+#### <a name=""></a> border
 
 
 + **extend** : `common`
@@ -3563,7 +3563,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 
 ---
 
-#### <a name=""></a>mobileBorder
+#### <a name=""></a> mobileBorder
 
 
 + **extend** : `commonMobile, mobilePageAware`
@@ -3625,7 +3625,7 @@ resized horizontally.</p></td>
 
 ---
 
-#### <a name=""></a>east
+#### <a name=""></a> east
 
 
 + **allowed previous element** : `border`
@@ -3656,7 +3656,7 @@ Enable to set an in-line view in the east zone of a border
 
 ---
 
-#### <a name=""></a>west
+#### <a name=""></a> west
 
 
 + **allowed previous element** : `border`
@@ -3687,7 +3687,7 @@ Enable to set an in-line view in the west zone of a border
 
 ---
 
-#### <a name=""></a>south
+#### <a name=""></a> south
 
 
 + **allowed previous element** : `border, mobileBorder`
@@ -3718,7 +3718,7 @@ Enable to set an in-line view in the south zone of a border
 
 ---
 
-#### <a name=""></a>north
+#### <a name=""></a> north
 
 
 + **allowed previous element** : `border, mobileBorder`
@@ -3749,7 +3749,7 @@ Enable to set an in-line view in the north zone of a border
 
 ---
 
-#### <a name=""></a>center
+#### <a name=""></a> center
 
 
 + **allowed previous element** : `border, mobileBorder`
@@ -3780,7 +3780,7 @@ Enable to set an in-line view in the center zone of a border
 
 ---
 
-#### <a name=""></a>grid
+#### <a name=""></a> grid
 
 
 + **extend** : `common`
@@ -3830,7 +3830,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 
 ---
 
-#### <a name=""></a>evenGrid
+#### <a name=""></a> evenGrid
 
 
 + **extend** : `common`
@@ -3906,7 +3906,7 @@ or column is then created to host the remaining cells.</p></td>
 
 ---
 
-#### <a name=""></a>cells
+#### <a name=""></a> cells
 
 
 + **allowed previous element** : `grid, evenGrid`
@@ -3937,7 +3937,7 @@ open a cells list in grid or in an evenGrid
 
 ---
 
-#### <a name=""></a>cell
+#### <a name=""></a> cell
 
 
 + **allowed previous element** : `cells`
@@ -3999,7 +3999,7 @@ Describes constraints on a cell of a grid
 
 ---
 
-#### <a name=""></a>evenCell
+#### <a name=""></a> evenCell
 
 
 + **allowed previous element** : `cells`
@@ -4033,7 +4033,7 @@ Describes a cell of an evenGrid
 
 ---
 
-#### <a name=""></a>entityCardView
+#### <a name=""></a> entityCardView
 
 
 + **extend** : `common`
@@ -4081,7 +4081,7 @@ card matches, an empty view is displayed.</p></td>
 
 ---
 
-#### <a name=""></a>basicCardView
+#### <a name=""></a> basicCardView
 
 
 + **extend** : `common`
@@ -4143,8 +4143,8 @@ registered card name selector.</p></td>
 
 ---
 
-#### <a name=""></a>Action
-#### <a name=""></a>actionMap
+#### <a name=""></a> Action
+#### <a name=""></a> actionMap
 
 
 + **allowed previous element** : `Front, treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart`
@@ -4230,7 +4230,7 @@ assigning a model to the action gates.</p></td>
 
 ---
 
-#### <a name=""></a>secondaryActionMap
+#### <a name=""></a> secondaryActionMap
 
 
 + **allowed previous element** : `treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart`
@@ -4317,7 +4317,7 @@ assigning a model to the action gates.</p></td>
 
 ---
 
-#### <a name=""></a>actionList
+#### <a name=""></a> actionList
 
 
 + **allowed previous element** : `actionMap, secondaryActionMap`
@@ -4432,7 +4432,7 @@ assigning a model to the action gates.</p></td>
 
 ---
 
-#### <a name=""></a>action
+#### <a name=""></a> action
 
 
 + **allowed previous element** : `Front, actionList, controller, actionView`
@@ -4741,7 +4741,7 @@ assigning a model to the action gates.</p></td>
 
 ---
 
-#### <a name=""></a>next
+#### <a name=""></a> next
 
 
 + **extend** : `action`
@@ -4774,7 +4774,7 @@ Allows defining "inline" next action for the current action. A next action is an
 
 ---
 
-#### <a name=""></a>wrapped
+#### <a name=""></a> wrapped
 
 
 + **extend** : `next`
@@ -4807,7 +4807,7 @@ Allows defining "inline" wrapped action for the current action. This is perfectl
 
 ---
 
-#### <a name=""></a>rowAction
+#### <a name=""></a> rowAction
 
 
 + **extend** : `action`
@@ -4845,7 +4845,7 @@ map.
 
 ---
 
-#### <a name=""></a>itemSelectionAction
+#### <a name=""></a> itemSelectionAction
 
 
 + **extend** : `action`
@@ -4882,7 +4882,7 @@ map.
 
 ---
 
-#### <a name=""></a>sortingAction
+#### <a name=""></a> sortingAction
 
 
 + **extend** : `action`
@@ -4918,8 +4918,8 @@ default.
 
 ---
 
-#### <a name=""></a>View
-#### <a name=""></a>mobileNavPage
+#### <a name=""></a> View
+#### <a name=""></a> mobileNavPage
 
 
 + **extend** : `commonMobile, mobilePageAware`
@@ -4969,7 +4969,7 @@ A Navigation page is a mobile page that displays a collection view (list or tree
 
 ---
 
-#### <a name=""></a>mobileCardPage
+#### <a name=""></a> mobileCardPage
 
 
 + **extend** : `commonMobile, mobilePageAware`
@@ -5009,7 +5009,7 @@ Defines a page that displays a card view as its main content.
 
 ---
 
-#### <a name=""></a>mobileCompositePage
+#### <a name=""></a> mobileCompositePage
 
 
 + **extend** : `commonMobile, mobilePageAware`
@@ -5069,7 +5069,7 @@ flag is turned on.</p></td>
 
 ---
 
-#### <a name=""></a>selection
+#### <a name=""></a> selection
 
 
 + **allowed previous element** : `mobileNavPage`
@@ -5100,7 +5100,7 @@ Defines the selection view of a navigation page, either tree or list.
 
 ---
 
-#### <a name=""></a>headerSections
+#### <a name=""></a> headerSections
 
 
 + **allowed previous element** : `mobileNavPage`
@@ -5131,7 +5131,7 @@ Defines a list of section views to be placed above the selection view.
 
 ---
 
-#### <a name=""></a>nextPage
+#### <a name=""></a> nextPage
 
 
 + **allowed previous element** : `mobileNavPage`
@@ -5162,7 +5162,7 @@ Defines the page that will be navigated to when the user clicks an item in the s
 
 ---
 
-#### <a name=""></a>pages
+#### <a name=""></a> pages
 
 
 + **allowed previous element** : `mobileCardPage`
@@ -5192,7 +5192,7 @@ Defines the card view that is displayed in the card page.
 
 ---
 
-#### <a name=""></a>sections
+#### <a name=""></a> sections
 
 
 + **allowed previous element** : `mobileCompositePage`
@@ -5223,7 +5223,7 @@ Defines a composite page sections.
 
 ---
 
-#### <a name=""></a>editorPage
+#### <a name=""></a> editorPage
 
 
 + **allowed previous element** : `mobileCompositePage`
@@ -5253,8 +5253,8 @@ Defines the editor page of a composite page.
 
 ---
 
-#### <a name=""></a>workspace
-#### <a name=""></a>workspace
+#### <a name=""></a> workspace
+#### <a name=""></a> workspace
 
 
 + **mandatory** : `nameElement`
@@ -5369,8 +5369,8 @@ value) disables role based authorization on this workspace.</p></td>
 
 ---
 
-#### <a name=""></a>Module
-#### <a name=""></a>module
+#### <a name=""></a> Module
+#### <a name=""></a> module
 
 
 + **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule`
@@ -5508,7 +5508,7 @@ their model.</p></td>
 
 ---
 
-#### <a name=""></a>collectionModule
+#### <a name=""></a> collectionModule
 
 
 + **extend** : `module`
@@ -5571,7 +5571,7 @@ of the module managed beans.</p></td>
 
 ---
 
-#### <a name=""></a>filterModule
+#### <a name=""></a> filterModule
 
 
 + **extend** : `collectionModule`
@@ -5664,7 +5664,7 @@ the default, the elements default page size is used.</p></td>
 
 ---
 
-#### <a name=""></a>beanModule
+#### <a name=""></a> beanModule
 
 
 + **extend** : `module`
@@ -5715,7 +5715,7 @@ view descriptor.</p></td>
 
 ---
 
-#### <a name=""></a>nodeModule
+#### <a name=""></a> nodeModule
 
 
 + **extend** : `module`
@@ -5748,8 +5748,8 @@ Allows to group modules under a simple node in a hierarchy of modules.
 
 ---
 
-#### <a name=""></a>Controller
-#### <a name=""></a>controller
+#### <a name=""></a> Controller
+#### <a name=""></a> controller
 
 
 + **mandatory** : `nameElement`
@@ -5919,8 +5919,8 @@ of modules / sub-modules.</p></td>
 
 ---
 
-#### <a name=""></a>Message
-#### <a name=""></a>messageSource
+#### <a name=""></a> Message
+#### <a name=""></a> messageSource
 
 
 + **mandatory** : `basenames`
@@ -5952,8 +5952,8 @@ Jspresso relies on the well-known java I18N mechanism through the use of resourc
 
 ---
 
-#### <a name=""></a>Suppoprort
-#### <a name=""></a>external
+#### <a name=""></a> Suppoprort
+#### <a name=""></a> external
 
 
 + **allowed previous element** : `Front`
@@ -5984,8 +5984,8 @@ External gives SJS the List of references witch are not declared in SJS witch bu
 
 ---
 
-#### <a name=""></a>Support
-#### <a name=""></a>template
+#### <a name=""></a> Support
+#### <a name=""></a> template
 
 
 + **allowed previous element** : `Front`
@@ -6022,7 +6022,7 @@ All new forms and tables will have these properties set
 
 ---
 
-#### <a name=""></a>paramSet
+#### <a name=""></a> paramSet
 
 
 + **allowed previous element** : `Front`
@@ -6057,7 +6057,7 @@ paramSet can be used by declaration SJS using the attribute paramSets
 
 ---
 
-#### <a name=""></a>namespace
+#### <a name=""></a> namespace
 
 
 + **allowed previous element** : `*`
@@ -6102,7 +6102,7 @@ In this exemple, images are in the subdirectory /images of the project
 
 ---
 
-#### <a name=""></a>spec
+#### <a name=""></a> spec
 
 
 + **allowed previous element** : `*`
@@ -6140,7 +6140,7 @@ spec('Flex'){...}
 
 ---
 
-#### <a name=""></a>include
+#### <a name=""></a> include
 
 
 + **allowed previous element** : `*`
@@ -6173,8 +6173,8 @@ include('fileName')
 
 ---
 
-#### <a name=""></a>Generic
-#### <a name=""></a>bean
+#### <a name=""></a> Generic
+#### <a name=""></a> bean
 
 
 + **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
@@ -6250,7 +6250,7 @@ custom:[
 
 ---
 
-#### <a name=""></a>list
+#### <a name=""></a> list
 
 
 + **mandatory** : `nameElement`
@@ -6283,7 +6283,7 @@ Allows to generate a list Spring in the XML generated file
 
 ---
 
-#### <a name=""></a>set
+#### <a name=""></a> set
 
 
 + **mandatory** : `nameElement`
@@ -6316,7 +6316,7 @@ Allows to generate a list Spring in the XML generated file
 
 ---
 
-#### <a name=""></a>map
+#### <a name=""></a> map
 
 
 + **mandatory** : `nameElement`
