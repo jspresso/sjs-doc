@@ -3,7 +3,7 @@
 #### <a name=""></a> Front
 
 
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, actionMap, action, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, actionMap, action, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
 
 This root descriptor is used in the file application.groovy generated during the
 initialization of the project by Jspresso.
@@ -1460,6 +1460,36 @@ of actions defined on table columns.</p></td>
 
 ---
 
+#### <a name=""></a> pivotTable
+
+
++ **extend** : `propertyView`
++ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center, cells, columns, fields`
++ **allowed next element** : `actionMap, secondaryActionMap`
++ **Jspresso** : `PivotTableDescriptor`
+<table>
+<caption>pivotTable properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td align="left"><p><strong>cellAction</strong></p><p><code>RefAction</code></p>
+</td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
 #### <a name=""></a> form
 
 
@@ -1832,7 +1862,7 @@ its model.
 
 
 + **allowed previous element** : `form, mobileForm`
-+ **allowed next element** : `propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html`
++ **allowed next element** : `pivotTable, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html`
 
 Open a list of propertyView to individually fine-tunes each field  in a form
 
@@ -2301,7 +2331,7 @@ indicates that the user can navigate to another page when clicking a list item.<
 
 
 + **allowed previous element** : `table`
-+ **allowed next element** : `propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html`
++ **allowed next element** : `pivotTable, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html`
 
 Open a list of propertyView to individually fine-tunes each column in a table
 
@@ -3449,7 +3479,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 
 
 + **allowed previous element** : `tabs, mobileTabs, entityCardView, basicCardView`
-+ **allowed next element** : `polarChart, cartesianChart, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Open a list of views where each view can be defined "inline"
 
@@ -3559,7 +3589,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 
 
 + **allowed previous element** : `split`
-+ **allowed next element** : `polarChart, cartesianChart, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Enable to set an in-line view in in the left zone of a split_horizontal
 
@@ -3590,7 +3620,7 @@ Enable to set an in-line view in in the left zone of a split_horizontal
 
 
 + **allowed previous element** : `split`
-+ **allowed next element** : `polarChart, cartesianChart, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Enable to set an in-line view in in the rigth zone of a split_horizontal
 
@@ -3621,7 +3651,7 @@ Enable to set an in-line view in in the rigth zone of a split_horizontal
 
 
 + **allowed previous element** : `split`
-+ **allowed next element** : `polarChart, cartesianChart, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Enable to set an in-line view in in the top zone of a split_vertical
 
@@ -3652,7 +3682,7 @@ Enable to set an in-line view in in the top zone of a split_vertical
 
 
 + **allowed previous element** : `split`
-+ **allowed next element** : `polarChart, cartesianChart, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Enable to set an in-line view in in the the bottom zone of a split_vertical
 
@@ -3845,7 +3875,7 @@ resized horizontally.</p></td>
 
 
 + **allowed previous element** : `border`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, form, mobileForm, mapView, mobileMapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Enable to set an in-line view in the east zone of a border
 
@@ -3876,7 +3906,7 @@ Enable to set an in-line view in the east zone of a border
 
 
 + **allowed previous element** : `border`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, form, mobileForm, mapView, mobileMapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Enable to set an in-line view in the west zone of a border
 
@@ -3907,7 +3937,7 @@ Enable to set an in-line view in the west zone of a border
 
 
 + **allowed previous element** : `border, mobileBorder`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, form, mobileForm, mapView, mobileMapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Enable to set an in-line view in the south zone of a border
 
@@ -3938,7 +3968,7 @@ Enable to set an in-line view in the south zone of a border
 
 
 + **allowed previous element** : `border, mobileBorder`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, form, mobileForm, mapView, mobileMapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Enable to set an in-line view in the north zone of a border
 
@@ -3969,7 +3999,7 @@ Enable to set an in-line view in the north zone of a border
 
 
 + **allowed previous element** : `border, mobileBorder`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, form, mobileForm, mapView, mobileMapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Enable to set an in-line view in the center zone of a border
 
@@ -4130,7 +4160,7 @@ or column is then created to host the remaining cells.</p></td>
 
 
 + **allowed previous element** : `grid, evenGrid`
-+ **allowed next element** : `propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, cell, evenCell`
++ **allowed next element** : `pivotTable, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, cell, evenCell`
 
 open a cells list in grid or in an evenGrid
 
@@ -4161,7 +4191,7 @@ open a cells list in grid or in an evenGrid
 
 
 + **allowed previous element** : `cells`
-+ **allowed next element** : `polarChart, cartesianChart, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Describes constraints on a cell of a grid
 
@@ -4223,7 +4253,7 @@ Describes constraints on a cell of a grid
 
 
 + **allowed previous element** : `cells`
-+ **allowed next element** : `polarChart, cartesianChart, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Describes a cell of an evenGrid
 <b>evenCell IS NEVER DIRECTLY USED</b>, like for a grid, cell is used.
@@ -4367,7 +4397,7 @@ registered card name selector.</p></td>
 #### <a name=""></a> actionMap
 
 
-+ **allowed previous element** : `Front, treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart`
++ **allowed previous element** : `Front, treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
 + **allowed next element** : `actionList`
 + **Jspresso** : `ActionMap`
 
@@ -4462,7 +4492,7 @@ assigning a model to the action gates.</p></td>
 #### <a name=""></a> secondaryActionMap
 
 
-+ **allowed previous element** : `treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart`
++ **allowed previous element** : `treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
 + **allowed next element** : `actionList`
 + **Jspresso** : `ActionMap`
 
