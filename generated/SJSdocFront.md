@@ -1467,6 +1467,10 @@ of actions defined on table columns.</p></td>
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `PivotTableDescriptor`
+
+Defines pivot table view.
+
+
 <table>
 <caption>pivotTable properties</caption>
 <colgroup>
@@ -1483,7 +1487,7 @@ of actions defined on table columns.</p></td>
 <tr class="even">
 <td align="left"><p><strong>cellAction</strong></p><p><code>RefAction</code></p>
 </td>
-<td><p></p></td>
+<td><p>Configures the action that is triggerred when clicking on a pivot table cell.</p></td>
 </tr>
 </tbody>
 </table>
