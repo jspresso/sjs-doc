@@ -6309,7 +6309,7 @@ Jspresso relies on the well-known java I18N mechanism through the use of resourc
 
 ---
 
-#### <a name=""></a> Suppoprort
+#### <a name=""></a> Support
 #### <a name=""></a> external
 
 
@@ -6341,7 +6341,6 @@ External gives SJS the List of references witch are not declared in SJS witch bu
 
 ---
 
-#### <a name=""></a> Support
 #### <a name=""></a> template
 
 
