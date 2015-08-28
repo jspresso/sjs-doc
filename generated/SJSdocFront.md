@@ -1463,8 +1463,9 @@ of actions defined on table columns.</p></td>
 #### <a name=""></a> pivotTable
 
 
-+ **extend** : `propertyView`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center, cells, columns, fields`
++ **extend** : `common`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
++ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `PivotTableDescriptor`
 
@@ -1485,6 +1486,11 @@ Defines pivot table view.
 </thead>
 <tbody>
 <tr class="even">
+<td align="left"><p><strong>parent</strong></p><p><code>RefView</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>cellAction</strong></p><p><code>RefAction</code></p>
 </td>
 <td><p>Configures the action that is triggerred when clicking on a pivot table cell.</p></td>
@@ -1866,7 +1872,7 @@ its model.
 
 
 + **allowed previous element** : `form, mobileForm`
-+ **allowed next element** : `pivotTable, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html`
++ **allowed next element** : `propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html`
 
 Open a list of propertyView to individually fine-tunes each field  in a form
 
@@ -2335,7 +2341,7 @@ indicates that the user can navigate to another page when clicking a list item.<
 
 
 + **allowed previous element** : `table`
-+ **allowed next element** : `pivotTable, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html`
++ **allowed next element** : `propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html`
 
 Open a list of propertyView to individually fine-tunes each column in a table
 
@@ -4164,7 +4170,7 @@ or column is then created to host the remaining cells.</p></td>
 
 
 + **allowed previous element** : `grid, evenGrid`
-+ **allowed next element** : `pivotTable, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, cell, evenCell`
++ **allowed next element** : `propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, cell, evenCell`
 
 open a cells list in grid or in an evenGrid
 
