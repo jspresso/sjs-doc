@@ -6130,6 +6130,12 @@ Allows to group modules under a simple node in a hierarchy of modules.
 + **Inherited properties ** : `component, filterComponent, filterView, pagingStatus, pagingAction, ordering, pageSize, detailView, parent, class, custom, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
+
+This type of module extends the filter module by adding a pivot table to it. The user is presented the pivot table as
+the result of his query, can add / remove line and column dimensions, measures and can drill-down in a cell in order
+to focus on the individual entities that compose the cell.
+
+
 <table>
 <caption>pivotModule properties</caption>
 <colgroup>
@@ -6144,19 +6150,20 @@ Allows to group modules under a simple node in a hierarchy of modules.
 </thead>
 <tbody>
 <tr class="even">
-<td align="left"><p><strong>dimensions</strong></p><p><code>ListOfString</code></p>
+<td align="left"><p><strong>dimensions</strong></p><p><code>ListOfString</code></p><p><code>pivotFields</code></p>
 </td>
-<td><p></p></td>
+<td><p>The allowed dimensions that can be organized in row an column.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>measures</strong></p><p><code>ListOfString</code></p>
+<td align="left"><p><strong>measures</strong></p><p><code>ListOfString</code></p><p><code>pivotMeasures</code></p>
 </td>
-<td><p></p></td>
+<td><p>The allowed measures along with their aggregation.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>refiner</strong></p><p><code>RefBean</code></p>
+<td align="left"><p><strong>refiner</strong></p><p><code>RefBean</code></p><p><code>pivotRefiner</code></p>
 </td>
-<td><p></p></td>
+<td><p>An implementation of org.jspresso.framework.ext.pivot.backend.IPivotRefiner used to refine the various behaviors of the
+pivot module.</p></td>
 </tr>
 </tbody>
 </table>
