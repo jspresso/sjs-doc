@@ -5751,6 +5751,16 @@ A module can also be as simple as a grouping structure for other modules (nodeMo
 <td><p>Allows to use an other descriptor as a model and to override certain properties.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>class</strong></p><p><code>String</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>custom</strong></p><p><code>Map</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>name</strong></p><p><code>String</code></p>
 </td>
 <td><p>Configures the key used to translate actual internationalized module
@@ -5859,7 +5869,7 @@ their model.</p></td>
 
 
 + **extend** : `module`
-+ **Inherited properties ** : `parent, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
++ **Inherited properties ** : `parent, class, custom, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
 
@@ -5925,7 +5935,7 @@ of the module managed beans.</p></td>
 
 
 + **extend** : `collectionModule`
-+ **Inherited properties ** : `detailView, parent, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
++ **Inherited properties ** : `detailView, parent, class, custom, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
 
@@ -6022,7 +6032,7 @@ the default, the elements default page size is used.</p></td>
 
 
 + **extend** : `module`
-+ **Inherited properties ** : `parent, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
++ **Inherited properties ** : `parent, class, custom, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
 
@@ -6075,7 +6085,7 @@ view descriptor.</p></td>
 
 
 + **extend** : `module`
-+ **Inherited properties ** : `parent, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
++ **Inherited properties ** : `parent, class, custom, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
 
