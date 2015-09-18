@@ -3,7 +3,7 @@
 #### <a name=""></a> Front
 
 
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, actionMap, action, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, image, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, actionMap, action, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
 
 This root descriptor is used in the file application.groovy generated during the
 initialization of the project by Jspresso.
@@ -1488,7 +1488,7 @@ Defines pivot table view.
 <tr class="even">
 <td align="left"><p><strong>parent</strong></p><p><code>RefView</code></p>
 </td>
-<td><p></p></td>
+<td><p>Allows to reference another descriptor as a model and to override certain properties.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>cellAction</strong></p><p><code>RefAction</code></p>
@@ -5592,7 +5592,7 @@ Defines the editor page of a composite page.
 
 + **mandatory** : `nameElement`
 + **allowed previous element** : `Front`
-+ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
++ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
 
 A workspace is an group of functional application modules. You may decide arbitrarily how to group modules
 into workspaces but a good approach might be to design the workspaces based on roles (i.e. business
@@ -5712,8 +5712,8 @@ value) disables role based authorization on this workspace.</p></td>
 #### <a name=""></a> module
 
 
-+ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule`
-+ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
++ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
++ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
 
 A module is an entry point in the application. Modules are organized in bi-directional, parent-children
 hierarchy. As such, they can be viewed (and they are materalized in the UI) as trees. Modules can be
@@ -5753,12 +5753,21 @@ A module can also be as simple as a grouping structure for other modules (nodeMo
 <tr class="odd">
 <td align="left"><p><strong>class</strong></p><p><code>String</code></p>
 </td>
-<td><p></p></td>
+<td><p>The module class if overriding is needed.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>custom</strong></p><p><code>Map</code></p>
 </td>
-<td><p></p></td>
+<td><p>Map of custom properties that have to be set on the action. When a property is a reference, its key has to be suffixed by "_ref". This enables SJS to generate the appropriate XML and to control the existence of the reference.
+
+<pre>
+custom:[
+
+    parentModuleName:'Projects', 
+
+    componentDescriptor_ref:'Project'])
+</pre>
+</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>name</strong></p><p><code>String</code></p>
@@ -5870,8 +5879,8 @@ their model.</p></td>
 
 + **extend** : `module`
 + **Inherited properties ** : `parent, class, custom, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
-+ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule`
-+ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
++ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
++ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
 
 This type of module keeps a reference on a beans collection. There is no assumption made on wether
 these beans are actually persistent entites or any other type of java beans.
@@ -5936,8 +5945,8 @@ of the module managed beans.</p></td>
 
 + **extend** : `collectionModule`
 + **Inherited properties ** : `detailView, parent, class, custom, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
-+ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule`
-+ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
++ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
++ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
 
 This is a specialized type of bean collection module that provides a filter ( an instance of IQueryComponent
 ). This type of module, coupled with a generic, built-in, action map is perfectly suited for CRUD-like
@@ -6033,8 +6042,8 @@ the default, the elements default page size is used.</p></td>
 
 + **extend** : `module`
 + **Inherited properties ** : `parent, class, custom, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
-+ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule`
-+ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
++ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
++ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
 
 This type of module keeps a reference on a beans collection. There is no assumption made on wether
 these beans are actually persistent entites or any other type of java beans.
@@ -6086,8 +6095,8 @@ view descriptor.</p></td>
 
 + **extend** : `module`
 + **Inherited properties ** : `parent, class, custom, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
-+ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule`
-+ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule`
++ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
++ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
 
 Allows to group modules under a simple node in a hierarchy of modules.
 
@@ -6108,6 +6117,46 @@ Allows to group modules under a simple node in a hierarchy of modules.
 <tr>
 <td align="left">This class does not have any specific property.</td>
 <td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+#### <a name=""></a> pivotModule
+
+
++ **extend** : `filterModule`
++ **Inherited properties ** : `component, filterComponent, filterView, pagingStatus, pagingAction, ordering, pageSize, detailView, parent, class, custom, name, description, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
++ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
++ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
+<table>
+<caption>pivotModule properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td align="left"><p><strong>dimensions</strong></p><p><code>ListOfString</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>measures</strong></p><p><code>ListOfString</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>refiner</strong></p><p><code>RefBean</code></p>
+</td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
