@@ -73,7 +73,7 @@ or be richer to meet more complex needs :
 
         'createTimestamp', 'lastUpdateTimestamp']) {
 
-  reference 'company', ref: 'Company', reverse: 'Company-departments', 
+  reference 'company', ref: 'Company', reverse: 'Company-departments',
           mandatory: true, composition: true
 
   set 'teams', ref: 'Team', composition: true
@@ -172,7 +172,7 @@ even if an ancestor defines an explicit set of rendered properties, its
 children ignore this setting.
 
 <pre>Entity('Employee',
- 
+
 <b>rendered</b>: ['name', 'firstName', 'ssn', 'age']){...}</pre>
 </p></td>
 </tr>
@@ -194,7 +194,7 @@ even if an ancestor defines an explicit set of queryable properties, its
 children ignore this setting
 
 <pre>Entity('Employee',
- 
+
 <b>queryable</b>: ['name', 'firstName', 'ssn', 'age']){...}</pre>
 </p></td>
 </tr>
@@ -265,7 +265,7 @@ be considered writable (updatable) if and only if all booleanGates gates are ope
 
 <pre>
 entity 'invoice', booleanWritabilityGates: ['val1', '!val2']
- 
+
 </pre>
 
 
@@ -318,12 +318,64 @@ Same mecanism has booleanWritabilityGates</p></td>
 <tr class="even">
 <td align="left"><p><strong>enumWritabilityGates</strong></p><p><code>MapOfListOfString</code></p>
 </td>
-<td><p></p></td>
+<td><p>Assigns a collection of gates to determine component writability. A component will
+be considered writable (updatable) if and only if all enum gates are open.
+
+<pre>
+entity 'invoice', enumWritabilityGates: ['prop1':['VAL1','VAL2'], '!prop2':['VAL3']]
+
+</pre>
+
+
+<ul>
+<li>
+The first 'prop1' gate is open if 'prop1' property value is either 'VAL1' or 'VAL2' on the underlying model
+</li>
+<li>
+The second '!prop2' gate is open if 'prop2' propety value is not 'VAL3' on the underlying model
+</li>
+</ul>
+
+This mecanism is mainly used for dynamic UI authorization based on
+model state, e.g. a validated invoice should not be editable anymore.
+Component assigned gates will be cloned for each component instance created
+and backed by this descriptor. So basically, each component instance will
+have its own, unshared collection of writability gates.
+
+By default, component descriptors are not assigned any gates collection,
+i.e. there is no writability restriction. Note that gates do not enforce
+programatic writability of a component; only UI is impacted.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>regexWritabilityGates</strong></p><p><code>MapOfString</code></p>
 </td>
-<td><p></p></td>
+<td><p>Assigns a collection of gates to determine component writability. A component will
+be considered writable (updatable) if and only if all regex gates are open.
+
+<pre>
+entity 'invoice', regexWritabilityGates: ['prop1':'[A-Z]*', '!prop2':'[a-z]*']
+
+</pre>
+
+
+<ul>
+<li>
+The first 'prop1' gate is open if the prop1 property matches [A-Z]* on the underlying model
+</li>
+<li>
+The second '!prop2' gate is open if prop2 property does not match [a-z]* regex on the underlying model
+</li>
+</ul>
+
+This mecanism is mainly used for dynamic UI authorization based on
+model state, e.g. a validated invoice should not be editable anymore.
+View assigned gates will be cloned for each view instance created
+and backed by this descriptor. So basically, each view instance will
+have its own, unshared collection of writability gates.
+
+By default, component descriptors are not assigned any gates collection,
+i.e. there is no writability restriction. Note that gates do not enforce
+programatic writability of a component; only UI is impacted.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>extension</strong></p><p><code>String</code></p>
@@ -334,7 +386,7 @@ Properties defined with a computed = true are computed whith a setter defined in
 
 
 Delegate instances are stateful. This allows for some caching of computing
-intensive properties. Delegate instances are lazily created when needed, 
+intensive properties. Delegate instances are lazily created when needed,
 i.e. when the computed property is accessed either programmatically or by the binding layer.
 The delegate class must implement the IComponentExtension
 &lt;T&gt; interface (where &lt;T&gt; is assignable from the owning component
@@ -449,8 +501,8 @@ resulting from Spring configuration is generally not used in the model</p></td>
 </td>
 <td><p>Allows to customize the string representation of a component instance.
 The property name assigned will be used when displaying the component instance as a string.
-It may be a computed property that composes several other properties in a human friendly format. 
-Whenever this property is null, the following rule apply to determine the toString property : 
+It may be a computed property that composes several other properties in a human friendly format.
+Whenever this property is null, the following rule apply to determine the toString property :
 
 <ul>
 <li>
@@ -728,7 +780,7 @@ max length).</p></td>
 <tr class="even">
 <td align="left"><p><strong>computed</strong></p><p><code>Boolean</code></p>
 </td>
-<td><p>Properties defined with a useExtension = true are computed with a getter. This getter is defined in the delegate class attached 
+<td><p>Properties defined with a useExtension = true are computed with a getter. This getter is defined in the delegate class attached
 by the <b>extension</b> property to the Entity, Component or Interface.</p></td>
 </tr>
 <tr class="odd">
@@ -768,7 +820,7 @@ be considered writable (updatable) if and only if all booleanGates gates are ope
 
 <pre>
 entity 'invoice', booleanWritabilityGates: ['val1', '!val2']
- 
+
 </pre>
 
 
@@ -818,12 +870,64 @@ Same mecanism has booleanWritabilityGates</p></td>
 <tr class="odd">
 <td align="left"><p><strong>enumWritabilityGates</strong></p><p><code>MapOfListOfString</code></p>
 </td>
-<td><p></p></td>
+<td><p>Assigns a collection of gates to determine property writability. A property will
+be considered writable (updatable) if and only if all enum gates are open.
+
+<pre>
+entity 'invoice', enumWritabilityGates: ['prop1':['VAL1','VAL2'], '!prop2':['VAL3']]
+
+</pre>
+
+
+<ul>
+<li>
+The first 'prop1' gate is open if 'prop1' property value is either 'VAL1' or 'VAL2' on the underlying model
+</li>
+<li>
+The second '!prop2' gate is open if 'prop2' propety value is not 'VAL3' on the underlying model
+</li>
+</ul>
+
+This mecanism is mainly used for dynamic UI authorization based on
+model state, e.g. a validated invoice should not be editable anymore.
+Property assigned gates will be cloned for each property instance created
+and backed by this descriptor. So basically, each property instance will
+have its own, unshared collection of writability gates.
+
+By default, property descriptors are not assigned any gates collection,
+i.e. there is no writability restriction. Note that gates do not enforce
+programatic writability of a property; only UI is impacted.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>regexWritabilityGates</strong></p><p><code>MapOfString</code></p>
 </td>
-<td><p></p></td>
+<td><p>Assigns a collection of gates to determine property writability. A property will
+be considered writable (updatable) if and only if all regex gates are open.
+
+<pre>
+entity 'invoice', regexWritabilityGates: ['prop1':'[A-Z]*', '!prop2':'[a-z]*']
+
+</pre>
+
+
+<ul>
+<li>
+The first 'prop1' gate is open if the prop1 property matches [A-Z]* on the underlying model
+</li>
+<li>
+The second '!prop2' gate is open if prop2 property does not match [a-z]* regex on the underlying model
+</li>
+</ul>
+
+This mecanism is mainly used for dynamic UI authorization based on
+model state, e.g. a validated invoice should not be editable anymore.
+View assigned gates will be cloned for each view instance created
+and backed by this descriptor. So basically, each view instance will
+have its own, unshared collection of writability gates.
+
+By default, property descriptors are not assigned any gates collection,
+i.e. there is no writability restriction. Note that gates do not enforce
+programatic writability of a property; only UI is impacted.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>unicityScope</strong></p><p><code>String</code></p>
@@ -876,7 +980,7 @@ empty implementations to override : EmptyPropertyProcessor&lt;E
 
 
 Whenever the underlying property is a collection property, the interface
-to implement is ICollectionPropertyProcessor&lt;E, F&gt; 
+to implement is ICollectionPropertyProcessor&lt;E, F&gt;
 (or extend EmptyCollectionPropertyProcessor&lt;E, F&gt;) with
 4 new phases introduced :
 
@@ -920,7 +1024,7 @@ Values in this map can be either :
 a constant value. In that case, the filter property is initialize with this constant value.
 </li>
 <li>
-a owning component property name. In that case, the filter property 
+a owning component property name. In that case, the filter property
 is initialize with the value of the owning component property.
 </li>
 </ul>
@@ -929,8 +1033,8 @@ is initialize with the value of the owning component property.
 <tr class="odd">
 <td align="left"><p><strong>paramSets</strong></p><p><code>ListOfString</code></p>
 </td>
-<td><p>paramSets makes it possible to use a list of paramSet. 
-The properties declared in the paramSet come to be added to the properties of the current descriptor. 
+<td><p>paramSets makes it possible to use a list of paramSet.
+The properties declared in the paramSet come to be added to the properties of the current descriptor.
 The properties brought by the paramSet can be overridden  by the current descriptor. If a property is overridden with the null value the property is ignored.</p></td>
 </tr>
 <tr class="even">
@@ -1001,7 +1105,7 @@ number, date, time, and duration properties behave this way.</p></td>
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicStringPropertyDescriptor`
 
-Field Declaration of type String. To be used with _n where the value n determine the maximum string length 
+Field Declaration of type String. To be used with _n where the value n determine the maximum string length
 
 <pre><b>string_32</b> 'name'
 
@@ -2182,7 +2286,7 @@ the property on one side of the relationship.</p></td>
 </td>
 <td><p>Instructs the framework that this property has to be treated as a composition,
 in the UML terminology. This implies that reachable entities
-that are referenced by this property follow the owning entity lifecycle. 
+that are referenced by this property follow the owning entity lifecycle.
 For instance, when the owning entity is deleted, the referenced entities
 in composition properties are also deleted.
 Whenever this property is not explicitely set by the developer, Jspresso
@@ -2413,7 +2517,7 @@ since all references are controlled by SJS, it is necessary to declare the exter
 paramSet allows to create a reusable groups of properties in SJS declarations.
 
 <pre>
-paramSet 'myCommon', readOnly:true, mandatory:true 
+paramSet 'myCommon', readOnly:true, mandatory:true
 </pre>
 
 paramSet can be used by declaration SJS using the attribute paramSets
@@ -2456,7 +2560,7 @@ This declaration allows, for example, to replace the following statement
 
 <pre>
 Entity('City', 
- 
+
         icon: 'classpath:org/jspresso/hrsample/images/city-48x48.png'){...}
 </pre>
 
