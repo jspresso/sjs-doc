@@ -1436,11 +1436,16 @@ Default value is false, meaning that the date is considered as a string. It is i
 <td><p>Sets whether this date should include seconds information when configured as <b>date_time</b>.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>millisecondsAware</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>format</strong></p><p><code>String</code></p><p><code>formatPattern</code></p>
 </td>
 <td><p>Configures a specific pattern to display this date</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>defaultValue</strong></p><p><code>String</code></p>
 </td>
 <td><p>Sets the default value for the field</p></td>
@@ -1580,11 +1585,16 @@ only the time part of the value is relevant
 <td><p>Sets whether this time should include seconds information.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>millisecondsAware</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>format</strong></p><p><code>String</code></p><p><code>formatPattern</code></p>
 </td>
 <td><p>Configures a specific pattern to display this time</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>defaultValue</strong></p><p><code>String</code></p>
 </td>
 <td><p>Sets the default value for the field</p></td>
@@ -1620,6 +1630,16 @@ properties in a convenient human format.
 </tr>
 </thead>
 <tbody>
+<tr class="even">
+<td align="left"><p><strong>secondsAware</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>millisecondsAware</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p></p></td>
+</tr>
 <tr class="even">
 <td align="left"><p><strong>maxMillis</strong></p><p><code>Integer</code></p>
 </td>
