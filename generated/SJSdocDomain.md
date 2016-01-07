@@ -1438,7 +1438,7 @@ Default value is false, meaning that the date is considered as a string. It is i
 <tr class="odd">
 <td align="left"><p><strong>millisecondsAware</strong></p><p><code>Boolean</code></p>
 </td>
-<td><p></p></td>
+<td><p>Sets whether this date should include milliseconds information when configured as <b>date_time</b>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>format</strong></p><p><code>String</code></p><p><code>formatPattern</code></p>
@@ -1587,7 +1587,7 @@ only the time part of the value is relevant
 <tr class="odd">
 <td align="left"><p><strong>millisecondsAware</strong></p><p><code>Boolean</code></p>
 </td>
-<td><p></p></td>
+<td><p>Sets whether this time should include milliseconds information.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>format</strong></p><p><code>String</code></p><p><code>formatPattern</code></p>
@@ -1633,12 +1633,12 @@ properties in a convenient human format.
 <tr class="even">
 <td align="left"><p><strong>secondsAware</strong></p><p><code>Boolean</code></p>
 </td>
-<td><p></p></td>
+<td><p>Sets whether this duration should include seconds information.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>millisecondsAware</strong></p><p><code>Boolean</code></p>
 </td>
-<td><p></p></td>
+<td><p>Sets whether this duration should include milliseconds information.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>maxMillis</strong></p><p><code>Integer</code></p>
