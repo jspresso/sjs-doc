@@ -2834,7 +2834,7 @@ means that the html view will be made scrollable horizontally.</p></td>
 + **extend** : `common`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
-+ **allowed next element** : `actionMap, secondaryActionMap, action, next, wrapped, rowAction, itemSelectionAction, sortingAction`
++ **allowed next element** : `actionMap, secondaryActionMap, action`
 + **Jspresso** : `BasicActionViewDescriptor`
 
 This type of view allows to make an action available as a view and thus participate in the UI composition
@@ -3334,7 +3334,7 @@ In SJS a subTree has the same identifier as the treeNode it instantiates.
 + **extend** : `common`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
-+ **allowed next element** : `views, actionMap, secondaryActionMap`
++ **allowed next element** : `views, actionMap, secondaryActionMap, tabSelectionAction`
 + **Jspresso** : `BasicTabViewDescriptor`
 
 This composite view arranges its children in tabs. Each tab potentially displays a label (that is translated
@@ -3405,6 +3405,11 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 <td align="left"><p><strong>lazy</strong></p><p><code>Boolean</code></p>
 </td>
 <td><p>Lazy binds tabs based on user selection.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>tabSelectionAction</strong></p><p><code>RefAction</code></p>
+</td>
+<td><p>Allows to register an action that is triggered when the tab peer selection changes.</p></td>
 </tr>
 </tbody>
 </table>
@@ -4599,7 +4604,7 @@ assigning a model to the action gates.</p></td>
 
 
 + **allowed previous element** : `actionMap, secondaryActionMap`
-+ **allowed next element** : `action, next, wrapped`
++ **allowed next element** : `action`
 + **Jspresso** : `ActionList`
 
 In an actionMap, an action list is contained in its own toolbar section which is visually
@@ -5075,7 +5080,7 @@ assigning a model to the action gates.</p></td>
 
 + **extend** : `action`
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
-+ **allowed previous element** : `actionList, controller, actionView, action, next, wrapped, rowAction, itemSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
++ **allowed previous element** : `action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
 
 Allows defining "inline" next action for the current action. A next action is an action to be executed after this action and after the wrapped one. This is perfectly suited to chain an action of the same type (frontend or backend) as this one.
@@ -5108,7 +5113,7 @@ Allows defining "inline" next action for the current action. A next action is an
 
 + **extend** : `next`
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
-+ **allowed previous element** : `actionList, controller, actionView, action, next, wrapped, rowAction, itemSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
++ **allowed previous element** : `action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
 
 Allows defining "inline" wrapped action for the current action. This is perfectly suited to chain a backend action from a frontend action since the control flow will return back to the calling layer (the frontend).
@@ -5141,7 +5146,7 @@ Allows defining "inline" wrapped action for the current action. This is perfectl
 
 + **extend** : `action`
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
-+ **allowed previous element** : `controller, actionView, table, listView, tree`
++ **allowed previous element** : `table, listView, tree`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
 
 Allows defining "inline" rowAction for the current action. It is an action
@@ -5179,7 +5184,7 @@ map.
 
 + **extend** : `action`
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
-+ **allowed previous element** : `controller, actionView, table, listView, mobileListView, tree, mobileTree`
++ **allowed previous element** : `table, listView, mobileListView, tree, mobileTree`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
 
 Allows defining "inline" itemSelectionAction for the current action.
@@ -5211,12 +5216,41 @@ map.
 
 ---
 
+#### <a name=""></a> tabSelectionAction
+
+
++ **extend** : `action`
++ **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
++ **allowed previous element** : `tabs`
++ **allowed next element** : `next, wrapped, bean, list, set, map`
+<table>
+<caption>tabSelectionAction properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+---
+
 #### <a name=""></a> sortingAction
 
 
 + **extend** : `action`
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
-+ **allowed previous element** : `controller, actionView, table`
++ **allowed previous element** : `table`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
 
 Allows defining "inline" sortingAction for the current action.
@@ -6176,7 +6210,7 @@ pivot module.</p></td>
 
 + **mandatory** : `nameElement`
 + **allowed previous element** : `Front`
-+ **allowed next element** : `actionMap, secondaryActionMap, action, next, wrapped, rowAction, itemSelectionAction, sortingAction`
++ **allowed next element** : `actionMap, secondaryActionMap, action`
 
 Sets the frontend application controllers. This controller is the place where you define the toplevel
 application structure like the workspace list, the name, the application-wide actions, ...
@@ -6619,7 +6653,7 @@ include('fileName')
 #### <a name=""></a> bean
 
 
-+ **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
++ **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `bean, list, set, map`
 
 Allows to generate a bean Spring in the XML generated file
@@ -6698,7 +6732,7 @@ custom:[
 
 
 + **mandatory** : `nameElement`
-+ **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
++ **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `bean, list, set, map`
 
 Allows to generate a list Spring in the XML generated file
@@ -6731,7 +6765,7 @@ Allows to generate a list Spring in the XML generated file
 
 
 + **mandatory** : `nameElement`
-+ **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
++ **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `bean, list, set, map`
 
 Allows to generate a list Spring in the XML generated file
@@ -6764,7 +6798,7 @@ Allows to generate a list Spring in the XML generated file
 
 
 + **mandatory** : `nameElement`
-+ **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
++ **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `bean, list, set, map`
 
 Allows to generate a Map Spring in the XML generated file
