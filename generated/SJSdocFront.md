@@ -655,6 +655,11 @@ Default value is EBorderType.NONE, i.e. no border.</p></td>
 The properties declared in the paramSet come to be added to the properties of the current descriptor.
 The properties brought by the paramSet can be overridden  by the current descriptor. If a property is overridden with the null value the property is ignored.</p></td>
 </tr>
+<tr class="even">
+<td align="left"><p><strong>class</strong></p><p><code>String</code></p>
+</td>
+<td><p>Allows to override the default framework descriptor class for advanced usage.</p></td>
+</tr>
 </tbody>
 </table>
 
@@ -1051,7 +1056,7 @@ descriptor for cartesian charts
 
 
 + **extend** : `commonMobile, mobileSection, abstractChart`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes, parent, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes, parent, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow`
 
 descriptor for charts
 
@@ -1082,7 +1087,7 @@ descriptor for charts
 
 
 + **extend** : `mobileChart, abstractPolarChart`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes, parent, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, pieSeries`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes, parent, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, pieSeries`
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center`
 + **allowed next element** : `pieSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `MobilePieChartDescriptor`
@@ -1116,7 +1121,7 @@ descriptor for pie charts
 
 
 + **extend** : `mobileChart, abstractCartesianChart`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes, parent, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes, parent, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center`
 + **allowed next element** : `lineSeries, barSeries, plotSeries, areaSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileBarChartDescriptor`
@@ -1704,7 +1709,7 @@ room.</p></td>
 
 
 + **extend** : `commonMobile, mobileSection`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes`
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center`
 + **allowed next element** : `fields, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileComponentViewDescriptor`
@@ -1831,7 +1836,7 @@ its model.
 
 
 + **extend** : `commonMobile, mobileSection`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes`
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `MobileMapViewDescriptor`
@@ -2216,7 +2221,7 @@ the view are kept in sync with the bound model collection.</p></td>
 
 
 + **extend** : `commonMobile`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, selection, Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap, itemSelectionAction`
 + **Jspresso** : `MobileListViewDescriptor`
@@ -3165,7 +3170,7 @@ be nested.</p></td>
 
 
 + **extend** : `commonMobile`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, selection, Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `subTree, actionMap, secondaryActionMap, itemSelectionAction`
 + **Jspresso** : `MobileTreeViewDescriptor`
@@ -3462,7 +3467,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 
 
 + **extend** : `commonMobile, mobileSection`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
 + **allowed next element** : `views, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileTabViewDescriptor`
@@ -3865,7 +3870,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 
 
 + **extend** : `commonMobile, mobilePageAware`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center`
 + **allowed next element** : `south, north, center, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileBorderViewDescriptor`
@@ -5328,7 +5333,7 @@ default.
 
 
 + **extend** : `commonMobile, mobilePageAware`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center, nextPage`
 + **allowed next element** : `actionMap, secondaryActionMap, selection, headerSections, nextPage`
 + **Jspresso** : `MobileNavPageViewDescriptor`
@@ -5378,7 +5383,7 @@ A Navigation page is a mobile page that displays a collection view (list or tree
 
 
 + **extend** : `commonMobile, mobilePageAware`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center, nextPage`
 + **allowed next element** : `actionMap, secondaryActionMap, pages`
 + **Jspresso** : `MobileCardPageViewDescriptor`
@@ -5418,7 +5423,7 @@ Defines a page that displays a card view as its main content.
 
 
 + **extend** : `commonMobile, mobilePageAware`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
 + **allowed previous element** : `Front, sections, headerSections, east, west, south, north, center, nextPage`
 + **allowed next element** : `actionMap, secondaryActionMap, sections, editorPage`
 + **Jspresso** : `MobileCompositePageViewDescriptor`
