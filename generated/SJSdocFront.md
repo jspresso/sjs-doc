@@ -455,7 +455,7 @@ The properties brought by the paramSet can be overridden  by the current descrip
 <tr class="odd">
 <td align="left"><p><strong>class</strong></p><p><code>String</code></p>
 </td>
-<td><p></p></td>
+<td><p>Allows to override the default framework descriptor class for advanced usage.</p></td>
 </tr>
 </tbody>
 </table>
