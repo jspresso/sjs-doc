@@ -3,7 +3,7 @@
 #### <a name=""></a> Front
 
 
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, actionMap, action, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, actionMap, action, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
 
 This root descriptor is used in the file application.groovy generated during the
 initialization of the project by Jspresso.
@@ -2347,6 +2347,174 @@ indicates that the user can navigate to another page when clicking a list item.<
 
 ---
 
+#### <a name=""></a> repeater
+
+
++ **extend** : `common`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
++ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
++ **allowed next element** : `actionMap, secondaryActionMap, rowAction, itemSelectionAction`
++ **Jspresso** : `BasicRepeaterViewDescriptor`
+
+This descriptor is used to implement a repeater view. A repeater view displays a
+collection of components, each one in an arbitrary view that is repeated as necessary.
+Repeater view supports selection by clicking one of the sections, so it can be used in a master-detail view.
+It also supports row action by double-clicking one of the sections.
+
+
+<table>
+<caption>repeater properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td align="left"><p><strong>parent</strong></p><p><code>RefView</code></p>
+</td>
+<td><p>Allows to reference another descriptor as a model and to override certain properties.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>repeatView</strong></p><p><code>RefView</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>rowAction</strong></p><p><code>RefAction</code></p>
+</td>
+<td><p>Registers an action that is implicitely triggered everytime a row is activated
+(e.g. double-clicked for current UI channels) on the collection
+view UI peer. The context of the action execution is the same as if
+the action was registered in the view action map.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>itemSelectionAction</strong></p><p><code>RefAction</code></p>
+</td>
+<td><p>Registers an action that is implicitely triggered everytime the selection
+changes on the collection view UI peer. The context of the action
+execution is the same as if the action was registered in the view action
+map.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>autoSelectFirstRow</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p>Configures the default selection that gets applied when the content of the
+collection view changes. Whenever set to true, the 1st row will be automatically selected,
+whereas nothing happens whe set to false.
+
+The default value depends on the selection mode of the collection view.
+When a cumulative selection mode is used, autoSelectFirstRow defaults to false.
+It defaults to true otherwise.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>paginationView</strong></p><p><code>RefView</code></p><p><code>paginationViewDescriptor</code></p>
+</td>
+<td><p>Configures a view that will control the pagination (if any) on this
+collection view. When contructed, the collection view will be decorated
+with the pagination view. The pagination view will be bound to the same
+model as the one providing the collection of the collection view.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>selectionModel</strong></p><p><code>RefDomain</code></p><p><code>selectionModelDescriptor</code></p>
+</td>
+<td><p>Bi-directionally binds the collection view selection to a model collection. Selected items in
+the view are kept in sync with the bound model collection.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+#### <a name=""></a> mobileRepeater
+
+
++ **extend** : `commonMobile`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
++ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
++ **allowed next element** : `actionMap, secondaryActionMap, itemSelectionAction`
++ **Jspresso** : `MobileRepeaterViewDescriptor`
+
+This descriptor is used to implement a repeater view. A repeater view displays a
+collection of components, each one in an arbitrary view that is repeated as necessary.
+Repeater view supports selection by clicking one of the sections, so it can be used in a master-detail view.
+It also supports row action by double-clicking one of the sections.
+
+
+<table>
+<caption>mobileRepeater properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td align="left"><p><strong>parent</strong></p><p><code>RefView</code></p>
+</td>
+<td><p>Allows to reference another descriptor as a model and to override certain properties.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>repeatView</strong></p><p><code>RefView</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>rowAction</strong></p><p><code>RefAction</code></p>
+</td>
+<td><p>Registers an action that is implicitely triggered everytime a row is activated
+(e.g. double-clicked for current UI channels) on the collection
+view UI peer. The context of the action execution is the same as if
+the action was registered in the view action map.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>itemSelectionAction</strong></p><p><code>RefAction</code></p>
+</td>
+<td><p>Registers an action that is implicitely triggered everytime the selection
+changes on the collection view UI peer. The context of the action
+execution is the same as if the action was registered in the view action
+map.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>autoSelectFirstRow</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p>Configures the default selection that gets applied when the content of the
+collection view changes. Whenever set to true, the 1st row will be automatically selected,
+whereas nothing happens whe set to false.
+
+The default value depends on the selection mode of the collection view.
+When a cumulative selection mode is used, autoSelectFirstRow defaults to false.
+It defaults to true otherwise.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>paginationView</strong></p><p><code>RefView</code></p><p><code>paginationViewDescriptor</code></p>
+</td>
+<td><p>Configures a view that will control the pagination (if any) on this
+collection view. When contructed, the collection view will be decorated
+with the pagination view. The pagination view will be bound to the same
+model as the one providing the collection of the collection view.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>selectionModel</strong></p><p><code>RefDomain</code></p><p><code>selectionModelDescriptor</code></p>
+</td>
+<td><p>Bi-directionally binds the collection view selection to a model collection. Selected items in
+the view are kept in sync with the bound model collection.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
 #### <a name=""></a> columns
 
 
@@ -3541,7 +3709,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 
 
 + **allowed previous element** : `tabs, mobileTabs, entityCardView, basicCardView`
-+ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Open a list of views where each view can be defined "inline"
 
@@ -3651,7 +3819,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 
 
 + **allowed previous element** : `split`
-+ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Enable to set an in-line view in in the left zone of a split_horizontal
 
@@ -3682,7 +3850,7 @@ Enable to set an in-line view in in the left zone of a split_horizontal
 
 
 + **allowed previous element** : `split`
-+ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Enable to set an in-line view in in the rigth zone of a split_horizontal
 
@@ -3713,7 +3881,7 @@ Enable to set an in-line view in in the rigth zone of a split_horizontal
 
 
 + **allowed previous element** : `split`
-+ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Enable to set an in-line view in in the top zone of a split_vertical
 
@@ -3744,7 +3912,7 @@ Enable to set an in-line view in in the top zone of a split_vertical
 
 
 + **allowed previous element** : `split`
-+ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Enable to set an in-line view in in the the bottom zone of a split_vertical
 
@@ -3937,7 +4105,7 @@ resized horizontally.</p></td>
 
 
 + **allowed previous element** : `border`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Enable to set an in-line view in the east zone of a border
 
@@ -3968,7 +4136,7 @@ Enable to set an in-line view in the east zone of a border
 
 
 + **allowed previous element** : `border`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Enable to set an in-line view in the west zone of a border
 
@@ -3999,7 +4167,7 @@ Enable to set an in-line view in the west zone of a border
 
 
 + **allowed previous element** : `border, mobileBorder`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Enable to set an in-line view in the south zone of a border
 
@@ -4030,7 +4198,7 @@ Enable to set an in-line view in the south zone of a border
 
 
 + **allowed previous element** : `border, mobileBorder`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Enable to set an in-line view in the north zone of a border
 
@@ -4061,7 +4229,7 @@ Enable to set an in-line view in the north zone of a border
 
 
 + **allowed previous element** : `border, mobileBorder`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Enable to set an in-line view in the center zone of a border
 
@@ -4253,7 +4421,7 @@ open a cells list in grid or in an evenGrid
 
 
 + **allowed previous element** : `cells`
-+ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Describes constraints on a cell of a grid
 
@@ -4315,7 +4483,7 @@ Describes constraints on a cell of a grid
 
 
 + **allowed previous element** : `cells`
-+ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, image, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Describes a cell of an evenGrid
 <b>evenCell IS NEVER DIRECTLY USED</b>, like for a grid, cell is used.
@@ -4459,7 +4627,7 @@ registered card name selector.</p></td>
 #### <a name=""></a> actionMap
 
 
-+ **allowed previous element** : `Front, treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, datePropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
++ **allowed previous element** : `Front, treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileRepeater, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, datePropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, repeater, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
 + **allowed next element** : `actionList`
 + **Jspresso** : `ActionMap`
 
@@ -4554,7 +4722,7 @@ assigning a model to the action gates.</p></td>
 #### <a name=""></a> secondaryActionMap
 
 
-+ **allowed previous element** : `treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, datePropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
++ **allowed previous element** : `treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileRepeater, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, datePropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, repeater, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
 + **allowed next element** : `actionList`
 + **Jspresso** : `ActionMap`
 
@@ -5193,7 +5361,7 @@ Allows defining "inline" wrapped action for the current action. This is perfectl
 
 + **extend** : `action`
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
-+ **allowed previous element** : `table, listView, tree`
++ **allowed previous element** : `table, listView, tree, repeater`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
 
 Allows defining "inline" rowAction for the current action. It is an action
@@ -5231,7 +5399,7 @@ map.
 
 + **extend** : `action`
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
-+ **allowed previous element** : `table, listView, mobileListView, tree, mobileTree`
++ **allowed previous element** : `table, listView, mobileListView, tree, mobileTree, repeater, mobileRepeater`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
 
 Allows defining "inline" itemSelectionAction for the current action.
