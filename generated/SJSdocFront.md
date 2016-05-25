@@ -2353,7 +2353,7 @@ indicates that the user can navigate to another page when clicking a list item.<
 + **extend** : `common`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
-+ **allowed next element** : `actionMap, secondaryActionMap, rowAction, itemSelectionAction`
++ **allowed next element** : `repeatView, actionMap, secondaryActionMap, rowAction, itemSelectionAction`
 + **Jspresso** : `BasicRepeaterViewDescriptor`
 
 This descriptor is used to implement a repeater view. A repeater view displays a
@@ -2383,7 +2383,7 @@ It also supports row action by double-clicking one of the sections.
 <tr class="odd">
 <td align="left"><p><strong>repeatView</strong></p><p><code>RefView</code></p>
 </td>
-<td><p></p></td>
+<td><p>Assigns the view to repeat in the repeater for each collection element.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>rowAction</strong></p><p><code>RefAction</code></p>
@@ -2437,7 +2437,7 @@ the view are kept in sync with the bound model collection.</p></td>
 + **extend** : `commonMobile`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, east, west, south, north, center`
-+ **allowed next element** : `actionMap, secondaryActionMap, itemSelectionAction`
++ **allowed next element** : `repeatView, actionMap, secondaryActionMap, itemSelectionAction`
 + **Jspresso** : `MobileRepeaterViewDescriptor`
 
 This descriptor is used to implement a repeater view. A repeater view displays a
@@ -2467,7 +2467,7 @@ It also supports row action by double-clicking one of the sections.
 <tr class="odd">
 <td align="left"><p><strong>repeatView</strong></p><p><code>RefView</code></p>
 </td>
-<td><p></p></td>
+<td><p>Assigns the view to repeat in the repeater for each collection element.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>rowAction</strong></p><p><code>RefAction</code></p>
@@ -4623,6 +4623,37 @@ registered card name selector.</p></td>
 
 ---
 
+#### <a name=""></a> View
+#### <a name=""></a> repeatView
+
+
++ **allowed previous element** : `repeater, mobileRepeater`
+
+Assigns the view to repeat in the repeater for each collection element.
+
+
+<table>
+<caption>repeatView properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+---
+
 #### <a name=""></a> Action
 #### <a name=""></a> actionMap
 
@@ -5438,6 +5469,10 @@ map.
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
 + **allowed previous element** : `tabs`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
+
+Allows to register an action that is triggered when the tab peer selection changes.
+
+
 <table>
 <caption>tabSelectionAction properties</caption>
 <colgroup>
