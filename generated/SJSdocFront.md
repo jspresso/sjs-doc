@@ -5936,7 +5936,9 @@ leveraged as a textual section that explains the workspace goal.</p></td>
 <tr class="even">
 <td align="left"><p><strong>pageHeaderDescription</strong></p><p><code>String</code></p>
 </td>
-<td><p></p></td>
+<td><p>Configures the key used to translate actual internationalized
+workspace page header description. The resulting translation will generally be
+leveraged as a textual header section that explains the workspace goal.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>icon</strong></p><p><code>String</code></p><p><code>iconImageURL</code></p>
@@ -6076,7 +6078,9 @@ tooltip on the UI side but its use may be extended for online help.</p></td>
 <tr class="odd">
 <td align="left"><p><strong>headerDescription</strong></p><p><code>String</code></p>
 </td>
-<td><p></p></td>
+<td><p>Configures the key used to translate actual internationalized
+Module header description. The resulting translation will generally be
+leveraged as a textual section that explains the module goal.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>icon</strong></p><p><code>String</code></p><p><code>iconImageURL</code></p>
