@@ -2754,7 +2754,7 @@ Allowed values are DESKTOP_SWING, DESKTOP_FLEX, DESKTOP_HTML5, MOBILE_HTML5_TABL
 or regex like DESKTOP, MOBILE, HTML5, ...</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>focusAction</strong></p><p><code>RefAction</code></p>
+<td align="left"><p><strong>focusAction</strong></p><p><code>RefAction</code></p><p><code>focusGainedAction</code></p>
 </td>
 <td><p>Configures a focus gained action. This action is triggered when the remote peer receives the focus in the client UI.</p></td>
 </tr>
