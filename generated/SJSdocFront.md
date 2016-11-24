@@ -789,12 +789,12 @@ charts properties. Charts in Jspresso are very similar to table collection view 
 <tr class="odd">
 <td align="left"><p><strong>class</strong></p><p><code>String</code></p>
 </td>
-<td><p></p></td>
+<td><p>Allows to override the default framework descriptor class for advanced usage.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>ref</strong></p><p><code>RefView</code></p>
 </td>
-<td><p></p></td>
+<td><p>Allows to reference an existing chart using its identifier.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>label</strong></p><p><code>RefField</code></p>
@@ -1183,17 +1183,17 @@ chart series properties. Charts series in Jspresso are very similar to property 
 <tr class="even">
 <td align="left"><p><strong>parent</strong></p><p><code>RefView</code></p>
 </td>
-<td><p></p></td>
+<td><p>Allows to use an other descriptor as a model and to override certain properties.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>class</strong></p><p><code>String</code></p>
 </td>
-<td><p></p></td>
+<td><p>Allows to override the default framework descriptor class for advanced usage.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>ref</strong></p><p><code>RefView</code></p>
 </td>
-<td><p></p></td>
+<td><p>Allows to reference an existing cartesian series using its identifier.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>valueField</strong></p><p><code>RefField</code></p>
@@ -1430,17 +1430,17 @@ Declares a series to be used for pie charts.
 <tr class="even">
 <td align="left"><p><strong>parent</strong></p><p><code>RefView</code></p>
 </td>
-<td><p></p></td>
+<td><p>Allows to use an other descriptor as a model and to override certain properties.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>class</strong></p><p><code>String</code></p>
 </td>
-<td><p></p></td>
+<td><p>Allows to override the default framework descriptor class for advanced usage.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>ref</strong></p><p><code>RefView</code></p>
 </td>
-<td><p></p></td>
+<td><p>Allows to reference an existing pie series using its identifier.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>valueField</strong></p><p><code>RefField</code></p>
