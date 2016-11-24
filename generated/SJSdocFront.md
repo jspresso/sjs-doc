@@ -787,6 +787,16 @@ charts properties. Charts in Jspresso are very similar to table collection view 
 <td><p>Allows to use an other descriptor as a model and to override certain properties.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>class</strong></p><p><code>String</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>ref</strong></p><p><code>RefView</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>label</strong></p><p><code>RefField</code></p>
 </td>
 <td><p>Configures the model property name to use as label field on the chart.</p></td>
@@ -957,7 +967,7 @@ Default value is EBarChartType.CLUSTERED, i.e. the series are drawn side by side
 
 
 + **extend** : `common, abstractChart`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, parent, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow`
 
 descriptor for charts
 
@@ -988,7 +998,7 @@ descriptor for charts
 
 
 + **extend** : `chart, abstractPolarChart`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, parent, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, pieSeries`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, pieSeries`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `pieSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `PieChartDescriptor`
@@ -1022,7 +1032,7 @@ descriptor for pie charts
 
 
 + **extend** : `chart, abstractCartesianChart`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, parent, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `lineSeries, barSeries, plotSeries, areaSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `BarChartDescriptor`
@@ -1056,7 +1066,7 @@ descriptor for cartesian charts
 
 
 + **extend** : `commonMobile, mobileSection, abstractChart`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes, parent, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow`
 
 descriptor for charts
 
@@ -1087,7 +1097,7 @@ descriptor for charts
 
 
 + **extend** : `mobileChart, abstractPolarChart`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes, parent, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, pieSeries`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, pieSeries`
 + **allowed previous element** : `Front, sections, headerSections, repeat, east, west, south, north, center`
 + **allowed next element** : `pieSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `MobilePieChartDescriptor`
@@ -1121,7 +1131,7 @@ descriptor for pie charts
 
 
 + **extend** : `mobileChart, abstractCartesianChart`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes, parent, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
 + **allowed previous element** : `Front, sections, headerSections, repeat, east, west, south, north, center`
 + **allowed next element** : `lineSeries, barSeries, plotSeries, areaSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileBarChartDescriptor`
@@ -1171,16 +1181,31 @@ chart series properties. Charts series in Jspresso are very similar to property 
 </thead>
 <tbody>
 <tr class="even">
+<td align="left"><p><strong>parent</strong></p><p><code>RefView</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>class</strong></p><p><code>String</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>ref</strong></p><p><code>RefView</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>valueField</strong></p><p><code>RefField</code></p>
 </td>
 <td><p>Configures the model property name to be used as series value. It must obviously be a numeric property.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>i18nNameKey</strong></p><p><code>String</code></p>
 </td>
 <td><p>Sets i18n key used for translation if it is different from the description</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>background</strong></p><p><code>String</code></p>
 </td>
 <td><p>Sets the background color (except for the pie series which actually needs a list of colors) of the series.
@@ -1189,7 +1214,7 @@ Each color must be defined using its string hexadecimal representation (0xrgba e
 
 Default value is null, meaning use UI default.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>foreground</strong></p><p><code>String</code></p>
 </td>
 <td><p>Sets the foreground color of the series.
@@ -1198,14 +1223,14 @@ Each color must be defined using its string hexadecimal representation (0xrgba e
 
 Default value is null, meaning use UI default.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>labelBackground</strong></p><p><code>String</code></p>
 </td>
 <td><p>Defines the background color of the series label. The color must be defined
 using its string hexadecimal representation (0xrgba encoded).
 Default value is null, meaning use UI default.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>labelFont</strong></p><p><code>String</code></p>
 </td>
 <td><p>Defines the background font of the series label. The font must be string encoded using
@@ -1230,14 +1255,14 @@ to the component default.
 
 Default value is null, meaning use default series font.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>labelForeground</strong></p><p><code>String</code></p>
 </td>
 <td><p>Defines the foreground color of the series label. The color must be defined
 using its string hexadecimal representation (0xrgba encoded).
 Default value is null, meaning use UI default.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>action</strong></p><p><code>RefAction</code></p>
 </td>
 <td><p>Configures an action to be triggered when the user clicks on a series item. It is the equivalent
@@ -1252,7 +1277,7 @@ of actions defined on table columns.</p></td>
 
 
 + **extend** : `commonCartesianSeries`
-+ **Inherited properties ** : `valueField, i18nNameKey, background, foreground, labelBackground, labelFont, labelForeground, action`
++ **Inherited properties ** : `parent, class, ref, valueField, i18nNameKey, background, foreground, labelBackground, labelFont, labelForeground, action`
 + **allowed previous element** : `cartesianChart, mobileCartesianChart`
 + **Jspresso** : `LineSeriesDescriptor`
 
@@ -1285,7 +1310,7 @@ Defines a line series.
 
 
 + **extend** : `commonCartesianSeries`
-+ **Inherited properties ** : `valueField, i18nNameKey, background, foreground, labelBackground, labelFont, labelForeground, action`
++ **Inherited properties ** : `parent, class, ref, valueField, i18nNameKey, background, foreground, labelBackground, labelFont, labelForeground, action`
 + **allowed previous element** : `cartesianChart, mobileCartesianChart`
 + **Jspresso** : `BarSeriesDescriptor`
 
@@ -1318,7 +1343,7 @@ Defines a bar series.
 
 
 + **extend** : `commonCartesianSeries`
-+ **Inherited properties ** : `valueField, i18nNameKey, background, foreground, labelBackground, labelFont, labelForeground, action`
++ **Inherited properties ** : `parent, class, ref, valueField, i18nNameKey, background, foreground, labelBackground, labelFont, labelForeground, action`
 + **allowed previous element** : `cartesianChart, mobileCartesianChart`
 + **Jspresso** : `PlotSeriesDescriptor`
 
@@ -1351,7 +1376,7 @@ Defines a plot series.
 
 
 + **extend** : `commonCartesianSeries`
-+ **Inherited properties ** : `valueField, i18nNameKey, background, foreground, labelBackground, labelFont, labelForeground, action`
++ **Inherited properties ** : `parent, class, ref, valueField, i18nNameKey, background, foreground, labelBackground, labelFont, labelForeground, action`
 + **allowed previous element** : `cartesianChart, mobileCartesianChart`
 + **Jspresso** : `AreaSeriesDescriptor`
 
@@ -1403,16 +1428,31 @@ Declares a series to be used for pie charts.
 </thead>
 <tbody>
 <tr class="even">
+<td align="left"><p><strong>parent</strong></p><p><code>RefView</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>class</strong></p><p><code>String</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>ref</strong></p><p><code>RefView</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>valueField</strong></p><p><code>RefField</code></p>
 </td>
 <td><p>Configures the model property name to be used as series value. It must obviously be a numeric property.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>i18nNameKey</strong></p><p><code>String</code></p>
 </td>
 <td><p>Sets i18n key used for translation if it is different from the description</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>background</strong></p><p><code>ListOfString</code></p>
 </td>
 <td><p>Sets the background colors (actually a list of colors) of the Series. Each color must be
@@ -1420,14 +1460,14 @@ defined using its string hexadecimal representation (0xrgba encoded)
 
 Default value is null, meaning use UI default.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>labelBackground</strong></p><p><code>String</code></p>
 </td>
 <td><p>Defines the background color of the series label. The color must be defined
 using its string hexadecimal representation (0xrgba encoded).
 Default value is null, meaning use UI default.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>labelFont</strong></p><p><code>String</code></p>
 </td>
 <td><p>Defines the background font of the series label. The font must be string encoded using
@@ -1452,14 +1492,14 @@ to the component default.
 
 Default value is null, meaning use default series font.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>labelForeground</strong></p><p><code>String</code></p>
 </td>
 <td><p>Defines the foreground color of the series label. The color must be defined
 using its string hexadecimal representation (0xrgba encoded).
 Default value is null, meaning use UI default.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>action</strong></p><p><code>RefAction</code></p>
 </td>
 <td><p>Configures an action to be triggered when the user clicks on a pie sector. It is the equivalent
