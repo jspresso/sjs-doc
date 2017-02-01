@@ -2956,7 +2956,7 @@ values should be rendered horizontally and VERTICAL otherwise. Default value is 
 + **Jspresso** : `BasicDatePropertyViewDescriptor`
 
 This specialized property view descriptor is used in order to be able to refine
-the format that is used to parse / format the dates. Tou can define the format pattern when
+the format that is used to parse / format the dates. You can define the format pattern when
 defining the corresponding column in a table view or field in a component view.
 
 
@@ -2989,6 +2989,12 @@ defining the corresponding column in a table view or field in a component view.
 + **extend** : `propertyView`
 + **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
+
+This specialized property view descriptor is used in order to be able to refine
+the format that is used to parse / format the times. You can define the format pattern when
+defining the corresponding column in a table view or field in a component view.
+
+
 <table>
 <caption>timePropertyView properties</caption>
 <colgroup>
@@ -3005,7 +3011,7 @@ defining the corresponding column in a table view or field in a component view.
 <tr class="even">
 <td align="left"><p><strong>formatPattern</strong></p><p><code>String</code></p>
 </td>
-<td><p></p></td>
+<td><p>Configures the format that is used to parse / format the times.</p></td>
 </tr>
 </tbody>
 </table>
@@ -3018,6 +3024,12 @@ defining the corresponding column in a table view or field in a component view.
 + **extend** : `propertyView`
 + **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
+
+This specialized property view descriptor is used in order to be able to refine
+the format that is used to parse / format the numbers. You can define the format pattern when
+defining the corresponding column in a table view or field in a component view.
+
+
 <table>
 <caption>numberPropertyView properties</caption>
 <colgroup>
@@ -3034,7 +3046,7 @@ defining the corresponding column in a table view or field in a component view.
 <tr class="even">
 <td align="left"><p><strong>formatPattern</strong></p><p><code>String</code></p>
 </td>
-<td><p></p></td>
+<td><p>Configures the format that is used to parse / format the numbers.</p></td>
 </tr>
 </tbody>
 </table>

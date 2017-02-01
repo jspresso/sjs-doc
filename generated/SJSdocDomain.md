@@ -1394,7 +1394,7 @@ Default value is false which means java.lang.Integer will be used.</p></td>
 <tr class="odd">
 <td align="left"><p><strong>format</strong></p><p><code>String</code></p><p><code>formatPattern</code></p>
 </td>
-<td><p></p></td>
+<td><p>Configures a specific pattern to display this date</p></td>
 </tr>
 </tbody>
 </table>
@@ -1562,7 +1562,7 @@ null which means unlimited.</p></td>
 <tr class="even">
 <td align="left"><p><strong>format</strong></p><p><code>String</code></p><p><code>formatPattern</code></p>
 </td>
-<td><p></p></td>
+<td><p>Configures a specific pattern to display this decimal</p></td>
 </tr>
 </tbody>
 </table>
