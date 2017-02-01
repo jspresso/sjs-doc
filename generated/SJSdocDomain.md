@@ -1391,6 +1391,11 @@ Default value is false which means java.lang.Integer will be used.</p></td>
 </td>
 <td><p>Sets the default value for the field</p></td>
 </tr>
+<tr class="odd">
+<td align="left"><p><strong>format</strong></p><p><code>String</code></p><p><code>formatPattern</code></p>
+</td>
+<td><p></p></td>
+</tr>
 </tbody>
 </table>
 
@@ -1554,6 +1559,11 @@ null which means unlimited.</p></td>
 </td>
 <td><p>Sets the default value for the field</p></td>
 </tr>
+<tr class="even">
+<td align="left"><p><strong>format</strong></p><p><code>String</code></p><p><code>formatPattern</code></p>
+</td>
+<td><p></p></td>
+</tr>
 </tbody>
 </table>
 
@@ -1665,7 +1675,7 @@ Default value is null, meaning unbound.</p></td>
 
 
 + **extend** : `decimal`
-+ **Inherited properties ** : `minValue, maxValue, usingBigDecimal, maxFractionDigit, thousandsGrouping, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, class`
++ **Inherited properties ** : `minValue, maxValue, usingBigDecimal, maxFractionDigit, thousandsGrouping, defaultValue, format, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicPercentPropertyDescriptor`
 
