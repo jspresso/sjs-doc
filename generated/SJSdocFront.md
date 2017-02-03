@@ -5433,6 +5433,12 @@ than one element.</p></td>
 <td><p>This property is SJS specific. It allows to enforce SJS controls without actually
 assigning a model to the action gates.</p></td>
 </tr>
+<tr class="even">
+<td align="left"><p><strong>repeatPeriodMillis</strong></p><p><code>Integer</code></p>
+</td>
+<td><p>This property allows to schedule at a fixed period the execution of the action. The action scheduled execution will be
+cancelled as soon as another action will be triggered.</p></td>
+</tr>
 </tbody>
 </table>
 
@@ -5442,7 +5448,7 @@ assigning a model to the action gates.</p></td>
 
 
 + **extend** : `action`
-+ **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
++ **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel, repeatPeriodMillis`
 + **allowed previous element** : `action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
 
@@ -5475,7 +5481,7 @@ Allows defining "inline" next action for the current action. A next action is an
 
 
 + **extend** : `next`
-+ **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
++ **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel, repeatPeriodMillis`
 + **allowed previous element** : `action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
 
@@ -5508,7 +5514,7 @@ Allows defining "inline" wrapped action for the current action. This is perfectl
 
 
 + **extend** : `action`
-+ **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
++ **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel, repeatPeriodMillis`
 + **allowed previous element** : `table, listView, tree, repeater`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
 
@@ -5546,7 +5552,7 @@ map.
 
 
 + **extend** : `action`
-+ **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
++ **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel, repeatPeriodMillis`
 + **allowed previous element** : `table, listView, mobileListView, tree, mobileTree, repeater, mobileRepeater`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
 
@@ -5583,7 +5589,7 @@ map.
 
 
 + **extend** : `action`
-+ **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
++ **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel, repeatPeriodMillis`
 + **allowed previous element** : `tabs`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
 
@@ -5616,7 +5622,7 @@ Allows to register an action that is triggered when the tab peer selection chang
 
 
 + **extend** : `action`
-+ **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel`
++ **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel, repeatPeriodMillis`
 + **allowed previous element** : `table`
 + **allowed next element** : `next, wrapped, bean, list, set, map`
 
