@@ -3210,14 +3210,15 @@ makes it a primary citizen of the UI.
 <td align="left"><p><strong>action</strong></p><p><code>RefAction</code></p>
 </td>
 <td><p>Assigns the action to display as a view. The action will typically be
-rendered as a button in the UI. whenever you want to size the icon
+rendered as a button in the UI. Whenever you want to size the icon
 used to display the action (and thus the button peer), you might use
 the preferredWidth / preferredHeight properties.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>actionList</strong></p><p><code>RefActionList</code></p>
 </td>
-<td><p></p></td>
+<td><p>Assigns the action list to display as a view. The action list will typically be
+rendered as a button toolbar in the UI.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>renderingOptions</strong></p><p><code>String</code></p>
@@ -5015,7 +5016,7 @@ grouping related actions as they are grouped in the action lists
 <tr class="even">
 <td align="left"><p><strong>ref</strong></p><p><code>RefActionList</code></p>
 </td>
-<td><p></p></td>
+<td><p>Allows to reference an existing actionList using its identifier. It can be used everywhere an actionList can.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>description</strong></p><p><code>String</code></p>
