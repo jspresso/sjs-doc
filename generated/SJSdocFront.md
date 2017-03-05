@@ -3184,7 +3184,7 @@ This type of view descriptor is used to display an html property.
 + **extend** : `common`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
-+ **allowed next element** : `actionMap, secondaryActionMap, action`
++ **allowed next element** : `actionMap, secondaryActionMap, actionList, action`
 + **Jspresso** : `BasicActionViewDescriptor`
 
 This type of view allows to make an action available as a view and thus participate in the UI composition
@@ -3215,6 +3215,11 @@ used to display the action (and thus the button peer), you might use
 the preferredWidth / preferredHeight properties.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>actionList</strong></p><p><code>RefActionList</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>renderingOptions</strong></p><p><code>String</code></p>
 </td>
 <td><p>Indicates how the actions should be rendered. This is either a value
@@ -4985,7 +4990,7 @@ assigning a model to the action gates.</p></td>
 #### <a name=""></a> actionList
 
 
-+ **allowed previous element** : `actionMap, secondaryActionMap`
++ **allowed previous element** : `actionMap, secondaryActionMap, actionView`
 + **allowed next element** : `action`
 + **Jspresso** : `ActionList`
 
