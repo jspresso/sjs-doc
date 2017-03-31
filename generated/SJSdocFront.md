@@ -6152,6 +6152,11 @@ directly influence the UI behaviour since unauthorized workspaces won't
 be displayed. Setting the collection of granted roles to null (default
 value) disables role based authorization on this workspace.</p></td>
 </tr>
+<tr class="odd">
+<td align="left"><p><strong>expanded</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p></p></td>
+</tr>
 </tbody>
 </table>
 
