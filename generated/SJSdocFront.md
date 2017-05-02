@@ -3151,6 +3151,10 @@ POD for instance.</p></td>
 + **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **Jspresso** : `BasicStaticTextViewDescriptor`
+
+This type of view descriptor is used to display an static, internationalized text.
+
+
 <table>
 <caption>staticText properties</caption>
 <colgroup>
@@ -3167,12 +3171,12 @@ POD for instance.</p></td>
 <tr class="even">
 <td align="left"><p><strong>i18nText</strong></p><p><code>String</code></p>
 </td>
-<td><p></p></td>
+<td><p>Configures the i18n key to lookup the static text in the application resource bundle.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>multiLine</strong></p><p><code>Boolean</code></p>
 </td>
-<td><p></p></td>
+<td><p>Configures text to be multi-line or not.</p></td>
 </tr>
 </tbody>
 </table>
