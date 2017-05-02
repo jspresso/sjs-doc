@@ -3169,7 +3169,7 @@ This type of view descriptor is used to display an static, internationalized tex
 </thead>
 <tbody>
 <tr class="even">
-<td align="left"><p><strong>i18nText</strong></p><p><code>String</code></p>
+<td align="left"><p><strong>i18nTextKey</strong></p><p><code>String</code></p>
 </td>
 <td><p>Configures the i18n key to lookup the static text in the application resource bundle.</p></td>
 </tr>
