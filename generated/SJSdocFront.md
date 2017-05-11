@@ -6456,7 +6456,8 @@ of the module managed beans.</p></td>
 <tr class="even">
 <td align="left"><p><strong>includeDetail</strong></p><p><code>Boolean</code></p><p><code>detailViewIncluded</code></p>
 </td>
-<td><p></p></td>
+<td><p>This property allows to automatically include the detail view in a tab of the main collection module
+view. A complementary action list is installed to navigate between module objects. Default value is false.</p></td>
 </tr>
 </tbody>
 </table>
