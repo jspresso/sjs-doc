@@ -6453,6 +6453,11 @@ This property indicates the view to use whenever the user requests a
 view descriptor must be backed by a model matching the type
 of the module managed beans.</p></td>
 </tr>
+<tr class="even">
+<td align="left"><p><strong>includeDetail</strong></p><p><code>Boolean</code></p><p><code>detailViewIncluded</code></p>
+</td>
+<td><p></p></td>
+</tr>
 </tbody>
 </table>
 
@@ -6462,7 +6467,7 @@ of the module managed beans.</p></td>
 
 
 + **extend** : `collectionModule`
-+ **Inherited properties ** : `detailView, parent, class, custom, name, description, headerDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
++ **Inherited properties ** : `detailView, includeDetail, parent, class, custom, name, description, headerDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
 
@@ -6645,7 +6650,7 @@ Allows to group modules under a simple node in a hierarchy of modules.
 
 
 + **extend** : `filterModule`
-+ **Inherited properties ** : `component, filterComponent, filterView, pagingStatus, pagingAction, ordering, pageSize, detailView, parent, class, custom, name, description, headerDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
++ **Inherited properties ** : `component, filterComponent, filterView, pagingStatus, pagingAction, ordering, pageSize, detailView, includeDetail, parent, class, custom, name, description, headerDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
 
