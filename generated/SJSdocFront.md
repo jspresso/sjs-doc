@@ -1896,6 +1896,11 @@ its model.
 </td>
 <td><p>the model property name that returns the latitude coordinate of the marker to display on the map.</p></td>
 </tr>
+<tr class="odd">
+<td align="left"><p><strong>route</strong></p><p><code>RefField</code></p><p><code>routeProperty</code></p>
+</td>
+<td><p></p></td>
+</tr>
 </tbody>
 </table>
 
@@ -1941,6 +1946,11 @@ its model.
 <td align="left"><p><strong>latitude</strong></p><p><code>RefField</code></p><p><code>latitudeProperty</code></p>
 </td>
 <td><p>the model property name that returns the latitude coordinate of the marker to display on the map.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>route</strong></p><p><code>RefField</code></p><p><code>routeProperty</code></p>
+</td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>

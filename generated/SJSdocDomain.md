@@ -2124,7 +2124,7 @@ format before being stored.</p></td>
 
 
 + **extend** : `binary`
-+ **Inherited properties ** : `fileFilter, fileName, contentType, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `fileFilter, fileName, contentType, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicJavaSerializablePropertyDescriptor`
 
@@ -2147,6 +2147,11 @@ never plays with the serialized form.
 </thead>
 <tbody>
 <tr class="even">
+<td align="left"><p><strong>class</strong></p><p><code>String</code></p><p><code>modelTypeClassName</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>maxLength</strong></p><p><code>Integer</code></p>
 </td>
 <td><p>Sets the max size of the object in Byte.</p></td>
@@ -2185,6 +2190,11 @@ explicitely declared.
 <td align="left"><p><strong>class</strong></p><p><code>String</code></p><p><code>modelTypeClassName</code></p>
 </td>
 <td><p>Configures the actual property type through its fully qualified name.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>maxLength</strong></p><p><code>Integer</code></p>
+</td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
