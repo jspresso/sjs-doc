@@ -1899,7 +1899,8 @@ its model.
 <tr class="odd">
 <td align="left"><p><strong>route</strong></p><p><code>RefField</code></p><p><code>routeProperty</code></p>
 </td>
-<td><p></p></td>
+<td><p>the model property name that returns the route to draw on the map, if any. The property should be an
+array of (longitude, latitude) coordinates.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1950,7 +1951,8 @@ its model.
 <tr class="odd">
 <td align="left"><p><strong>route</strong></p><p><code>RefField</code></p><p><code>routeProperty</code></p>
 </td>
-<td><p></p></td>
+<td><p>the model property name that returns the route to draw on the map, if any. The property should be an
+array of (longitude, latitude) coordinates.</p></td>
 </tr>
 </tbody>
 </table>

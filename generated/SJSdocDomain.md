@@ -2149,7 +2149,7 @@ never plays with the serialized form.
 <tr class="even">
 <td align="left"><p><strong>class</strong></p><p><code>String</code></p><p><code>modelTypeClassName</code></p>
 </td>
-<td><p></p></td>
+<td><p>Configures the actual serializable property type through its fully qualified name.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>maxLength</strong></p><p><code>Integer</code></p>
