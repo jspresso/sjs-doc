@@ -2191,11 +2191,6 @@ explicitely declared.
 </td>
 <td><p>Configures the actual property type through its fully qualified name.</p></td>
 </tr>
-<tr class="odd">
-<td align="left"><p><strong>maxLength</strong></p><p><code>Integer</code></p>
-</td>
-<td><p></p></td>
-</tr>
 </tbody>
 </table>
 
