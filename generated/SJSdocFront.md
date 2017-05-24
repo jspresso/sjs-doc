@@ -1864,7 +1864,7 @@ model descriptor.</p></td>
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicMapViewDescriptor`
 
-A map is a view that displays a map and allows to bind to longitude and latitude coordinates taken from
+A map is a view that displays a map and allows to bind to arbitrary markers and routes content taken from
 its model.
 
 
@@ -1887,20 +1887,9 @@ its model.
 <td><p>Allows to reference another descriptor as a model and to override certain properties.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>longitude</strong></p><p><code>RefField</code></p><p><code>longitudeProperty</code></p>
+<td align="left"><p><strong>mapContent</strong></p><p><code>RefField</code></p><p><code>mapContentProperty</code></p>
 </td>
-<td><p>the model property name that returns the longitude coordinate of the marker to display on the map.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>latitude</strong></p><p><code>RefField</code></p><p><code>latitudeProperty</code></p>
-</td>
-<td><p>the model property name that returns the latitude coordinate of the marker to display on the map.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>route</strong></p><p><code>RefField</code></p><p><code>routeProperty</code></p>
-</td>
-<td><p>the model property name that returns the route to draw on the map, if any. The property should be an
-array of (longitude, latitude) coordinates.</p></td>
+<td><p>the model property name that returns the content of the map as a Json object containting the markers and the routes.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1916,7 +1905,7 @@ array of (longitude, latitude) coordinates.</p></td>
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `MobileMapViewDescriptor`
 
-A mobile map is a mobile page that displays a map and allows to bind to longitude and latitude coordinates taken from
+A map is a view that displays a map and allows to bind to arbitrary markers and routes content taken from
 its model.
 
 
@@ -1939,20 +1928,9 @@ its model.
 <td><p>Allows to reference another descriptor as a model and to override certain properties.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>longitude</strong></p><p><code>RefField</code></p><p><code>longitudeProperty</code></p>
+<td align="left"><p><strong>mapContent</strong></p><p><code>RefField</code></p><p><code>mapContentProperty</code></p>
 </td>
-<td><p>the model property name that returns the longitude coordinate of the marker to display on the map.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>latitude</strong></p><p><code>RefField</code></p><p><code>latitudeProperty</code></p>
-</td>
-<td><p>the model property name that returns the latitude coordinate of the marker to display on the map.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>route</strong></p><p><code>RefField</code></p><p><code>routeProperty</code></p>
-</td>
-<td><p>the model property name that returns the route to draw on the map, if any. The property should be an
-array of (longitude, latitude) coordinates.</p></td>
+<td><p>the model property name that returns the content of the map as a Json object containting the markers and the routes.</p></td>
 </tr>
 </tbody>
 </table>
