@@ -6857,11 +6857,6 @@ of modules / sub-modules.</p></td>
 </td>
 <td><p>Configures the height under which a scrollbar will appear.</p></td>
 </tr>
-<tr class="odd">
-<td align="left"><p><strong>defaultViews</strong></p><p><code>Map</code></p><p><code>defaultViewDescriptors</code></p>
-</td>
-<td><p>Configures the default component views as a map indexed by the components and valued by the default module views to use.</p></td>
-</tr>
 </tbody>
 </table>
 
