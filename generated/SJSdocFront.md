@@ -2815,7 +2815,18 @@ or regex like DESKTOP, MOBILE, HTML5, ...</p></td>
 <tr class="odd">
 <td align="left"><p><strong>focusAction</strong></p><p><code>RefAction</code></p><p><code>focusGainedAction</code></p>
 </td>
+<td><p>Configures a focus gained action. This is a shortcut for focusGainedAction. This action is triggered when the remote
+peer receives the focus in the client UI.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>focusGainedAction</strong></p><p><code>RefAction</code></p>
+</td>
 <td><p>Configures a focus gained action. This action is triggered when the remote peer receives the focus in the client UI.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>focusLostAction</strong></p><p><code>RefAction</code></p>
+</td>
+<td><p>Configures a focus lost action. This action is triggered when the remote peer looses the focus in the client UI.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2826,7 +2837,7 @@ or regex like DESKTOP, MOBILE, HTML5, ...</p></td>
 
 
 + **extend** : `propertyView`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicStringPropertyViewDescriptor`
@@ -2862,7 +2873,7 @@ to be triggered when a character is typed in the UI.
 
 
 + **extend** : `stringPropertyView`
-+ **Inherited properties ** : `charAction, parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
++ **Inherited properties ** : `charAction, parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicReferencePropertyViewDescriptor`
@@ -2902,7 +2913,7 @@ property view. A null value (default) keeps the standard action.</p></td>
 
 
 + **extend** : `propertyView`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicEnumerationPropertyViewDescriptor`
@@ -2969,7 +2980,7 @@ values should be rendered horizontally and VERTICAL otherwise. Default value is 
 
 
 + **extend** : `propertyView`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicDatePropertyViewDescriptor`
@@ -3006,7 +3017,7 @@ defining the corresponding column in a table view or field in a component view.
 
 
 + **extend** : `propertyView`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 
 This specialized property view descriptor is used in order to be able to refine
@@ -3041,7 +3052,7 @@ defining the corresponding column in a table view or field in a component view.
 
 
 + **extend** : `propertyView`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 
 This specialized property view descriptor is used in order to be able to refine
@@ -3076,7 +3087,7 @@ defining the corresponding column in a table view or field in a component view.
 
 
 + **extend** : `propertyView`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicImageViewDescriptor`
@@ -3138,7 +3149,7 @@ POD for instance.</p></td>
 
 
 + **extend** : `propertyView`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **Jspresso** : `BasicStaticTextViewDescriptor`
 
@@ -3177,7 +3188,7 @@ This type of view descriptor is used to display an static, internationalized tex
 
 
 + **extend** : `propertyView, scrollable`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, verticallyScrollable, horizontallyScrollable`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, rolesWritabilityGates, enumWritabilityGates, regexWritabilityGates, verticallyScrollable, horizontallyScrollable`
 + **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicHtmlViewDescriptor`
