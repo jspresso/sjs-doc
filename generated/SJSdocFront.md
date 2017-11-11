@@ -6849,7 +6849,7 @@ the user exits. Default frontend controller configuration installs an action
 that checks current module dirty state.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>onModuleStartup</strong></p><p><code>RefAction</code></p>
+<td align="left"><p><strong>onModuleStartup</strong></p><p><code>RefAction</code></p><p><code>onModuleStartupAction</code></p>
 </td>
 <td><p>Reference an action to be executed each time a module of the application
 is started. The action is executed in the context of the module
