@@ -6535,7 +6535,7 @@ bordered with the bage navigation actions.</p></td>
 <td><p>Configures a custom action to be trigerred when paging.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>ordering</strong></p><p><code>Map</code></p>
+<td align="left"><p><strong>ordering</strong></p><p><code>Map</code></p><p><code>orderingProperties</code></p>
 </td>
 <td><p>Configures a custom map of ordering properties for the result set. If
 not set, which is the default, the elements ordering properties is used.
