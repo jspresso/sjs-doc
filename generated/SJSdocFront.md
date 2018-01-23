@@ -3927,11 +3927,6 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 </td>
 <td><p>Allows to register an action that is triggered when the tab peer selection changes.</p></td>
 </tr>
-<tr class="even">
-<td align="left"><p><strong>hiddenWhenDisabled</strong></p><p><code>Boolean</code></p>
-</td>
-<td><p></p></td>
-</tr>
 </tbody>
 </table>
 
