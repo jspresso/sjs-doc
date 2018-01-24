@@ -1694,6 +1694,11 @@ Defines pivot table view.
 <tr class="odd">
 <td align="left"><p><strong>cellAction</strong></p><p><code>RefAction</code></p>
 </td>
+<td><p>Configures the action that is triggerred when double clicking on a pivot table cell.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>cellSelectionAction</strong></p><p><code>RefAction</code></p>
+</td>
 <td><p>Configures the action that is triggerred when clicking on a pivot table cell.</p></td>
 </tr>
 </tbody>
