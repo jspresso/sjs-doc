@@ -236,6 +236,12 @@ disables paging for this component.
 </p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>autoQuery</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p>Whenever this component is used as a query filter, this enables / disables auto-query
+when typing or loosing focus on a filter field.</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>sqlName</strong></p><p><code>String</code></p>
 </td>
 <td><p>Instructs Jspresso to use this name when translating this component
@@ -246,7 +252,7 @@ By default Jspresso uses its default naming policy
 <pre>Entity('Employee', <b>sqlName</b>: "T_EMPLOYEE"){...}</pre>
 </p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>grantedRoles</strong></p><p><code>ListOfString</code></p>
 </td>
 <td><p>Assigns the roles that are authorized to manipulate components
@@ -257,7 +263,7 @@ access that is of the developer responsbility.
 <pre>Entity('Employee',<b>grantedRoles</b>: ['administrator', 'manager']){...}</pre>
 </p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>booleanWritabilityGates</strong></p><p><code>ListOfString</code></p>
 </td>
 <td><p>Assigns a collection of gates to determine component writability. A component will
@@ -293,7 +299,7 @@ By default, component descriptors are not assigned any gates collection,
 i.e. there is no writability restriction. Note that gates do not enforce
 programatic writability of a component; only UI is impacted.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>booleanReadabilityGates</strong></p><p><code>ListOfString</code></p>
 </td>
 <td><p>Assigns a collection of gates to determine component readability. A component will
@@ -329,7 +335,7 @@ By default, component descriptors are not assigned any gates collection,
 i.e. there is no readability restriction. Note that gates do not enforce
 programatic readability of a component; only UI is impacted.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>rolesWritabilityGates</strong></p><p><code>ListOfString</code></p>
 </td>
 <td><p>Assigns a collection of gates to determine component writability. A component will
@@ -351,7 +357,7 @@ The second gate '!role2' is open if the connected user does not have the role2
 
 Same mecanism has booleanWritabilityGates</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>rolesReadabilityGates</strong></p><p><code>ListOfString</code></p>
 </td>
 <td><p>Assigns a collection of gates to determine component readability. A component will
@@ -373,7 +379,7 @@ The second gate '!role2' is open if the connected user does not have the role2
 
 Same mecanism has booleanReadabilityGates</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>enumWritabilityGates</strong></p><p><code>MapOfListOfString</code></p>
 </td>
 <td><p>Assigns a collection of gates to determine component writability. A component will
@@ -404,7 +410,7 @@ By default, component descriptors are not assigned any gates collection,
 i.e. there is no writability restriction. Note that gates do not enforce
 programatic writability of a component; only UI is impacted.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>enumReadabilityGates</strong></p><p><code>MapOfListOfString</code></p>
 </td>
 <td><p>Assigns a collection of gates to determine component readability. A component will
@@ -435,7 +441,7 @@ By default, component descriptors are not assigned any gates collection,
 i.e. there is no readability restriction. Note that gates do not enforce
 programatic readability of a component; only UI is impacted.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>regexWritabilityGates</strong></p><p><code>MapOfString</code></p>
 </td>
 <td><p>Assigns a collection of gates to determine component writability. A component will
@@ -466,7 +472,7 @@ By default, component descriptors are not assigned any gates collection,
 i.e. there is no writability restriction. Note that gates do not enforce
 programatic writability of a component; only UI is impacted.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>regexReadabilityGates</strong></p><p><code>MapOfString</code></p>
 </td>
 <td><p>Assigns a collection of gates to determine component readability. A component will
@@ -497,7 +503,7 @@ By default, component descriptors are not assigned any gates collection,
 i.e. there is no readability restriction. Note that gates do not enforce
 programatic readability of a component; only UI is impacted.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>extension</strong></p><p><code>String</code></p>
 </td>
 <td><p>Instructs the framework that a delegate class is attached to this component to implements
@@ -524,7 +530,7 @@ when needed.
 }</pre>
 </p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>processor</strong></p><p><code>String</code></p>
 </td>
 <td><p>Class name in which all class processors associated with the properties of this component are grouped
@@ -533,7 +539,7 @@ when needed.
 <b>processor:</b>'EmployeePropertyProcessors'){...}</pre>
 </p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>interceptors</strong></p><p><code>ListOfString</code></p><p><code>lifecycleInterceptorClassNames</code></p>
 </td>
 <td><p>List of lifecycle interceptor instances that will be triggered on the different phases of the
@@ -544,14 +550,14 @@ updated, loaded or deleted in the data store.
 <b>interceptors</b>: 'TraceableLifecycleInterceptor'){...}</pre>
 </p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>interceptorBeans</strong></p><p><code>ListOfString</code></p><p><code>lifecycleInterceptorBeanNames</code></p>
 </td>
 <td><p>This is the same as the interceptors list except that interceptor instances are declared using their identfiers.
 This allows to use externally configured instances instead of instances that are created at runtime using their
 default constructor.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>services</strong></p><p><code>Map</code></p><p><code>serviceDelegateClassNames</code></p>
 </td>
 <td><p>Much the same as serviceDelegateBeanNames except that instead
@@ -570,7 +576,7 @@ implement the IComponentService marker interface.
 
 When needed, Jspresso will create service delegate instances.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>serviceBeans</strong></p><p><code>Map</code></p><p><code>serviceDelegateBeanNames</code></p>
 </td>
 <td><p>Registers the collection of service delegate instances attached to this
@@ -610,13 +616,13 @@ except that it allows to register delegate instances
 that are configured externally in the Spring context. lifecycle interceptor
 instances must implement the IComponentService marker interface.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>parent</strong></p><p><code>Ref</code></p>
 </td>
 <td><p>Parent property allows to used an other descriptor as a model to override certain properties. This ability directly
 resulting from Spring configuration is generally not used in the model</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>toString</strong></p><p><code>RefField</code></p><p><code>toStringProperty</code></p>
 </td>
 <td><p>Allows to customize the string representation of a component instance.
@@ -637,7 +643,7 @@ Note that this property is not inherited by children descriptors, i.e.
 even if an ancestor defines an explicit toString property, its children
 ignore this setting.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>toHtml</strong></p><p><code>RefField</code></p><p><code>toHtmlProperty</code></p>
 </td>
 <td><p>Allows to customize the HTML representation of a component instance. The property name assigned will be used when displaying
@@ -646,7 +652,7 @@ the component instance as HTML. It may be a computed property that composes seve
 Whenever this property is null, the toStringProperty is used. Note that this property is not inherited by children descriptors,
 i.e. even if an ancestor defines an explicit toHtmlProperty property, its children ignore this setting.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>autoComplete</strong></p><p><code>RefField</code></p><p><code>autoCompleteProperty</code></p>
 </td>
 <td><p>Allows to customize the property used to autocomplete reference fields on
@@ -670,7 +676,7 @@ Note that this property is not inherited by children descriptors, i.e. even
 if an ancestor defines an explicit lovProperty, its children ignore
 this setting.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>purelyAbstract</strong></p><p><code>Boolean</code></p>
 </td>
 <td><p>This property is used to indicate that the entity type described is to be
@@ -698,7 +704,7 @@ Entity('Department', extend: 'OrganizationalUnit'){...} </pre>
 
 
 + **extend** : `Entity`
-+ **Inherited properties ** : `extend, description, icon, iconWidth, iconHeight, rendered, queryable, uncloned, ordering, pageSize, sqlName, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, extension, processor, interceptors, interceptorBeans, services, serviceBeans, parent, toString, toHtml, autoComplete, purelyAbstract`
++ **Inherited properties ** : `extend, description, icon, iconWidth, iconHeight, rendered, queryable, uncloned, ordering, pageSize, autoQuery, sqlName, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, extension, processor, interceptors, interceptorBeans, services, serviceBeans, parent, toString, toHtml, autoComplete, purelyAbstract`
 + **allowed previous element** : `Domain`
 + **allowed next element** : `string, text, imageUrl, password, integer, date, bool, decimal, time, duration, percent, enumeration, typeEnumeration, range, refId, color, binary, image, java, any, sourcecode, html, reference, list, set, paramSet`
 + **Jspresso** : `BasicInterfaceDescriptor`
@@ -759,7 +765,7 @@ Entity('Employee', <b>extend</b>: ['Nameable', 'Traceable']){
 
 
 + **extend** : `Entity`
-+ **Inherited properties ** : `extend, description, icon, iconWidth, iconHeight, rendered, queryable, uncloned, ordering, pageSize, sqlName, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, extension, processor, interceptors, interceptorBeans, services, serviceBeans, parent, toString, toHtml, autoComplete, purelyAbstract`
++ **Inherited properties ** : `extend, description, icon, iconWidth, iconHeight, rendered, queryable, uncloned, ordering, pageSize, autoQuery, sqlName, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, extension, processor, interceptors, interceptorBeans, services, serviceBeans, parent, toString, toHtml, autoComplete, purelyAbstract`
 + **allowed previous element** : `Domain`
 + **allowed next element** : `string, text, imageUrl, password, integer, date, bool, decimal, time, duration, percent, enumeration, typeEnumeration, range, refId, color, binary, image, java, any, sourcecode, html, reference, list, set, paramSet`
 + **Jspresso** : `BasicComponentDescriptor`
