@@ -1150,7 +1150,7 @@ descriptor for charts
 
 + **extend** : `chart, abstractPolarChart`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, pieSeries`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `pieSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `PieChartDescriptor`
 
@@ -1184,7 +1184,7 @@ descriptor for pie charts
 
 + **extend** : `chart, abstractCartesianChart`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `lineSeries, barSeries, plotSeries, areaSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `BarChartDescriptor`
 
@@ -1249,7 +1249,7 @@ descriptor for charts
 
 + **extend** : `mobileChart, abstractPolarChart`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, pieSeries`
-+ **allowed previous element** : `Front, sections, headerSections, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center`
 + **allowed next element** : `pieSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `MobilePieChartDescriptor`
 
@@ -1283,7 +1283,7 @@ descriptor for pie charts
 
 + **extend** : `mobileChart, abstractCartesianChart`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
-+ **allowed previous element** : `Front, sections, headerSections, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center`
 + **allowed next element** : `lineSeries, barSeries, plotSeries, areaSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileBarChartDescriptor`
 
@@ -1666,7 +1666,7 @@ of actions defined on table columns.</p></td>
 
 + **extend** : `common`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `PivotTableDescriptor`
 
@@ -1711,7 +1711,7 @@ Defines pivot table view.
 
 + **extend** : `common, scrollable`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, verticallyScrollable, horizontallyScrollable`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `fields, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicComponentViewDescriptor`
 
@@ -1900,7 +1900,7 @@ Default value is null, meaning all property fields have a span of 1.</p></td>
 
 + **extend** : `commonMobile, mobileSection`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes`
-+ **allowed previous element** : `Front, sections, headerSections, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center`
 + **allowed next element** : `fields, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileComponentViewDescriptor`
 
@@ -1981,7 +1981,7 @@ model descriptor.</p></td>
 
 + **extend** : `common`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicMapViewDescriptor`
 
@@ -2022,7 +2022,7 @@ its model.
 
 + **extend** : `commonMobile, mobileSection`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes`
-+ **allowed previous element** : `Front, sections, headerSections, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `MobileMapViewDescriptor`
 
@@ -2094,7 +2094,7 @@ Open a list of propertyView to individually fine-tunes each field  in a form
 
 + **extend** : `common`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `columns, actionMap, secondaryActionMap, rowAction, itemSelectionAction, sortingAction`
 + **Jspresso** : `BasicTableViewDescriptor`
 
@@ -2267,7 +2267,7 @@ the view are kept in sync with the bound model collection.</p></td>
 
 + **extend** : `common`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap, rowAction, itemSelectionAction`
 + **Jspresso** : `BasicListViewDescriptor`
 
@@ -2402,7 +2402,7 @@ the view are kept in sync with the bound model collection.</p></td>
 
 + **extend** : `commonMobile`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, selection, Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, selection, Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap, itemSelectionAction`
 + **Jspresso** : `MobileListViewDescriptor`
 
@@ -2532,7 +2532,7 @@ indicates that the user can navigate to another page when clicking a list item.<
 
 + **extend** : `common`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `repeat, actionMap, secondaryActionMap, rowAction, itemSelectionAction`
 + **Jspresso** : `BasicRepeaterViewDescriptor`
 
@@ -2616,7 +2616,7 @@ the view are kept in sync with the bound model collection.</p></td>
 
 + **extend** : `commonMobile`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, selection, Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, selection, Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `repeat, actionMap, secondaryActionMap, itemSelectionAction`
 + **Jspresso** : `MobileRepeaterViewDescriptor`
 
@@ -2731,7 +2731,7 @@ Open a list of propertyView to individually fine-tunes each column in a table
 
 + **extend** : `common`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicPropertyViewDescriptor`
 
@@ -2959,7 +2959,7 @@ peer receives the focus in the client UI.</p></td>
 
 + **extend** : `propertyView`
 + **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicStringPropertyViewDescriptor`
 
@@ -2995,7 +2995,7 @@ to be triggered when a character is typed in the UI.
 
 + **extend** : `stringPropertyView`
 + **Inherited properties ** : `charAction, parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicReferencePropertyViewDescriptor`
 
@@ -3035,7 +3035,7 @@ property view. A null value (default) keeps the standard action.</p></td>
 
 + **extend** : `propertyView`
 + **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicEnumerationPropertyViewDescriptor`
 
@@ -3102,7 +3102,7 @@ values should be rendered horizontally and VERTICAL otherwise. Default value is 
 
 + **extend** : `propertyView`
 + **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicDatePropertyViewDescriptor`
 
@@ -3139,7 +3139,7 @@ defining the corresponding column in a table view or field in a component view.
 
 + **extend** : `propertyView`
 + **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicTimePropertyViewDescriptor`
 
@@ -3176,7 +3176,7 @@ defining the corresponding column in a table view or field in a component view.
 
 + **extend** : `propertyView`
 + **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicNumberPropertyViewDescriptor`
 
@@ -3213,7 +3213,7 @@ defining the corresponding column in a table view or field in a component view.
 
 + **extend** : `propertyView`
 + **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicImageViewDescriptor`
 
@@ -3275,7 +3275,7 @@ POD for instance.</p></td>
 
 + **extend** : `propertyView`
 + **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **Jspresso** : `BasicStaticTextViewDescriptor`
 
 This type of view descriptor is used to display an static, internationalized text.
@@ -3314,7 +3314,7 @@ This type of view descriptor is used to display an static, internationalized tex
 
 + **extend** : `propertyView, scrollable`
 + **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, verticallyScrollable, horizontallyScrollable`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicHtmlViewDescriptor`
 
@@ -3348,7 +3348,7 @@ This type of view descriptor is used to display an html property.
 
 + **extend** : `common`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap, actionList, action`
 + **Jspresso** : `BasicActionViewDescriptor`
 
@@ -3417,7 +3417,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 + **extend** : `common`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
 + **mandatory** : `nameElement`
-+ **allowed previous element** : `Front`
++ **allowed previous element** : `Front, custom`
 + **allowed next element** : `actionMap, secondaryActionMap`
 
 
@@ -3471,7 +3471,7 @@ treeNode('Company-teams.treeNode',
 
 + **extend** : `common`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `subTree, actionMap, secondaryActionMap, rowAction, itemSelectionAction`
 + **Jspresso** : `BasicTreeViewDescriptor`
 
@@ -3645,7 +3645,7 @@ be nested.</p></td>
 
 + **extend** : `commonMobile`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, selection, Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, selection, Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `subTree, actionMap, secondaryActionMap, itemSelectionAction`
 + **Jspresso** : `MobileTreeViewDescriptor`
 
@@ -3854,7 +3854,7 @@ In SJS a subTree has the same identifier as the treeNode it instantiates.
 
 + **extend** : `common, scrollable`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, verticallyScrollable, horizontallyScrollable`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `views, actionMap, secondaryActionMap, tabSelectionAction`
 + **Jspresso** : `BasicTabViewDescriptor`
 
@@ -3942,7 +3942,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 
 + **extend** : `commonMobile, mobileSection`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `views, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileTabViewDescriptor`
 
@@ -4047,7 +4047,7 @@ Open a list of views where each view can be defined "inline"
 
 + **extend** : `common, scrollable`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, verticallyScrollable, horizontallyScrollable`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `left, right, top, bottom, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicSplitViewDescriptor`
 
@@ -4250,7 +4250,7 @@ Enable to set an in-line view in in the the bottom zone of a split_vertical
 
 + **extend** : `common, scrollable`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, verticallyScrollable, horizontallyScrollable`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `east, west, south, north, center, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicBorderViewDescriptor`
 
@@ -4345,7 +4345,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 
 + **extend** : `commonMobile, mobilePageAware`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
-+ **allowed previous element** : `Front, sections, headerSections, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center`
 + **allowed next element** : `south, north, center, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileBorderViewDescriptor`
 
@@ -4567,7 +4567,7 @@ Enable to set an in-line view in the center zone of a border
 
 + **extend** : `common, scrollable`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, verticallyScrollable, horizontallyScrollable`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `cells, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicConstrainedGridViewDescriptor`
 
@@ -4618,7 +4618,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 + **extend** : `common, scrollable`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, verticallyScrollable, horizontallyScrollable`
 + **mandatory** : `drivingDimension, drivingCellCount`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `cells, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicEvenGridViewDescriptor`
 
@@ -4824,7 +4824,7 @@ Describes a cell of an evenGrid
 
 + **extend** : `common, scrollable`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, verticallyScrollable, horizontallyScrollable`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `views, actionMap, secondaryActionMap`
 + **Jspresso** : `EntityCardViewDescriptor`
 
@@ -4873,7 +4873,7 @@ card matches, an empty view is displayed.</p></td>
 + **extend** : `common, scrollable`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, verticallyScrollable, horizontallyScrollable`
 + **mandatory** : `selector`
-+ **allowed previous element** : `Front, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `views, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicCardViewDescriptor`
 
@@ -5305,7 +5305,7 @@ assigning a model to the action gates.</p></td>
 
 
 + **allowed previous element** : `Front, actionList, controller, actionView`
-+ **allowed next element** : `next, wrapped, bean, list, set, map`
++ **allowed next element** : `next, wrapped, bean, list, set, map, custom`
 
 This descriptor establishes the foundation of the Jspresso action
 framework, i.e. each action can link :
@@ -5668,7 +5668,7 @@ undefined, i.e. null, meaning that the enclosing action list or map drives the c
 + **extend** : `action`
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel, repeatPeriodMillis, hiddenWhenDisabled`
 + **allowed previous element** : `action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
-+ **allowed next element** : `next, wrapped, bean, list, set, map`
++ **allowed next element** : `next, wrapped, bean, list, set, map, custom`
 
 Allows defining "inline" next action for the current action. A next action is an action to be executed after this action and after the wrapped one. This is perfectly suited to chain an action of the same type (frontend or backend) as this one.
 
@@ -5701,7 +5701,7 @@ Allows defining "inline" next action for the current action. A next action is an
 + **extend** : `next`
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel, repeatPeriodMillis, hiddenWhenDisabled`
 + **allowed previous element** : `action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
-+ **allowed next element** : `next, wrapped, bean, list, set, map`
++ **allowed next element** : `next, wrapped, bean, list, set, map, custom`
 
 Allows defining "inline" wrapped action for the current action. This is perfectly suited to chain a backend action from a frontend action since the control flow will return back to the calling layer (the frontend).
 
@@ -5734,7 +5734,7 @@ Allows defining "inline" wrapped action for the current action. This is perfectl
 + **extend** : `action`
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel, repeatPeriodMillis, hiddenWhenDisabled`
 + **allowed previous element** : `table, listView, tree, repeater`
-+ **allowed next element** : `next, wrapped, bean, list, set, map`
++ **allowed next element** : `next, wrapped, bean, list, set, map, custom`
 
 Allows defining "inline" rowAction for the current action. It is an action
 that is implicitely triggered everytime a row is activated
@@ -5771,8 +5771,8 @@ map.
 
 + **extend** : `action`
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel, repeatPeriodMillis, hiddenWhenDisabled`
-+ **allowed previous element** : `table, listView, mobileListView, tree, mobileTree, repeater, mobileRepeater`
-+ **allowed next element** : `next, wrapped, bean, list, set, map`
++ **allowed previous element** : `table, listView, tree, repeater, mobileListView, mobileTree, mobileRepeater`
++ **allowed next element** : `next, wrapped, bean, list, set, map, custom`
 
 Allows defining "inline" itemSelectionAction for the current action.
 It is an action that is implicitely triggered everytime the selection
@@ -5809,7 +5809,7 @@ map.
 + **extend** : `action`
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel, repeatPeriodMillis, hiddenWhenDisabled`
 + **allowed previous element** : `tabs`
-+ **allowed next element** : `next, wrapped, bean, list, set, map`
++ **allowed next element** : `next, wrapped, bean, list, set, map, custom`
 
 Allows to register an action that is triggered when the tab peer selection changes.
 
@@ -5842,7 +5842,7 @@ Allows to register an action that is triggered when the tab peer selection chang
 + **extend** : `action`
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel, repeatPeriodMillis, hiddenWhenDisabled`
 + **allowed previous element** : `table`
-+ **allowed next element** : `next, wrapped, bean, list, set, map`
++ **allowed next element** : `next, wrapped, bean, list, set, map, custom`
 
 Allows defining "inline" sortingAction for the current action.
 It configures the action to be activated when a sort is triggered by the
@@ -5878,7 +5878,7 @@ default.
 
 + **extend** : `commonMobile, mobilePageAware`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
-+ **allowed previous element** : `Front, sections, headerSections, repeat, east, west, south, north, center, nextPage`
++ **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center, nextPage`
 + **allowed next element** : `actionMap, secondaryActionMap, selection, headerSections, nextPage`
 + **Jspresso** : `MobileNavPageViewDescriptor`
 
@@ -5928,7 +5928,7 @@ A Navigation page is a mobile page that displays a collection view (list or tree
 
 + **extend** : `commonMobile, mobilePageAware`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
-+ **allowed previous element** : `Front, sections, headerSections, repeat, east, west, south, north, center, nextPage`
++ **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center, nextPage`
 + **allowed next element** : `actionMap, secondaryActionMap, pages`
 + **Jspresso** : `MobileCardPageViewDescriptor`
 
@@ -5968,7 +5968,7 @@ Defines a page that displays a card view as its main content.
 
 + **extend** : `commonMobile, mobilePageAware`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
-+ **allowed previous element** : `Front, sections, headerSections, repeat, east, west, south, north, center, nextPage`
++ **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center, nextPage`
 + **allowed next element** : `actionMap, secondaryActionMap, sections, editorPage`
 + **Jspresso** : `MobileCompositePageViewDescriptor`
 
@@ -6216,7 +6216,7 @@ Defines the editor page of a composite page.
 
 
 + **mandatory** : `nameElement`
-+ **allowed previous element** : `Front`
++ **allowed previous element** : `Front, custom`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
 
 A workspace is an group of functional application modules. You may decide arbitrarily how to group modules
@@ -6349,8 +6349,8 @@ value) disables role based authorization on this workspace.</p></td>
 #### <a name=""></a> module
 
 
-+ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
-+ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
++ **allowed previous element** : `Front, custom, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
++ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, custom`
 
 A module is an entry point in the application. Modules are organized in bi-directional, parent-children
 hierarchy. As such, they can be viewed (and they are materalized in the UI) as trees. Modules can be
@@ -6523,8 +6523,8 @@ their model.</p></td>
 
 + **extend** : `module`
 + **Inherited properties ** : `parent, class, custom, name, description, headerDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
-+ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
-+ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
++ **allowed previous element** : `Front, custom, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
++ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, custom`
 
 This type of module keeps a reference on a beans collection. There is no assumption made on wether
 these beans are actually persistent entites or any other type of java beans.
@@ -6595,8 +6595,8 @@ view. A complementary action list is installed to navigate between module object
 
 + **extend** : `collectionModule`
 + **Inherited properties ** : `detailView, includeDetail, parent, class, custom, name, description, headerDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
-+ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
-+ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
++ **allowed previous element** : `Front, custom, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
++ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, custom`
 
 This is a specialized type of bean collection module that provides a filter ( an instance of IQueryComponent
 ). This type of module, coupled with a generic, built-in, action map is perfectly suited for CRUD-like
@@ -6692,8 +6692,8 @@ the default, the elements default page size is used.</p></td>
 
 + **extend** : `module`
 + **Inherited properties ** : `parent, class, custom, name, description, headerDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
-+ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
-+ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
++ **allowed previous element** : `Front, custom, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
++ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, custom`
 
 This type of module keeps a reference on a beans collection. There is no assumption made on wether
 these beans are actually persistent entites or any other type of java beans.
@@ -6745,8 +6745,8 @@ view descriptor.</p></td>
 
 + **extend** : `module`
 + **Inherited properties ** : `parent, class, custom, name, description, headerDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
-+ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
-+ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
++ **allowed previous element** : `Front, custom, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
++ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, custom`
 
 Allows to group modules under a simple node in a hierarchy of modules.
 
@@ -6778,8 +6778,8 @@ Allows to group modules under a simple node in a hierarchy of modules.
 
 + **extend** : `filterModule`
 + **Inherited properties ** : `component, filterComponent, filterView, pagingStatus, pagingAction, ordering, pageSize, detailView, includeDetail, parent, class, custom, name, description, headerDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
-+ **allowed previous element** : `Front, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
-+ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule`
++ **allowed previous element** : `Front, custom, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
++ **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, custom`
 
 This type of module extends the filter module by adding a pivot table to it. The user is presented the pivot table as
 the result of his query, can add / remove line and column dimensions, measures and can drill-down in a cell in order
@@ -6825,7 +6825,7 @@ pivot module.</p></td>
 
 
 + **mandatory** : `nameElement`
-+ **allowed previous element** : `Front`
++ **allowed previous element** : `Front, custom`
 + **allowed next element** : `actionMap, secondaryActionMap, action`
 
 Sets the frontend application controllers. This controller is the place where you define the toplevel
@@ -7003,7 +7003,7 @@ of modules / sub-modules.</p></td>
 
 
 + **mandatory** : `basenames`
-+ **allowed previous element** : `Front`
++ **allowed previous element** : `Front, custom`
 
 Jspresso relies on the well-known java I18N mechanism through the use of resource bundle property files.
 
@@ -7035,7 +7035,7 @@ Jspresso relies on the well-known java I18N mechanism through the use of resourc
 #### <a name=""></a> external
 
 
-+ **allowed previous element** : `Front`
++ **allowed previous element** : `Front, custom`
 
 External gives SJS the List of references witch are not declared in SJS witch but can be used as reference.
 
@@ -7066,7 +7066,7 @@ External gives SJS the List of references witch are not declared in SJS witch bu
 #### <a name=""></a> template
 
 
-+ **allowed previous element** : `Front`
++ **allowed previous element** : `Front, custom`
 
 template configures a Map of default properties values for a descriptor
 
@@ -7105,7 +7105,7 @@ All new forms and tables will have these properties set
 #### <a name=""></a> paramSet
 
 
-+ **allowed previous element** : `Front`
++ **allowed previous element** : `Front, custom`
 
 paramSet allows to create a reusable groups of properties in SJS declarations.
 
@@ -7269,8 +7269,8 @@ include('fileName')
 #### <a name=""></a> bean
 
 
-+ **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
-+ **allowed next element** : `bean, list, set, map`
++ **allowed previous element** : `Front, custom, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
++ **allowed next element** : `bean, list, set, map, custom`
 
 Allows to generate a bean Spring in the XML generated file
 
@@ -7348,7 +7348,7 @@ custom:[
 
 
 + **mandatory** : `nameElement`
-+ **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
++ **allowed previous element** : `Front, custom, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `bean, list, set, map`
 
 Allows to generate a list Spring in the XML generated file
@@ -7381,7 +7381,7 @@ Allows to generate a list Spring in the XML generated file
 
 
 + **mandatory** : `nameElement`
-+ **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
++ **allowed previous element** : `Front, custom, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `bean, list, set, map`
 
 Allows to generate a list Spring in the XML generated file
@@ -7414,7 +7414,7 @@ Allows to generate a list Spring in the XML generated file
 
 
 + **mandatory** : `nameElement`
-+ **allowed previous element** : `Front, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
++ **allowed previous element** : `Front, custom, bean, list, set, map, action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
 + **allowed next element** : `bean, list, set, map`
 
 Allows to generate a Map Spring in the XML generated file
@@ -7437,6 +7437,33 @@ Allows to generate a Map Spring in the XML generated file
 <td align="left"><p><strong>values</strong></p><p><code>Map</code></p>
 </td>
 <td><p>Map of string values</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
+#### <a name=""></a> custom
+
+
++ **allowed previous element** : `bean, module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
+<table>
+<caption>custom properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">This class does not have any specific property.</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
