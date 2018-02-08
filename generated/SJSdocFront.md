@@ -3,7 +3,7 @@
 #### <a name=""></a> Front
 
 
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, actionMap, action, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, actionMap, actionList, action, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
 
 This root descriptor is used in the file application.groovy generated during the
 initialization of the project by Jspresso.
@@ -4965,7 +4965,7 @@ Assigns the view to repeat in the repeater for each collection element.
 #### <a name=""></a> actionMap
 
 
-+ **allowed previous element** : `Front, treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileRepeater, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, repeater, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
++ **allowed previous element** : `Front, custom, treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileRepeater, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, repeater, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
 + **allowed next element** : `actionList`
 + **Jspresso** : `ActionMap`
 
@@ -5162,7 +5162,7 @@ assigning a model to the action gates.</p></td>
 #### <a name=""></a> actionList
 
 
-+ **allowed previous element** : `actionMap, secondaryActionMap, actionView`
++ **allowed previous element** : `Front, custom, actionMap, secondaryActionMap, actionView`
 + **allowed next element** : `action`
 + **Jspresso** : `ActionList`
 
@@ -5304,7 +5304,7 @@ assigning a model to the action gates.</p></td>
 #### <a name=""></a> action
 
 
-+ **allowed previous element** : `Front, actionList, controller, actionView`
++ **allowed previous element** : `Front, custom, actionList, controller, actionView`
 + **allowed next element** : `next, wrapped, bean, list, set, map, custom`
 
 This descriptor establishes the foundation of the Jspresso action
@@ -7447,7 +7447,7 @@ Allows to generate a Map Spring in the XML generated file
 
 
 + **allowed previous element** : `bean, module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, actionMap, actionList, action, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
 
 Allows to define custom properties in the form of named inline descriptors. All 1st-level descriptors can be used.
 
