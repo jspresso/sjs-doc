@@ -1701,6 +1701,16 @@ Defines pivot table view.
 </td>
 <td><p>Configures the action that is triggerred when clicking on a pivot table cell.</p></td>
 </tr>
+<tr class="odd">
+<td align="left"><p><strong>displayRowTotals</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>displayColumnTotals</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p></p></td>
+</tr>
 </tbody>
 </table>
 
