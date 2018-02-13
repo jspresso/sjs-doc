@@ -1317,6 +1317,11 @@ Default value is false</p></td>
 for sorting programmatically.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>alternativeSortProperty</strong></p><p><code>RefField</code></p>
+</td>
+<td><p>Allows to configure an alternative property used to sort this one.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>cacheable</strong></p><p><code>Boolean</code></p>
 </td>
 <td><p>Configures the fact that this property can be cached. This is only used for computed properties.
@@ -1328,20 +1333,20 @@ is detected to be fired.
 Default value is false in order to prevent un-desired side-effects if computed property change
 notification is not correctly wired.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>filterComparable</strong></p><p><code>Boolean</code></p>
 </td>
 <td><p>Configures the fact that this property uses a comparator when installed n a filter view. By default,
 number, date, time, and duration properties behave this way.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>filterOnly</strong></p><p><code>Boolean</code></p>
 </td>
 <td><p>Gets whether this property is only used in filters, i.e. it is not persistent and only serves for storing criteria
 data that can be further leveraged by criteria refiners. Using {@code filterOnly} properties relieves the developer
 from having to declare fake computed properties.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>class</strong></p><p><code>String</code></p>
 </td>
 <td><p>Allows to override the default framework descriptor class for advanced usage.</p></td>
@@ -1356,7 +1361,7 @@ from having to declare fake computed properties.</p></td>
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicStringPropertyDescriptor`
 
@@ -1440,7 +1445,7 @@ Default value is false.</p></td>
 
 
 + **extend** : `string`
-+ **Inherited properties ** : `maxLength, regex, regexSample, upperCase, translatable, truncate, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `maxLength, regex, regexSample, upperCase, translatable, truncate, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicTextPropertyDescriptor`
 
@@ -1518,7 +1523,7 @@ text view in order to allow for multi-line text in filters. Default value is fal
 
 
 + **extend** : `string`
-+ **Inherited properties ** : `maxLength, regex, regexSample, upperCase, translatable, truncate, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `maxLength, regex, regexSample, upperCase, translatable, truncate, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicImageUrlPropertyDescriptor`
 
@@ -1562,7 +1567,7 @@ ratio.</p></td>
 
 
 + **extend** : `string`
-+ **Inherited properties ** : `maxLength, regex, regexSample, upperCase, translatable, truncate, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `maxLength, regex, regexSample, upperCase, translatable, truncate, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicPasswordPropertyDescriptor`
 
@@ -1598,7 +1603,7 @@ fields, to interact with password properties.
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicIntegerPropertyDescriptor`
 
@@ -1661,7 +1666,7 @@ Default value is false which means java.lang.Integer will be used.</p></td>
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicDatePropertyDescriptor`
 
@@ -1725,7 +1730,7 @@ Default value is false, meaning that the date is considered as a string. It is i
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicBooleanPropertyDescriptor`
 
@@ -1759,7 +1764,7 @@ Describes a boolean property
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicDecimalPropertyDescriptor`
 
@@ -1829,7 +1834,7 @@ null which means unlimited.</p></td>
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicTimePropertyDescriptor`
 
@@ -1879,7 +1884,7 @@ only the time part of the value is relevant
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicDurationPropertyDescriptor`
 
@@ -1931,7 +1936,7 @@ Default value is null, meaning unbound.</p></td>
 
 
 + **extend** : `decimal`
-+ **Inherited properties ** : `minValue, maxValue, usingBigDecimal, maxFractionDigit, thousandsGrouping, defaultValue, format, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `minValue, maxValue, usingBigDecimal, maxFractionDigit, thousandsGrouping, defaultValue, format, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicPercentPropertyDescriptor`
 
@@ -1966,7 +1971,7 @@ instead of their raw decimal values.
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicEnumerationPropertyDescriptor`
 
@@ -2046,7 +2051,7 @@ disjunctions in filters. Default value is false.</p></td>
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `TypeEnumerationPropertyDescriptor`
 
@@ -2107,7 +2112,7 @@ disjunctions in filters. Default value is false.</p></td>
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `RangeEnumerationPropertyDescriptor`
 
@@ -2203,7 +2208,7 @@ allows to point on a reference
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicColorPropertyDescriptor`
 
@@ -2240,7 +2245,7 @@ colors manipulation and helps converting to/from their hexadecimal representatio
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicBinaryPropertyDescriptor`
 
@@ -2317,7 +2322,7 @@ values are the extension list associated to a certain group name, e
 
 
 + **extend** : `binary`
-+ **Inherited properties ** : `maxLength, fileFilter, fileName, contentType, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `maxLength, fileFilter, fileName, contentType, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicImageBinaryPropertyDescriptor`
 
@@ -2367,7 +2372,7 @@ format before being stored.</p></td>
 
 
 + **extend** : `binary`
-+ **Inherited properties ** : `fileFilter, fileName, contentType, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly`
++ **Inherited properties ** : `fileFilter, fileName, contentType, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicJavaSerializablePropertyDescriptor`
 
@@ -2408,7 +2413,7 @@ never plays with the serialized form.
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly`
++ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicObjectPropertyDescriptor`
 
@@ -2443,7 +2448,7 @@ explicitely declared.
 
 
 + **extend** : `text`
-+ **Inherited properties ** : `fileFilter, fileName, contentType, queryMultiline, maxLength, regex, regexSample, upperCase, translatable, truncate, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `fileFilter, fileName, contentType, queryMultiline, maxLength, regex, regexSample, upperCase, translatable, truncate, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicSourceCodePropertyDescriptor`
 
@@ -2480,7 +2485,7 @@ language used to format the property text content may be defined explicitely usi
 
 
 + **extend** : `text`
-+ **Inherited properties ** : `fileFilter, fileName, contentType, queryMultiline, maxLength, regex, regexSample, upperCase, translatable, truncate, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `fileFilter, fileName, contentType, queryMultiline, maxLength, regex, regexSample, upperCase, translatable, truncate, defaultValue, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicHtmlPropertyDescriptor`
 
@@ -2515,7 +2520,7 @@ HTML instead of raw text content.
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **mandatory** : `ref`
 + **allowed previous element** : `Entity, Interface, Component`
 + **Jspresso** : `BasicReferencePropertyDescriptor`
@@ -2651,7 +2656,7 @@ properties based on the referenced component descriptor.</p></td>
 
 
 + **extend** : `reference`
-+ **Inherited properties ** : `ref, reverse, composition, fkName, rendered, queryable, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `ref, reverse, composition, fkName, rendered, queryable, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **mandatory** : `ref`
 + **allowed previous element** : `Entity, Interface, Component`
 
@@ -2736,7 +2741,7 @@ determines the size of th IN clause.</p></td>
 
 
 + **extend** : `list`
-+ **Inherited properties ** : `ordering, manyToMany, fetch, batch, nullElement, ref, reverse, composition, fkName, rendered, queryable, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, cacheable, filterComparable, filterOnly, class`
++ **Inherited properties ** : `ordering, manyToMany, fetch, batch, nullElement, ref, reverse, composition, fkName, rendered, queryable, description, icon, iconWidth, iconHeight, i18nNameKey, mandatory, readOnly, preferredWidth, computed, sqlName, parent, id, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, unicityScope, delegateWritable, processors, initializationMapping, paramSets, versionControl, computedFurther, sortable, alternativeSortProperty, cacheable, filterComparable, filterOnly, class`
 + **mandatory** : `ref`
 + **allowed previous element** : `Entity, Interface, Component`
 
