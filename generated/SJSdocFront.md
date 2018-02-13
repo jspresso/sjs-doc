@@ -1704,12 +1704,12 @@ Defines pivot table view.
 <tr class="odd">
 <td align="left"><p><strong>displayRowTotals</strong></p><p><code>Boolean</code></p>
 </td>
-<td><p></p></td>
+<td><p>Allows to display / hide row totals.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>displayColumnTotals</strong></p><p><code>Boolean</code></p>
 </td>
-<td><p></p></td>
+<td><p>Allows to display / hide column totals.</p></td>
 </tr>
 </tbody>
 </table>
