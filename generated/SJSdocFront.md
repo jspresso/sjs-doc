@@ -3940,7 +3940,12 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 <tr class="odd">
 <td align="left"><p><strong>tabSelectionAction</strong></p><p><code>RefAction</code></p>
 </td>
-<td><p>Allows to register an action that is triggered when the tab peer selection changes.</p></td>
+<td><p>Configures the tab view to reset its tab selection to the first one each time the model changes.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>selectFirstTab</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
