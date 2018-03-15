@@ -3952,12 +3952,12 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 <tr class="odd">
 <td align="left"><p><strong>tabSelectionAction</strong></p><p><code>RefAction</code></p>
 </td>
-<td><p>Configures the tab view to reset its tab selection to the first one each time the model changes.</p></td>
+<td><p>Allows to register an action that is triggered when the tab peer selection changes.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>selectFirstTab</strong></p><p><code>Boolean</code></p>
 </td>
-<td><p></p></td>
+<td><p>If true, the tab view will select its the first tab each time its model changes. Default value is false.</p></td>
 </tr>
 </tbody>
 </table>
@@ -4031,17 +4031,17 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 <tr class="even">
 <td align="left"><p><strong>tabSelectionAction</strong></p><p><code>RefAction</code></p>
 </td>
-<td><p></p></td>
+<td><p>Allows to register an action that is triggered when the tab peer selection changes.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>selectFirstTab</strong></p><p><code>Boolean</code></p>
 </td>
-<td><p></p></td>
+<td><p>If true, the tab view will select its the first tab each time its model changes. Default value is false.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>carouselMode</strong></p><p><code>Boolean</code></p>
 </td>
-<td><p></p></td>
+<td><p>Should this mobile tab view be rendered as a casousel ?</p></td>
 </tr>
 </tbody>
 </table>
@@ -5847,10 +5847,6 @@ map.
 + **Inherited properties ** : `parent, class, ref, next, wrapped, custom, name, description, accelerator, icon, iconWidth, iconHeight, styleName, grantedRoles, permId, booleanActionabilityGates, rolesActionabilityGates, enumActionabilityGates, regexActionabilityGates, collectionBased, multiSelection, validationModel, repeatPeriodMillis, hiddenWhenDisabled`
 + **allowed previous element** : `tabs`
 + **allowed next element** : `next, wrapped, bean, list, set, map, custom`
-
-Allows to register an action that is triggered when the tab peer selection changes.
-
-
 <table>
 <caption>tabSelectionAction properties</caption>
 <colgroup>
