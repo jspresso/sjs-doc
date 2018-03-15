@@ -808,7 +808,8 @@ Default value is EBorderType.NONE, i.e. no border.</p></td>
 <tr class="odd">
 <td align="left"><p><strong>collapsible</strong></p><p><code>Boolean</code></p>
 </td>
-<td><p></p></td>
+<td><p>When set to false, this allows to prevent a view to be collapsed when the UI provides a way for the user to do so,
+when decorated in a titled border for instance.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>paramSets</strong></p><p><code>ListOfString</code></p>
@@ -4028,9 +4029,19 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 <td><p>Lazy binds tabs based on user selection.</p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>tabSelectionAction</strong></p><p><code>RefAction</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>selectFirstTab</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>carouselMode</strong></p><p><code>Boolean</code></p>
 </td>
-<td><p>Should this mobile tab view be rendered as a casousel ?</p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
