@@ -2279,6 +2279,11 @@ model as the one providing the collection of the collection view.</p></td>
 <td><p>Bi-directionally binds the collection view selection to a model collection. Selected items in
 the view are kept in sync with the bound model collection.</p></td>
 </tr>
+<tr class="even">
+<td align="left"><p><strong>singleClickEdit</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p>Configures if the table to enter edition on single clicks.</p></td>
+</tr>
 </tbody>
 </table>
 
