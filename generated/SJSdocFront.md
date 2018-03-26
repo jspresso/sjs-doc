@@ -619,11 +619,49 @@ The properties brought by the paramSet can be overridden  by the current descrip
 
 ---
 
+#### <a name=""></a> mobileSection
+
+Defines a page section that can be aggregated in a composite page.
+
+
+<table>
+<caption>mobileSection properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td align="left"><p><strong>position</strong></p><p><code>String</code></p>
+</td>
+<td><p>Allows define where, if the layout allows it, to drop the page section in the composite page. Allowed values are
+LEFT, RIGHT, TOP or BOTTOM</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>clientTypes</strong></p><p><code>ListOfString</code></p><p><code>forClientTypes</code></p>
+</td>
+<td><p>Gets the restricted list of client types that will display this property view. Defaults to null,
+which means no restriction. The provided list is not empty, then the actual session client type is matched
+against each of the restricted client type with either equal or substring or regexp semantic.
+Allowed values are DESKTOP_SWING, DESKTOP_FLEX, DESKTOP_HTML5, MOBILE_HTML5_TABLET, MOBILE_HTML5_PHONE or any substring
+or regex like DESKTOP, MOBILE, HTML5, ...</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
 #### <a name=""></a> commonMobile
 
 
-+ **extend** : `security`
-+ **Inherited properties ** : `permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
++ **extend** : `security, mobileSection`
++ **Inherited properties ** : `permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes`
 
 This descriptor is an internal s SJS descriptor which is never used by the application. It s used by SJS to factorize
 commons properties for mobile views.
@@ -822,44 +860,6 @@ The properties brought by the paramSet can be overridden  by the current descrip
 <td align="left"><p><strong>class</strong></p><p><code>String</code></p>
 </td>
 <td><p>Allows to override the default framework descriptor class for advanced usage.</p></td>
-</tr>
-</tbody>
-</table>
-
----
-
-#### <a name=""></a> mobileSection
-
-Defines a page section that can be aggregated in a composite page.
-
-
-<table>
-<caption>mobileSection properties</caption>
-<colgroup>
-<col width="33%" />
-<col width="66%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Property</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="even">
-<td align="left"><p><strong>position</strong></p><p><code>String</code></p>
-</td>
-<td><p>Allows define where, if the layout allows it, to drop the page section in the composite page. Allowed values are
-LEFT, RIGHT, TOP or BOTTOM</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><strong>clientTypes</strong></p><p><code>ListOfString</code></p><p><code>forClientTypes</code></p>
-</td>
-<td><p>Gets the restricted list of client types that will display this property view. Defaults to null,
-which means no restriction. The provided list is not empty, then the actual session client type is matched
-against each of the restricted client type with either equal or substring or regexp semantic.
-Allowed values are DESKTOP_SWING, DESKTOP_FLEX, DESKTOP_HTML5, MOBILE_HTML5_TABLET, MOBILE_HTML5_PHONE or any substring
-or regex like DESKTOP, MOBILE, HTML5, ...</p></td>
 </tr>
 </tbody>
 </table>
@@ -1228,7 +1228,7 @@ descriptor for cartesian charts
 #### <a name=""></a> mobileChart
 
 
-+ **extend** : `commonMobile, mobileSection, abstractChart`
++ **extend** : `commonMobile, abstractChart`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow`
 
 descriptor for charts
@@ -1920,7 +1920,7 @@ Default value is null, meaning all property fields have a span of 1.</p></td>
 #### <a name=""></a> mobileForm
 
 
-+ **extend** : `commonMobile, mobileSection`
++ **extend** : `commonMobile`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center`
 + **allowed next element** : `fields, actionMap, secondaryActionMap`
@@ -2042,7 +2042,7 @@ its model.
 #### <a name=""></a> mobileMapView
 
 
-+ **extend** : `commonMobile, mobileSection`
++ **extend** : `commonMobile`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap`
@@ -2428,8 +2428,8 @@ the view are kept in sync with the bound model collection.</p></td>
 
 
 + **extend** : `commonMobile`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, custom, selection, Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes`
++ **allowed previous element** : `Front, custom, selection, Front, custom, sections, headerSections, repeat, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap, itemSelectionAction`
 + **Jspresso** : `MobileListViewDescriptor`
 
@@ -2642,8 +2642,8 @@ the view are kept in sync with the bound model collection.</p></td>
 
 
 + **extend** : `commonMobile`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, custom, selection, Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes`
++ **allowed previous element** : `Front, custom, selection, Front, custom, sections, headerSections, repeat, east, west, south, north, center`
 + **allowed next element** : `repeat, actionMap, secondaryActionMap, itemSelectionAction`
 + **Jspresso** : `MobileRepeaterViewDescriptor`
 
@@ -3671,8 +3671,8 @@ be nested.</p></td>
 
 
 + **extend** : `commonMobile`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates`
-+ **allowed previous element** : `Front, custom, selection, Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes`
++ **allowed previous element** : `Front, custom, selection, Front, custom, sections, headerSections, repeat, east, west, south, north, center`
 + **allowed next element** : `subTree, actionMap, secondaryActionMap, itemSelectionAction`
 + **Jspresso** : `MobileTreeViewDescriptor`
 
@@ -3972,7 +3972,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 #### <a name=""></a> mobileTabs
 
 
-+ **extend** : `commonMobile, mobileSection`
++ **extend** : `commonMobile`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `views, actionMap, secondaryActionMap`
@@ -4057,7 +4057,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 
 
 + **allowed previous element** : `tabs, mobileTabs, entityCardView, basicCardView`
-+ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, repeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Open a list of views where each view can be defined "inline"
 
@@ -4167,7 +4167,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 
 
 + **allowed previous element** : `split`
-+ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, repeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Enable to set an in-line view in in the left zone of a split_horizontal
 
@@ -4198,7 +4198,7 @@ Enable to set an in-line view in in the left zone of a split_horizontal
 
 
 + **allowed previous element** : `split`
-+ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, repeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Enable to set an in-line view in in the rigth zone of a split_horizontal
 
@@ -4229,7 +4229,7 @@ Enable to set an in-line view in in the rigth zone of a split_horizontal
 
 
 + **allowed previous element** : `split`
-+ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, repeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Enable to set an in-line view in in the top zone of a split_vertical
 
@@ -4260,7 +4260,7 @@ Enable to set an in-line view in in the top zone of a split_vertical
 
 
 + **allowed previous element** : `split`
-+ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, repeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Enable to set an in-line view in in the the bottom zone of a split_vertical
 
@@ -4386,7 +4386,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 
 
 + **extend** : `commonMobile, mobilePageAware`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center`
 + **allowed next element** : `south, north, center, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileBorderViewDescriptor`
@@ -4769,7 +4769,7 @@ open a cells list in grid or in an evenGrid
 
 
 + **allowed previous element** : `cells`
-+ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, repeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Describes constraints on a cell of a grid
 
@@ -4831,7 +4831,7 @@ Describes constraints on a cell of a grid
 
 
 + **allowed previous element** : `cells`
-+ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
++ **allowed next element** : `polarChart, cartesianChart, pivotTable, form, mapView, table, listView, repeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, tabs, mobileTabs, split, border, grid, evenGrid, entityCardView, basicCardView`
 
 Describes a cell of an evenGrid
 <b>evenCell IS NEVER DIRECTLY USED</b>, like for a grid, cell is used.
@@ -5007,7 +5007,7 @@ Assigns the view to repeat in the repeater for each collection element.
 #### <a name=""></a> actionMap
 
 
-+ **allowed previous element** : `Front, custom, treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileRepeater, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, repeater, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
++ **allowed previous element** : `Front, custom, treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileTabs, mobileListView, mobileRepeater, mobileTree, form, propertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, repeater, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
 + **allowed next element** : `actionList`
 + **Jspresso** : `ActionMap`
 
@@ -5108,7 +5108,7 @@ assigning a model to the action gates.</p></td>
 #### <a name=""></a> secondaryActionMap
 
 
-+ **allowed previous element** : `treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileListView, mobileRepeater, mobileTree, mobileTabs, form, propertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, repeater, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
++ **allowed previous element** : `treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileTabs, mobileListView, mobileRepeater, mobileTree, form, propertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, repeater, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
 + **allowed next element** : `actionList`
 + **Jspresso** : `ActionMap`
 
@@ -5919,7 +5919,7 @@ default.
 
 
 + **extend** : `commonMobile, mobilePageAware`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center, nextPage`
 + **allowed next element** : `actionMap, secondaryActionMap, selection, headerSections, nextPage`
 + **Jspresso** : `MobileNavPageViewDescriptor`
@@ -5969,7 +5969,7 @@ A Navigation page is a mobile page that displays a collection view (list or tree
 
 
 + **extend** : `commonMobile, mobilePageAware`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center, nextPage`
 + **allowed next element** : `actionMap, secondaryActionMap, pages`
 + **Jspresso** : `MobileCardPageViewDescriptor`
@@ -6009,7 +6009,7 @@ Defines a page that displays a card view as its main content.
 
 
 + **extend** : `commonMobile, mobilePageAware`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center, nextPage`
 + **allowed next element** : `actionMap, secondaryActionMap, sections, editorPage`
 + **Jspresso** : `MobileCompositePageViewDescriptor`
@@ -6104,7 +6104,7 @@ Defines the selection view of a navigation page, either tree or list.
 
 
 + **allowed previous element** : `mobileNavPage`
-+ **allowed next element** : `mobilePolarChart, mobileCartesianChart, mobileForm, mobileMapView, mobileBorder, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `mobilePolarChart, mobileCartesianChart, mobileForm, mobileMapView, mobileListView, mobileRepeater, mobileTree, mobileBorder, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Defines a list of section views to be placed above the selection view.
 
@@ -6196,7 +6196,7 @@ Defines the card view that is displayed in the card page.
 
 
 + **allowed previous element** : `mobileCompositePage`
-+ **allowed next element** : `mobilePolarChart, mobileCartesianChart, mobileForm, mobileMapView, mobileBorder, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `mobilePolarChart, mobileCartesianChart, mobileForm, mobileMapView, mobileListView, mobileRepeater, mobileTree, mobileBorder, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Defines a composite page sections.
 
