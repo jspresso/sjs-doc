@@ -3,7 +3,7 @@
 #### <a name=""></a> Front
 
 
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, actionMap, actionList, action, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileCardView, actionMap, actionList, action, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
 
 This root descriptor is used in the file application.groovy generated during the
 initialization of the project by Jspresso.
@@ -4453,7 +4453,7 @@ resized horizontally.</p></td>
 
 
 + **allowed previous element** : `border`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Enable to set an in-line view in the east zone of a border
 
@@ -4484,7 +4484,7 @@ Enable to set an in-line view in the east zone of a border
 
 
 + **allowed previous element** : `border`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Enable to set an in-line view in the west zone of a border
 
@@ -4515,7 +4515,7 @@ Enable to set an in-line view in the west zone of a border
 
 
 + **allowed previous element** : `border, mobileBorder`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Enable to set an in-line view in the south zone of a border
 
@@ -4546,7 +4546,7 @@ Enable to set an in-line view in the south zone of a border
 
 
 + **allowed previous element** : `border, mobileBorder`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Enable to set an in-line view in the north zone of a border
 
@@ -4577,7 +4577,7 @@ Enable to set an in-line view in the north zone of a border
 
 
 + **allowed previous element** : `border, mobileBorder`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Enable to set an in-line view in the center zone of a border
 
@@ -4971,12 +4971,74 @@ registered card name selector.</p></td>
 
 ---
 
+#### <a name=""></a> mobileCardView
+
+
++ **extend** : `commonMobile`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes`
++ **mandatory** : `selector`
++ **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center`
++ **allowed next element** : `actionMap, secondaryActionMap`
++ **Jspresso** : `MobileCardViewDescriptor`
+
+A card view is a view stack made of children views (the cards) where only the view (card) at the top
+of the stack is visible. The actual child view to place on the top of the stack is dynamically
+determined based on the bound model.
+
+
+A basicCardView describes a multi-purpose card view that is configurable with a custom card determination strategy.
+Cards are registered with a name key that is used to retrieve the card to display based on the card selector
+selected name key.
+
+
+<table>
+<caption>mobileCardView properties</caption>
+<colgroup>
+<col width="33%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Property</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="even">
+<td align="left"><p><strong>parent</strong></p><p><code>RefView</code></p>
+</td>
+<td><p>Allows to reference another descriptor as a model and to override certain properties.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>selector</strong></p><p><code>RefBean</code></p><p><code>cardNameSelector</code></p>
+</td>
+<td><p>Configures the card determination strategy. This delegate is responsible
+for selecting the card name key based on the model bound to
+the view. Everytime the bound model changes, the card name selector
+is triggered to select a new card. The names returned by the card
+name selector must match the names under which the cards are registered.
+Whenever the card name selector returns an unknown name,
+the card view displays an empty view. The card name selector can optionally implement ICardProvider
+in which case, it will be given a chance to create cards dynamically based on their names.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>views</strong></p><p><code>MapOfView</code></p><p><code>cardViewDescriptors</code></p>
+</td>
+<td><p>Registers the card views keyed by their name keys. The names used
+as key of the Map must match the names that are returned by the
+registered card name selector.</p></td>
+</tr>
+</tbody>
+</table>
+
+---
+
 #### <a name=""></a> View
 #### <a name=""></a> repeat
 
 
 + **allowed previous element** : `repeater, mobileRepeater`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Assigns the view to repeat in the repeater for each collection element.
 
@@ -5007,7 +5069,7 @@ Assigns the view to repeat in the repeater for each collection element.
 #### <a name=""></a> actionMap
 
 
-+ **allowed previous element** : `Front, custom, treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileTabs, mobileListView, mobileRepeater, mobileTree, form, propertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, repeater, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
++ **allowed previous element** : `Front, custom, treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileTabs, mobileListView, mobileCardView, mobileRepeater, mobileTree, form, propertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, repeater, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
 + **allowed next element** : `actionList`
 + **Jspresso** : `ActionMap`
 
@@ -5108,7 +5170,7 @@ assigning a model to the action gates.</p></td>
 #### <a name=""></a> secondaryActionMap
 
 
-+ **allowed previous element** : `treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileTabs, mobileListView, mobileRepeater, mobileTree, form, propertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, repeater, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
++ **allowed previous element** : `treeNode, controller, mobileNavPage, mobileCompositePage, mobileCardPage, mobileForm, mobileBorder, mobileMapView, mobilePolarChart, mobileCartesianChart, mobileTabs, mobileListView, mobileCardView, mobileRepeater, mobileTree, form, propertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, stringPropertyView, tabs, tree, table, listView, split, border, mapView, grid, evenGrid, image, repeater, html, entityCardView, basicCardView, actionView, polarChart, cartesianChart, pivotTable`
 + **allowed next element** : `actionList`
 + **Jspresso** : `ActionMap`
 
@@ -6104,7 +6166,7 @@ Defines the selection view of a navigation page, either tree or list.
 
 
 + **allowed previous element** : `mobileNavPage`
-+ **allowed next element** : `mobilePolarChart, mobileCartesianChart, mobileForm, mobileMapView, mobileListView, mobileRepeater, mobileTree, mobileBorder, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `mobilePolarChart, mobileCartesianChart, mobileForm, mobileMapView, mobileListView, mobileRepeater, mobileTree, mobileBorder, mobileCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Defines a list of section views to be placed above the selection view.
 
@@ -6196,7 +6258,7 @@ Defines the card view that is displayed in the card page.
 
 
 + **allowed previous element** : `mobileCompositePage`
-+ **allowed next element** : `mobilePolarChart, mobileCartesianChart, mobileForm, mobileMapView, mobileListView, mobileRepeater, mobileTree, mobileBorder, mobileNavPage, mobileCardPage, mobileCompositePage`
++ **allowed next element** : `mobilePolarChart, mobileCartesianChart, mobileForm, mobileMapView, mobileListView, mobileRepeater, mobileTree, mobileBorder, mobileCardView, mobileNavPage, mobileCardPage, mobileCompositePage`
 
 Defines a composite page sections.
 
@@ -7489,7 +7551,7 @@ Allows to generate a Map Spring in the XML generated file
 
 
 + **allowed previous element** : `bean, module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, action, next, wrapped, rowAction, itemSelectionAction, tabSelectionAction, sortingAction, enterAction, backAction, pageEndAction, mainAction, swipeLeftAction, swipeRightAction`
-+ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, actionMap, actionList, action, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
++ **allowed next element** : `polarChart, cartesianChart, mobilePolarChart, mobileCartesianChart, pivotTable, form, mobileForm, mapView, mobileMapView, table, listView, mobileListView, repeater, mobileRepeater, propertyView, stringPropertyView, referencePropertyView, enumerationPropertyView, datePropertyView, timePropertyView, numberPropertyView, image, staticText, html, actionView, treeNode, tree, mobileTree, tabs, mobileTabs, split, border, mobileBorder, grid, evenGrid, entityCardView, basicCardView, mobileCardView, actionMap, actionList, action, mobileNavPage, mobileCardPage, mobileCompositePage, workspace, module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, controller, messageSource, external, template, paramSet, bean, list, set, map`
 
 Allows to define custom properties in the form of named inline descriptors. All 1st-level descriptors can be used.
 
