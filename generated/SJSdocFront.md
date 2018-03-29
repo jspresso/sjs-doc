@@ -3443,7 +3443,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 + **extend** : `commonMobile`
 + **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, position, clientTypes`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, east, west, south, north, center`
-+ **allowed next element** : `actionMap, secondaryActionMap`
++ **allowed next element** : `actionMap, secondaryActionMap, actionList, action`
 + **Jspresso** : `MobileActionViewDescriptor`
 
 This type of view allows to make an action available as a view and thus participate in the UI composition
@@ -5333,7 +5333,7 @@ assigning a model to the action gates.</p></td>
 #### <a name=""></a> actionList
 
 
-+ **allowed previous element** : `Front, custom, actionMap, secondaryActionMap, actionView`
++ **allowed previous element** : `Front, custom, actionMap, secondaryActionMap, actionView, mobileActionView`
 + **allowed next element** : `action`
 + **Jspresso** : `ActionList`
 
@@ -5475,7 +5475,7 @@ assigning a model to the action gates.</p></td>
 #### <a name=""></a> action
 
 
-+ **allowed previous element** : `Front, custom, actionList, controller, actionView`
++ **allowed previous element** : `Front, custom, actionList, controller, actionView, mobileActionView`
 + **allowed next element** : `next, wrapped, bean, list, set, map, custom`
 
 This descriptor establishes the foundation of the Jspresso action
