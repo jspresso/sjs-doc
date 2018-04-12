@@ -5719,34 +5719,7 @@ which stands for 'collection based'. Collection based actions will typically be 
 and will be enabled only when the view selection is not empty (a default gate is installed for this purpose).
 Moreover, boolean actionnability gates that are configured on collection based actions take their model from the
 view selected components instead of the view model itself. In case of multi-selection enabled UI views, the actionability gates
-will actually open if and only if their opening condition is met for all the selected items.
-
-
-<pre>
-action('actionA', booleanActionabilityGates: ['!prop1', 'prop2_cb'] ...
-</pre>
-
-
-
-<ul>
-<li>
-The first '!prop1' gate is open if prop1 is false, the gate is not applied to each collection item individually
-</li>
-<li>
-The second 'prop2' gate is open if prop2 is true, the gate is applied to each collection item individually
-</li>
-</ul>
-
-
-This mecanism is mainly used for dynamic UI authorization
-based on model state, e.g. a validated invoice should not be validated
-twice.
-Action assigned gates will be cloned for each concrete action instance
-created and bound to its respective UI component (usually
-a button). So basically, each action instance will have its own, unshared
-collection of actionability gates.
-By default, frontend actions are assigned a generic gate that closes
-(disables the action) when the view is not assigned any model</p></td>
+will actually open if and only if their opening condition is met for all the selected items.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>rolesActionabilityGates</strong></p><p><code>ListOfString</code></p>
@@ -5849,7 +5822,40 @@ By default, frontend actions are assigned a generic gate that closes
 <tr class="odd">
 <td align="left"><p><strong>serviceActionabilityGates</strong></p><p><code>ListOfString</code></p>
 </td>
-<td><p></p></td>
+<td><p>Assigns a collection of gates to determine action actionability. An action will be considered actionable (enabled)
+if and only if all boolean gates are open. With SJS a boolean actionability gate can be suffixed by '_cb',
+which stands for 'collection based'. Collection based actions will typically be installed on selectable views (table, list , tree)
+and will be enabled only when the view selection is not empty (a default gate is installed for this purpose).
+Moreover, boolean actionnability gates that are configured on collection based actions take their model from the
+view selected components instead of the view model itself. In case of multi-selection enabled UI views, the actionability gates
+will actually open if and only if their opening condition is met for all the selected items.
+
+
+<pre>
+action('actionA', booleanActionabilityGates: ['!prop1', 'prop2_cb'] ...
+</pre>
+
+
+
+<ul>
+<li>
+The first '!prop1' gate is open if prop1 is false, the gate is not applied to each collection item individually
+</li>
+<li>
+The second 'prop2' gate is open if prop2 is true, the gate is applied to each collection item individually
+</li>
+</ul>
+
+
+This mecanism is mainly used for dynamic UI authorization
+based on model state, e.g. a validated invoice should not be validated
+twice.
+Action assigned gates will be cloned for each concrete action instance
+created and bound to its respective UI component (usually
+a button). So basically, each action instance will have its own, unshared
+collection of actionability gates.
+By default, frontend actions are assigned a generic gate that closes
+(disables the action) when the view is not assigned any model</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>collectionBased</strong></p><p><code>Boolean</code></p>
