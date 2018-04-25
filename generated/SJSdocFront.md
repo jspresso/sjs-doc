@@ -3417,9 +3417,10 @@ This type of view descriptor is used to display an html property.
 </tr>
 </thead>
 <tbody>
-<tr>
-<td align="left">This class does not have any specific property.</td>
-<td align="left"></td>
+<tr class="even">
+<td align="left"><p><strong>editorConfiguration</strong></p><p><code>String</code></p>
+</td>
+<td><p>Allows to pass custom editor configuration that can be leveraged on the client side.</p></td>
 </tr>
 </tbody>
 </table>
