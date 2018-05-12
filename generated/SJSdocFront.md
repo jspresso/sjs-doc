@@ -5069,7 +5069,7 @@ strategy pulls up the card whose model descriptor matches the property value of 
 <td><p>Allows to reference another descriptor as a model and to override certain properties.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>views</strong></p><p><code>ListOfView</code></p><p><code>viewDescriptors</code></p>
+<td align="left"><p><strong>views</strong></p><p><code>MapOfView</code></p><p><code>cardViewDescriptors</code></p>
 </td>
 <td><p>Registers the list of card view descriptors. Every time the bound model property
 changes, this list is iterated until a card with a matching model is
