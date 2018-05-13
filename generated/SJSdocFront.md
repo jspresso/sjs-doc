@@ -2090,6 +2090,11 @@ its model.
 </td>
 <td><p>the model property name that returns the content of the map as a Json object containting the markers and the routes.</p></td>
 </tr>
+<tr class="even">
+<td align="left"><p><strong>defaultZoom</strong></p><p><code>Integer</code></p>
+</td>
+<td><p>The map default zoom when there is no route to display and a single marker.</p></td>
+</tr>
 </tbody>
 </table>
 
@@ -2130,6 +2135,11 @@ its model.
 <td align="left"><p><strong>mapContent</strong></p><p><code>RefField</code></p><p><code>mapContentProperty</code></p>
 </td>
 <td><p>the model property name that returns the content of the map as a Json object containting the markers and the routes.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>defaultZoom</strong></p><p><code>Integer</code></p>
+</td>
+<td><p>The map default zoom when there is no route to display and a single marker.</p></td>
 </tr>
 </tbody>
 </table>
