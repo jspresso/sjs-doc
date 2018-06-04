@@ -86,7 +86,7 @@ form 'form1', booleanWritabilityGates: ['prop1', '!prop2']
 
 <ul>
 <li>
-The first 'prop1' gate is open if the prop1 property is true on the underlying model
+The first 'prop1' gate is open if the prop1 propertyis true on the underlying model
 </li>
 <li>
 The second '!prop2' gate is open if prop2 property is false on the underlying model
@@ -101,7 +101,24 @@ have its own, unshared collection of writability gates.
 
 By default, view descriptors are not assigned any gates collection,
 i.e. there is no writability restriction. Note however that view actual
-writability is the combination of view and model writability.</p></td>
+writability is the combination of view and model writability.
+
+Gates are also compatible with services, i.e. a service name can be used in place of a property name.
+
+Gates are very flexible regarding the underlying property or service return value :
+
+<ul>
+<li>
+If the method returns a boolean, the gate is open if the returned value is « true »
+</li>
+<li>
+If the method returns a collection, the gate is open if the returned value is not null and if collection not empty
+</li>
+<li>
+If the method returns any other type,  the gate is open if the returned value is not null
+</li>
+</ul>
+</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>booleanReadabilityGates</strong></p><p><code>ListOfString</code></p>
@@ -132,7 +149,24 @@ have its own, unshared collection of readability gates.
 
 By default, view descriptors are not assigned any gates collection,
 i.e. there is no readability restriction. Note however that view actual
-readability is the combination of view and model readability.</p></td>
+readability is the combination of view and model readability.
+
+Gates are also compatible with services, i.e. a service name can be used in place of a property name.
+
+Gates are very flexible regarding the underlying property or service return value :
+
+<ul>
+<li>
+If the method returns a boolean, the gate is open if the returned value is « true »
+</li>
+<li>
+If the method returns a collection, the gate is open if the returned value is not null and if collection not empty
+</li>
+<li>
+If the method returns any other type,  the gate is open if the returned value is not null
+</li>
+</ul>
+</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>rolesWritabilityGates</strong></p><p><code>ListOfString</code></p>
@@ -6826,7 +6860,7 @@ description. The resulting translation will generally be leveraged as a
 tooltip on the UI side but its use may be extended for online help.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>headerDescription</strong></p><p><code>String</code></p>
+<td align="left"><p><strong>pageHeaderDescription</strong></p><p><code>String</code></p>
 </td>
 <td><p>Configures the key used to translate actual internationalized
 Module header description. The resulting translation will generally be
@@ -6927,7 +6961,7 @@ their model.</p></td>
 
 
 + **extend** : `module`
-+ **Inherited properties ** : `parent, class, custom, name, description, headerDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
++ **Inherited properties ** : `parent, class, custom, name, description, pageHeaderDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, custom, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, custom`
 
@@ -6999,7 +7033,7 @@ view. A complementary action list is installed to navigate between module object
 
 
 + **extend** : `collectionModule`
-+ **Inherited properties ** : `detailView, includeDetail, parent, class, custom, name, description, headerDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
++ **Inherited properties ** : `detailView, includeDetail, parent, class, custom, name, description, pageHeaderDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, custom, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, custom`
 
@@ -7096,7 +7130,7 @@ the default, the elements default page size is used.</p></td>
 
 
 + **extend** : `module`
-+ **Inherited properties ** : `parent, class, custom, name, description, headerDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
++ **Inherited properties ** : `parent, class, custom, name, description, pageHeaderDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, custom, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, custom`
 
@@ -7149,7 +7183,7 @@ view descriptor.</p></td>
 
 
 + **extend** : `module`
-+ **Inherited properties ** : `parent, class, custom, name, description, headerDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
++ **Inherited properties ** : `parent, class, custom, name, description, pageHeaderDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, custom, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, custom`
 
@@ -7182,7 +7216,7 @@ Allows to group modules under a simple node in a hierarchy of modules.
 
 
 + **extend** : `filterModule`
-+ **Inherited properties ** : `component, filterComponent, filterView, pagingStatus, pagingAction, ordering, pageSize, detailView, includeDetail, parent, class, custom, name, description, headerDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
++ **Inherited properties ** : `component, filterComponent, filterView, pagingStatus, pagingAction, ordering, pageSize, detailView, includeDetail, parent, class, custom, name, description, pageHeaderDescription, icon, iconWidth, iconHeight, moduleView, startup, entry, exit, ref, permId, grantedRoles`
 + **allowed previous element** : `Front, custom, workspace, module, nodeModule, collectionModule, filterModule, beanModule, pivotModule`
 + **allowed next element** : `module, collectionModule, filterModule, beanModule, nodeModule, pivotModule, custom`
 
