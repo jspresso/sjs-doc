@@ -2175,6 +2175,11 @@ its model.
 </td>
 <td><p>The map default zoom when there is no route to display and a single marker.</p></td>
 </tr>
+<tr class="odd">
+<td align="left"><p><strong>inline</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p>When set to true, the pam is displayed inline in the containing page. Otherwise, it is in its own linked page.</p></td>
+</tr>
 </tbody>
 </table>
 
