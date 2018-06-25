@@ -1085,7 +1085,8 @@ It defaults to true otherwise.</p></td>
 <tr class="even">
 <td align="left"><p><strong>rendererOptions</strong></p><p><code>String</code></p>
 </td>
-<td><p>An arbitrary string that is leveraged on client side to customize the rendering of the chart.</p></td>
+<td><p>An arbitrary string that is leveraged on client side to customize the rendering of the chart. for HTML5 chart rendering
+configuration, please see http://www.jqplot.com/docs/files/jqplot-core-js.html</p></td>
 </tr>
 </tbody>
 </table>
