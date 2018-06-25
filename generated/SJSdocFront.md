@@ -1082,6 +1082,11 @@ The default value depends on the selection mode of the collection view.
 When a cumulative selection mode is used, autoSelectFirstRow defaults to false.
 It defaults to true otherwise.</p></td>
 </tr>
+<tr class="even">
+<td align="left"><p><strong>rendererOptions</strong></p><p><code>String</code></p>
+</td>
+<td><p>An arbitrary string that is leveraged on client side to customize the rendering of the chart.</p></td>
+</tr>
 </tbody>
 </table>
 
@@ -1220,7 +1225,7 @@ Default value is EBarChartType.CLUSTERED, i.e. the series are drawn side by side
 
 
 + **extend** : `common, abstractChart`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions`
 
 descriptor for charts
 
@@ -1251,7 +1256,7 @@ descriptor for charts
 
 
 + **extend** : `chart, abstractPolarChart`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, pieSeries`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions, pieSeries`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `pieSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `PieChartDescriptor`
@@ -1285,7 +1290,7 @@ descriptor for pie charts
 
 
 + **extend** : `chart, abstractCartesianChart`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `lineSeries, barSeries, plotSeries, areaSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `BarChartDescriptor`
@@ -1319,7 +1324,7 @@ descriptor for cartesian charts
 
 
 + **extend** : `commonMobile, abstractChart`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions`
 
 descriptor for charts
 
@@ -1350,7 +1355,7 @@ descriptor for charts
 
 
 + **extend** : `mobileChart, abstractPolarChart`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, pieSeries`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions, pieSeries`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center`
 + **allowed next element** : `pieSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `MobilePieChartDescriptor`
@@ -1384,7 +1389,7 @@ descriptor for pie charts
 
 
 + **extend** : `mobileChart, abstractCartesianChart`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center`
 + **allowed next element** : `lineSeries, barSeries, plotSeries, areaSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileBarChartDescriptor`
