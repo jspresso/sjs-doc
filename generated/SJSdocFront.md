@@ -693,13 +693,19 @@ system.</p></td>
 when decorated in a titled border for instance.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>collapsed</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p>When set to true, this allows to display a view initially collapsed when the UI provides a way for the user to do so,
+when decorated in a titled border for instance.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>paramSets</strong></p><p><code>ListOfString</code></p>
 </td>
 <td><p>paramSets makes it possible to use a list of paramSet.
 The properties declared in the paramSet come to be added to the properties of the current descriptor.
 The properties brought by the paramSet can be overridden  by the current descriptor. If a property is overridden with the null value the property is ignored.</p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><p><strong>class</strong></p><p><code>String</code></p>
 </td>
 <td><p>Allows to override the default framework descriptor class for advanced usage.</p></td>
@@ -940,13 +946,19 @@ Default value is EBorderType.NONE, i.e. no border.</p></td>
 when decorated in a titled border for instance.</p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>collapsed</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p>When set to true, this allows to display a view initially collapsed when the UI provides a way for the user to do so,
+when decorated in a titled border for instance.</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>paramSets</strong></p><p><code>ListOfString</code></p>
 </td>
 <td><p>paramSets makes it possible to use a list of paramSet.
 The properties declared in the paramSet come to be added to the properties of the current descriptor.
 The properties brought by the paramSet can be overridden  by the current descriptor. If a property is overridden with the null value the property is ignored.</p></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><p><strong>class</strong></p><p><code>String</code></p>
 </td>
 <td><p>Allows to override the default framework descriptor class for advanced usage.</p></td>
@@ -1226,7 +1238,7 @@ Default value is EBarChartType.CLUSTERED, i.e. the series are drawn side by side
 
 
 + **extend** : `common, abstractChart`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions`
 
 descriptor for charts
 
@@ -1257,7 +1269,7 @@ descriptor for charts
 
 
 + **extend** : `chart, abstractPolarChart`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions, pieSeries`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions, pieSeries`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `pieSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `PieChartDescriptor`
@@ -1291,7 +1303,7 @@ descriptor for pie charts
 
 
 + **extend** : `chart, abstractCartesianChart`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `lineSeries, barSeries, plotSeries, areaSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `BarChartDescriptor`
@@ -1325,7 +1337,7 @@ descriptor for cartesian charts
 
 
 + **extend** : `commonMobile, abstractChart`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions`
 
 descriptor for charts
 
@@ -1356,7 +1368,7 @@ descriptor for charts
 
 
 + **extend** : `mobileChart, abstractPolarChart`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions, pieSeries`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions, pieSeries`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center`
 + **allowed next element** : `pieSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `MobilePieChartDescriptor`
@@ -1390,7 +1402,7 @@ descriptor for pie charts
 
 
 + **extend** : `mobileChart, abstractCartesianChart`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, parent, ref, label, legend, rowAction, itemSelectionAction, autoSelectFirstRow, rendererOptions, lineSeries, columnSeries, barSeries, plotSeries, areaSeries, orientation, axisMinValue, axisMaxValue, chartType`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center`
 + **allowed next element** : `lineSeries, barSeries, plotSeries, areaSeries, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileBarChartDescriptor`
@@ -1773,7 +1785,7 @@ of actions defined on table columns.</p></td>
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `PivotTableDescriptor`
@@ -1828,7 +1840,7 @@ Defines pivot table view.
 
 
 + **extend** : `common, scrollable`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `fields, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicComponentViewDescriptor`
@@ -2017,7 +2029,7 @@ Default value is null, meaning all property fields have a span of 1.</p></td>
 
 
 + **extend** : `commonMobile`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center`
 + **allowed next element** : `fields, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileComponentViewDescriptor`
@@ -2098,7 +2110,7 @@ model descriptor.</p></td>
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicMapViewDescriptor`
@@ -2144,7 +2156,7 @@ its model.
 
 
 + **extend** : `commonMobile`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `MobileMapViewDescriptor`
@@ -2226,7 +2238,7 @@ Open a list of propertyView to individually fine-tunes each field  in a form
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `columns, actionMap, secondaryActionMap, rowAction, itemSelectionAction, sortingAction`
 + **Jspresso** : `BasicTableViewDescriptor`
@@ -2404,7 +2416,7 @@ the view are kept in sync with the bound model collection.</p></td>
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap, rowAction, itemSelectionAction`
 + **Jspresso** : `BasicListViewDescriptor`
@@ -2539,7 +2551,7 @@ the view are kept in sync with the bound model collection.</p></td>
 
 
 + **extend** : `commonMobile`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
 + **allowed previous element** : `Front, custom, selection, Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap, itemSelectionAction`
 + **Jspresso** : `MobileListViewDescriptor`
@@ -2669,7 +2681,7 @@ indicates that the user can navigate to another page when clicking a list item.<
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `repeat, actionMap, secondaryActionMap, rowAction, itemSelectionAction`
 + **Jspresso** : `BasicRepeaterViewDescriptor`
@@ -2753,7 +2765,7 @@ the view are kept in sync with the bound model collection.</p></td>
 
 
 + **extend** : `commonMobile`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
 + **allowed previous element** : `Front, custom, selection, Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center`
 + **allowed next element** : `repeat, actionMap, secondaryActionMap, itemSelectionAction`
 + **Jspresso** : `MobileRepeaterViewDescriptor`
@@ -2868,7 +2880,7 @@ Open a list of propertyView to individually fine-tunes each column in a table
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicPropertyViewDescriptor`
@@ -3096,7 +3108,7 @@ peer receives the focus in the client UI.</p></td>
 
 
 + **extend** : `propertyView`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicStringPropertyViewDescriptor`
@@ -3132,7 +3144,7 @@ to be triggered when a character is typed in the UI.
 
 
 + **extend** : `stringPropertyView`
-+ **Inherited properties ** : `charAction, parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `charAction, parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicReferencePropertyViewDescriptor`
@@ -3172,7 +3184,7 @@ property view. A null value (default) keeps the standard action.</p></td>
 
 
 + **extend** : `propertyView`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicEnumerationPropertyViewDescriptor`
@@ -3239,7 +3251,7 @@ values should be rendered horizontally and VERTICAL otherwise. Default value is 
 
 
 + **extend** : `propertyView`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicDatePropertyViewDescriptor`
@@ -3276,7 +3288,7 @@ defining the corresponding column in a table view or field in a component view.
 
 
 + **extend** : `propertyView`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicTimePropertyViewDescriptor`
@@ -3313,7 +3325,7 @@ defining the corresponding column in a table view or field in a component view.
 
 
 + **extend** : `propertyView`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicNumberPropertyViewDescriptor`
@@ -3350,7 +3362,7 @@ defining the corresponding column in a table view or field in a component view.
 
 
 + **extend** : `propertyView`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicImageViewDescriptor`
@@ -3412,7 +3424,7 @@ POD for instance.</p></td>
 
 
 + **extend** : `propertyView`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **Jspresso** : `BasicStaticTextViewDescriptor`
 
@@ -3451,7 +3463,7 @@ This type of view descriptor is used to display an static, internationalized tex
 
 
 + **extend** : `propertyView, scrollable`
-+ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
++ **Inherited properties ** : `parent, ref, name, width, labelBackground, labelFont, labelForeground, labelHorizontalPosition, action, renderedChildProperties, horizontalAlignment, sortable, clientTypes, focusAction, focusGainedAction, focusLostAction, model, validationModel, icon, iconWidth, iconHeight, styleName, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center, cells, columns, fields`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `BasicHtmlViewDescriptor`
@@ -3486,7 +3498,7 @@ This type of view descriptor is used to display an html property.
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap, actionList, action`
 + **Jspresso** : `BasicActionViewDescriptor`
@@ -3553,7 +3565,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 
 
 + **extend** : `commonMobile`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap, actionList, action`
 + **Jspresso** : `MobileActionViewDescriptor`
@@ -3621,7 +3633,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **mandatory** : `nameElement`
 + **allowed previous element** : `Front, custom`
 + **allowed next element** : `actionMap, secondaryActionMap`
@@ -3676,7 +3688,7 @@ treeNode('Company-teams.treeNode',
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `subTree, actionMap, secondaryActionMap, rowAction, itemSelectionAction`
 + **Jspresso** : `BasicTreeViewDescriptor`
@@ -3850,7 +3862,7 @@ be nested.</p></td>
 
 
 + **extend** : `commonMobile`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
 + **allowed previous element** : `Front, custom, selection, Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center`
 + **allowed next element** : `subTree, actionMap, secondaryActionMap, itemSelectionAction`
 + **Jspresso** : `MobileTreeViewDescriptor`
@@ -4017,7 +4029,7 @@ be nested.</p></td>
 
 
 + **extend** : `common`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates`
 + **allowed previous element** : `tree, mobileTree, subTree`
 + **allowed next element** : `subTree`
 + **Jspresso** : `BasicSimpleTreeLevelDescriptor`
@@ -4059,7 +4071,7 @@ In SJS a subTree has the same identifier as the treeNode it instantiates.
 
 
 + **extend** : `common, scrollable`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `views, actionMap, secondaryActionMap, tabSelectionAction`
 + **Jspresso** : `BasicTabViewDescriptor`
@@ -4152,7 +4164,7 @@ Default value is null, i.e. determined from outside, e.g. the view factory.</p><
 
 
 + **extend** : `commonMobile`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `views, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileTabViewDescriptor`
@@ -4267,7 +4279,7 @@ Open a list of views where each view can be defined "inline"
 
 
 + **extend** : `common, scrollable`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `left, right, top, bottom, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicSplitViewDescriptor`
@@ -4470,7 +4482,7 @@ Enable to set an in-line view in in the the bottom zone of a split_vertical
 
 
 + **extend** : `common, scrollable`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `east, west, south, north, center, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicBorderViewDescriptor`
@@ -4565,7 +4577,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 
 
 + **extend** : `commonMobile, mobilePageAware`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center`
 + **allowed next element** : `south, north, center, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileBorderViewDescriptor`
@@ -4784,7 +4796,7 @@ Enable to set an in-line view in the center zone of a border
 
 
 + **extend** : `common, scrollable`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `cells, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicConstrainedGridViewDescriptor`
@@ -4834,7 +4846,7 @@ than the outer composite unless explicitely specified differently.</p></td>
 
 
 + **extend** : `common, scrollable`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
 + **mandatory** : `drivingDimension, drivingCellCount`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `cells, actionMap, secondaryActionMap`
@@ -4914,7 +4926,7 @@ or column is then created to host the remaining cells.</p></td>
 
 
 + **extend** : `commonMobile, mobilePageAware`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center`
 + **allowed next element** : `cells, actionMap, secondaryActionMap`
 + **Jspresso** : `MobileEvenGridViewDescriptor`
@@ -5077,7 +5089,7 @@ Describes a cell of an evenGrid
 
 
 + **extend** : `common, scrollable`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `views, actionMap, secondaryActionMap`
 + **Jspresso** : `EntityCardViewDescriptor`
@@ -5125,7 +5137,7 @@ card matches, an empty view is displayed.</p></td>
 
 
 + **extend** : `common, scrollable`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
 + **mandatory** : `property`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `views, actionMap, secondaryActionMap`
@@ -5179,7 +5191,7 @@ card matches, an empty view is displayed.</p></td>
 
 
 + **extend** : `common, scrollable`
-+ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
++ **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
 + **mandatory** : `selector`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `views, actionMap, secondaryActionMap`
@@ -5241,7 +5253,7 @@ registered card name selector.</p></td>
 
 
 + **extend** : `commonMobile`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
 + **mandatory** : `selector`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap`
@@ -5303,7 +5315,7 @@ registered card name selector.</p></td>
 
 
 + **extend** : `commonMobile`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap`
 + **Jspresso** : `MobileEntityCardViewDescriptor`
@@ -5351,7 +5363,7 @@ card matches, an empty view is displayed.</p></td>
 
 
 + **extend** : `commonMobile`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes`
 + **mandatory** : `property`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center`
 + **allowed next element** : `actionMap, secondaryActionMap`
@@ -6360,7 +6372,7 @@ default.
 
 
 + **extend** : `commonMobile, mobilePageAware`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center, nextPage`
 + **allowed next element** : `actionMap, secondaryActionMap, selection, headerSections, nextPage`
 + **Jspresso** : `MobileNavPageViewDescriptor`
@@ -6410,7 +6422,7 @@ A Navigation page is a mobile page that displays a collection view (list or tree
 
 
 + **extend** : `commonMobile, mobilePageAware`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center, nextPage`
 + **allowed next element** : `actionMap, secondaryActionMap, pages`
 + **Jspresso** : `MobileCardPageViewDescriptor`
@@ -6450,7 +6462,7 @@ Defines a page that displays a card view as its main content.
 
 
 + **extend** : `commonMobile, mobilePageAware`
-+ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction`
++ **Inherited properties ** : `model, validationModel, icon, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, borderType, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, position, clientTypes, mainAction, enterAction, backAction, pageEndAction, swipeLeftAction, swipeRightAction`
 + **allowed previous element** : `Front, custom, sections, headerSections, repeat, evenCell, east, west, south, north, center, nextPage`
 + **allowed next element** : `actionMap, secondaryActionMap, sections, editorPage`
 + **Jspresso** : `MobileCompositePageViewDescriptor`
