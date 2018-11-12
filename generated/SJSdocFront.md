@@ -5046,6 +5046,26 @@ Describes constraints on a cell of a grid
 </td>
 <td><p>wether the cell should be resized to take all the available space vertically</p></td>
 </tr>
+<tr class="odd">
+<td align="left"><p><strong>fillWidth</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>fillHeight</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><strong>horizontalAlignment</strong></p><p><code>String</code></p>
+</td>
+<td><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><strong>vertyicalAlignment</strong></p><p><code>String</code></p>
+</td>
+<td><p></p></td>
+</tr>
 </tbody>
 </table>
 
