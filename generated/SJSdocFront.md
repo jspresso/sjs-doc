@@ -5075,9 +5075,22 @@ RIGHT
 </p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>vertyicalAlignment</strong></p><p><code>String</code></p>
+<td align="left"><p><strong>verticalAlignment</strong></p><p><code>String</code></p>
 </td>
-<td><p></p></td>
+<td><p>How to vertically align the cell content when it is not filling the available cell width.
+
+<ul>
+<li>
+TOP
+</li>
+<li>
+MIDDLE (default)
+</li>
+<li>
+BOTTOM
+</li>
+</ul>
+</p></td>
 </tr>
 </tbody>
 </table>
