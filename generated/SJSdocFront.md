@@ -5049,17 +5049,30 @@ Describes constraints on a cell of a grid
 <tr class="odd">
 <td align="left"><p><strong>fillWidth</strong></p><p><code>Boolean</code></p>
 </td>
-<td><p></p></td>
+<td><p>wether the cell component should expand to fill the cell horizontally</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>fillHeight</strong></p><p><code>Boolean</code></p>
 </td>
-<td><p></p></td>
+<td><p>wether the cell component should expand to fill the cell vertically</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>horizontalAlignment</strong></p><p><code>String</code></p>
 </td>
-<td><p></p></td>
+<td><p>How to horizontally align the cell content when it is not filling the available cell width.
+
+<ul>
+<li>
+LEFT (default)
+</li>
+<li>
+CENTER
+</li>
+<li>
+RIGHT
+</li>
+</ul>
+</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>vertyicalAlignment</strong></p><p><code>String</code></p>
