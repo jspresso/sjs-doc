@@ -236,7 +236,7 @@ disables paging for this component.
 </p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>autoQuery</strong></p><p><code>Boolean</code></p>
+<td align="left"><p><strong>autoQuery</strong></p><p><code>Boolean</code></p><p><code>autoQueryEnabled</code></p>
 </td>
 <td><p>Whenever this component is used as a query filter, this enables / disables auto-query
 when typing or loosing focus on a filter field.</p></td>
