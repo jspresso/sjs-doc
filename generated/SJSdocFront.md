@@ -4847,7 +4847,6 @@ than the outer composite unless explicitely specified differently.</p></td>
 
 + **extend** : `common, scrollable`
 + **Inherited properties ** : `model, validationModel, icon, iconWidth, iconHeight, styleName, name, description, i18nNameKey, actionMap, secondaryActionMap, readOnly, background, foreground, font, borderType, preferredWidth, preferredHeight, collapsible, collapsed, paramSets, class, permId, grantedRoles, booleanWritabilityGates, booleanReadabilityGates, rolesWritabilityGates, rolesReadabilityGates, enumWritabilityGates, enumReadabilityGates, regexWritabilityGates, regexReadabilityGates, serviceWritabilityGates, serviceReadabilityGates, verticallyScrollable, horizontallyScrollable`
-+ **mandatory** : `drivingDimension, drivingCellCount`
 + **allowed previous element** : `Front, custom, left, right, top, bottom, cell, evenCell, views, repeat, east, west, south, north, center`
 + **allowed next element** : `cells, actionMap, secondaryActionMap`
 + **Jspresso** : `BasicEvenGridViewDescriptor`
@@ -4915,7 +4914,8 @@ columns.</p></td>
 <td><p>This property configures the maximum number of cells in the driving
 dimension (row or column). Nested views are distributed along the
 driving axis until this maximum number has been reached. A new row
-or column is then created to host the remaining cells.</p></td>
+or column is then created to host the remaining cells. Default value is 2, i.e. 2 cells per row (or column
+depending on drivingDimension).</p></td>
 </tr>
 </tbody>
 </table>
