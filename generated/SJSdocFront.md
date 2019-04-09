@@ -2150,17 +2150,17 @@ its model.
 <tr class="odd">
 <td align="left"><p><strong>markerAction</strong></p><p><code>RefAction</code></p>
 </td>
-<td><p></p></td>
+<td><p>An action that will be triggered when clicking a marker.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>routeAction</strong></p><p><code>RefAction</code></p>
 </td>
-<td><p></p></td>
+<td><p>An action that will be triggered when clicking a route.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>zoneAction</strong></p><p><code>RefAction</code></p>
 </td>
-<td><p></p></td>
+<td><p>An action that will be triggered when clicking a zone.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2211,17 +2211,17 @@ its model.
 <tr class="odd">
 <td align="left"><p><strong>markerAction</strong></p><p><code>RefAction</code></p>
 </td>
-<td><p></p></td>
+<td><p>An action that will be triggered when clicking a marker.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>routeAction</strong></p><p><code>RefAction</code></p>
 </td>
-<td><p></p></td>
+<td><p>An action that will be triggered when clicking a route.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>zoneAction</strong></p><p><code>RefAction</code></p>
 </td>
-<td><p></p></td>
+<td><p>An action that will be triggered when clicking a zone.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>inline</strong></p><p><code>Boolean</code></p>
