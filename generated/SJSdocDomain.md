@@ -1670,6 +1670,12 @@ ratio.</p></td>
 target value. If only one of the 2 scaled dimensions is set, then the image is scaled by preserving its aspect
 ratio.</p></td>
 </tr>
+<tr class="even">
+<td align="left"><p><strong>keepRatio</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p>Whenever keepRatio is explicitely set to false, the image, if not scrollable, will resize according to its container
+without respectig its height / width ratio.</p></td>
+</tr>
 </tbody>
 </table>
 
@@ -2470,6 +2476,12 @@ target value. If only one of the 2 scaled dimensions is set, then the image is s
 ratio.</p></td>
 </tr>
 <tr class="even">
+<td align="left"><p><strong>keepRatio</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p>Whenever keepRatio is explicitely set to false, the image, if not scrollable, will resize according to its container
+without respectig its height / width ratio.</p></td>
+</tr>
+<tr class="odd">
 <td align="left"><p><strong>formatName</strong></p><p><code>String</code></p>
 </td>
 <td><p>Sets format name. When set to something not null (e.g. PNG, JPG, ...), the image is transformed to the specified

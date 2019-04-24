@@ -3440,6 +3440,12 @@ target value. If only one of the 2 scaled dimensions is set, then the image is s
 ratio.</p></td>
 </tr>
 <tr class="odd">
+<td align="left"><p><strong>keepRatio</strong></p><p><code>Boolean</code></p>
+</td>
+<td><p>Whenever keepRatio is explicitely set to false, the image, if not scrollable, will resize according to its container
+without respectig its height / width ratio.</p></td>
+</tr>
+<tr class="even">
 <td align="left"><p><strong>drawable</strong></p><p><code>Boolean</code></p>
 </td>
 <td><p>Allows the user to draw on the image and save the result. This can be very useful to capture the user signature as a
